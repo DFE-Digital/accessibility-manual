@@ -1,0 +1,48 @@
+{% extends "layouts/content-with-sidenav.html" %}
+
+{% set pageName = "Search results" %}
+
+{% block beforeContent %}{% endblock %}
+
+{% block content %}
+
+<article>
+
+
+
+
+  {% if results.data | length > 0 %}
+  <p class="govuk-u-margin-bottom-3">
+    {{ resultsLen }} Result{%if results | length != 1%}s{%endif%} for {{searchTerm}}
+  </p>
+  <ul class="govuk-list govuk-list--border">
+    {% for item in results.data %}
+    {% if not item.attributes.service.data.attributes.Password %}
+    <li>
+      <p class="govuk-!-margin-bottom-2">
+        <a href="/{{item.attributes.service.data.attributes.Slug}}/{{item.attributes.Slug}}"
+          class="govuk-!-font-weight-bold govuk-link govuk-!-font-size-24">{{item.attributes.Title}}</a>
+      </p>
+      <p class="govuk-body-s govuk-u-margin-top-1">{{item.attributes.Lede}}</p>
+      <p class="govuk-body-s">Published: {% if post.attributes.Publication_date %}
+        {{ item.attributes.Publication_date | date('D MMMM YYYY')}}
+        {% else %}
+        {{ item.attributes.publishedAt | date('D MMMM YYYY')}}
+        {% endif %}</p>
+    </li>
+    {% endif %}
+    {% endfor %}
+  </ul>
+  {% else %}
+  <p>Your search - <span class="govuk-!-font-weight-bold">{{query}}</span> - had no matching results.</p>
+  <p>Improve your search results by:</p>
+  <ul>
+    <li>double-checking your spelling</li>
+    <li>using fewer keywords</li>
+    <li>searching for something less specific</li>
+  </ul>
+  {% endif %}
+
+</article>
+
+{% endblock %}

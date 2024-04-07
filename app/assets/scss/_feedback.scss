@@ -1,0 +1,31 @@
+.dfe-feedback-banner {
+    background-color: #f3f2f1;
+    border: 1px solid $govuk-border-colour;
+    margin-bottom: 30px;
+    .dfe-feedback-banner--content {
+        padding: 20px 15px;
+        .dfe-feedback-banner--content-questions {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            .dfe-feedback-banner--content-question {
+                display: flex;
+                align-items: center;
+                h2 {
+                    margin-right: 20px;
+                    margin-bottom: 0;
+                }
+            }
+            .govuk-button-group, .govuk-button {
+                margin-bottom: 0;
+            }
+        }
+        .govuk-button--secondary {
+            background: #ffffff !important;
+        }
+        .dfe-feedback-banner--content-message[hidden] {
+            display: none !important;
+        }
+    }
+}

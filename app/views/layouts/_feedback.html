@@ -1,0 +1,110 @@
+<section>
+    <div class="dfe-width-container">
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-full">
+                <div class="dfe-feedback-banner">
+                    <div class="dfe-feedback-banner--content">
+                        <form id="feedbackForm" action="/form-response/helpful" method="post">
+                            <div class="dfe-feedback-banner--content-questions">
+                                <div class="dfe-feedback-banner--content-question" id="questionForm">
+                                    <h2 class="govuk-heading-s dfe-feedback-banner--content-question-text">Is this page
+                                        useful?</h2>
+                                    <div class="govuk-button-group">
+                                        <button type="button" class="govuk-button govuk-button--secondary" value="Yes"
+                                            data-module="govuk-button" onclick="submitFeedback('Yes')">Yes</button>
+                                        <button type="button" class="govuk-button govuk-button--secondary" value="No"
+                                            data-module="govuk-button" onclick="submitFeedback('No')">No</button>
+                                    </div>
+                                </div>
+                                <div class="dfe-feedback-banner--content-message" id="thanksMessage" hidden>Thank you
+                                    for your feedback</div>
+                                <div class="dfe-feedback-banner--content-problem" id="problemButton">
+                                    <button type="button" class="govuk-button govuk-button--secondary"
+                                        data-module="govuk-button">Give feedback about this page</button>
+                                </div>
+                            </div>
+                        </form>
+                        <div class="dfe-feedback-panel" id="feedback-panel" style="display: none;" aria-hidden="true">
+                            <form id="feedback-form">
+                                <h2 class="govuk-heading-m">Give feedback about this page</h2>
+                                <div class="govuk-character-count" data-module="govuk-character-count"
+                                    data-maxlength="200">
+                                    <textarea class="govuk-textarea govuk-js-character-count" id="feedback_form_input"
+                                        name="feedback_form_input" rows="5"
+                                        aria-describedby="feedback_form_input-hint"></textarea>
+                                    <div id="feedback_form_input-info"
+                                        class="govuk-hint govuk-character-count__message">You can enter up to 200
+                                        characters</div>
+                                </div>
+                                <div class="govuk-button-group">
+                                    <button class="govuk-button" data-module="govuk-button" type="submit">Submit</button>
+                                    <button class="govuk-button govuk-button--secondary" type="button" data-module="govuk-button"
+                                        id="cancelButton">Cancel</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const problemButton = document.getElementById('problemButton').querySelector('button');
+        const cancelButton = document.getElementById('cancelButton');
+    
+        problemButton.addEventListener('click', function () {
+            document.getElementById('feedback-panel').style.display = 'block';
+            document.getElementById('questionForm').style.display = 'none';
+            problemButton.style.display = 'none';
+        });
+    
+        cancelButton.addEventListener('click', function() {
+            document.getElementById('feedback-panel').style.display = 'none';
+            document.getElementById('questionForm').style.display = 'flex'; // Change this to the original display style of questionForm
+            problemButton.style.display = 'block'; // Show the problemButton again
+            document.getElementById('thanksMessage').hidden = true; // Hide the thanksMessage if it was showing
+        });
+    
+        document.getElementById('feedbackForm').addEventListener('submit', function (event) {
+            event.preventDefault();
+        });
+    
+        document.getElementById('feedback-form').addEventListener('submit', function (event) {
+            event.preventDefault();
+            const feedback = document.getElementById('feedback_form_input').value;
+            submitDetailedFeedback(feedback);
+        });
+    });
+    
+    function submitFeedback(response, endpoint = 'helpful') {
+        fetch(`/form-response/${endpoint}`, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'X-Requested-With': 'XMLHttpRequest'
+            },
+            body: JSON.stringify({ response: response }),
+        })
+        .then(response => response.json())
+        .then(data => {
+            console.log('Success:', data);
+            document.getElementById('thanksMessage').hidden = false;
+            if (endpoint === 'helpful') {
+                document.getElementById('questionForm').style.display = 'none';
+            } else {
+                document.getElementById('feedback-panel').style.display = 'none';
+            }
+        })
+        .catch((error) => {
+            console.error('Error:', error);
+        });
+    }
+    
+    function submitDetailedFeedback(feedback) {
+        submitFeedback(feedback, 'feedback');
+    }
+    
+</script>

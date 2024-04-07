@@ -1,0 +1,24 @@
+{% set x = [
+  {
+    title: "x",
+    url: "/"
+  }
+] %}
+
+
+
+
+<nav class="dfe-vertical-nav">
+
+  {%- if selectedNav === "" %}
+    <ul class="dfe-vertical-nav__section">
+      {% for item in x %}
+        <li class="dfe-vertical-nav__section-item {% if item.title === pageName  or setSelectedSideNav === item.title %}dfe-vertical-nav__section-item--current{% endif %}">
+          <a class="dfe-vertical-nav__link" href="{{ item.url }}">{{ item.title }}</a>
+        </li>
+      {% endfor %}
+    </ul>
+
+  {% endif %}
+
+</nav>

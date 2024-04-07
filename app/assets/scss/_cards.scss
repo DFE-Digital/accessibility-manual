@@ -1,0 +1,232 @@
+.dfe-manual-card-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    /* Creates a gap of 30px between the cards */
+    list-style: none;
+    margin: 0;
+    /* Resets default margin */
+    padding: 0;
+    /* Resets default padding */
+    align-items: stretch;
+    /* Ensures cards stretch to fill the container height */
+    margin-bottom: 40px;
+}
+
+.dfe-manual-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* Distributes space inside the card */
+    box-sizing: border-box;
+    /* Ensures padding and border are included in the width */
+    background-color: govuk-colour("white");
+    border: 1px solid $govuk-border-colour;
+    padding: govuk-spacing(6);
+    flex: 1 0 auto;
+    /* Adds flexibility and ensures cards can grow to fill space */
+
+    h2,
+    h3 {
+        margin-bottom: govuk-spacing(2);
+    }
+
+    h2 a,
+    h3 a {
+        text-decoration: none;
+    }
+
+}
+
+.dfe-manual-card--full {
+    width: calc(100% - 40px);
+    /* Adjusts for gap to ensure full width */
+}
+
+.dfe-manual-card--one-half {
+    width: calc(50% - 20px);
+    /* Adjusts for gap to ensure 50% width */
+}
+
+.dfe-manual-card--one-third {
+    width: calc(33.333% - 40px);
+    /* Adjusts for gap to ensure 33.33% width */
+}
+
+.dfe-manual-card--one-quarter {
+    width: calc(25% - 22.5px);
+    /* Adjusts for gap to ensure 25% width */
+}
+
+@media (max-width: 768px) {
+
+    .dfe-manual-card--one-half,
+    .dfe-manual-card--one-third,
+    .dfe-manual-card--one-quarter {
+        width: calc(100% - 30px);
+        /* Makes all cards full width on smaller screens */
+    }
+}
+
+
+/* Resetting bottom margin and padding for the last child of dfe-manual-card */
+.dfe-manual-card>*:last-child {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    margin-top: auto;
+
+}
+
+.dfe-manual-card--white {
+    background-color: $color_dfe-white;
+}
+
+.dfe-manual-card--no-padding {
+    padding: govuk-spacing(0);
+}
+
+
+
+
+
+
+.dfe-grid-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+@include govuk-media-query($from: tablet) {
+    .dfe-grid-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        gap: 30px;
+    }
+}
+
+.dfe-grid-container--hero-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    /* First column is twice as wide as the others */
+    grid-auto-rows: minmax(100px, auto);
+    /* Adjust the minimum row height as needed */
+    gap: 30px;
+    /* Adjust the gap between the cards */
+    margin-bottom: 30px;
+}
+
+.dfe-grid-container--hero-grid>.dfe-card:first-child {
+    grid-row: span 2;
+    /* Makes the first card span 2 rows */
+    max-width: 800px;
+}
+
+.dfe-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    background-color: govuk-colour("white");
+    border: 1px solid $govuk-border-colour;
+    max-width: 400px;
+
+}
+
+
+
+.dfe-card--blog-card {
+    border-radius: 12px 12px 0 0;
+
+    img {
+        border-radius: 12px 12px 0 0;
+    }
+}
+
+.dfe-card--plain {
+    background-color: transparent;
+    border-bottom: none;
+}
+
+.dfe-card--raised:hover,
+.dfe-card--raised:focus {
+    transition: box-shadow 200ms ease 0s;
+    border-bottom: none;
+    border-radius: 0;
+    box-shadow: rgba(60, 64, 67, 0.2) 0px 1px 2px 0px, rgba(60, 64, 67, 0.2) 0px 2px 6px 2px;
+}
+
+@include govuk-media-query($until: tablet) {
+    .dfe-card {
+        max-width: 100%;
+    }
+}
+
+.dfe-card>picture,
+.dfe-card>picture>img {
+    max-width: 100%;
+}
+
+.dfe-card-container {
+    padding: govuk-spacing(6);
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+
+
+    .dfe-card-meta {
+        margin-top: auto;
+
+        p {
+            margin-bottom: 0px;
+        }
+
+        p:last-child {
+            margin-top: 5px;
+        }
+    }
+
+
+
+}
+
+.dfe-card:hover,
+.dfe-card:focus-within {
+    background-color: $color_dfe-blue;
+}
+
+.dfe-card:hover a,
+.dfe-card:focus-within a,
+.dfe-card:hover p,
+.dfe-card:focus-within p,
+.dfe-card:hover .govuk-heading-m,
+.dfe-card:focus-within .govuk-heading-m {
+    color: $color_dfe-white;
+}
+
+.dfe-card:focus-within {
+    outline: 3px solid $color_dfe-yellow;
+}
+
+.dfe-card-container .dfe-card-link--retake:focus,
+.dfe-card-container .dfe-card-link--header:focus {
+    color: $color_dfe-black;
+}
+
+.dfe-card-link--retake {
+    position: relative;
+    z-index: 2;
+}
+
+.dfe-card-link--header {
+    text-decoration: none;
+    color: $color_dfe-secondary-blue;
+}
+
+.dfe-card-link--header:after {
+    position: absolute;
+    content: "";
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+}
