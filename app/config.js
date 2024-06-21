@@ -7,7 +7,7 @@ module.exports = {
   env: process.env.NODE_ENV || 'development',
 
   // Port to run local development server on
-  port: process.env.PORT || 3066,
+  port: process.env.PORT || 3411,
   githubrepo: 'https://github.com/DFE-Digital/accessibility-manual',
 
   assetPath: process.env.assetPath

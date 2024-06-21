@@ -1,0 +1,68 @@
+{% extends "layouts/full.html" %}
+
+{% set selectedNav = "Best practice" %}
+{% set pageName = "Best practice" %}
+{% set pageDescription = "Understanding best practice when it comes to accessibility."%}
+{% set setSelectedSideNav = "Overview" %}
+
+
+{% block hero %}
+<section class="dfe-page-header ">
+    <div class="govuk-width-container">
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-two-thirds">
+                <h1 class="govuk-heading-xl govuk-!-margin-top-5">{{pageName}}</h1>
+                <p class="govuk-body-l">{{pageDescription}}</p>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
+
+
+
+{% block content %}
+
+<div class="govuk-width-container">
+    <div class="govuk-grid-row">
+
+        <div class="govuk-grid-column-full">
+
+
+<div class="dfe-grid-container">
+    <div class="dfe-card">
+        <div class="dfe-card-container">
+            <h3 class="govuk-heading-m">
+                <a href="/best-practice/images" class="govuk-link govuk-link--no-visited-state dfe-card-link--header">Images</a>
+            </h3>
+            <p>Learn how to ensure images are accessible, including providing text alternatives and apply contrast ratios.</p>
+        </div>
+    </div>
+    <div class="dfe-card">
+        <div class="dfe-card-container">
+            <h3 class="govuk-heading-m">
+                <a href="/best-practice/forms" class="govuk-link govuk-link--no-visited-state dfe-card-link--header">Forms</a>
+            </h3>
+            <p>Discover the criteria for making forms accessible, including proper labeling and instructions for inputs.</p>
+        </div>
+    </div>
+
+    <div class="dfe-card">
+        <div class="dfe-card-container">
+            <h3 class="govuk-heading-m">
+                <a href="/best-practice/content" class="govuk-link govuk-link--no-visited-state dfe-card-link--header">Content</a>
+            </h3>
+            <p>Learn how to make content understandable and help people find the information they need.</p>
+        </div>
+    </div>
+</div>
+
+            
+     
+
+        </div>
+    </div>
+</div>
+
+
+{% endblock %}

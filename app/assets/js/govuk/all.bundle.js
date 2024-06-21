@@ -4,7 +4,7 @@
   (global = typeof globalThis !== 'undefined' ? globalThis : global || self, factory(global.GOVUKFrontend = {}));
 })(this, (function (exports) { 'use strict';
 
-  const version = '5.3.0';
+  const version = '5.3.1';
 
   function normaliseString(value, property) {
     const trimmedValue = value ? value.trim() : '';
@@ -1232,7 +1232,7 @@
         return;
       }
       const $target = document.getElementById(targetId);
-      if ($target && $target.classList.contains('govuk-checkboxes__conditional')) {
+      if ($target != null && $target.classList.contains('govuk-checkboxes__conditional')) {
         const inputIsChecked = $input.checked;
         $input.setAttribute('aria-expanded', inputIsChecked.toString());
         $target.classList.toggle('govuk-checkboxes__conditional--hidden', !inputIsChecked);

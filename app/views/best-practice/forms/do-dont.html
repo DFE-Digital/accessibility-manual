@@ -1,0 +1,206 @@
+{% extends "layouts/content-with-sidenav-left.html" %}
+
+{% set selectedNav = "Best practice" %}
+{% set pageName = "Do's and Don'ts" %}
+{% set pageDescription = "Understand how to apply best practice to forms when it comes to accessibility."%}
+
+
+
+{% block hero %}
+<section class="dfe-page-header ">
+    <div class="govuk-width-container">
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-two-thirds">
+                <div class="govuk-breadcrumbs">
+                    <ol class="govuk-breadcrumbs__list">
+                      <li class="govuk-breadcrumbs__list-item">
+                        <a class="govuk-breadcrumbs__link" href="/">Home</a>
+                      </li>
+                      <li class="govuk-breadcrumbs__list-item">
+                        <a class="govuk-breadcrumbs__link" href="/best-practice">Best practice</a>
+                      </li>
+                      <li class="govuk-breadcrumbs__list-item">
+                        <a class="govuk-breadcrumbs__link" href="/best-practice/forms">Forms</a>
+                      </li>
+                    </ol>
+                  </div>
+                <h1 class="govuk-heading-xl govuk-!-margin-top-5">Form {{pageName | lower}}</h1>
+                <p class="govuk-body-l">{{pageDescription}}</p>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
+
+
+
+{% block content %}
+
+{# Introduce the page of do and don't when it comes to forms #}
+
+<p>Things to avoid when designing forms.</p>
+
+<h2 class="govuk-heading-m">Descriptive error messages</h2>
+
+<div class="govuk-grid-row dfe-flex">
+    <div class="govuk-grid-column-one-half dfe-flex-item">
+        <div class="dfe-panel-do">
+            <h3 class="govuk-heading-s">Do</h3>
+            <img src="/assets/images/error-description-do.png" style="width:100%;" class="govuk-!-margin-bottom-5"
+                alt="Do">
+            <p class="govuk-!-margin-bottom-0">Use descriptive error messages that explain what the problem is and how
+                to fix it.</p>
+        </div>
+    </div>
+    <div class="govuk-grid-column-one-half dfe-flex-item">
+        <div class="dfe-panel-dont">
+            <h3 class="govuk-heading-s">Don't</h3>
+            <img src="/assets/images/error-description-dont.png" style="width:100%;" class="govuk-!-margin-bottom-5"
+                alt="Dont">
+            <p class="govuk-!-margin-bottom-0">Don't use generic error messages that are ambiguous.</p>
+        </div>
+    </div>
+</div>
+
+<h2 class="govuk-heading-m">Formatting of values</h2>
+
+<div class="govuk-grid-row dfe-flex">
+    <div class="govuk-grid-column-one-half dfe-flex-item">
+        <div class="dfe-panel-do">
+            <h3 class="govuk-heading-s">Do</h3>
+            <img src="/assets/images/error-format-do.png" style="width:100%;" class="govuk-!-margin-bottom-5" alt="Do">
+            <p class="govuk-!-margin-bottom-0">Help users understand the expected format of an input.</p>
+        </div>
+    </div>
+    <div class="govuk-grid-column-one-half dfe-flex-item">
+        <div class="dfe-panel-dont">
+            <h3 class="govuk-heading-s">Don't</h3>
+            <img src="/assets/images/error-format-dont.png" style="width:100%;" class="govuk-!-margin-bottom-5"
+                alt="Dont">
+            <p class="govuk-!-margin-bottom-0">Don't use technical terminology the user might not understand.</p>
+        </div>
+    </div>
+</div>
+
+
+
+<h2 class="govuk-heading-m">Link errors to inputs</h2>
+
+<div class="govuk-grid-row dfe-flex">
+    <div class="govuk-grid-column-one-half">
+     
+        <img src="/assets/images/error-link-do.png" style="width:100%; " class="govuk-!-margin-bottom-5" alt="Do">
+          <h3 class="govuk-heading-s"><strong class="govuk-tag govuk-tag--green">Do</strong></h3> <p class="govuk-!-margin-bottom-0">Linking the error message to the input makes it easier to find.</p>
+
+    </div>
+    <div class="govuk-grid-column-one-half">
+
+      
+        <img src="/assets/images/error-link-dont.png" style="width:100%; " class="govuk-!-margin-bottom-5" alt="Dont">
+         <h3 class="govuk-heading-s"><strong class="govuk-tag govuk-tag--red">Don't</strong></h3> <p class="govuk-!-margin-bottom-0">Missing links make it harder to find the problem if there are multiple
+            inputs on a page.</p>
+
+    </div>
+</div>
+
+<h2 class="govuk-heading-m">Database errors</h2>
+
+<div class="govuk-grid-row dfe-flex">
+    <div class="govuk-grid-column-one-half">
+     
+        <img src="/assets/images/error-db-do.png" style="width:100%; " class="govuk-!-margin-bottom-5" alt="Do">
+          <h3 class="govuk-heading-s"><strong class="govuk-tag govuk-tag--green">Do</strong></h3> <p class="govuk-!-margin-bottom-0">Show a friendly error which helps the user understand the problem and how to fix it.</p>
+
+    </div>
+    <div class="govuk-grid-column-one-half">
+
+      
+        <img src="/assets/images/error-db-dont.png" style="width:100%; " class="govuk-!-margin-bottom-5" alt="Dont">
+         <h3 class="govuk-heading-s"><strong class="govuk-tag govuk-tag--red">Don't</strong></h3> <p class="govuk-!-margin-bottom-0">Don't expose server or database errors which contain information which can be used by a hacker.</p>
+
+    </div>
+</div>
+
+<h2 class="govuk-heading-m">Error summary and field error messages</h2>
+
+<div class="govuk-grid-row dfe-flex">
+    <div class="govuk-grid-column-one-half">
+     
+        <img src="/assets/images/error-label-do.png" style="width:100%; " class="govuk-!-margin-bottom-5" alt="Do">
+          <h3 class="govuk-heading-s"><strong class="govuk-tag govuk-tag--green">Do</strong></h3> <p class="govuk-!-margin-bottom-0">Ensure the error message in the summary and the field match.</p>
+
+    </div>
+    <div class="govuk-grid-column-one-half">
+
+      
+        <img src="/assets/images/error-label-dont.png" style="width:100%; " class="govuk-!-margin-bottom-5" alt="Dont">
+         <h3 class="govuk-heading-s"><strong class="govuk-tag govuk-tag--red">Don't</strong></h3> <p class="govuk-!-margin-bottom-0">Don't have different messages or generic messages as it could confuse the user.</p>
+
+    </div>
+</div>
+
+
+<h2 class="govuk-heading-m">Optional fields</h2>
+
+<div class="govuk-grid-row dfe-flex">
+    <div class="govuk-grid-column-one-half">
+     
+        <img src="/assets/images/forms-optional-do.png" style="width:100%; " class="govuk-!-margin-bottom-5" alt="Do">
+          <h3 class="govuk-heading-s"><strong class="govuk-tag govuk-tag--green">Do</strong></h3> <p class="govuk-!-margin-bottom-0">Tell users if a field is optional using hint text.</p>
+
+    </div>
+    <div class="govuk-grid-column-one-half">
+
+      
+        <img src="/assets/images/forms-optional-dont.png" style="width:100%; " class="govuk-!-margin-bottom-5" alt="Dont">
+         <h3 class="govuk-heading-s"><strong class="govuk-tag govuk-tag--red">Don't</strong></h3> <p class="govuk-!-margin-bottom-0">Don't make it ambigous as users could enter "Not applicable" which would lead to data issues.</p>
+
+    </div>
+</div>
+
+
+
+
+<style>
+    .dfe-flex {
+        display: flex;
+        margin-bottom: 60px;
+
+    }
+
+    .dfe-flex-item {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .dfe-panel-do,
+    .dfe-panel-dont {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .dfe-panel-do img,
+    .dfe-panel-dont img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .dfe-panel-do {
+        background-color: rgba(74, 195, 128, 0.1);
+        padding: 20px;
+        border-top: 8px solid rgba(0, 130, 59, 1);
+    }
+
+    .dfe-panel-dont {
+        background-color: rgba(207, 93, 104, 0.1);
+        padding: 20px;
+        border-top: 8px solid rgba(177, 14, 30, 1);
+    }
+
+    
+</style>
+
+
+{% endblock %}

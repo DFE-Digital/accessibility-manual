@@ -1,0 +1,313 @@
+{% extends "layouts/homepage.html" %}
+
+{% set selectedNav = "Home" %}
+{% set pageName = "Digital accessibility and inclusivity manual" %}
+{% set pageDescription = "Everything you need to ensure we create accessible, inclusive products and services."%}
+
+{% set mainClasses = "govuk-!-padding-top-0" %}
+
+{% block hero %}
+<section class="dfe-page-hero">
+   <div class="govuk-width-container">
+      <div class="govuk-grid-row">
+         <div class="govuk-grid-column-two-thirds">
+            <h1 class="govuk-heading-xl govuk-!-font-size-80">{{pageName}}</h1>
+            <p class="govuk-body-l">{{pageDescription}}</p>
+         </div>
+      </div>
+   </div>
+</section>
+{% endblock %}
+
+{% block content %}
+
+{# <section class="dfe-page-header govuk-!-padding-top-9 govuk-!-padding-bottom-9">
+   <div class="govuk-width-container">
+      <div class="govuk-grid-row">
+         <div class="govuk-grid-column-full">
+            <h2 class="govuk-heading-l">How many people?</h2>
+         </div>
+         <div class="govuk-grid-column-one-half">
+            <p class="govuk-body govuk-body-l govuk-!-margin-bottom-3">Estimate how many people might have a disability
+               or impairment which might impact how they use your service.</p>
+            <p class="govuk-body govuk-!-margin-bottom-4"><a href="">More about this tool</a>.</p>
+         </div>
+         <div class="govuk-grid-column-one-half">
+            <form action="https://design.education.gov.uk/tools/how-many-users" method="post"> <label
+                  class="govuk-label govuk-label--m" for="numberOfUsers">
+                  Number of people
+               </label>
+               <div class="govuk-form-group-inline">
+
+                  <input class="govuk-input" id="numberOfUsers" name="numberOfUsers" type="text" value=""
+                     spellcheck="false" data-ms-editor="true">
+                  <button class="govuk-button govuk-button-fix" data-module="govuk-button">
+                     Calculate
+                  </button>
+               </div>
+            </form>
+         </div>
+      </div>
+   </div>
+</section> #}
+
+{# <div class="govuk-grid-row">
+   <div class="govuk-grid-column-full">
+      <h3 class="govuk-heading-m">Understand and manage issues</h3>
+   </div>
+   <div class="govuk-grid-column-one-half">
+      <p>Understand the common accessibility issues in services and how to prevent and manage them.</p>
+      <ul class="govuk-list govuk-list--spaced">
+         <li><a href="/">Top accessibility failures</a></li>
+         <li><a href="/">How to prioritise issues</a></li>
+         <li><a href="/">Something else</a></li>
+      </ul>
+   </div>
+   <div class="govuk-grid-column-one-half">
+      <div class="dfe-panel govuk-!-margin-top-2">
+         <h3 class="govuk-heading-s">Accessibility statement service</h3>
+         <p>Use our service to track accessibility issues and generate an accurate accessibility statement.</p>
+         <p class="govuk-!-margin-bottom-0"><a href="/tools/proposition-checker" class="govuk-link">Use the
+               tool </a></p>
+      </div>
+   </div>
+</div> #}
+
+<div class="govuk-width-container govuk-!-margin-top-7">
+   <div class="govuk-grid-row">
+      <div class="govuk-grid-column-full">
+         <h2 class="govuk-heading-l">Understand accessibility</h2>
+         <p class="govuk-body-l">Your starting point for why accessibility is important and the impact good and bad
+            accessibility practices have on users of our services.</p>
+      </div>
+   </div>
+   <div class="dfe-grid-container">
+      <div class="dfe-card">
+         <div class="dfe-card-container">
+            <h3 class="govuk-heading-m">
+               <a href="#" class="govuk-link govuk-link--no-visited-state dfe-card-link--header">How many people</a>
+            </h3>
+            <p>Estimate how many people might have a disability, condition, or impairment which might impact how they
+               use our services.</p>
+         </div>
+      </div>
+      <div class="dfe-card">
+         <div class="dfe-card-container">
+            <h3 class="govuk-heading-m">
+               <a href="#" class="govuk-link govuk-link--no-visited-state dfe-card-link--header">Why we do it</a>
+            </h3>
+            <p>Ensuring accessibility mitigates legal risks and upholds our responsibility to support all users in
+               accessing our services.</p>
+         </div>
+      </div>
+      <div class="dfe-card">
+         <div class="dfe-card-container">
+            <h3 class="govuk-heading-m">
+               <a href="#" class="govuk-link govuk-link--no-visited-state dfe-card-link--header">Benefits</a>
+            </h3>
+            <p>Enhanced usability for everyone, ensuring inclusive access, and upholding ethical standards.</p>
+         </div>
+      </div>
+   </div>
+</div>
+
+<div class="govuk-width-container govuk-!-margin-top-7">
+   <div class="govuk-grid-row">
+      <div class="govuk-grid-column-full">
+         <h2 class="govuk-heading-l">Awareness for everyone</h2>
+         <p class="govuk-body-l">Accessibility is everyones responsibility, so it's important to understand
+            accessibility is enshrined in law.</p>
+
+      </div>
+   </div>
+   <div class="dfe-grid-container">
+      <div class="dfe-card">
+         <div class="dfe-card-container">
+            <h3 class="govuk-heading-m">
+               <a href="#" class="govuk-link govuk-link--no-visited-state dfe-card-link--header">Principles</a>
+            </h3>
+            <p>The four key principles of accessibility and applying them in your project.</p>
+         </div>
+      </div>
+      <div class="dfe-card">
+         <div class="dfe-card-container">
+            <h3 class="govuk-heading-m">
+               <a href="#" class="govuk-link govuk-link--no-visited-state dfe-card-link--header">Regulations</a>
+            </h3>
+            <p>The legal requirements we must meet and understanding the risk and impact of not doing so.</p>
+         </div>
+      </div>
+      <div class="dfe-card">
+         <div class="dfe-card-container">
+            <h3 class="govuk-heading-m">
+               <a href="#" class="govuk-link govuk-link--no-visited-state dfe-card-link--header">Getting an audit</a>
+            </h3>
+            <p>There are different ways to procure an audit, each way is appropriate dependent
+               on the type of service you are building.</p>
+         </div>
+      </div>
+      <div class="dfe-card">
+         <div class="dfe-card-container">
+            <h3 class="govuk-heading-m">
+               <a href="#" class="govuk-link govuk-link--no-visited-state dfe-card-link--header">Talk to DesignOps</a>
+            </h3>
+            <p>The team can help with issues around audits, help you plan, provide guidance and advice,
+               come to your profession time or team meetings.</p>
+         </div>
+      </div>
+   </div>
+</div>
+
+<div class="govuk-width-container govuk-!-margin-top-7">
+   <div class="govuk-grid-row">
+      <div class="govuk-grid-column-full">
+         <h2 class="govuk-heading-l">Decision makers and service owners</h2>
+         <p class="govuk-body-l">As a service owner or decision maker in a team, you have additional responsibilites
+            when it comes to complying with requirements.</p>
+
+      </div>
+   </div>
+   <div class="dfe-grid-container">
+      <div class="dfe-card">
+         <div class="dfe-card-container">
+            <h3 class="govuk-heading-m">
+               <a href="#" class="govuk-link govuk-link--no-visited-state dfe-card-link--header">Roles and
+                  responsibilites</a>
+            </h3>
+            <p>Accessibility is everyones responsibility and some roles have more responsibility than others.</p>
+         </div>
+      </div>
+      <div class="dfe-card">
+         <div class="dfe-card-container">
+            <h3 class="govuk-heading-m">
+               <a href="#" class="govuk-link govuk-link--no-visited-state dfe-card-link--header">Getting an audit</a>
+            </h3>
+            <p>There are different ways to procure an audit, each way is appropriate dependent
+               on the type of service you are building.</p>
+         </div>
+      </div>
+      <div class="dfe-card">
+         <div class="dfe-card-container">
+            <h3 class="govuk-heading-m">
+               <a href="#" class="govuk-link govuk-link--no-visited-state dfe-card-link--header">Accessibility statements</a>
+            </h3>
+            <p>Your service is legally required to have an accessibility statement that is accurate and regularly updated.</p>
+         </div>
+      </div>
+      <div class="dfe-card">
+         <div class="dfe-card-container">
+            <h3 class="govuk-heading-m">
+               <a href="#" class="govuk-link govuk-link--no-visited-state dfe-card-link--header">Prioritise</a>
+            </h3>
+            <p>Ensuring issues are resolved promptly and techniques for prioritising resolving accessibility issues.</p>
+         </div>
+      </div>
+      <div class="dfe-card">
+         <div class="dfe-card-container">
+            <h3 class="govuk-heading-m">
+               <a href="#" class="govuk-link govuk-link--no-visited-state dfe-card-link--header">Remediate</a>
+            </h3>
+            <p>Correct the issue, test it, and validate it.</p>
+         </div>
+      </div>
+      <div class="dfe-card">
+         <div class="dfe-card-container">
+            <h3 class="govuk-heading-m">
+               <a href="#" class="govuk-link govuk-link--no-visited-state dfe-card-link--header">Monitor</a>
+            </h3>
+            <p>How to monitor issues, ensure accessibility statements are updated and share issues in the open for
+               others to learn from.</p>
+         </div>
+      </div>
+   </div>
+</div>
+
+<div class="govuk-width-container govuk-!-margin-top-7">
+   <div class="govuk-grid-row">
+      <div class="govuk-grid-column-full">
+         <h2 class="govuk-heading-l">Delivery teams</h2>
+         <p class="govuk-body-l">TK</p>
+
+      </div>
+   </div>
+   <div class="dfe-grid-container">
+      <div class="dfe-card">
+         <div class="dfe-card-container">
+            <h3 class="govuk-heading-m">
+               <a href="#" class="govuk-link govuk-link--no-visited-state dfe-card-link--header">Testing with users</a>
+            </h3>
+            <p>Understand who your users are and identify those most at risk of exclusion.</p>
+         </div>
+      </div>
+      <div class="dfe-card">
+         <div class="dfe-card-container">
+            <h3 class="govuk-heading-m">
+               <a href="#" class="govuk-link govuk-link--no-visited-state dfe-card-link--header">Testing tools</a>
+            </h3>
+            <p>A range of tools and methods to test your products and services, how to use them and understand the results.</p>
+         </div>
+      </div>
+      <div class="dfe-card">
+         <div class="dfe-card-container">
+            <h3 class="govuk-heading-m">
+               <a href="#" class="govuk-link govuk-link--no-visited-state dfe-card-link--header">Design systems</a>
+            </h3>
+            <p>Ensure that the team understands the design system and how it is not guaranteed to create an accessible
+               service.</p>
+         </div>
+      </div>
+      <div class="dfe-card">
+         <div class="dfe-card-container">
+            <h3 class="govuk-heading-m">
+               <a href="#" class="govuk-link govuk-link--no-visited-state dfe-card-link--header">Iterating your service</a>
+            </h3>
+            <p>When your iterating your service, ensure accessibility is at the forefront of your thinking.</p>
+         </div>
+      </div>
+    
+   </div>
+</div>
+
+
+<div class="govuk-width-container govuk-!-margin-top-7">
+   <div class="govuk-grid-row">
+      <div class="govuk-grid-column-full">
+         <h2 class="govuk-heading-l">Learning and development</h2>
+         <p class="govuk-body-l">TK</p>
+
+      </div>
+   </div>
+   <div class="dfe-grid-container">
+      <div class="dfe-card">
+         <div class="dfe-card-container">
+            <h3 class="govuk-heading-m">
+               <a href="#" class="govuk-link govuk-link--no-visited-state dfe-card-link--header">Training and learning</a>
+            </h3>
+            <p>Training courses, learning and development, including mandatory training for all staff and contractors.</p>
+         </div>
+      </div>
+      <div class="dfe-card">
+         <div class="dfe-card-container">
+            <h3 class="govuk-heading-m">
+               <a href="#" class="govuk-link govuk-link--no-visited-state dfe-card-link--header">Champions scheme</a>
+            </h3>
+            <p>Who the department accessibility champions are, how they can help and the champions scheme.</p>
+         </div>
+      </div>
+
+      <div class="dfe-card">
+         <div class="dfe-card-container">
+            <h3 class="govuk-heading-m">
+               <a href="#" class="govuk-link govuk-link--no-visited-state dfe-card-link--header">Work in the open</a>
+            </h3>
+            <p>The best way to learn is to work in the open, share issues with other, and how you've approached accessibility in your service.</p>
+         </div>
+      </div>
+
+    
+   </div>
+</div>
+
+
+
+{% endblock %}

@@ -1,0 +1,58 @@
+{% extends "layouts/collection.html" %}
+
+{% set selectedNav = "Guidance" %}
+{% set pageName = "Guidance" %}
+{% set pageDescription = "Guidance for doing things the right way"%}
+
+{% set collections = [
+
+{
+"title": "Accessibility statements",
+"description": "Guidance and templates for accessibility statements",
+"url": "/guidance/accessibility-statements"
+}, {
+"title": "Audits",
+"description": "Guidance on how to get an audit of your product or service",
+"url": "/audits"
+}
+] %}
+
+
+{% block hero %}
+<section class="dfe-page-header ">
+    <div class="govuk-width-container">
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-two-thirds">
+                <h1 class="govuk-heading-xl govuk-!-margin-top-8">{{pageName}}</h1>
+                <p class="govuk-body-l">{{pageDescription}}</p>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
+
+
+
+{% block content %}
+<div class="govuk-width-container">
+    <div class="govuk-grid-row">
+        <div class="govuk-grid-column-full">
+
+            <div class="dfe-grid-container">
+                {% for collection in collections %}
+                <div class="dfe-card">
+                    <div class="dfe-card-container">
+                        <h3 class="govuk-heading-m">
+                            <a href="{{collection.url}}"
+                                class="govuk-link govuk-link--no-visited-state dfe-card-link--header">{{collection.title}}</a>
+                        </h3>
+                        <p>{{collection.description}}</p>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+
+        </div>
+    </div>
+</div>
+{% endblock %}

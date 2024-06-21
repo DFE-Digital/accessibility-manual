@@ -1,0 +1,87 @@
+{% extends "layouts/full.html" %}
+
+{% set selectedNav = "WCAG" %}
+{% set pageName = "WCAG" %}
+{% set pageDescription = ""%}
+{% set setSelectedSideNav = "Overview" %}
+
+
+{% block hero %}
+<section class="dfe-page-header ">
+    <div class="govuk-width-container">
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-two-thirds">
+                <h1 class="govuk-heading-xl govuk-!-margin-top-5">{{pageName}}</h1>
+                <p class="govuk-body-l">{{pageDescription}}</p>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
+
+
+
+{% block content %}
+
+<div class="govuk-width-container">
+    <div class="govuk-grid-row">
+
+        <div class="govuk-grid-column-full">
+            <h2 class="govuk-heading-l">Get help understanding criteria</h2>
+
+            <div class="controls"><p>View: <a href="/wcag">Without criteria</a> | <a href="/wcag/detailed" class="selected-link">With criteria</a></p></div>
+
+            <div class="govuk-grid-row">
+                <div class="govuk-grid-column-one-third">
+                    <h3 class="govuk-heading-m">Images</h3>
+                    <p>Learn how to ensure images are accessible, including providing text alternatives and apply contrast ratios.</p>  
+                    <h4 class="govuk-heading-s">Relevant criteria</h4>
+                    <ul class="govuk-list">
+                        <li><a href="/wcag/111">1.1.1 - Non Text content (A)</a></li>
+                        <li><a href="/wcag/111">1.4.2 - Contrast minimum (AA)</a></li>
+                        <li><a href="/wcag/111">1.4.5 - Images of text (AA)</a></li>
+                        <li><a href="/wcag/111">1.4.9 - Images of text (no exceptions) (AAA)</a></li>
+                    </ul>
+                    <p><a href="">Best practice for images</a></p>
+                </div>
+                <div class="govuk-grid-column-one-third">
+                    <h3 class="govuk-heading-m">Forms</h3>
+                    <p>Discover the criteria for making forms accessible, including proper labeling and instructions for inputs.</p>
+                    <h4 class="govuk-heading-s">Relevant criteria</h4>
+                    <ul class="govuk-list">
+                        <li><a href="/wcag/111">1.3.5 - Input purpose (AA)</a></li>
+                        <li><a href="/wcag/111">2.4.6 - Headings and labels (AA)</a></li>
+                    </ul>
+                    <p><a href="">Best practice for forms</a></p>
+                </div>
+
+                <div class="govuk-grid-column-one-third">
+                <h3 class="govuk-heading-m">Content</h3>
+                    <p>Learn how to make content understandable and help people find the information they need.</p>
+                    <h4 class="govuk-heading-s">Relevant criteria</h4>
+                    <ul class="govuk-list">
+                        <li><a href="/wcag/111">1.4.4 - Resize text (AA)</a></li>
+                    </ul>
+                    <p><a href="">Best practice for content</a></p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<style>
+    .controls{
+        padding: 25px;
+        background-color: #f5f5f5;
+        margin-bottom: 20px;
+
+    }
+    .controls p{margin-bottom:0px}
+    .selected-link{
+        font-weight: bold;
+        text-decoration: underline;
+    }
+</style>
+
+{% endblock %}

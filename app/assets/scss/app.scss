@@ -4,8 +4,9 @@ $govuk-font-family: 'Inter', sans-serif;
 $govuk-new-link-styles: true;
 $govuk-global-styles: true;
 
+
 @import 'node_modules/govuk-frontend/dist/govuk/all';
-@import 'node_modules/dfe-frontend-alpha/packages/dfefrontend';
+@import 'node_modules/dfe-frontend/packages/dfefrontend';
 
 @import './_hero.scss';
 @import './_topnav.scss';

@@ -8,7 +8,7 @@
 <head>
   <meta charset="utf-8">
   <title>
-    {%- if seoPageName %}{{seoPageName}} {% elseif pageName %}{{pageName}}{%endif%} - {serviceName}}</title>
+    {%- if seoPageName %}{{seoPageName}} {% elseif pageName %}{{pageName}}{%endif%} - {{serviceName}}</title>
   <meta name="description"
     content="{% if seoPageDescription %}{{seoPageDescription}}{% elseif pageName %}{{pageDescription}}{%endif%}">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
@@ -66,8 +66,7 @@
 
   {% block main %}
 
-  <main class="govuk-main-wrapper {% if zeroMainMargin === 'true'%}govuk-!-margin-0 govuk-!-padding-0 {% endif %}"
-    id="main-content" role="main">
+  <main class="govuk-main-wrapper {{mainClasses}}" id="main-content" role="main">
 
     {% block content %}{% endblock %}
 

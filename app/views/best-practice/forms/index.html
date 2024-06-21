@@ -1,0 +1,130 @@
+{% extends "layouts/content-with-sidenav-left.html" %}
+
+{% set selectedNav = "Best practice" %}
+{% set pageName = "Forms" %}
+{% set pageDescription = "Understand how to apply best practice to forms when it comes to accessibility."%}
+{% set setSelectedSideNav = "Overview" %}
+
+
+{% block hero %}
+<section class="dfe-page-header ">
+    <div class="govuk-width-container">
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-two-thirds">     <div class="govuk-breadcrumbs">
+                <ol class="govuk-breadcrumbs__list">
+                  <li class="govuk-breadcrumbs__list-item">
+                    <a class="govuk-breadcrumbs__link" href="/">Home</a>
+                  </li>
+                  <li class="govuk-breadcrumbs__list-item">
+                    <a class="govuk-breadcrumbs__link" href="/best-practice">Best practice</a>
+                  </li>
+                </ol>
+              </div>
+                <h1 class="govuk-heading-xl govuk-!-margin-top-5">{{pageName}}</h1>
+                <p class="govuk-body-l">{{pageDescription}}</p>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
+
+
+
+{% block content %}
+<h2 class="govuk-heading-l">Guidance for accessible forms</h2>
+<p>Accessible forms ensure that all our users can access, navigate, and submit forms without encountering barriers. We
+    must create forms which are clear and easy to understand while also ensuring they are accessible for anyone with a
+    disability.</p>
+
+<p>Instructions, requirements, errors, and information provided to users' needs to be clear and unambiguous which will
+    provide a better user experience and reduce mistakes. </p>
+
+    <p>We've grouped common form topics together to help you understand how to create accessible forms.</p>
+
+
+<div class="dfe-grid-container">
+    <div class="dfe-card">
+        <div class="dfe-card-container">
+            <h3 class="govuk-heading-m">
+                <a href="/best-practice/forms/labels-inputs"
+                    class="govuk-link govuk-link--no-visited-state dfe-card-link--header">Labels and inputs</a>
+            </h3>
+            <p>How to apply best practice to labels and inputs.</p>
+        
+        </div>
+    </div>
+    <div class="dfe-card">
+        <div class="dfe-card-container">
+            <h3 class="govuk-heading-m">
+                <a href="/best-practice/forms/errors-validation"
+                    class="govuk-link govuk-link--no-visited-state dfe-card-link--header">Errors and validation</a>
+            </h3>
+            <p>How to handle errors and validation in forms.</p>
+        
+        </div>
+    </div>
+    <div class="dfe-card">
+        <div class="dfe-card-container">
+            <h3 class="govuk-heading-m">
+                <a href="/best-practice/forms/form-interaction"
+                    class="govuk-link govuk-link--no-visited-state dfe-card-link--header">Form interaction</a>
+            </h3>
+            <p>How users interact with forms.</p>
+        
+        </div>
+    </div>
+    <div class="dfe-card">
+        <div class="dfe-card-container">
+            <h3 class="govuk-heading-m">
+                <a href="/best-practice/forms/do-dont"
+                    class="govuk-link govuk-link--no-visited-state dfe-card-link--header">Do's and don'ts</a>
+            </h3>
+            <p>Things to avoid when designing forms.</p>
+        
+        </div>
+    </div>
+</div>
+
+
+
+
+<h2 class="govuk-heading-l">WCAG criteria related to forms</h2>
+<p>Many of the web content accessibility guidelines (WCAG) criteria relate to forms. This means that as well as creating
+    a usable experience for our users, we also need to create accessible forms to ensure the department are meeting
+    their legislative requirements.</p>
+
+
+<p>Select the criteria to view more details and how to test your product meets the specific success requirements.</p>
+
+<h3 class="govuk-heading-m"><a href="/wcag/criteria/135">1.3.5 Identify Input Purpose (AA)</a></h3>
+<p class="govuk-body">Make sure each form field has a clear purpose that assistive technologies can recognise, like
+    fields for name, email, or address.</p>
+
+<h3 class="govuk-heading-m"><a href="">2.4.6 Headings and Labels (AA)</a></h3>
+<p class="govuk-body">Use headings and labels that clearly describe what each section or field is about.</p>
+
+
+<h3 class="govuk-heading-m"><a href="">3.3.1 Error Identification (A)</a></h3>
+<p class="govuk-body">If there's a mistake in a form field, clearly indicate which field is wrong and explain the error.
+</p>
+
+<h3 class="govuk-heading-m"><a href="">3.3.2 Labels or Instructions (A)</a></h3>
+<p class="govuk-body">Provide labels or instructions to help users understand what they need to enter in each form
+    field.</p>
+
+<h3 class="govuk-heading-m"><a href="">3.3.3 Error Suggestion (AA)</a></h3>
+<p class="govuk-body">If there's a mistake, offer helpful suggestions on how to fix it.</p>
+
+<h3 class="govuk-heading-m"><a href="">3.3.4 Error Prevention (Legal, Financial, Data) (AA)</a></h3>
+<p class="govuk-body">For forms that involve legal, financial, or important data, make sure users can review and correct
+    their information before final submission.</p>
+
+
+<h3 class="govuk-heading-m"><a href="">4.1.2 Name, Role, Value (A)</a></h3>
+<p class="govuk-body">Ensure all form elements (like text fields, checkboxes, and buttons) have clear names and roles
+    that can be identified by assistive technologies.</p>
+
+
+
+
+{% endblock %}

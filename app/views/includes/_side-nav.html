@@ -1,18 +1,61 @@
-{% set x = [
+{% set tools = [
   {
-    title: "x",
-    url: "/"
+    title: "Overview",
+    url: "/tools"
+  }
+] %}
+
+{% set statements = [
+
+  {
+    title: "Accessibility statements",
+    url: "/guidance/accessibility-statements"
+  },
+  {
+    title: "Understand conformance and compliance",
+    url: "/guidance/accessibility-conformance-and-compliance"
+  },
+  {
+    title: "Statement templates",
+    url: "/guidance/accessibility-statement-templates"
   }
 ] %}
 
 
+{% set wcag = [
+  {
+    title: "Overview",
+    url: "/wcag"
+  }
+] %}
+
+{% set bestpractice_forms = [
+  {
+    title: "Overview",
+    url: "/best-practice/forms"
+  },  {
+    title: "Labels and inputs",
+    url: "/best-practice/forms/labels-inputs"
+  },  {
+    title: "Errors and validation",
+    url: "/best-practice/forms/errors-validation"
+  }, {
+    title: "Form interaction",
+    url: "/best-practice/forms/form-interaction"
+  },{
+    title: "Do's and Don'ts",
+    url: "/best-practice/forms/do-dont"
+  }
+] %}
 
 
 <nav class="dfe-vertical-nav">
 
-  {%- if selectedNav === "" %}
+  {%- if selectedNav === "Guidance" %} <a href="/guidance" class="govuk-back-link govuk-!-margin-top-0 govuk-!-margin-bottom-9">Back to guidance</a>
     <ul class="dfe-vertical-nav__section">
-      {% for item in x %}
+
+     
+      {% for item in statements %}
         <li class="dfe-vertical-nav__section-item {% if item.title === pageName  or setSelectedSideNav === item.title %}dfe-vertical-nav__section-item--current{% endif %}">
           <a class="dfe-vertical-nav__link" href="{{ item.url }}">{{ item.title }}</a>
         </li>
@@ -20,5 +63,18 @@
     </ul>
 
   {% endif %}
+
+  {%- if selectedNav === "Best practice" %} <a href="/best-practice" class="govuk-back-link govuk-!-margin-top-0 govuk-!-margin-bottom-9">Back to guidance</a>
+  
+  <ul class="dfe-vertical-nav__section">
+
+     {% for item in bestpractice_forms %}
+      <li class="dfe-vertical-nav__section-item {% if item.title === pageName  or setSelectedSideNav === item.title %}dfe-vertical-nav__section-item--current{% endif %}">
+        <a class="dfe-vertical-nav__link" href="{{ item.url }}">{{ item.title }}</a>
+      </li>
+    {% endfor %}
+  </ul>
+
+{% endif %}
 
 </nav>

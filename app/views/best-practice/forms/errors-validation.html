@@ -1,0 +1,72 @@
+{% extends "layouts/content-with-sidenav-left.html" %}
+
+{% set selectedNav = "Best practice" %}
+{% set pageName = "Errors and validation" %}
+{% set pageDescription = "Understand how to apply best practice to forms when it comes to accessibility."%}
+
+
+
+{% block hero %}
+<section class="dfe-page-header ">
+    <div class="govuk-width-container">
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-two-thirds">
+                <div class="govuk-breadcrumbs">
+                    <ol class="govuk-breadcrumbs__list">
+                      <li class="govuk-breadcrumbs__list-item">
+                        <a class="govuk-breadcrumbs__link" href="/">Home</a>
+                      </li>
+                      <li class="govuk-breadcrumbs__list-item">
+                        <a class="govuk-breadcrumbs__link" href="/best-practice">Best practice</a>
+                      </li>
+                      <li class="govuk-breadcrumbs__list-item">
+                        <a class="govuk-breadcrumbs__link" href="/best-practice/forms">Forms</a>
+                      </li>
+                    </ol>
+                  </div>
+                <h1 class="govuk-heading-xl govuk-!-margin-top-5">{{pageName}}</h1>
+                <p class="govuk-body-l">{{pageDescription}}</p>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
+
+
+
+{% block content %}
+
+<p>When creating forms, error messages are important in alerting users to any information they have missed or mistakes
+    they may have made while submitting their answers. </p>
+
+<p>Good error messages pinpoint exactly what is wrong and provide clear instructions on how to resolve the issues, this
+    reduces confusion and helps to ensure users avoid making the same mistake in the future. </p>
+
+<p>By understanding the error messages provided users are less likely to abandon the form and increases users'
+    confidence on your service.</p>
+
+<h2 class="govuk-heading-m">Using the GOV.UK Design System</h2>
+
+<p>Follow the guidance in the <a href="https://design-system.service.gov.uk">design system</a> for correct
+    use of displaying errors in your products. This includes:</p>
+
+    <ul class="govuk-list govuk-list--bullet">
+        <li>using the <a href="https://design-system.service.gov.uk/components/error-summary/">error summary component</a> to summarise all errors at the top of the page</li>
+        <li>using the <a href="https://design-system.service.gov.uk/components/error-message/">error message component</a> to display errors next to the form field</li>
+    </ul>
+
+
+
+
+<h2 class="govuk-heading-m">Testing error messages</h2>
+
+<ul class="govuk-list govuk-list--bullet">
+    <li>get a content designer to <a href="https://design.education.gov.uk/design-system/reviewing-and-checking-content">2i your error messages</a></li>
+    <li>ensure your error messages are <a href="https://design-system.service.gov.uk/components/error-summary/#linking-from-the-error-summary-to-each-answer">associated with the form input</a> containing the error</li>
+    <li>cause an error while using a screen reader, ensure the error is announced via an alert</li>
+    <li>ensure that the error in your summary matches the error next to the form field</li>
+</ul>
+
+
+
+{% endblock %}

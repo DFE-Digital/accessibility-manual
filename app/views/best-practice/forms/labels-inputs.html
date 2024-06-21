@@ -1,0 +1,58 @@
+{% extends "layouts/content-with-sidenav-left.html" %}
+
+{% set selectedNav = "Best practice" %}
+{% set pageName = "Labels and inputs" %}
+{% set pageDescription = "Understand how to apply best practice to forms when it comes to accessibility."%}
+
+
+
+{% block hero %}
+<section class="dfe-page-header ">
+    <div class="govuk-width-container">
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-two-thirds">
+                <div class="govuk-breadcrumbs">
+                    <ol class="govuk-breadcrumbs__list">
+                      <li class="govuk-breadcrumbs__list-item">
+                        <a class="govuk-breadcrumbs__link" href="/">Home</a>
+                      </li>
+                      <li class="govuk-breadcrumbs__list-item">
+                        <a class="govuk-breadcrumbs__link" href="/best-practice">Best practice</a>
+                      </li>
+                      <li class="govuk-breadcrumbs__list-item">
+                        <a class="govuk-breadcrumbs__link" href="/best-practice/forms">Forms</a>
+                      </li>
+                    </ol>
+                  </div>
+                <h1 class="govuk-heading-xl govuk-!-margin-top-5">{{pageName}}</h1>
+                <p class="govuk-body-l">{{pageDescription}}</p>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
+
+
+
+{% block content %}
+
+<h2 class="govuk-heading-l">Using autocomplete attributes</h2>
+
+<p>The autocomplete attribute provides information to the browser, and assistive technologies, about the type of information expected in the field. This helps users to complete forms more quickly and accurately.</p>
+<p>You can find a list of all the <a href="https://www.w3.org/TR/WCAG/#input-purposes">list of values for autocomplete attributes</a> on the W3C website.</p>
+
+<p>The following example is a field which asks the user to provide a telephone number.</p>
+<p>The code includes <code>autocomplete="tel"</code> which tells the browser that the field is expecting a telephone number.</p>
+
+<pre><code class="language-html">&lt;div class=&quot;govuk-form-group&quot;&gt;
+    &lt;label class=&quot;govuk-label&quot; for=&quot;phone-number&quot;&gt;
+        What is your phone number?
+    &lt;/label&gt;
+    &lt;input class=&quot;govuk-input&quot; id=&quot;phone-number&quot; name=&quot;phone-number&quot; autocomplete=&quot;tel&quot;&gt;
+    type=&quot;text&quot; 
+&lt;/div&gt; 
+</code></pre>
+
+
+
+{% endblock %}
