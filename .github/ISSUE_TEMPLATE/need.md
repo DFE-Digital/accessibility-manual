@@ -1,9 +1,10 @@
 ---
 name: Need
-description: Track a user need
+about: Track a user need
 title: "[Need] <Descriptive Title>"
 labels: need
 assignees: ''
+
 ---
 
 ## Need Description

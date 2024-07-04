@@ -1,9 +1,10 @@
 ---
 name: Task
-description: Track a task related to a need
+about: Track a task related to a need
 title: "[Task] <Descriptive Title>"
 labels: task
 assignees: ''
+
 ---
 
 ## Task Description

@@ -1,9 +1,10 @@
 ---
 name: Acceptance Criteria
-description: Track acceptance criteria for a need
+about: Track acceptance criteria for a need
 title: "[AC] <Descriptive Title>"
 labels: acceptance criteria
 assignees: ''
+
 ---
 
 ## Acceptance Criteria

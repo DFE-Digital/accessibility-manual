@@ -1,9 +1,10 @@
 ---
 name: HMW Statement
-description: Track a "How Might We" statement
+about: Track a "How Might We" statement
 title: "[HMW] <Descriptive Title>"
 labels: hmw
 assignees: ''
+
 ---
 
 ## HMW Statement
