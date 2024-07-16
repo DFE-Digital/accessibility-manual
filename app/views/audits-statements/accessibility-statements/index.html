@@ -1,0 +1,81 @@
+{% extends "layouts/page_layout.html" %}
+
+{% set selectedNav = "Audits and statements" %}
+{% set pageName = "Accessibility statements" %}
+{% set pageDescription = "An accessibility statement helps people understand the accessibility of a website, how to get
+help with, or give feedback on accessibility issues."%}
+{% set created = "15 July 2024" %}
+{% set reviewed = "15 July 2024" %}
+{% set updated = "15 July 2024" %}
+{% set githubIssueID = "30" %}
+{% set need = "This page exists to help people understand why accessibility statements are needed, how to ensure it is
+correct and supports the standard." %}
+
+{% block sidenav %}
+{% include "layouts/_newnav.html" %}
+{% endblock %}
+
+
+{% block content %}
+<div class="govuk-breadcrumbs">
+    <ol class="govuk-breadcrumbs__list">
+        <li class="govuk-breadcrumbs__list-item">
+            <a class="govuk-breadcrumbs__link" href="/">Home</a>
+        </li>
+        <li class="govuk-breadcrumbs__list-item">
+            <a class="govuk-breadcrumbs__link" href="/audits-statements">Audits and statements</a>
+        </li>
+        <li class="govuk-breadcrumbs__list-item">
+            {{pageName}}
+        </li>
+    </ol>
+</div>
+
+<span class="govuk-caption-l  govuk-!-margin-top-5">Accessibility statements</span>
+<h1 class="govuk-heading-xl">{{pageName}}</h1>
+<p class="govuk-body-l">{{pageDescription}}</p>
+
+<div class="govuk-inset-text">
+    Using these templates will support you in meeting the requirements of the <a href="/standards/accessibility-statements">Standard for the publication of accessibility statements</a>.
+</div>
+
+
+    <p>You should ensure you read the <a href="/standards/accessibility-statements/how-to-meet">guidance for meeting the accessibility statement standard</a> to ensure your statement is legally compliant.</p>
+
+
+    <table class="govuk-table">
+        <caption class="govuk-table__caption govuk-table__caption--m">Templates</caption>
+        <thead class="govuk-table__head">
+          <tr class="govuk-table__row">
+            <th scope="col" class="govuk-table__header ">Compliance</th>
+            <th scope="col" class="govuk-table__header govuk-!-width-two-thirds">Use when</th>
+            <th scope="col" class="govuk-table__header">Template</th>
+          </tr>
+        </thead>
+        <tbody class="govuk-table__body">
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">Fully compliant</th>
+            <td class="govuk-table__cell">
+              <p>All pages of the website or service, including every step in any transactional service, must meet all level A
+                and AA success criteria in full.</p>
+              <p><strong>There are no exceptions to this level of declaration.</strong></p>
+            </td>
+            <td class="govuk-table__cell"><a href="/audits-statements/accessibility-statements/fully-compliant">Template
+                <span class="govuk-visually-hidden">for full conformance</span></a></td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">Partially compliant</th>
+            <td class="govuk-table__cell">1 or more, but less than half, of Level A and AA success criteria have failed to be
+              met.</td>
+            <td class="govuk-table__cell"><a href="/audits-statements/accessibility-statements/paritially-compliant">Template<span class="govuk-visually-hidden">for partial conformance</span></a></td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">Non-compliant</th>
+            <td class="govuk-table__cell">More than half of all Level A and AA success criteria have not been met.</td>
+            <td class="govuk-table__cell"><a href="/audits-statements/accessibility-statements/non-compliant">Template
+                <span class="govuk-visually-hidden">for non conformance</span></a></td>
+          </tr>
+        </tbody>
+      </table>
+
+{% endblock %}

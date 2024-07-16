@@ -67,6 +67,16 @@ nunjuckEnv.addFilter('hyphen', function (str) {
   return str.replace(/[A-Z]/g, (letter) => `-${letter.toLowerCase()}`);
 });
 
+nunjuckEnv.addFilter('slugify', function (str) {
+  return str
+  .toString()
+  .toLowerCase()
+  .trim()
+  .replace(/\s+/g, '-')   // Replace spaces with -
+  .replace(/[^\w\-]+/g, '')   // Remove all non-word chars
+  .replace(/\-\-+/g, '-');  // Replace multiple - with single -
+});
+
 app.use(forceHttps);
 
 // Set up static file serving for the app's assets

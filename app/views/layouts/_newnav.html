@@ -1,0 +1,107 @@
+{% set data = [
+    {
+        "nav": "Standards",
+        "url": "/standards",
+        "sections": [
+            {
+                "section": "Accessibility statements",
+                "sub-sections": [
+                    {
+                        "title": "Standard",
+                        "url": "/standards/accessibility-statements"
+                    },
+                    {
+                        "title": "How to meet this standard",
+                        "url": "/standards/accessibility-statements/how-to-meet"
+                    },
+                    {
+                        "title": "Compliance",
+                        "url": "/standards/accessibility-statements/compliance"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "nav": "Audits and statements",
+        "url": "/audits-statements",
+        "sections": [
+            {
+                "section": "Audits",
+                "sub-sections": [
+                    {
+                        "title": "Get an audit",
+                        "url": "/audits-statements/audits/get-an-audit"
+                    },
+                    {
+                        "title": "Why you need an audit",
+                        "url": "/audits-statements/audits/why-you-need-an-audit"
+                    }
+                ]
+            },
+            {
+                "section": "Statements",
+                "sub-sections": [
+                    {
+                        "title": "Accessibility statements",
+                        "url": "/audits-statements/accessibility-statements"
+                    },
+                    {
+                        "title": "Fully compliant template",
+                        "url": "/audits-statements/accessibility-statements/fully-compliant"
+                    },
+                    {
+                        "title": "Partially compliant template",
+                        "url": "/audits-statements/accessibility-statements/partially-compliant"
+                    },
+                    {
+                        "title": "Non-compliant template",
+                        "url": "/audits-statements/accessibility-statements/non-compliant"
+                    }
+
+                ]   
+            }
+        ]
+    }
+] %}
+
+{% set selectedSection = null %}
+
+{% set navSections = [] %}
+
+{% for item in data %}
+    {% if item.nav == selectedNav %}
+        {% set selectedSection = item %}
+        {% set navSections = item.sections %}
+    {% endif %}
+{% endfor %}
+
+<nav class="navbar" aria-label="Secondary navigation">
+    {%- if selectedSection %}
+    <ul class="nav-list">
+
+        <li>
+            <a href="{{selectedSection.url}}" class="nav-link">
+                {{selectedSection.nav}}
+            </a>
+        </li>
+
+        {% for section in navSections %}
+        <li>
+            <button type="button" aria-expanded="false" aria-controls="sub-nav-{{ section.section | slugify }}" class="nav-link-toggle">
+                {{ section.section }}<span class="icon"></span>
+            </button>
+            <ul id="sub-nav-{{ section.section | slugify }}" class="sub-nav" style="display: none;">
+                {% for sub_section in section['sub-sections'] %}
+                <li>
+                    <a href="{{ sub_section.url }}" class="{% if sub_section.title == pageName %} sub-nav--active {% endif %}">{{ sub_section.title }}</a>
+                </li>
+                {% endfor %}
+            </ul>
+        </li>
+        {% endfor %}
+    </ul>
+    {% endif %}
+</nav>
+
+

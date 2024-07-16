@@ -1,0 +1,273 @@
+{% extends "layouts/page_layout.html" %}
+
+{% set selectedNav = "Audits and statements" %}
+{% set pageName = "Fully compliant accessibility statement template" %}
+{% set pageDescription = "Templates for accessibility statements."%}
+{% set created = "15 July 2024" %}
+{% set reviewed = "15 July 2024" %}
+{% set updated = "15 July 2024" %}
+{% set githubIssueID = "30" %}
+{% set need = "This page exists to help people understand why accessibility statements are needed, how to ensure it is
+correct and supports the standard." %}
+
+
+
+
+
+{% block content %}
+
+
+<div class="govuk-breadcrumbs">
+    <ol class="govuk-breadcrumbs__list">
+        <li class="govuk-breadcrumbs__list-item">
+            <a class="govuk-breadcrumbs__link" href="/">Home</a>
+        </li>
+        <li class="govuk-breadcrumbs__list-item">
+            <a class="govuk-breadcrumbs__link" href="/audits-statements">Audits and statements</a>
+        </li>
+        <li class="govuk-breadcrumbs__list-item">
+            {{pageName}}
+        </li>
+    </ol>
+</div>
+
+<span class="govuk-caption-l  govuk-!-margin-top-5">Accessibility statements</span>
+<h1 class="govuk-heading-xl">{{pageName}}</h1>
+<p class="govuk-body-l">{{pageDescription}}</p>
+
+
+<div class="govuk-tabs code-example" data-module="govuk-tabs">
+    <h2 class="govuk-tabs__title">
+        Contents
+    </h2>
+    <ul class="govuk-tabs__list">
+        <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
+            <a class="govuk-tabs__tab" href="#full-example">
+                Example
+            </a>
+        </li>
+        <li class="govuk-tabs__list-item">
+            <a class="govuk-tabs__tab" href="#full-html">
+                HTML code
+            </a>
+        </li>
+    </ul>
+    <div class="govuk-tabs__panel govuk-tabs__panel--hidden " id="full-example">
+        <div
+            aria-label="Example content for a fully compliant service accessibility statement for the purpose of demonstrating the content. ">
+            {%raw %}
+
+            <h1 class="govuk-heading-xl">Accessibility statement</h1>
+
+            <p class="govuk-body">This accessibility statement applies to [name of the
+                service].</p>
+
+            <p class="govuk-body">This website is run by the Department for Education. We want as
+                many people as possible to be able to use this website. For example, that means you
+                should be able to:</p>
+
+            <ul class="govuk-list govuk-list--bullet">
+                <li>change colours, contrast levels and fonts</li>
+
+                <li>zoom in up to 300% without the text spilling off the screen</li>
+
+                <li>navigate most of the website using just a keyboard</li>
+
+                <li>navigate most of the website using speech recognition software</li>
+
+                <li>listen to most of the website using a screen reader (including the most recent
+                    versions of JAWS, NVDA and VoiceOver)</li>
+            </ul>
+
+            <p class="govuk-body">We've also made the website text as simple as possible to
+                understand.</p>
+
+            <p class="govuk-body"><a href="https://mcmw.abilitynet.org.uk/" target="_blank"
+                    rel="noopner noreferrer">AbilityNet</a> has advice on making your device easier to use if
+                you have a disability.</p>
+
+            <h2 class="govuk-heading-l">Feedback and contact information</h2>
+
+            <p class="govuk-body">If you need information on this website in a different format
+                like accessible PDF, large print, easy read, audio recording or braille:</p>
+
+            <ul class="govuk-list govuk-list--bullet">
+                <li>email [email address]</li>
+
+                <li>call [phone number]</li>
+
+                <li>[any other contact details]</li>
+            </ul>
+
+            <p class="govuk-body">We'll consider your request and get back to you in [number]
+                days.</p>
+
+            <h2 class="govuk-heading-l">Reporting accessibility problems with this website</h2>
+
+            <p class="govuk-body">We're always looking to improve the accessibility of this
+                website. If you find any problems not listed on this page or think we're not meeting
+                accessibility requirements, contact: [provide both details of how to report these
+                issues and contact details for the unit or person responsible for dealing with these
+                reports].</p>
+
+            <h2 class="govuk-heading-l">Enforcement procedure</h2>
+
+            <p class="govuk-body">The Equality and Human Rights Commission (EHRC) is responsible
+                for enforcing the Public Sector Bodies (Websites and Mobile Applications) (No. 2)
+                Accessibility Regulations 2018 (the &lsquo;accessibility regulations&rsquo;). If
+                you&rsquo;re not happy with how we respond to your complaint, <a rel="noopner noreferrer"
+                    href="https://www.equalityadvisoryservice.com/" target="_blank">contact the Equality Advisory and
+                    Support Service (<abbr title="Equality Advisory and Support Service">EASS</abbr>)</a>.</p>
+
+            <h2 class="govuk-heading-l">Technical information about this website's
+                accessibility</h2>
+
+            <p class="govuk-body">The Department for Education is committed to making its websites
+                accessible, in accordance with the Public Sector Bodies (Websites and Mobile
+                Applications) (No. 2) Accessibility Regulations 2018.</p>
+
+            <h2 class="govuk-heading-l">Compliance status</h2>
+
+            <p class="govuk-body">This website is fully compliant with the <abbr
+                    title="Web Content Accessibility Guidelines">WCAG</abbr> version 2.2 AA standard.</p>
+
+            <h2 class="govuk-heading-l">Preparation of this accessibility statement</h2>
+
+            <p class="govuk-body">This statement was prepared on [date when it was first
+                published]. It was last reviewed on [date when it was last reviewed].</p>
+
+            <p class="govuk-body">This website was last tested on [date]. The test was carried out
+                by [add name of organisation that carried out test, or indicate that you did your own
+                testing]</p>
+
+            <p class="govuk-body">We used this approach to deciding on a sample of pages to test
+                [add link to explanation of how you decided which pages to test].</p>
+
+            {% endraw%}
+        </div>
+    </div>
+    <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="full-html" data-module="app-copy">
+       <div style="text-align: right"> <span class="govuk-visually-hidden" aria-live="assertive"></span>
+        <button class="app-copy-button govuk-button govuk-!-margin-bottom-0">Copy code</button></div>
+        <pre><code class="language-html">&lt;h1 class=&quot;govuk-heading-xl&quot;&gt;Accessibility statement&lt;/h1&gt;
+
+&lt;p class=&quot;govuk-body&quot;&gt;This accessibility statement applies to [name of the service].&lt;/p&gt;
+
+&lt;p class=&quot;govuk-body&quot;&gt;
+    This website is run by the Department for Education. We want as many people as possible
+    to be able to use this website. For example, that means you should be able to:
+&lt;/p&gt;
+
+&lt;ul class=&quot;govuk-list govuk-list--bullet&quot;&gt;
+    &lt;li&gt;change colours, contrast levels and fonts&lt;/li&gt;
+    &lt;li&gt;zoom in up to 300% without the text spilling off the screen&lt;/li&gt;
+    &lt;li&gt;navigate most of the website using just a keyboard&lt;/li&gt;
+    &lt;li&gt;navigate most of the website using speech recognition software&lt;/li&gt;
+    &lt;li&gt;listen to most of the website using a screen reader (including the most recent
+    versions of JAWS, NVDA and VoiceOver)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p class=&quot;govuk-body&quot;&gt;We&#39;ve also made the website text as simple as possible to understand.&lt;/p&gt;
+
+&lt;p class=&quot;govuk-body&quot;&gt;
+    &lt;a href=&quot;https://mcmw.abilitynet.org.uk/&quot; target=&quot;_blank&quot; rel=&quot;noopner noreferrer&quot;&gt;AbilityNet&lt;/a&gt;
+    has advice on making your device easier to use if you have a disability.
+&lt;/p&gt;
+
+&lt;h2 class=&quot;govuk-heading-l&quot;&gt;Feedback and contact information&lt;/h2&gt;
+
+&lt;p class=&quot;govuk-body&quot;&gt;
+    If you need information on this website in a different format like accessible PDF, large
+    print, easy read, audio recording or braille:
+&lt;/p&gt;
+
+&lt;ul class=&quot;govuk-list govuk-list--bullet&quot;&gt;
+    &lt;li&gt;email [email address]&lt;/li&gt;
+    &lt;li&gt;call [phone number]&lt;/li&gt;
+    &lt;li&gt;[any other contact details]&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p class=&quot;govuk-body&quot;&gt;We&#39;ll consider your request and get back to you in [number] days.&lt;/p&gt;
+
+&lt;h2 class=&quot;govuk-heading-l&quot;&gt;Reporting accessibility problems with this website&lt;/h2&gt;
+
+&lt;p class=&quot;govuk-body&quot;&gt;
+    We&#39;re always looking to improve the accessibility of this website. If you find any problems
+    not listed on this page or think we&#39;re not meeting accessibility requirements, contact:
+    [provide both details of how to report these issues and contact details for the unit or
+    person responsible for dealing with these reports].
+&lt;/p&gt;
+
+&lt;h2 class=&quot;govuk-heading-l&quot;&gt;Enforcement procedure&lt;/h2&gt;
+
+&lt;p class=&quot;govuk-body&quot;&gt;
+    The Equality and Human Rights Commission (EHRC) is responsible for enforcing the Public
+    Sector Bodies (Websites and Mobile Applications) (No. 2) Accessibility Regulations 2018
+    (the &lsquo;accessibility regulations&rsquo;). If you&rsquo;re not happy with how we respond to
+    your complaint, &lt;a rel=&quot;noopner noreferrer&quot; href=&quot;https://www.equalityadvisoryservice.com/&quot;
+    target=&quot;_blank&quot;&gt;contact the Equality Advisory and Support Service (&lt;abbr title=&quot;Equality
+    Advisory and Support Service&quot;&gt;EASS&lt;/abbr&gt;)&lt;/a&gt;.
+&lt;/p&gt;
+
+&lt;h2 class=&quot;govuk-heading-l&quot;&gt;Technical information about this website&#39;s accessibility&lt;/h2&gt;
+
+&lt;p class=&quot;govuk-body&quot;&gt;
+    The Department for Education is committed to making its websites accessible, in accordance
+    with the Public Sector Bodies (Websites and Mobile Applications) (No. 2) Accessibility
+    Regulations 2018.
+&lt;/p&gt;
+
+&lt;h2 class=&quot;govuk-heading-l&quot;&gt;Compliance status&lt;/h2&gt;
+
+&lt;p class=&quot;govuk-body&quot;&gt;
+    This website is fully compliant with the &lt;abbr title=&quot;Web Content Accessibility Guidelines&quot;&gt;
+    WCAG&lt;/abbr&gt; version 2.2 AA standard.
+&lt;/p&gt;
+
+&lt;h2 class=&quot;govuk-heading-l&quot;&gt;Preparation of this accessibility statement&lt;/h2&gt;
+
+&lt;p class=&quot;govuk-body&quot;&gt;
+    This statement was prepared on [date when it was first published]. It was last reviewed
+    on [date when it was last reviewed].
+&lt;/p&gt;
+
+&lt;p class=&quot;govuk-body&quot;&gt;
+    This website was last tested on [date]. The test was carried out by [add name of
+    organisation that carried out test, or indicate that you did your own testing]
+&lt;/p&gt;
+
+&lt;p class=&quot;govuk-body&quot;&gt;
+    We used this approach to deciding on a sample of pages to test [add link to explanation of
+    how you decided which pages to test].
+&lt;/p&gt;</code></pre>
+    </div>
+</div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', (event) => {
+      const copyButton = document.querySelector('.app-copy-button');
+      const ariaLiveSpan = document.querySelector('.govuk-visually-hidden[aria-live="assertive"]');
+
+      copyButton.addEventListener('click', () => {
+        const codeElement = document.querySelector('pre code');
+        const codeText = codeElement.textContent;
+
+        navigator.clipboard.writeText(codeText).then(() => {
+          copyButton.textContent = 'Code copied';
+          ariaLiveSpan.textContent = 'Code copied';
+
+          // Reset after 5 seconds
+          setTimeout(() => {
+            copyButton.textContent = 'Copy code';
+            ariaLiveSpan.textContent = '';
+          }, 5000);
+        }).catch(err => {
+          console.error('Failed to copy text: ', err);
+        });
+      });
+    });
+  </script>
+
+
+{% endblock %}
+

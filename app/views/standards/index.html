@@ -1,17 +1,20 @@
-{% extends "layouts/content-with-sidenav-left.html" %}
+{% extends "layouts/full.html" %}
 
 {% set selectedNav = "Standards" %}
-{% set pageName = "Standards" %}
-{% set pageDescription = "The accessibility standards all digital services are expected to meet."%}
-{% set setSelectedSideNav = "Overview" %}
+{% set pageName = "DfE Standard for Accessibility and Inclusive Design" %}
+{% set pageDescription = "The accessibile and inclusive design standards all digital products, websites, and services
+must meet."%}
 
+
+
+{% set mainClasses = "govuk-!-padding-top-0" %}
 
 {% block hero %}
-<section class="dfe-page-header ">
+<section class="dfe-page-hero govuk-!-padding-bottom-9" style="background: #003a69;">
    <div class="govuk-width-container">
       <div class="govuk-grid-row">
          <div class="govuk-grid-column-two-thirds">
-            <h1 class="govuk-heading-xl govuk-!-margin-top-5">{{pageName}}</h1>
+            <h1 class="govuk-heading-xl">{{pageName}}</h1>
             <p class="govuk-body-l">{{pageDescription}}</p>
          </div>
       </div>
@@ -19,27 +22,120 @@
 </section>
 {% endblock %}
 
-{% block sideContent %}
-
-
-
-{% endblock %}
-
 {% block content %}
 
-<h2 class="govuk-heading-m">Understand and apply the standards</h2>
+<style>
+   .dfe-manuals-panel-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+   }
 
-<div class="dfe-grid-container">
-   <div class="dfe-card">
-      <div class="dfe-card-container">
-         <h3 class="govuk-heading-m">
-            <a href="/standards/ddts-1" class="govuk-link govuk-link--no-visited-state dfe-card-link--header">Publish
-               and maintain an accurate accessibility statement</a>
-         </h3>
-         <p>All browser and app-based products must have a legally compliant accessibility statement published.</p>
-         <p class="govuk-body-s">Standard DDTS-1</p>
+   .dfe-manuals-panel-list__item {
+      background: #fff;
+      border: 1px solid #C5C7C9;
+      padding: 30px;
+      margin-bottom: 30px;
+      width: 100%;
+      /* Full width */
+      box-sizing: border-box;
+      /* Ensure padding and border are included in the width */
+      border-radius: 4px;
+   }
+
+   /* Optional: add some hover effect */
+   .dfe-manuals-panel-list__item:hover {
+      box-shadow: 0 0 12px rgba(0, 0, 0, 0.3);
+   }
+
+   /* Optional: add some responsive styling */
+   @media (max-width: 768px) {
+      .dfe-manuals-panel-list__item {
+         padding: 15px;
+      }
+   }
+</style>
+
+
+
+   <div class="dfe-width-container govuk-!-margin-top-9">
+      <div class="govuk-grid-row">
+
+         <div class="govuk-grid-column-full">
+            <h2 class="govuk-heading-l">Explore and understand the standards</h2>
+            <p>Guidance for the accessible and inclusive design standards, how you can meet them, and how they are
+               assured.</p>
+
+            <div class="dfe-manuals-panel-list govuk-!-margin-top-7">
+               <div class="dfe-manuals-panel-list__item">
+                  <span class="govuk-caption-m">Standard: DDTS-812</span>
+                  <h3 class="govuk-heading-m"><a href="/standards/accessibility-statements">Accessibility statements</a></h3>
+                  <p class="govuk-body">Services must publish a statement of accessibility for the websites and mobile
+                     applications of which they are the owners. This is required in law under:</p>
+                  <ul class="govuk-list">
+                     <li><a href="https://www.legislation.gov.uk/uksi/2018/952/contents" class="govuk-body-s">The Public
+                           Sector Bodies (Websites
+                           and Mobile Applications) (No. 2) Accessibility Regulations 2018</a></li>
+                  </ul>
+               </div>
+               <div class="dfe-manuals-panel-list__item">
+                  <span class="govuk-caption-m">Standard: DDTS-813</span>
+                  <h3 class="govuk-heading-m"><a href="/standards/ddts-813">Report and manage accessibility issues</a>
+                  </h3>
+                  <p class="govuk-body">Services must record and manage all accessibility issues in their products and
+                     services in the central DfE accessibility issue register.</p>
+               </div>
+               <div class="dfe-manuals-panel-list__item">
+                  <span class="govuk-caption-m">Standard: DDTS-814</span>
+                  <h3 class="govuk-heading-m"><a href="/standards/ddts-814">Audit products and websites</a>
+                  </h3>
+                  <p class="govuk-body">Services must have an accessibility audit, before a service is used by end users</p>
+               </div>
+            </div>
+         </div>
       </div>
    </div>
+
+
+<div class="govuk-width-container govuk-!-margin-top-9">
+   <div class="govuk-grid-row">
+
+
+      <div class="govuk-grid-column-one-half">
+
+         <h2 class="govuk-heading-l">How we help teams meet these standards</h2>
+
+
+      </div>
+      <div class="govuk-grid-column-one-half">
+
+
+
+      </div>
+   </div>
+
+   <div class="govuk-grid-row">
+
+
+      <div class="govuk-grid-column-one-half">
+
+
+         <p>Not all teams are the same and the DesignOps and Accessibility team are here to help everyone and apply
+            these standards in their role.</p>
+
+      </div>
+      <div class="govuk-grid-column-one-half">
+
+         <ul class="govuk-list govuk-list--spaced">
+            <li><a href="">Standards workshops in team meetings and community</a></li>
+            <li><a href="">Training on the application and compliance of standards</a></li>
+            <li><a href="">Access to the monthly accessibility clinic</a></li>
+         </ul>
+
+      </div>
+   </div>
+
+
 </div>
 
 {% endblock %}

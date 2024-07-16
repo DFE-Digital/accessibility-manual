@@ -1,0 +1,178 @@
+{% extends "layouts/page_layout.html" %}
+
+{% set selectedNav = "Accessibility statements" %}
+{% set pageName = "Accessibility statements" %}
+{% set pageDescription = "All products and websites must have an accurate, legally-compliant, and up to date
+accessibility statement."%}
+
+{% set sideNav = "page" %}
+
+{% block sidenav %}
+
+<nav class="navbar">
+   
+    <nav aria-label="Main Navigation">
+        <ul class="nav-list">
+            <li>
+                <a href="#" aria-expanded="false" aria-controls="sub-nav-1" class="nav-link">
+                    Section 1 <span class="icon"></span>
+                </a>
+                <ul id="sub-nav-1" class="sub-nav">
+                    <li><a href="/templates/page" class="{% if sideNav == 'page' %} sub-nav--active {% endif %}">Page</a></li>
+                    <li><a href="#">Sub-section 1.2</a></li>
+                    <li><a href="#">Sub-section 1.3</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#" aria-expanded="false" aria-controls="sub-nav-2" class="nav-link">
+                    Section 2 <span class="icon"></span>
+                </a>
+                <ul id="sub-nav-2" class="sub-nav">
+                    <li><a href="/templates/page-2" class="{% if sideNav == 'page-2' %} sub-nav--active {% endif %}">Page 2</a></li>
+                    <li><a href="#">Sub-section 2.2</a></li>
+                    <li><a href="#">Sub-section 2.3</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#" aria-expanded="false" aria-controls="sub-nav-3" class="nav-link">
+                    Section 3 <span class="icon"></span>
+                </a>
+                <ul id="sub-nav-3" class="sub-nav">
+                    <li><a href="#">Sub-section 3.1</a></li>
+                    <li><a href="#">Sub-section 3.2</a></li>
+                    <li><a href="#">Sub-section 3.3</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+
+</nav>
+
+
+{% endblock %}
+
+
+{% block content %}
+
+
+<div class="govuk-breadcrumbs">
+    <ol class="govuk-breadcrumbs__list">
+        <li class="govuk-breadcrumbs__list-item">
+            <a class="govuk-breadcrumbs__link" href="/">Home</a>
+        </li>
+        <li class="govuk-breadcrumbs__list-item">
+            <a class="govuk-breadcrumbs__link" href="#">Audits and statements</a>
+        </li>
+        <li class="govuk-breadcrumbs__list-item">
+            Accessibility statements
+        </li>
+    </ol>
+</div>
+
+<h1 class="govuk-heading-xl govuk-!-margin-top-9">{{pageName}}</h1>
+<p class="govuk-body-l">{{pageDescription}}</p>
+
+
+<p>You must have a link to the service or website accessibility statement on every page, in the footer. </p>
+
+<p>For mobile apps, the statement should be available on the website of the public sector body that developed the app,
+    or with other information available when downloading the app. The statement can also be made available from within
+    the app. Kit finally</p>
+
+
+<h2 class="govuk-heading-l">Statement templates</h2>
+
+<p>The following statements are designed to make it easier to create the correct statement for your service, and it's
+  level of compliance to WCAG 2.2 Level AA. To use the correct statement template, you should understand <a
+    href="/accessibility/determine-conformance">conformance requirements</a>.
+
+
+
+<p>If you are unsure of what to put in your statement, speak to the <a href='/design-ops/' target='_blank'>DesignOps
+    team</a>.</p>
+
+<p>As a general rule, if you have just 1 failing success criteria against Level A or AA, you should use the partially
+  conforming template. </p>
+
+<table class="govuk-table">
+  <caption class="govuk-table__caption govuk-table__caption--m">Template code</caption>
+  <thead class="govuk-table__head">
+    <tr class="govuk-table__row">
+      <th scope="col" class="govuk-table__header">Conformance</th>
+      <th scope="col" class="govuk-table__header">Use when</th>
+      <th scope="col" class="govuk-table__header">Template</th>
+    </tr>
+  </thead>
+  <tbody class="govuk-table__body">
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">Fully conforming</th>
+      <td class="govuk-table__cell">
+        <p>All pages of the website or service, including every step in any transactional service, must meet all level A
+          and AA success criteria in full.</p>
+        <p><strong>There are no exceptions to this level of declaration.</strong></p>
+      </td>
+      <td class="govuk-table__cell"><a href="/accessibility/accessibility-statements/full-statement">Get template code
+          <span class="govuk-visually-hidden">for full conformance</span></a></td>
+    </tr>
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">Partially conforming</th>
+      <td class="govuk-table__cell">1 or more, but less than half, of Level A and AA success criteria have failed to be
+        met.</td>
+      <td class="govuk-table__cell"><a href="/accessibility/accessibility-statements/partial-statement">Get template
+          code <span class="govuk-visually-hidden">for partial conformance</span></a></td>
+    </tr>
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">Non-conforming</th>
+      <td class="govuk-table__cell">More than half of all Level A and AA success criteria have not been met.</td>
+      <td class="govuk-table__cell"><a href="/accessibility/accessibility-statements/notmet-statement">Get template code
+          <span class="govuk-visually-hidden">for non conformance</span></a></td>
+    </tr>
+  </tbody>
+</table>
+
+<p><a href="/design-ops">Contact DesignOps</a> for guidance and support on understanding conformance criteria.
+</p>
+
+<h2 class="govuk-heading-l">Disproportionate burden</h2>
+
+<p>You might judge that the benefits of making some things accessible would not justify the cost to DfE to resolve. In
+  that case, you can claim it would not be reasonable for you to make those things accessible because it’s a
+  disproportionate burden.</p>
+
+<p>You cannot take things like lack of time or knowledge into account in your assessment - or argue that making things
+  accessible is a disproportionate burden because you’ve not given it priority.</p>
+
+<h3 class="govuk-heading-m">Out of scope content</h3>
+
+<ul>
+  <li>pre-recorded audio and video published before 23 September 2020</li>
+  <li>live audio and video</li>
+  <li>heritage collections like scanned manuscripts</li>
+  <li>PDFs or other documents published before 23 September 2018 - unless users need them to use a service, for example
+    a form that lets you request school meal preferences</li>
+  <li>maps - but you’ll need to provide essential information in an accessible format like an address</li>
+  <li>third party content that’s under someone else’s control if you did not pay for it or develop it yourself - for
+    example, social media ‘like’ buttons</li>
+  <li>content on intranets or extranets published before 23 September 2019 (unless you make a major revision after that
+    date)</li>
+  <li>archived websites if they’re not needed for services your organisation provides and they are not updated</li>
+</ul>
+
+<p>Read full guidance about <a
+    href="https://www.gov.uk/guidance/accessibility-requirements-for-public-sector-websites-and-apps#when-complying-with-accessibility-regulations-might-be-a-disproportionate-burden"
+    target="_blank">disproportionate burden and out of scope content (opens in new tab)</a> on GOV.UK</p>
+
+
+
+          <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+
+          
+
+          <p>
+            <a href="https://github.com/DFE-Digital/design/issues/46" target="_blank"
+              class="govuk-link">Contribute to this page on GitHub</a>
+          </p>
+
+
+
+{% endblock %}

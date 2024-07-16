@@ -1,0 +1,35 @@
+[
+    {
+        "nav": "Audits and statements",
+        "url": "/audits-statements",
+        "sections": [
+            {
+                "section": "Audits",
+                "sub-sections": [
+                    {
+                        "title": "Get an audit",
+                        "url": "/audits-statements/audits/get-an-audit"
+                    },
+                    {
+                        "title": "Why you need an audit",
+                        "url": "/audits-statements/audits/why-you-need-an-audit"
+                    }
+                ]
+            },
+            {
+                "section": "Statements",
+                "sub-sections": [
+                    {
+                        "title": "Accessibility statements",
+                        "url": "/audits-statements/accessibility-statements"
+                    },
+                    {
+                        "title": "Templates",
+                        "url": "/audits-statements/accessibility-statements/templates"
+                    }
+                ]
+            }
+        ]
+
+    }
+]

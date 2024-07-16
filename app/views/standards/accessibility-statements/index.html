@@ -1,0 +1,161 @@
+{% extends "layouts/page_layout.html" %}
+
+{% set selectedNav = "Standards" %}
+{% set pageName = "Standard for the publication of accessibility statements" %}
+{% set pageDescription = "Services must publish a statement of accessibility for the websites and mobile applications of
+which they are the owners. "%}
+
+{% set created = "15 July 2024" %}
+{% set reviewed = "15 July 2024" %}
+{% set updated = "15 July 2024" %}
+{% set githubIssueID = "30" %}
+{% set need = "This page exists to help people understand the DfE accessibility statement standard." %}
+
+{% block content %}
+
+
+<div class="govuk-breadcrumbs">
+    <ol class="govuk-breadcrumbs__list">
+        <li class="govuk-breadcrumbs__list-item">
+            <a class="govuk-breadcrumbs__link" href="/">Home</a>
+        </li>
+        <li class="govuk-breadcrumbs__list-item">
+            <a class="govuk-breadcrumbs__link" href="/standards">Standards</a>
+        </li>
+        <li class="govuk-breadcrumbs__list-item">
+            {{pageName}}
+        </li>
+    </ol>
+</div>
+
+<span class="govuk-caption-l  govuk-!-margin-top-5">Standard</span>
+<h1 class="govuk-heading-xl">{{pageName}}</h1>
+<p class="govuk-body-l">{{pageDescription}}</p>
+
+<dl class="govuk-summary-list">
+    <div class="govuk-summary-list__row govuk-summary-list__row--no-actions">
+        <dt class="govuk-summary-list__key">
+            Standard reference
+        </dt>
+        <dd class="govuk-summary-list__value">
+            DDTS-812
+        </dd>
+    </div>
+    <div class="govuk-summary-list__row govuk-summary-list__row--no-actions">
+        <dt class="govuk-summary-list__key">
+            Standard owner
+        </dt>
+        <dd class="govuk-summary-list__value">
+            Andy Jones<br />Head of Profession for Design
+        </dd>
+    </div>
+    <div class="govuk-summary-list__row govuk-summary-list__row--no-actions">
+        <dt class="govuk-summary-list__key">
+            Last updated
+        </dt>
+        <dd class="govuk-summary-list__value">
+            18 June 2024
+        </dd>
+    </div>
+</dl>
+
+<div class="govuk-inset-text">You must report compliance with this standard on the <a href="" target="_blank">service health check hub</a>.</div>
+
+<p class="govuk-body">This standard is within the Accessibility group of standards. It applies to all
+    websites and mobile applications from the department. This standard should be understood and applied by
+    anyone delivering such products and services, especially those in user-centred design, product and
+    delivery, and service owners.</p>
+<h2 class="govuk-heading-m">Alternative terms</h2>
+<p class="govuk-body">Accessibility statements, Statements, Product statement, Product accessibility
+    declaration.</p>
+<h2 class="govuk-heading-m">Definitions</h2>
+
+<dl class="govuk-summary-list">
+    <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+            Website
+        </dt>
+        <dd class="govuk-summary-list__value">
+            The legal definition of something accessed through a
+            browser. For this standard, this also means any digital product or service.
+        </dd>
+    </div>
+    <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+            App or application
+        </dt>
+        <dd class="govuk-summary-list__value">
+            A native app which can be installed onto a
+            device through Apple or Google App Stores
+        </dd>
+    </div>
+</dl>
+
+<h2 class="govuk-heading-m">Rationale</h2>
+<p class="govuk-body">Not all DfE’s websites have an accurate accessibility statement and those that do,
+    don’t often declare the correct level of conformance, don’t always contain the legally required wording,
+    and don’t always list all known accessibility issues. This means end users may struggle to get the
+    support or information they need if they face an issue using the website.</p>
+<p class="govuk-body">This supports the legal requirement for websites and applications to publish a
+    factually accurate accessibility statement as outlined by the Public Sector Websites and Applications
+    Accessibility Regulations 2018.</p>
+<p class="govuk-body">This specific standard ensures it is applied, assured and monitored effectively in
+    DfE.</p>
+
+
+
+<h2 class="govuk-heading-m">Approved products and services</h2>
+<p class="govuk-body">Service owners must ensure the statement is accurate and uses the correct template for
+    the determined level of conformance as published in the Accessibility manual.</p>
+
+<h2 class="govuk-heading-m">Tolerated products and services</h2>
+<p class="govuk-body">Not applicable to this standard.</p>
+
+<h2 class="govuk-heading-m">Known exceptions</h2>
+<p class="govuk-body">There are no exceptions granted for this standard.</p>
+
+<h2 class="govuk-heading-m">Standard ownership and point of contact</h2>
+
+<dl class="govuk-summary-list">
+    <div class="govuk-summary-list__row govuk-summary-list__row--no-actions">
+        <dt class="govuk-summary-list__key">
+            Point of contact
+        </dt>
+        <dd class="govuk-summary-list__value">
+            <a href="mailto:design.ops@education.gov.uk?subject=Accessibility standard">Andy Jones</a><br />Head of
+            Profession for Design
+        </dd>
+    </div>
+    <div class="govuk-summary-list__row govuk-summary-list__row--no-actions">
+        <dt class="govuk-summary-list__key">
+            Standard owner
+        </dt>
+        <dd class="govuk-summary-list__value">
+            Charlotte Briscall<br />
+            Chief Digital Officer
+        </dd>
+    </div>
+
+</dl>
+
+<style>
+    .custom-standard-meta {
+        list-style-type: none;
+        padding: 0;
+        margin-bottom: 10px;
+    }
+
+
+
+    .custom-standard-meta li {
+        display: inline;
+        margin-right: 1em;
+        font-size: 0.85em;
+    }
+
+    .custom-standard-meta li span {
+        font-weight: bold;
+    }
+</style>
+
+{% endblock %}

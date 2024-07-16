@@ -1,0 +1,87 @@
+{% extends "layouts/page_layout.html" %}
+
+{% set selectedNav = "Profession guidance" %}
+{% set pageName = "Concepts of web accessibility" %}
+{% set pageDescription = "There are several concepts when it comes to accessibility that are important for interaction designers to specifically consider."%}
+{% set sideNav = "concepts" %}
+
+
+{% block sidenav %}
+
+<nav class="navbar">
+
+    <nav aria-label="Main Navigation">
+        <ul class="nav-list">
+            <li>
+                <a href="/professions" class="nav-link">
+                    Profession guidance
+                </a>
+            </li>
+            <li>
+                <a href="#" aria-expanded="false" aria-controls="sub-nav-1" class="nav-link-toggle">
+                    Business analysis <span class="icon"></span>
+                </a>
+                <ul id="sub-nav-1" class="sub-nav">
+                    <li><a href="#">Requirements</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#" aria-expanded="false" aria-controls="sub-nav-2" class="nav-link-toggle">
+                    Interaction design <span class="icon"></span>
+                </a>
+                <ul id="sub-nav-2" class="sub-nav">
+                    <li><a href="/professions/interaction-design"
+                            class="{% if sideNav == 'relevant' %} sub-nav--active {% endif %}">Relevant guidance</a>
+                    </li>
+                    <li><a href="/professions/interaction-design/concepts"
+                            class="{% if sideNav == 'concepts' %} sub-nav--active {% endif %}">Concepts of web accessibility</a></li>
+                    <li><a href="#">Best practice</a></li>
+                </ul>
+            </li>
+
+        </ul>
+    </nav>
+
+
+</nav>
+
+
+{% endblock %}
+
+
+
+{% block content %}
+
+
+<div class="govuk-breadcrumbs">
+    <ol class="govuk-breadcrumbs__list">
+        <li class="govuk-breadcrumbs__list-item">
+            <a class="govuk-breadcrumbs__link" href="/">Home</a>
+        </li>
+        <li class="govuk-breadcrumbs__list-item">
+            <a class="govuk-breadcrumbs__link" href="/professions">Professions</a>
+        </li>
+        <li class="govuk-breadcrumbs__list-item">
+            {{pageName}}
+        </li>
+    </ol>
+</div>
+
+<span class="govuk-caption-l  govuk-!-margin-top-5">Profession guidance</span>
+<h1 class="govuk-heading-xl">{{pageName}}</h1>
+<p class="govuk-body-l">{{pageDescription}}</p>
+
+<p>The following concepts from <a href="/knowledge-base">the knowldge base</a> are important for interaction designers to understand.</p>
+
+<h3 class="govuk-heading-m">Assistive technologies</h3>
+<p>Assistive technologies are software or hardware that help people, including those with disabilities use technology. Examples include screen readers, magnifiers, and voice recognition software.</p>
+
+<h3 class="govuk-heading-m">Markup and HTML</h3>
+<p>HTML is the language used to create web pages. It is important to use semantic HTML to ensure that content is accessible to people using assistive technologies.</p>
+
+<h3 class="govuk-heading-m">Roles, states and properties</h3>
+<p>Roles, states and properties are used to describe the behaviour of elements on a web page. They are important for making sure that content is accessible to people using assistive technologies.</p>
+
+
+
+{% endblock %}

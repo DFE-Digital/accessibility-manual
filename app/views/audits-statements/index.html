@@ -1,0 +1,140 @@
+{% extends "layouts/full.html" %}
+
+{% set selectedNav = "Audits and statements" %}
+{% set pageName = "Audits and statements" %}
+{% set pageDescription = "Understand what audit you need, when to get one and publish an accessibility statement."%}
+
+
+
+{% set mainClasses = "govuk-!-padding-top-0 govuk-!-padding-bottom-0" %}
+
+{% block hero %}
+<section class="dfe-page-hero govuk-!-padding-bottom-9" style="background: #003a69;">
+   <div class="govuk-width-container">
+      <div class="govuk-grid-row">
+         <div class="govuk-grid-column-two-thirds">
+            <h1 class="govuk-heading-xl">{{pageName}}</h1>
+            <p class="govuk-body-l">{{pageDescription}}</p>
+         </div>
+      </div>
+   </div>
+</section>
+{% endblock %}
+
+{% block content %}
+
+<style>
+   .dfe-manuals-panel-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+   }
+
+   .dfe-manuals-panel-list__item {
+      background: #fff;
+      border: 1px solid #C5C7C9;
+      padding: 30px;
+      margin-bottom: 30px;
+      width: 100%;
+      /* Full width */
+      box-sizing: border-box;
+      /* Ensure padding and border are included in the width */
+      border-radius: 4px;
+   }
+
+   /* Optional: add some hover effect */
+   .dfe-manuals-panel-list__item:hover {
+      box-shadow: 0 0 12px rgba(0, 0, 0, 0.3);
+   }
+
+   /* Optional: add some responsive styling */
+   @media (max-width: 768px) {
+      .dfe-manuals-panel-list__item {
+         padding: 15px;
+      }
+   }
+</style>
+
+
+
+<div class="dfe-width-container govuk-!-margin-top-9">
+   <div class="govuk-grid-row">
+
+      <div class="govuk-grid-column-full">
+         <h2 class="govuk-heading-l">Audits</h2>
+         <p>Find out what audits are appropriate and when you need them.</p>
+
+         <div class="dfe-grid-container">
+
+            <div class="dfe-card">
+               <div class="dfe-card-container">
+                  <h3 class="govuk-heading-m">
+                     <a href="#" class="govuk-link govuk-link--no-visited-state dfe-card-link--header">Internal
+                        audit</a>
+                  </h3>
+                  <p>Find out how the DesignOps team can help you with any technical questions relating to
+                     accessibility.</p>
+               </div>
+            </div>
+            <div class="dfe-card">
+               <div class="dfe-card-container">
+                  <h3 class="govuk-heading-m">
+                     <a href="#" class="govuk-link govuk-link--no-visited-state dfe-card-link--header">External audit
+                     </a>
+                  </h3>
+                  <p>See our upcoming clinic dates where you can get support from accessibility specialists.</p>
+               </div>
+            </div>
+            <div class="dfe-card">
+               <div class="dfe-card-container">
+                  <h3 class="govuk-heading-m">
+                     <a href="#" class="govuk-link govuk-link--no-visited-state dfe-card-link--header">Unsure what you
+                        need?</a>
+                  </h3>
+                  <p>Find out how the DesignOps team can help you with any technical questions relating to
+                     accessibility.</p>
+               </div>
+            </div>
+         </div>
+
+         <h2 class="govuk-heading-l govuk-!-margin-top-9">Accessibility statements</h2>
+         <p>All products and websites must have an accurate, up to date accessibility statement.</p>
+
+         <div class="dfe-grid-container">
+
+            <div class="dfe-card">
+               <div class="dfe-card-container">
+                  <h3 class="govuk-heading-m">
+                     <a href="/audits-statements/accessibility-statements" class="govuk-link govuk-link--no-visited-state dfe-card-link--header">Accessibility statements</a>
+                  </h3>
+                  <p>Guidance for when and how you must publish an accurate accessibility statement.</p>
+               </div>
+            </div>
+            <div class="dfe-card">
+               <div class="dfe-card-container">
+                  <h3 class="govuk-heading-m">
+                     <a href="/audits-statements/accessibility-statements/templates" class="govuk-link govuk-link--no-visited-state dfe-card-link--header">Templates
+                     </a>
+                  </h3>
+                  <p>Templates for accessibility statements to use in your product or websites.</p>
+               </div>
+            </div>
+            <div class="dfe-card">
+               <div class="dfe-card-container">
+                  <h3 class="govuk-heading-m">
+                     <a href="/managing-issues" class="govuk-link govuk-link--no-visited-state dfe-card-link--header">Managing
+                        issues</a>
+                  </h3>
+                  <p>You must track your issues and report them in your statement.</p>
+               </div>
+            </div>
+         </div>
+
+      </div>
+   </div>
+</div>
+
+
+
+
+{% endblock %}

@@ -1,0 +1,52 @@
+{% extends "layouts/page_layout.html" %}
+
+{% set selectedNav = "Standards" %}
+{% set pageName = "Fully compliant statement template" %}
+{% set pageDescription = "" %}
+
+{% set created = "15 July 2024" %}
+{% set reviewed = "15 July 2024" %}
+{% set updated = "15 July 2024" %}
+{% set githubIssueID = "31" %}
+{% set need = "This page exists to help people ..." %}
+
+{% block content %}
+
+<div class="govuk-breadcrumbs">
+    <ol class="govuk-breadcrumbs__list">
+        <li class="govuk-breadcrumbs__list-item">
+            <a class="govuk-breadcrumbs__link" href="/">Home</a>
+        </li>
+        <li class="govuk-breadcrumbs__list-item">
+            <a class="govuk-breadcrumbs__link" href="/standards">Standards</a>
+        </li>
+        <li class="govuk-breadcrumbs__list-item">
+            {{pageName}}
+        </li>
+    </ol>
+</div>
+
+<span class="govuk-caption-l  govuk-!-margin-top-5">Standard</span>
+<h1 class="govuk-heading-xl">{{pageName}}</h1>
+<p class="govuk-body-l">{{pageDescription}}</p>
+
+<p>The <a href="https://design.education.gov.uk/design-ops">DesignOps team</a> will ensure compliance with the DfE
+    Accessibility Statement Digital Standard through a combination of the following methods:</p>
+
+<h2 class="govuk-heading-l">Monitoring</h2>
+
+<h3 class="govuk-heading-m">Ad-hoc checks</h3>
+<p>Regular reviews of accessibility statements will be carried to ensure ongoing adherence to the standard.</p>
+<p>These checks will be carried out by the DesignOps team.</p>
+<p>Any issues identified will be raised with the service owner for resolution.</p>
+
+<h3 class="govuk-heading-m">Service assessments</h3>
+<p>Evaluation against the standard will be assured in service assessments at beta phase onwards.</p>
+<p>This standard will be assured by the assessor panel and failure of the standard will be recorded as a red rating
+    against standard 5 of the Service Standard.</p>
+
+<h2 class="govuk-heading-l">Reporting</h2>
+
+<p>Compliance with the standard will be reported on the <a href="">service health check hub</a>.</p>
+
+{% endblock %}
