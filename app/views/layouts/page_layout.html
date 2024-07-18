@@ -175,6 +175,7 @@
     cursor: pointer;
     /* Change cursor to pointer */
     font-size: 1.1875rem;
+    text-align: left;
   }
 
   .nav-link-toggle:focus {
@@ -402,7 +403,7 @@
         </div>
 
         <div
-          class="govuk-grid-column-three-quarters dfe-manual-page-content  govuk-!-padding-top-4  govuk-!-padding-bottom-5 govuk-!-padding-left-7 govuk-!-padding-right-7 dfe-manuals-p-max-width">
+          class="govuk-grid-column-three-quarters dfe-manual-page-content  govuk-!-padding-top-4  govuk-!-padding-bottom-9 govuk-!-padding-left-7 govuk-!-padding-right-7 dfe-manuals-p-max-width">
           {% block content %}{% endblock %}
           <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible govuk-!-margin-top-9">
           <details class="govuk-details">
@@ -423,13 +424,7 @@
                   <dt class="govuk-summary-list__key">Last updated</dt>
                   <dd class="govuk-summary-list__value">{{updated}}</dd>
                 </div>
-                <div class="govuk-summary-list__row">
-                  <dt class="govuk-summary-list__key">Page source code</dt>
-                  <dd class="govuk-summary-list__value">
-                    <a href="https://github.com/DFE-Digital/accessibility-manual/blob/main/app/views/audits-statements/accessibility-statements/index.html"
-                      target="_blank">View source for this page</a>
-                  </dd>
-                </div>
+               
                 <div class="govuk-summary-list__row">
                   <dt class="govuk-summary-list__key">Reason this page exists</dt>
                   <dd class="govuk-summary-list__value">{{need}}</dd>

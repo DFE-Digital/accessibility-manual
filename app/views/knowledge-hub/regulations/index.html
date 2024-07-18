@@ -1,0 +1,91 @@
+{% extends "layouts/page_layout.html" %}
+
+{% set selectedNav = "Knowledge hub" %}
+{% set pageName = "Overview of the regulations" %}
+{% set pageDescription = "Guidance for understanding the laws and regulations related to accessibility."%}
+{% set mainClasses = "govuk-!-padding-top-0" %}
+{% set created = "16 July 2024" %}
+{% set reviewed = "16 July 2024" %}
+{% set updated = "16 July 2024" %}
+{% set githubIssueID = "35" %}
+{% set need = "This page exists to help people understand the laws and regulations." %}
+
+{% block content %}
+
+<div class="govuk-breadcrumbs">
+   <ol class="govuk-breadcrumbs__list">
+      <li class="govuk-breadcrumbs__list-item">
+         <a class="govuk-breadcrumbs__link" href="/">Home</a>
+      </li>
+      <li class="govuk-breadcrumbs__list-item">
+         <a class="govuk-breadcrumbs__link" href="/knowledge-hub">Knowledge hub</a>
+      </li>
+      <li class="govuk-breadcrumbs__list-item">
+         {{pageName}}
+      </li>
+   </ol>
+</div>
+
+<h1 class="govuk-heading-xl  govuk-!-margin-top-5">{{pageName}}</h1>
+<p class="govuk-body-l">{{pageDescription}}</p>
+
+<div class="govuk-warning-text">
+   <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+   <strong class="govuk-warning-text__text">
+      <span class="govuk-visually-hidden">Warning</span>
+      The department can be fined if we do not comply with these laws and standards.
+   </strong>
+</div>
+
+<p class="govuk-body">
+   Several laws and standards govern accessibility, applicable to all users of our services, including:
+</p>
+
+<ul class="govuk-list govuk-list--bullet">
+   <li>members of the public</li>
+   <li>teachers and pupils</li>
+   <li>Department for Education or other agency staff</li>
+</ul>
+
+<h2 class="govuk-heading-l">Laws and regulations</h2>
+
+<p class="govuk-body">
+   These accessibility requirements are enforced through various legislation and standards.
+</p>
+
+<h3 class="govuk-heading-m">Public Sector Bodies (Websites and Mobile Applications) Accessibility Regulations 2018</h3>
+<p class="govuk-body">
+   These regulations require public sector websites and mobile apps to meet accessibility standards, ensuring that they
+   can be used by as many people as possible, including those with disabilities. </p>
+<p class="govuk-body">This law requires public bodies to specifically meet the latest published version of WCAG.</p>
+<p class="govuk-body"><a class="govuk-link" href="https://www.legislation.gov.uk/uksi/2018/952/contents/made"
+      target="_blank">Find out more about the 2018 Accessibility Regulations</a>.</p>
+
+
+<h3 class="govuk-heading-m">Equality Act 2010</h3>
+<p class="govuk-body">
+   The Equality Act 2010 legally protects people from discrimination in the workplace and in wider society. It sets out
+   the different ways in which it’s unlawful to treat someone.</p>
+<p class="govuk-body"> <a class="govuk-link" href="https://www.legislation.gov.uk/ukpga/2010/15/contents"
+      target="_blank">Read more about
+      the Equality Act 2010</a>.
+</p>
+
+<h3 class="govuk-heading-m">Public Sector Equality Duty</h3>
+<p class="govuk-body">
+   The Public Sector Equality Duty requires public bodies to consider how their policies or decisions affect people who
+   are protected under the Equality Act. This helps organisations to deliver services that are accessible and inclusive.
+</p>
+<p class="govuk-body"> <a class="govuk-link" href="https://www.legislation.gov.uk/ukpga/2010/15/section/149"
+      target="_blank">Learn more about the Public Sector Equality Duty</a>.</p>
+
+
+<h3 class="govuk-heading-m">EN 301 549 Accessibility Requirements for ICT Products and Services</h3>
+<p class="govuk-body">
+   EN 301 549 is a European standard that specifies the accessibility requirements for ICT products and services,
+   including websites, software, and hardware. This standard ensures that ICT products are accessible to all users.</p>
+<p class="govuk-body"><a class="govuk-link"
+      href="https://www.etsi.org/deliver/etsi_en/301500_301599/301549/03.01.01_60/en_301549v030101p.pdf"
+      target="_blank">Read the EN 301 549 standard (PDF)</a>.</p>
+
+{% endblock %}
