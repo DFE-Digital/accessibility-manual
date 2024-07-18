@@ -47,22 +47,22 @@
     var s, t;
     try {
       t = m.sessionStorage.getItem('maze-us');
-    } catch (err) {}
-  
+    } catch (err) { }
+
     if (!t) {
       t = new Date().getTime();
       try {
         m.sessionStorage.setItem('maze-us', t);
-      } catch (err) {}
+      } catch (err) { }
     }
-  
+
     s = a.createElement('script');
     s.src = z + '?apiKey=' + e;
     s.async = true;
     a.getElementsByTagName('head')[0].appendChild(s);
     m.mazeUniversalSnippetApiKey = e;
   })(window, document, 'https://snippet.maze.co/maze-universal-loader.js', '65dfeffa-8f46-4a3e-a48e-8de66e00be67');
-  </script>
+</script>
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-Z4G55VN0FB"></script>
 
 <body class="govuk-template__body ">
@@ -97,7 +97,7 @@
         <div class="govuk-grid-column-three-quarters">
 
           <h1 class="govuk-heading-xl govuk-!-margin-bottom-4">{{pageName}}</h1>
-          <p class="govuk-body-l">{{pageDescription}}</p>
+
 
           {% if dateUpdated %}
 
