@@ -2,11 +2,31 @@
 
 {% set selectedNav = "Support" %}
 {% set pageName = "Support" %}
-{% set pageDescription = "TK"%}
+{% set pageDescription = "Get support and advice with accessibility and inclusive design questions or problems."%}
+{% set setSelectedSideNav = "Overview" %}
+{% set created = "19 July 2024" %}
+{% set reviewed = "19 July 2024" %}
+{% set updated = "19 July 2024" %}
+{% set githubIssueID = "55" %}
+{% set need = "This page exists to help people get support and help when they need it." %}
+
 
 {% set mainClasses = "govuk-!-padding-top-0" %}
 
+{% block hero %}
 
+<section class="dfe-page-hero govuk-!-padding-bottom-9" style="background: #003a69;">
+   <div class="govuk-width-container">
+      <div class="govuk-grid-row">
+         <div class="govuk-grid-column-two-thirds">
+            <h1 class="govuk-heading-xl">{{pageName}}</h1>
+            <p class="govuk-body-l">{{pageDescription}}</p>
+         </div>
+      </div>
+   </div>
+</section>
+
+{% endblock %}
 
 {% block content %}
 
@@ -14,9 +34,100 @@
    <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
 
+         <h2 class="govuk-heading-l">Support with digital delivery and user-centred design</h2>
+         <p>The DesignOps team can help with questions, advice, and support for the following topics:</p>
+         <ul class="govuk-list govuk-list--spaced">
+            <li><a href="/audits-statements/accessibility-statements">accessibility statements</a></li>
+            <li><a href="/audits-statements/audits">audits</a></li>
+            <li><a href="/profession-guidance/content-design">content design</a></li>
+            <li><a href="/profession-guidance/interaction-design">design <abbr title="User Interface">UI</abbr>
+                  components and patterns </a></li>
+            <li><a href="/standards">standards compliance or assurance</a></li>
+            <li><a href="/profession-guidance/development">technical guidance with code and development</a></li>
+         </ul>
+
+         <h3 class="govuk-heading-m">Contact the DesignOps team</h3>
+
+         <ul class="govuk-list govuk-list--spaced">
+            <li>Email: <a href="mailto:design.ops@education.gov.uk">design.ops@education.gov.uk</a></li>
+            <li>DfE Slack: <a href="https://ukgovernmentdfe.slack.com/archives/C0432A8JSV7">#designops</a></li>
+            <li>UK Governemnt Slack: <a
+                  href="https://ukgovernmentdigital.slack.com/archives/C04GXQ0320Z">#dfe-designops</a></li>
+         </ul>
+
+         <h2 class="govuk-heading-l govuk-!-margin-top-7">Support with devices, workplace adjustments and assisitve technology</h2>
+         <p>The accessibility team, can help with support and advice on work-related questions, including:</p>
+         <ul class="govuk-list govuk-list--spaced">
+            <li><a href="https://educationgovuk.sharepoint.com/sites/lvewp00043/SitePages/Assistive-Software.aspx"
+                  target="_blank" rel="noopener noreferrer">assistive software</a></li>
+            <li><a href="https://educationgovuk.sharepoint.com/sites/lvewp00043/SitePages/Creating-Accessible-Documents.aspx"
+                  target="_blank" rel="noopener noreferrer">creating accessible documents and presentations</a></li>
+            <li><a href="https://educationgovuk.sharepoint.com/sites/lvewp00043/SitePages/Usability-Features-in-Office-and-Windows.aspx"
+                  target="_blank" rel="noopener noreferrer">using Microsoft products</a></li>
+            <li><a href="https://educationgovuk.sharepoint.com/sites/lvewp00043/SitePages/Workplace-Adjustments.aspx"
+                  target="_blank" rel="noopener noreferrer">workplace adjustments</a></li>
+         </ul>
+
+         <p>Visit the <a href="https://educationgovuk.sharepoint.com/sites/lvewp00043" target="_blank"
+               rel="noopener noreferrer">Accessibility hub</a> on the DfE Intranet for more information, or to contact the accessibility team.</p>
+
 
       </div>
+      <div class="govuk-grid-column-one-third">
+
+         <div class="dfe-manual-callout dfe-manual-callout--no-border dfe-manual-callout--no-top-margin">
+            <div class="dfe-manual-callout--header">
+               <h3 class="govuk-heading-m">DfE Experience lab</h3>
+            </div>
+
+            <div class="dfe-manual-callout--content">
+               <p>The lab in Sheffield enables you to experience using assisitve technologies and the barriers people
+                  face when using digital products.</p>
+
+               <p><a href="https://educationgovuk.sharepoint.com/sites/lvewp00043/SitePages/Experience-Lab.aspx"
+                     rel="noopener noreferrer" target="_blank">More information and book a visit (DfE Intranet) <span
+                        class="govuk-visually-hidden">link opens in a new tab</span></a>
+               </p>
+            </div>
+         </div>
+
+         <h3 class="govuk-heading-m">Other resources</h3>
+         <ul class="govuk-list govuk-list--spaced">
+            <li><a href="https://ukgovernmentdfe.slack.com/archives/CADP1R39Q">DfE Slack Accessibility channel</a></li>
+            <li><a href="https://ukgovernmentdigital.slack.com/messages/accessibility/">Cross-government Slack Accessibility channel</a></li>
+            <li><a href="https://www.gov.uk/service-manual/communities/accessibility-community">Accessibility community</a></li>
+         </ul>
+      </div>
+
    </div>
 </div>
+
+
+<style>
+   .dfe-manual-callout {
+      padding: 25px 25px 10px 25px;
+      border-left: 10px solid #005ea5;
+      margin: 40px 0;
+      background-color: #F2F7FA;
+   }
+
+   .dfe-manual-callout--no-border {
+      border-left: none;
+   }
+
+   .dfe-manual-callout--no-top-margin {
+      margin-top: 0px;
+   }
+
+   .dfe-manual-callout--header {
+      display: flex;
+      align-items: top;
+   }
+
+   .dfe-manual-callout--header img {
+      margin-right: 10px;
+      height: 32px;
+   }
+</style>
 
 {% endblock %}
