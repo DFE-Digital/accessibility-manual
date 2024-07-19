@@ -1,0 +1,88 @@
+{% extends "layouts/page_layout.html" %}
+
+{% set selectedNav = "Knowledge hub" %}
+{% set pageName = "Disproportionate burden" %}
+{% set pageDescription = "Guidance for when you can use disproportionate burden when deciding not to prioritise
+accessibility issues."%}
+{% set mainClasses = "govuk-!-padding-top-0" %}
+{% set created = "18 July 2024" %}
+{% set reviewed = "18 July 2024" %}
+{% set updated = "18 July 2024" %}
+{% set githubIssueID = "63" %}
+{% set need = "This page exists to help people understand how to manage and prioritise accessibility issues and apply
+disproportionate burden if appropriate." %}
+
+{% block content %}
+
+<div class="govuk-breadcrumbs">
+    <ol class="govuk-breadcrumbs__list">
+        <li class="govuk-breadcrumbs__list-item">
+            <a class="govuk-breadcrumbs__link" href="/">Home</a>
+        </li>
+        <li class="govuk-breadcrumbs__list-item">
+            <a class="govuk-breadcrumbs__link" href="/knowledge-hub">Knowledge hub</a>
+        </li>
+        <li class="govuk-breadcrumbs__list-item">
+            {{pageName}}
+        </li>
+    </ol>
+</div>
+
+<h1 class="govuk-heading-xl  govuk-!-margin-top-5">{{pageName}}</h1>
+
+<p class="govuk-body">Disproportionate burden is an important consideration when making services accessible. It
+    recognises that, in some cases, the cost of making specific aspects of a service accessible may be too high relative
+    to the benefit gained.</p>
+
+<p class="govuk-body">However, applying disproportionate burden should be done carefully.</p>
+
+<h2 class="govuk-heading-l">Purpose of disproportionate burden</h2>
+
+<p class="govuk-body">The purpose of disproportionate burden is to provide a balance between
+    the obligation to make services accessible and the practical constraints you may have.</p>
+<p class="govuk-body">It recognises in some instances, the resources or cost to fix certain accessibility
+    issues might be too high compared to the overall benefit to users.</p>
+
+
+    <div class="dfe-manual-callout">
+        <div class="dfe-manual-callout--header">
+            <img src="/assets/images/new-window.png" alt="" />
+            <h3 class="govuk-heading-m">Guidance on GOV.UK</h3>
+        </div>
+    
+        <div class="dfe-manual-callout--content">
+            <p>You should follow the <a
+                    href="https://www.gov.uk/guidance/accessibility-requirements-for-public-sector-websites-and-apps#when-complying-with-accessibility-regulations-might-be-a-disproportionate-burden"
+                    rel="noopener noreferrer" target="_blank">guidance on GOV.UK <span class="govuk-visually-hidden">link opens in a new tab</span></a> for understanding and applying disproportionate burden.
+            </p>
+        </div>
+    </div>
+    
+
+<h2 class="govuk-heading-l">Accessibility statements</h2>
+
+<p class="govuk-body">If you apply disproportionate burden, you must detail this in your accessibility statement. You
+    should use either the <a href="/audits-statements/accessibility-statements/partially-compliant">partially-compliant
+        template</a> or <a href="/audits-statements/accessibility-statements/non-compliant">non-compliant template</a>.
+</p>
+
+
+<style>
+    .dfe-manual-callout {
+        padding: 25px 25px 10px 25px;
+        border-left: 10px solid #005ea5;
+        margin: 40px 0;
+        background-color: #F2F7FA;
+    }
+    .dfe-manual-callout--header{
+        display: flex;
+        align-items: top;
+    }
+
+    .dfe-manual-callout--header img{
+        margin-right: 10px;
+        height: 32px;
+    }
+</style>
+
+{% endblock %}
