@@ -1,0 +1,204 @@
+{% extends "layouts/full.html" %}
+
+{% set selectedNav = "Tools" %}
+{% set pageName = "Check an accessibility statement" %}
+{% set pageDescription = "Run some tests on an accessibility statement to check for required wording, and conditional
+wording." %}
+{% set created = "15 July 2024" %}
+{% set reviewed = "15 July 2024" %}
+{% set updated = "20 July 2024" %}
+{% set githubIssueID = "" %}
+{% set need = "This page exists to help people check an accessibility statement." %}
+
+{% block sidenav %}
+{% include "layouts/_newnav.html" %}
+{% endblock %}
+
+{% block content %}
+<div class="dfe-width-container ">
+    <div class="govuk-grid-row">
+
+        <div class="govuk-grid-column-three-quarters">
+
+            {% if errorMessage %}
+            <div class="govuk-error-summary" aria-labelledby="error-summary-title" role="alert" tabindex="-1"
+                data-module="govuk-error-summary">
+                <h2 class="govuk-error-summary__title" id="error-summary-title">
+                    There is a problem
+                </h2>
+                <div class="govuk-error-summary__body">
+                    <ul class="govuk-list">
+                        <li>
+                            <a href="#url">{{errorMessage}}</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            {% endif %}
+
+
+            <form action="/app/check-statement" method="post" id="form">
+                <div class="govuk-form-group {% if errorMessage %} govuk-form-group--error{% endif %} ">
+                    <h2 class="govuk-label-wrapper">
+                        <label class="govuk-label govuk-label--l" for="url">
+                            URL to check
+                        </label>
+                    </h2>
+                    {% if errorMessage %}
+                    <p id="event-name-error" class="govuk-error-message">
+                        <span class="govuk-visually-hidden">Error:</span> {{errorMessage}}
+                    </p>
+                    {% endif %}
+                    <input class="govuk-input" id="url" name="url" type="text" value="{{url}}">
+                </div>
+                <div class="govuk-button-group">
+                    <button type="submit" class="govuk-button" data-module="govuk-button">
+                        Check URL
+                    </button>
+                    <a class="govuk-link" href="/app/check-statement">Reset <span class="govuk-visually-hidden">the
+                            page</span></a>
+                </div>
+            </form>
+
+
+
+            {% if results | length %}
+            <div class="govuk-inset-text govuk-!-padding-left-7">
+                <h2 class="govuk-heading-l">Results</h2>
+
+                <table class="govuk-table">
+                    <thead class="govuk-table__head">
+                        <tr class="govuk-table__row">
+                            <th scope="col" class="govuk-table__header govuk-!-width-one-third">Test</th>
+                            <th scope="col" class="govuk-table__header">Result</th>
+                        </tr>
+                    </thead>
+                    <tbody class="govuk-table__body">
+                        <tr class="govuk-table__row">
+                            <th scope="row" class="govuk-table__header">Has feedback header</th>
+                            <td class="govuk-table__cell">{% if results.hasFeedbackContactInfo === true %}<strong
+                                    class="govuk-tag govuk-tag--green">Pass</strong>{% else %}<strong
+                                    class="govuk-tag govuk-tag--red">Fail</strong>{% endif %}</td>
+
+                        </tr>
+                        <tr class="govuk-table__row">
+                            <th scope="row" class="govuk-table__header">Has contact header</th>
+                            <td class="govuk-table__cell">{% if results.hasReportingAccessibilityProblems === true
+                                %}<strong class="govuk-tag govuk-tag--green">Pass</strong>{% else %}<strong
+                                    class="govuk-tag govuk-tag--red">Fail</strong>{% endif %}</td>
+                        </tr>
+
+                        <tr class="govuk-table__row">
+                            <th scope="row" class="govuk-table__header">Has enforcement header</th>
+                            <td class="govuk-table__cell">{% if results.hasEnforcementProcedure === true %}<strong
+                                    class="govuk-tag govuk-tag--green">Pass</strong>{% else %}<strong
+                                    class="govuk-tag govuk-tag--red">Fail</strong>{% endif %}</td>
+                        </tr>
+
+                        <tr class="govuk-table__row">
+                            <th scope="row" class="govuk-table__header">Has technical header</th>
+                            <td class="govuk-table__cell">{% if results.hasTechnicalInformation === true %}<strong
+                                    class="govuk-tag govuk-tag--green">Pass</strong>{% else %}<strong
+                                    class="govuk-tag govuk-tag--red">Fail</strong>{% endif %}</td>
+                        </tr>
+
+                        <tr class="govuk-table__row">
+                            <th scope="row" class="govuk-table__header">Has compliance header</th>
+                            <td class="govuk-table__cell">{% if results.hasComplianceStatus === true %}<strong
+                                    class="govuk-tag govuk-tag--green">Pass</strong>{% else %}<strong
+                                    class="govuk-tag govuk-tag--red">Fail</strong>{% endif %}</td>
+                        </tr>
+
+                        <tr class="govuk-table__row">
+                            <th scope="row" class="govuk-table__header">Has preparation header</th>
+                            <td class="govuk-table__cell">{% if results.hasPreparation === true %}<strong
+                                    class="govuk-tag govuk-tag--green">Pass</strong>{% else %}<strong
+                                    class="govuk-tag govuk-tag--red">Fail</strong>{% endif %}</td>
+                        </tr>
+
+                        <tr class="govuk-table__row">
+                            <th scope="row" class="govuk-table__header">Compliance statement</th>
+                            <td class="govuk-table__cell">{% if results.containsComplianceStatement
+                                %}{{results.containsComplianceStatement}}{% else %}<strong
+                                    class="govuk-tag govuk-tag--red govuk-!-margin-bottom-2">Fail</strong>
+                                <p class="govuk-!-margin-bottom-0">Check compliance status statement manually as
+                                    required wording does not exist.</p>{% endif %}
+                            </td>
+                        </tr>
+
+
+                        <tr class="govuk-table__row">
+                            <th scope="row" class="govuk-table__header">Contains enforcement wording</th>
+                            <td class="govuk-table__cell">{% if results.containsEnforcementProcedure %}<strong
+                                    class="govuk-tag govuk-tag--green">Pass</strong>{% else %}<strong
+                                    class="govuk-tag govuk-tag--red govuk-!-margin-bottom-2">Fail</strong>
+                                <p class="govuk-!-margin-bottom-0">Check enforcement wording manually as required
+                                    wording does not exist.</p>{% endif %}
+                            </td>
+                        </tr>
+
+
+                        <tr class="govuk-table__row">
+                            <th scope="row" class="govuk-table__header">Dates found</th>
+                            <td class="govuk-table__cell">
+                                {% if results.dateParagraphs | length %}
+                                <ul class="govuk-list govuk-list--bullet">
+                                    {% for date in results.dateParagraphs %}
+                                    <li>{{date.paragraph}}</li>
+                                    {% endfor %}
+                                </ul>
+                                {% else %}
+                                Dates couldn't be extracted from the statement.
+                                {% endif %}
+                            </td>
+                        </tr>
+
+                        <tr class="govuk-table__row">
+                            <th scope="row" class="govuk-table__header">WCAG criteria found</th>
+                            <td class="govuk-table__cell">
+
+                                <p>Found: {{results.containsWCAG22Criteria.foundCriteria | length}}</p>
+
+                                {% if results.containsWCAG22Criteria.foundCriteria | length %}
+                                <ul class="govuk-list govuk-list--bullet">
+                                    {% for criteria in results.containsWCAG22Criteria.foundCriteria %}
+                                    <li>{{criteria}}</li>
+                                    {% endfor %}
+                                </ul>
+                                {% endif %}
+
+
+
+
+                                {% if results.containsWCAG22Criteria.paragraphsWithCriteria | length %}
+                                <p>Details:</p>
+                                <ul class="govuk-list govuk-list--bullet">
+                                    {% for criteria in results.containsWCAG22Criteria.paragraphsWithCriteria %}
+                                    <li>{{criteria.paragraph}}</li>
+                                    {% endfor %}
+                                </ul>
+                                {% else %}
+                                No criteria found.
+                                {% endif %}
+                            </td>
+                        </tr>
+
+
+
+
+
+
+
+                    </tbody>
+                </table>
+
+
+            </div>
+            {% endif %}
+
+
+        </div>
+    </div>
+</div>
+
+{% endblock %}

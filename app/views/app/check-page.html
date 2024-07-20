@@ -1,0 +1,194 @@
+{% extends "layouts/full.html" %}
+
+{% set selectedNav = "Tools" %}
+{% set pageName = "Run some basic page tests" %}
+{% set pageDescription = "Run some basic tests on any public URL to check for issues that automated tests don't always
+detect." %}
+{% set created = "15 July 2024" %}
+{% set reviewed = "15 July 2024" %}
+{% set updated = "20 July 2024" %}
+{% set githubIssueID = "" %}
+{% set need = "This page exists to help people check for specific issues on a webpage" %}
+
+{% block sidenav %}
+{% include "layouts/_newnav.html" %}
+{% endblock %}
+
+{% block content %}
+<div class="dfe-width-container ">
+    <div class="govuk-grid-row">
+
+        <div class="govuk-grid-column-three-quarters">
+
+            <details class="govuk-details">
+                <summary class="govuk-details__summary">
+                    <span class="govuk-details__summary-text">
+                        What this tool will check for
+                    </span>
+                </summary>
+                <div class="govuk-details__text">
+                    <ul>
+                        <li>Number of H1's on page</li>
+                        <li>H1 exists in page title</li>
+                        <li>The page title</li>
+                        <li>Tables without captions</li>
+                        <li>Heading order</li>
+                        <li>Links with short text (and no visually hidden text)</li>
+                        <li>Images without alt text</li>
+                    </ul>
+                    <p>Contact the DesignOps team to <a href="/support">make a suggestion</a> for something else to
+                        check using this tool.</p>
+                </div>
+            </details>
+
+
+
+            {% if errorMessage %}
+            <div class="govuk-error-summary" aria-labelledby="error-summary-title" role="alert" tabindex="-1"
+                data-module="govuk-error-summary">
+                <h2 class="govuk-error-summary__title" id="error-summary-title">
+                    There is a problem
+                </h2>
+                <div class="govuk-error-summary__body">
+                    <ul class="govuk-list">
+                        <li>
+                            <a href="#url">{{errorMessage}}</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            {% endif %}
+
+
+            <form action="/app/check-page" method="post" id="form">
+                <div class="govuk-form-group {% if errorMessage %} govuk-form-group--error{% endif %} ">
+                    <h2 class="govuk-label-wrapper">
+                        <label class="govuk-label govuk-label--l" for="url">
+                            URL to check
+                        </label>
+                    </h2>
+                    {% if errorMessage %}
+                    <p id="event-name-error" class="govuk-error-message">
+                        <span class="govuk-visually-hidden">Error:</span> {{errorMessage}}
+                    </p>
+                    {% endif %}
+                    <input class="govuk-input" id="url" name="url" type="text" value="{{url}}">
+                </div>
+                <div class="govuk-button-group">
+                    <button type="submit" class="govuk-button" data-module="govuk-button">
+                        Check URL
+                    </button>
+                    <a class="govuk-link" href="/app/check-page">Reset <span class="govuk-visually-hidden">the
+                            page</span></a>
+                </div>
+            </form>
+
+
+
+            {% if results | length %}
+            <div class="govuk-inset-text govuk-!-padding-left-7">
+                <h2 class="govuk-heading-l">Results</h2>
+
+                <h3>URL tested</h3>
+                <p>{{url}}</p>
+
+                <h3>How many H1's are on the page</h3>
+
+                {% if results.h1Count === 1 %}
+                <p>There is 1 H1 on the page.</p>
+                {% else %}
+                <p>There are {{results.h1Count}} H1's on the page. For usability there should only be 1 H1 on a page.
+                </p>
+                {% endif %}
+
+                <h3>Does the H1 exist in the page title?</h3>
+
+                <p>{% if results.h1InTitle %}Yes, the H1 of the page exists in the title tag for the page.{% else %}No,
+                    the
+                    H1 is not in
+                    the title tag for the page. You should include the content of the H1 in the title, to support screen
+                    reader users, SEO, and usability in general.{% endif %}</p>
+
+                <h3>Page title</h3>
+
+                <p>{{results.title}}</p>
+
+                <h3>Do any tables have missing captions?</h3>
+
+                {% if results.tablesWithoutCaption | length === 0 %}
+                <p>No tables without captions found.</p>
+                {% else %}
+                <p>There are {{results.tablesWithoutCaption | length}} tables without captions.</p>
+                {% endif %}
+
+                <h3>The heading structure of the page</h3>
+                <ul class="govuk-list govuk-list--bullet">
+                    {% macro renderHeadingStructure(structure) %}
+                    {% for heading in structure %}
+                    <li>
+                        (H{{ heading.level }}): {{ heading.text }}
+                        {% if heading.children.length > 0 %}
+                        <ul class="govuk-list govuk-list--bullet">{{ renderHeadingStructure(heading.children) }}</ul>
+                        {% endif %}
+                    </li>
+                    {% endfor %}
+                    {% endmacro %}
+                    {{ renderHeadingStructure(results.headingStructure) }}
+                </ul>
+
+                <h3>Headings that have skipped a level</h3>
+                {% if results.skippedHeadings | length === 0 %}
+                <p>No skipped headings.</p>
+                {% else %}
+                <ul class="govuk-list govuk-list--bullet">
+                    {% for heading in results.skippedHeadings %}
+                    <li>({{ heading.tag | upper}}): {{ heading.text }}</li>
+                    {% endfor %}
+                </ul>
+                {% endif %}
+
+
+                <h3>Links with 2 or fewer words</h3>
+                <p>If shown, content in square brackets "[]" is visually hidden content in the link text.</p>
+
+
+                <ul class="govuk-list govuk-list--bullet">
+                    {% for links in results.shortLinks %}
+                    <li>{{ links }}</li>
+                    {% endfor %}
+                </ul>
+
+
+                {% if results.images | length > 0%}
+
+                <table class="govuk-table">
+                    <caption class="govuk-table__caption govuk-table__caption-l">Images on page </caption>
+                    <thead class="govuk-table__head">
+                        <tr class="govuk-table__row">
+                            <th scope="col" class="govuk-table__header govuk-!-width-one-half">Image</th>
+                            <th scope="col" class="govuk-table__header">Alt</th>
+                        </tr>
+                    </thead>
+                    <tbody class="govuk-table__body">
+                        {% for image in results.images %}
+                        <tr class="govuk-table__row">
+                            <td class="govuk-table__cell"><a href="{{ image.src }}" target="_blank">{{ image.displaySrc
+                                    }}</a></td>
+                            <td class="govuk-table__cell">{{ image.alt }}</td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+
+                {% else %}
+                <h3>Images</h3>
+                <p>No images on the page.</p>
+                {% endif %}
+            </div>
+            {% endif %}
+
+        </div>
+    </div>
+</div>
+
+{% endblock %}
