@@ -5,7 +5,7 @@ const cheerio = require('cheerio');
 
 exports.p_checkpage = async function (req, res) {
 
-    console.log('Checking page...');
+   
 
     const url = req.body.url;
 
@@ -38,15 +38,13 @@ exports.p_checkpage = async function (req, res) {
         return res.render("app/check-page", { results, url });
 
     } catch (error) {
-        console.log(error);
-        res.status(500).send(error);
+        res.render('/error')
     }
 }
 
 
 exports.p_checkstatement = async function (req, res) {
 
-    console.log('Checking statement...');
     const url = req.body.url;
 
     if (!isValidUrl(url)) {
@@ -88,8 +86,7 @@ exports.p_checkstatement = async function (req, res) {
 
 
     } catch (error) {
-        console.log(error);
-        res.status(500).send(error);
+        res.render('/error')
     }
 }
 
@@ -135,13 +132,6 @@ const checkEnforcementProcedure = ($) => {
     const normalizeWhitespace = (text) => text.replace(/\s+/g, ' ').trim();
     bodyText = normalizeWhitespace(bodyText);
     const normalizedEnforcementProcedureText = normalizeWhitespace(enforcementProcedureText);
-
-    console.log("=== Debugging Info ===");
-    console.log("Normalized Extracted Body Text:");
-    console.log(bodyText);
-    console.log("Normalized Enforcement Procedure Text:");
-    console.log(normalizedEnforcementProcedureText);
-    console.log("======================");
 
     return bodyText.includes(normalizedEnforcementProcedureText);
 };
@@ -359,7 +349,6 @@ const checkSkippedHeadings = ($) => {
                 text: $(element).text().trim(),
                 skippedFrom: `h${lastLevel}`
             });
-            console.log(`Skipped heading: ${element.tagName} - ${$(element).text().trim()}`);
         }
 
         lastLevel = level;
