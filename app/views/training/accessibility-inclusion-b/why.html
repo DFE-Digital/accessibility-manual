@@ -1,0 +1,83 @@
+{% extends "layouts/page_layout.html" %}
+
+{% set selectedNav = "Training" %}
+{% set pageName = "Accessibility and inclusion" %}
+{% set pageDescription = ""%}
+{% set mainClasses = "govuk-!-padding-bottom-9" %}
+
+{% block newNav%}
+
+<nav class="navbar" aria-label="Secondary navigation">
+    <ul class="nav-list">
+        <li>
+            <a href="/training" class="nav-link">Training
+            </a>
+        </li>
+        <li>
+            <button type="button" aria-expanded="true" aria-controls="sub-nav-howmany" class="nav-link-toggle">
+               Accessibility and inclusion<span class="icon"></span>
+            </button>
+            <ul id="sub-nav-howmany" class="sub-nav" style="display: block;">
+                <li>
+                    <a href="/training/accessibility-inclusion-b">Accessibility and inclusion</a>
+                </li>
+                <li>
+                    <a href="/training/accessibility-inclusion-b/types">Permanent, temporary, and situational impairments</a>
+                </li>
+                <li>
+                    <a href="/training/accessibility-inclusion-b/why">It's the law</a>
+                </li>
+                <li>
+                    <a href="/training/accessibility-inclusion-b/ethical">It's ethical</a>
+                </li>
+
+               
+                <li>
+                    <a href="/training/accessibility-inclusion-b/more">... more</a>
+                </li>
+            </ul>
+        </li>
+    </ul>
+</nav>
+{% endblock%}
+
+
+{% block content %}
+<div class="govuk-width-container">
+    <div class="govuk-breadcrumbs">
+        <ol class="govuk-breadcrumbs__list">
+            <li class="govuk-breadcrumbs__list-item">
+                <a class="govuk-breadcrumbs__link" href="/">Home</a>
+            </li>
+            <li class="govuk-breadcrumbs__list-item">
+                <a class="govuk-breadcrumbs__link" href="/training">Training</a>
+            </li>
+            <li class="govuk-breadcrumbs__list-item">
+                {{pageName}}
+            </li>
+        </ol>
+    </div>
+</div>
+
+<span class="govuk-caption-l  govuk-!-margin-top-5">Accessibility and inclusion</span>
+<h1 class="govuk-heading-xl">Why accessibility is important</h1>
+
+<p>There are 3 main reasons to ensure our products and websites are accessible</p>
+
+
+
+<h3 class="govuk-heading-l">It's the law</h3>
+<p>As a public body, we have a legal requirement under the Public Sector Websites and Applications
+    Regulations 2018.</p>
+<p>This law requires us to make sure all our websites and applications, meet the Web Content Accessibility Guidelines
+    (WCAG) Level AA as a minimum.</p>
+<p>There are other laws and regulations we must follow and comply with, you can read about these, along with guidance
+    around WCAG and what level AA means, in the <a href="">knowledge hub</a>.</p>
+
+
+<p>It's not just a legal requirement, it's also the right thing to do.</p>
+
+
+
+
+{% endblock %}
