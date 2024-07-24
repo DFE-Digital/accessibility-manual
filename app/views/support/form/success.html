@@ -1,0 +1,57 @@
+{% extends "layouts/full.html" %}
+
+{% set selectedNav = "Support" %}
+{% set pageName = "Get support from DesignOps with an accessibility query" %}
+{% set pageDescription = "Complete the form to request support with an accessibility related query."%}
+{% set setSelectedSideNav = "Overview" %}
+{% set created = "19 July 2024" %}
+{% set reviewed = "19 July 2024" %}
+{% set updated = "22 July 2024" %}
+{% set githubIssueID = "66" %}
+{% set need = "This page exists to help people get support and help when they need it." %}
+
+
+{% set mainClasses = "govuk-!-padding-top-0" %}
+
+{% block hero %}
+
+<section class="dfe-page-hero govuk-!-padding-bottom-9" style="background: #003a69;">
+    <div class="govuk-width-container">
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-two-thirds">
+                <h1 class="govuk-heading-xl">{{pageName}}</h1>
+                <p class="govuk-body-l">{{pageDescription}}</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-width-container govuk-!-margin-top-9">
+    <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+
+            <div class="govuk-panel govuk-panel--confirmation">
+                <h1 class="govuk-panel__title">
+                    Request submitted
+                </h1>
+                <div class="govuk-panel__body">
+                    We'll respond within 1 working day.</div>
+                <p class="govuk-body-l govuk-!-margin-top-5 govuk-!-margin-bottom-0"><a href="/support" class="govuk-link--inverse">Back to support</a>
+                </p>
+            </div>
+
+
+
+
+
+        </div>
+    </div>
+</div>
+
+
+
+{% endblock %}

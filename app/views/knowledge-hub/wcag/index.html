@@ -1,0 +1,78 @@
+{% extends "layouts/page_layout.html" %}
+
+{% set selectedNav = "Knowledge hub" %}
+{% set pageName = "Overview of WCAG" %}
+{% set pageDescription = "Guidance for ..."%}
+{% set mainClasses = "govuk-!-padding-top-0" %}
+{% set created = "18 July 2024" %}
+{% set reviewed = "18 July 2024" %}
+{% set updated = "18 July 2024" %}
+{% set githubIssueID = "" %}
+{% set need = "This page exists to help people understand ..." %}
+
+{% block content %}
+
+<div class="govuk-breadcrumbs">
+   <ol class="govuk-breadcrumbs__list">
+      <li class="govuk-breadcrumbs__list-item">
+         <a class="govuk-breadcrumbs__link" href="/">Home</a>
+      </li>
+      <li class="govuk-breadcrumbs__list-item">
+         <a class="govuk-breadcrumbs__link" href="/knowledge-hub">Knowledge hub</a>
+      </li>
+      <li class="govuk-breadcrumbs__list-item">
+         {{pageName}}
+      </li>
+   </ol>
+</div>
+
+<h1 class="govuk-heading-xl  govuk-!-margin-top-5">{{pageName}}</h1>
+
+<p>The Web Content Accessibility Guidelines (WCAG) 2.2 are a set of recommendations designed to make web content more
+   accessible to people with disabilities. These guidelines are aimed at improving the user experience for people with
+   various impairments, including visual, auditory, physical, speech, cognitive, language, learning, and neurological
+   disabilities.</p>
+
+<h2 class="govuk-heading-l">Key principles</h2>
+
+<p>WCAG 2.2 is organised around four key principles, often summarised by the acronym POUR.</p>
+
+<h3 class="govuk-heading-m">Perceivable</h3>
+<p>Information and user interface components must be presented in ways that users can perceive. This means content
+   should be available to at least one of a user's senses (sight, hearing, touch).</p>
+
+<h3 class="govuk-heading-m">Operable</h3>
+<p>User interface components and navigation must be operable. Users should be able to interact with and use the
+   interface effectively.</p>
+
+<h3 class="govuk-heading-m">Understandable</h3>
+<p>Information and the operation of user interface must be understandable. Users should be able to comprehend the
+   information as well as how to use the interface.</p>
+
+<h3 class="govuk-heading-m">Robust</h3>
+<p>Content must be robust enough to be interpreted reliably by a wide variety of user agents, including assistive
+   technologies. This means ensuring compatibility as technologies evolve.</p>
+
+<h2 class="govuk-heading-l">More information</h2>
+
+<div class="dfe-grid-container">
+  
+   <div class="dfe-card">
+      <div class="dfe-card-container">
+         <h3 class="govuk-heading-m">
+            <a href="https://design.homeoffice.gov.uk/accessibility/standard" target="_blank" class="govuk-link govuk-link--no-visited-state dfe-card-link--header">WCAG guide from HMRC</a>
+         </h3>
+         <p>A simplified explaination of each of the WCAG criteria.</p>
+      </div>
+   </div> 
+   <div class="dfe-card">
+      <div class="dfe-card-container">
+         <h3 class="govuk-heading-m">
+            <a href="https://www.w3.org/WAI/WCAG22/quickref/" target="_blank" class="govuk-link govuk-link--no-visited-state dfe-card-link--header">WCAG quick reference</a>
+         </h3>
+         <p>A customizable quick reference to WCAG success crieteria and how to meet them.</p>
+      </div>
+   </div>
+</div>
+
+{% endblock %}

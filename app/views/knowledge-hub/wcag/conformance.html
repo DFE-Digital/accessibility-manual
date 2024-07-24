@@ -1,0 +1,76 @@
+{% extends "layouts/page_layout.html" %}
+
+{% set selectedNav = "Knowledge hub" %}
+{% set pageName = "Conformance" %}
+{% set pageDescription = "Guidance for the different levels of conformance are within WCAG and what we aim to meet in DfE."%}
+{% set mainClasses = "govuk-!-padding-top-0" %}
+{% set created = "18 July 2024" %}
+{% set reviewed = "18 July 2024" %}
+{% set updated = "22 July 2024" %}
+{% set githubIssueID = "67" %}
+{% set need = "This page exists to help people understand what the different levels of conformance are within WCAG and what we aim to meet in DfE." %}
+
+{% block content %}
+
+<div class="govuk-breadcrumbs">
+   <ol class="govuk-breadcrumbs__list">
+      <li class="govuk-breadcrumbs__list-item">
+         <a class="govuk-breadcrumbs__link" href="/">Home</a>
+      </li>
+      <li class="govuk-breadcrumbs__list-item">
+         <a class="govuk-breadcrumbs__link" href="/knowledge-hub">Knowledge hub</a>
+      </li>
+      <li class="govuk-breadcrumbs__list-item">
+         {{pageName}}
+      </li>
+   </ol>
+</div>
+
+<h1 class="govuk-heading-xl  govuk-!-margin-top-5">{{pageName}}</h1>
+
+<p class="govuk-body">Conformance to the Web Content Accessibility Guidelines (WCAG) 2.2 means meeting the accessibility
+   standards set forth in the guidelines. Conformance is important to ensure that web content is accessible to all
+   users, including those with disabilities. There are different levels of conformance and a systematic approach to
+   achieving and reporting compliance.</p>
+
+<h2 class="govuk-heading-l">Conformance Levels</h2>
+<p class="govuk-body">WCAG 2.2 defines three levels of conformance:</p>
+
+<h3 class="govuk-heading-m">Level A</h3>
+<p class="govuk-body">This is the minimum level of conformance. It addresses the most basic web accessibility features
+   and includes requirements that will have the highest impact on the largest number of users with disabilities.</p>
+
+<h3 class="govuk-heading-m">Level AA</h3>
+<p class="govuk-body">This level addresses the biggest and most common barriers for disabled users. It is often
+   considered the standard level of conformance for web accessibility.</p>
+<p class="govuk-body">Level AA is the level of conformance we meet as a minimum in DfE.</p>
+
+<h3 class="govuk-heading-m">Level AAA</h3>
+<p class="govuk-body">This is the highest and most stringent level of conformance. It includes additional improvements
+   that will make content accessible to the maximum number of users. However, it is recognised that it may not be
+   possible to meet all Level AAA success criteria for all content.</p>
+
+
+<h2 class="govuk-heading-l">Conformance Requirements</h2>
+<p class="govuk-body">To conform to WCAG 2.2, web content must satisfy the success criteria at the desired level of
+   conformance. The key requirements for conformance are:</p>
+
+<h3 class="govuk-heading-m">Full pages</h3>
+<p class="govuk-body">The entire web page must meet the success criteria. If part of a web page is inaccessible, the
+   whole page is considered non-conformant.</p>
+
+<h3 class="govuk-heading-m">Complete processes</h3>
+<p class="govuk-body">Any process, such as a series of steps needed to complete a form or transaction, must be
+   accessible. All steps in the process must meet the success criteria.</p>
+
+<h3 class="govuk-heading-m">Accessibility-supported technologies</h3>
+<p class="govuk-body">Content must be usable with assistive technologies and accessible user agents. This means using
+   technologies that are supported by the user agents and assistive technologies available to the target audience.</p>
+
+<h3 class="govuk-heading-m">No interference</h3>
+<p class="govuk-body">The use of technologies must not interfere with the accessibility of other content. If a
+   technology is used in a way that causes accessibility problems, it does not meet the requirements.</p>
+
+
+
+{% endblock %}

@@ -399,7 +399,7 @@
     <div class="govuk-width-container">
       <div class="govuk-grid-row">
         <div class="govuk-grid-column-one-quarter govuk-!-padding-top-7 sticky">
-          {% include "layouts/_newnav.html" %}
+        {% block newNav%}  {% include "layouts/_newnav.html" %}{% endblock%}
         </div>
 
         <div

@@ -1,0 +1,81 @@
+{% extends "layouts/full-nohero.html" %}
+
+{% set selectedNav = "Training" %}
+{% set pageName = "Accessibility and inclusion" %}
+{% set pageDescription = ""%}
+{% set mainClasses = "govuk-!-padding-bottom-9" %}
+
+{% block hero %}
+
+<div class="govuk-width-container">
+    <div class="govuk-breadcrumbs">
+        <ol class="govuk-breadcrumbs__list">
+            <li class="govuk-breadcrumbs__list-item">
+                <a class="govuk-breadcrumbs__link" href="/">Home</a>
+            </li>
+            <li class="govuk-breadcrumbs__list-item">
+                <a class="govuk-breadcrumbs__link" href="/training">Training</a>
+            </li>
+            <li class="govuk-breadcrumbs__list-item">
+                {{pageName}}
+            </li>
+        </ol>
+    </div>
+</div>
+
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-width-container">
+    <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+            <h1 class="govuk-heading-xl">Permanent, situational and temporary impairments</h1>
+        </div>
+    </div>
+
+    <div class="govuk-grid-row">
+        <div class="govuk-grid-column-full">
+
+            <p>Not all disabilities or impairments are permanent. Some can be as a result of injury or environment.</p>
+
+            <h2 class="govuk-heading-l">Around 1 in 5 people in the UK have a disability</h2>
+
+            <div class="govuk-grid-row">
+                <div class="govuk-grid-column-one-third">
+                    <h3 class="govuk-heading-m">Permanent</h3>
+                    <p>Permanent disabilities are long-term conditions that affect people throughout their lives.</p>
+                    <p>Examples include blindness, deafness, or mobility impairments.</p>
+                </div>
+                <div class="govuk-grid-column-one-third">
+                    <h3 class="govuk-heading-m">Situational</h3>
+                    <p>Situational disabilities occur due to specific circumstances or environments.</p>
+                    <p>For example, a person in a noisy environment may temporarily experience difficulties similar to
+                        those who are hard of hearing.</p>
+                </div>
+                <div class="govuk-grid-column-one-third">
+                    <h3 class="govuk-heading-m">Temporary</h3>
+                    <p>Temporary disabilities are short-term conditions that affect us for a limited period.</p>
+                    <p>These can include things like a broken arm or an eye infection which might mean adapting to how
+                        someone interacts with us, our services, products or websites.</p>
+                </div>
+            </div>
+
+            <p>There is guidance in the <a href="">interaction design</a> section of the profession guidance on designing for these types of situations.</p>
+
+
+            <p class="govuk-!-margin-top-6"><a href="/training/accessibility-inclusion"
+                    class="dfe-manual-button dfe-manual-button--grey govuk-!-margin-right-2"
+                    role="button">Previous</a><a href="/training/accessibility-inclusion/why" class="dfe-manual-button"
+                    role="button">Next</a></p>
+
+        </div>
+        <div class="govuk-grid-column-one-third">
+
+        </div>
+    </div>
+</div>
+
+
+
+{% endblock %}
