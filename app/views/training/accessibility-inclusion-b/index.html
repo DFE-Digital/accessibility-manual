@@ -1,0 +1,102 @@
+{% extends "layouts/page_layout.html" %}
+
+
+{% set selectedNav = "Training" %}
+{% set pageName = "Accessibility and inclusion" %}
+{% set pageDescription = ""%}
+{% set mainClasses = "govuk-!-padding-bottom-9" %}
+
+{% block newNav%}
+
+<nav class="navbar" aria-label="Secondary navigation">
+    <ul class="nav-list">
+        <li>
+            <a href="/training" class="nav-link">Training
+            </a>
+        </li>
+        <li>
+            <button type="button" aria-expanded="true" aria-controls="sub-nav-howmany" class="nav-link-toggle">
+               Accessibility and inclusion<span class="icon"></span>
+            </button>
+            <ul id="sub-nav-howmany" class="sub-nav" style="display: block;">
+                <li>
+                    <a href="/training/accessibility-inclusion-b">Accessibility and inclusion</a>
+                </li>
+                <li>
+                    <a href="/training/accessibility-inclusion-b/types">Permanent, temporary, and situational impairments</a>
+                </li>
+                <li>
+                    <a href="/training/accessibility-inclusion-b/why">It's the law</a>
+                </li>
+                <li>
+                    <a href="/training/accessibility-inclusion-b/ethical">It's ethical</a>
+                </li>
+
+                <li>
+                    <a href="/training/accessibility-inclusion-b/more">... more</a>
+                </li>
+            </ul>
+        </li>
+    </ul>
+</nav>
+{% endblock%}
+
+
+{% block content %}
+<div class="govuk-width-container">
+    <div class="govuk-breadcrumbs">
+        <ol class="govuk-breadcrumbs__list">
+            <li class="govuk-breadcrumbs__list-item">
+                <a class="govuk-breadcrumbs__link" href="/">Home</a>
+            </li>
+            <li class="govuk-breadcrumbs__list-item">
+                <a class="govuk-breadcrumbs__link" href="/training">Training</a>
+            </li>
+            <li class="govuk-breadcrumbs__list-item">
+                {{pageName}}
+            </li>
+        </ol>
+    </div>
+</div>
+
+<span class="govuk-caption-l  govuk-!-margin-top-5">Accessibility and inclusion</span>
+<h1 class="govuk-heading-xl">{{pageName}}</h1>
+
+
+<p>Accessibility refers to the design and creation of websites, tools, and technologies so that people with
+    disabilities can use them.</p>
+
+<h2 class="govuk-heading-l">Around 1 in 5 people in the UK have a disability</h2>
+<p>People with disabilities can have a range of impairments.</p>
+
+
+<h3 class="govuk-heading-m">Visual impairments</h3>
+<p>Visual impairments include blindness, low vision, and colour blindness.</p>
+<p>People may rely on screen readers, screen magnifiers, or need high-contrast text and designs that
+    do not rely solely on colour.</p>
+
+<h3 class="govuk-heading-m">Hearing impairments</h3>
+<p>Hearing impairments include deafness or being hard of hearing.</p>
+<p>You'll need to providing text alternatives for audio content and ensure that videos with audit
+    contain closed captions or a text-alternative.</p>
+
+<h3 class="govuk-heading-m">Motor impairments</h3>
+<p>Motor impairments affect movement and coordination, requiring alternatives to a
+    mouse and keyboard.</p>
+<p>Adaptive technologies like speech recognition, head or eye-tracking devices can help.</p>
+
+<h3 class="govuk-heading-m">Cognitive impairments</h3>
+<p>Cognitive impairments include learning disabilities and problems with memory and recall.</p>
+<p>Clear, simple layouts, plain language, and tools like text-to-speech can make content more
+    accessible.</p>
+
+
+
+<p class="govuk-body">Impairments are not always permanent. They can be temporary, as a result of an accident, or
+    situational, based on the persons surroundings.</p>
+
+
+
+
+
+{% endblock %}
