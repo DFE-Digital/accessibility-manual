@@ -15,7 +15,7 @@ exports.p_support = async function (req, res) {
     }
 
     if (!email) {
-        errors.push({ msg: 'Enter your email', field: 'email' });
+        errors.push({ msg: 'Enter your email address', field: 'email' });
     }
 
     // validate email is an email
