@@ -120,7 +120,7 @@
 
                 <div class="govuk-form-group {% if queryError %}govuk-form-group--error{% endif %}">
                     <label class="govuk-label" for="query">Your question</label>
-                    <div id="query-hint" class="govuk-hint">Please provide as much detail as possible to help us understand your query.</div>
+                    <div id="query-hint" class="govuk-hint">Please provide as much detail as possible to help us understand your query</div>
                     {% if queryError %}
                     <span class="govuk-error-message">{{ queryError }}</span>
                     {% endif %}
@@ -129,11 +129,11 @@
 
                 <div class="govuk-form-group">
                     <label class="govuk-label" for="steps">What guidance or steps have you taken so far?</label>
-                    <div id="steps-hint" class="govuk-hint">Optional, but can help us understand what you have already tried.</div>
+                    <div id="steps-hint" class="govuk-hint">Optional, but can help us understand what you have already tried</div>
                     <textarea class="govuk-textarea" id="steps" name="steps" rows="5" aria-describedby="steps-hint">{{ data.steps }}</textarea>
                 </div>
 
-                <p>Your details are only used for the purpose of handling the support request.</p>
+                <p>Your details will only be used to deal with this request.</p>
                 <button type="submit" class="govuk-button">Submit request</button>
             </form>
         </div>
