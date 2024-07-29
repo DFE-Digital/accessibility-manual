@@ -1,7 +1,7 @@
 {% extends "layouts/full-nohero.html" %}
 
 {% set selectedNav = "Training" %}
-{% set pageName = "Accessibility and inclusion" %}
+{% set pageName = "What accessibility is" %}
 {% set pageDescription = ""%}
 {% set mainClasses = "govuk-!-padding-bottom-9" %}
 
@@ -22,45 +22,35 @@
         </ol>
     </div>
 </div>
-
 {% endblock %}
 
 {% block content %}
-
 <div class="govuk-width-container">
+
     <div class="govuk-grid-row">
-        <div class="govuk-grid-column-two-thirds">
-            <h1 class="govuk-heading-xl">People with vision impairments</h1>
-        </div>
-    </div>
-
-    <div class="govuk-grid-row ">
         <div class="govuk-grid-column-full">
-
-   
-            <p>Visual impairments include blindness, low vision, and colour blindness.</p>
-            <p>People may rely on screen readers, screen magnifiers, or need high-contrast text and designs that
-                do not rely solely on colour.</p>
-
-          
-            <p>Guidance for <a href="">interaction and content designers</a>...</p>
-
-
-
-           
-
+            <div class="govuk-grid-row">
+                <div class="govuk-grid-column-two-thirds">
+                    <h1 class="govuk-heading-xl govuk-!-font-size-48">{{pageName}}</h1>
+                    <p>Accessibility is about ensuring that everyone, regardless of their abilities, can use our digital
+                        services effectively. </p>
+                    <p>This includes making sure our websites, mobile apps, and digital content are usable by people
+                        with a variety of disabilities. </p>
+                    <p>We must prioritise the people we are designing for, placing them at the centre of what it is we
+                        are designing. </p>
+                    <p>This enables us to understand people’s needs and how they might use our products and websites,
+                        enabling us to provide the best possible experience.</p>
+                </div>
+                <div class="govuk-grid-column-one-third center-image">
+                  
+                </div>
+            </div>
             <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
-
             <p class="govuk-!-margin-top-6"><a href="/training/accessibility-inclusion/types" class="dfe-manual-button"
                     role="button">Next</a></p>
-
-        </div>
-        <div class="govuk-grid-column-one-third">
-
         </div>
     </div>
-</div>
 
 
 
-{% endblock %}
+    {% endblock %}

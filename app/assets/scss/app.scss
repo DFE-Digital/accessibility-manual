@@ -2689,3 +2689,10 @@ ol {
   background-color: #fd0;
   box-shadow: 0 2px 0 #0b0c0c;
 }
+
+.row-flex{display: flex;}
+.center-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

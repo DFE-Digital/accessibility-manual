@@ -1,30 +1,234 @@
-{% extends "layouts/full.html" %}
+{% extends "layouts/homepage.html" %}
 
 {% set selectedNav = "Home" %}
 {% set pageName = "Accessibility and inclusive design manual" %}
 {% set pageDescription = "Everything you need to understand how we create accessible, inclusive products and services in
 the Department for Education."%}
-{% set mainClasses = "govuk-!-padding-bottom-9" %}
+{% set mainClasses = "govuk-!-padding-bottom-0 govuk-!-padding-top-0" %}
 
 
 
 {% block content %}
 
+<style>
+   .wider-grid {
+      max-width: 80%;
+      margin: 0 auto;
+   }
+
+   .full-width-div {
+      position: relative;
+      width: 100%;
+      height: 100vh;
+      /* Full viewport height */
+      max-height: 560px;
+      /* Max height of 560px */
+      background: url('https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?q=80&w=4140&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') no-repeat center center;
+      background-size: cover;
+      transition: transform 0.3s ease;
+      /* Smooth transform */
+   }
+
+   .full-width-div:hover {
+      transform: scale(1.02);
+   }
+
+   .overlay-text {
+      position: absolute;
+      top: 50%;
+      left: 5%;
+      transform: translateY(-50%);
+      background-color: rgba(0, 0, 0, 0.75);
+      color: white;
+      padding: 30px 40px;
+      width: 40%;
+   }
+
+   .overlay-text h2 {
+      color: white;
+   }
+
+   .overlay-text .govuk-button {
+      margin-bottom: 0px;
+   }
+
+   .clickable-div {
+      display: block;
+      position: relative;
+      text-decoration: none;
+      color: inherit;
+   }
+
+   .clickable-div:focus {
+      outline: none;
+   }
+
+   .govuk-button:focus {
+      outline: 3px solid #ffdd00;
+      /* Custom focus outline */
+      outline-offset: 2px;
+   }
+
+   @media (max-width: 768px) {
+      .wider-grid {
+         max-width: 90%;
+         margin: 0 auto;
+      }
+
+      .full-width-div {
+         position: relative;
+         width: 100%;
+         height: 100vh;
+         /* Full viewport height */
+         max-height: 360px;
+         /* Max height of 360px */
+      }
+
+      .overlay-text {
+         width: 90%;
+         left: 0px;
+      }
+   }
+
+   @media (min-width: 1900px) {
+      .wider-grid {
+         max-width: 70%;
+         margin: 0 auto;
+      }
+   }
+
+   .full-width-panel {
+      width: 100%;
+      display: flex;
+      margin: 0 auto;
+   }
+
+   .full-width-panel .govuk-grid-column-one-half {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 20px;
+   }
+
+   .full-width-panel .govuk-grid-column-one-half.text-column {
+      background-color: #f3f2f1;
+   }
+
+   .full-width-panel .govuk-grid-column-one-half.image-column {
+      padding: 0;
+   }
+
+   .full-width-panel .image-container {
+      width: 100%;
+      height: 100%;
+      background-size: cover;
+      background-position: center;
+   }
+
+   @media (max-width: 768px) {
+      .full-width-panel {
+         flex-direction: column;
+      }
+
+      .full-width-panel .govuk-grid-column-one-half {
+         width: 100%;
+      }
+
+      .full-width-panel .image-container {
+         height: 200px;
+         /* Adjust height for mobile view */
+      }
+   }
+
+   .split-panel {
+      width: 100%;
+      display: flex;
+      margin: 0 auto;
+   }
+
+   .split-panel--bg-white {
+      background-color: #ffffff;
+   }
+
+   .split-panel .govuk-grid-column-one-half {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 20px;
+   }
+
+   .split-panel .govuk-grid-column-one-half.text-column {
+    padding: 60px 50px;
+   
+
+   }
+   .text-column p{
+   max-width: 30ch;
+   }
+
+   .split-panel .govuk-grid-column-one-half.image-column {
+      padding: 0;
+      position: relative;
+   }
+
+   .split-panel .image-container {
+      width: 100%;
+      height: 100%;
+      background-size: cover;
+      background-position: center;
+      min-height: 300px;
+      /* Ensure there is a minimum height */
+   }
+
+   @media (max-width: 768px) {
+      .split-panel {
+         flex-direction: column;
+      }
+
+      .split-panel .govuk-grid-column-one-half {
+         width: 100%;
+      }
+
+      .split-panel .image-container {
+         height: 200px;
+         /* Adjust height for mobile view */
+      }
+   }
+</style>
+
+<div class="wider-grid govuk-!-margin-top-9">
+   <div class="govuk-grid-row">
+      <div class="govuk-grid-column-full">
+
+         <div class="full-width-div">
+            <div class="overlay-text">
+               <h2 class="govuk-heading-l">Learn about the basics of accessibility and inclusive design</h2>
+               <a href="/training/accessibility-inclusion" role="button" draggable="false"
+                  class="govuk-button govuk-button--start govuk-button--inverse" data-module="govuk-button">
+                  Start now
+                  <svg class="govuk-button__start-icon" xmlns="http://www.w3.org/2000/svg" width="17.5" height="19"
+                     viewBox="0 0 33 40" aria-hidden="true" focusable="false">
+                     <path fill="currentColor" d="M0 0h13l20 20-20 20H0l20-20z" />
+                  </svg>
+               </a>
+            </div>
+         </div>
+
+      </div>
+   </div>
+</div>
 
 
-<section style="background: #ffffff">
+<section style="background-color:#f0f4f5;" class="govuk-!-padding-top-9 govuk-!-padding-bottom-9 govuk-!-margin-top-9">
    <div class="govuk-width-container">
       <div class="govuk-grid-row">
          <div class="govuk-grid-column-full">
-            <h2 class="govuk-heading-l">Learn about accessibility and inclusive design</h2>
+            <h2 class="govuk-heading-xl">Professions</h2>
          </div>
       </div>
       <div class="govuk-grid-row">
-         <div class="govuk-grid-column-two-thirds">
-            <p>Accessibility and inclusive design isn't about ticking a box, or doing an "accessibility sprint", it's
-               having empathy for people who use our products and websites, and building that into ensuring we build
-               services, products, and websites for everyone.
-            </p>
+         <div class="govuk-grid-column-full">
+            <p class="govuk-body-l">Find guidance, advice, and good practice for your profession. <a href="/profession-guidance">More guidance</a>.</p>
          </div>
          <div class="govuk-grid-column-two-thirds">
          </div>
@@ -35,59 +239,73 @@ the Department for Education."%}
                   <img src="/assets/images/twopeople.jpg" alt="">
                   <div class="dfe-card-container">
                      <h3 class="govuk-heading-m">
-                        <a href="/training/accessibility-inclusion" class="govuk-link govuk-link--no-visited-state dfe-card-link--header">Accessibility
-                           and inclusion</a>
+                        <a href="/" class="govuk-link govuk-link--no-visited-state dfe-card-link--header">Design</a>
                      </h3>
-                     <p>Learn about inclusion and accessibility in the Department for Education.</p>
+                     <p>Understand how you can use UX laws and the GOV design system to create accessible user interfaces and content.</p>
                   </div>
                </div>
                <div class="dfe-card">
                   <img src="/assets/images/people.jpg" alt="">
                   <div class="dfe-card-container">
                      <h3 class="govuk-heading-m">
-                        <a href="/professions"
-                           class="govuk-link govuk-link--no-visited-state dfe-card-link--header">Best practice in your
-                           role</a>
+                        <a href="/" class="govuk-link govuk-link--no-visited-state dfe-card-link--header">Product and
+                           delivery</a>
                      </h3>
-                     <p>Accessibility and inclusive design considerations in your role across Digital, Data, and
-                        Technology.
-                     </p>
+                     <p>Learn building accessibility and inclusivity principles into planning and processes can create better products and reduce problems.</p>
                   </div>
                </div>
                <div class="dfe-card">
                   <img src="/assets/images/hands.jpg" alt="">
                   <div class="dfe-card-container">
                      <h3 class="govuk-heading-m">
-                        <a href="/standards"
-                           class="govuk-link govuk-link--no-visited-state dfe-card-link--header">Knowledge hub</a>
+                        <a href="/" class="govuk-link govuk-link--no-visited-state dfe-card-link--header">Technical</a>
                      </h3>
-                     <p>All guidance and knowledge to support understanding accessibility and inclusive design.</p>
+                     <p>How to include accessibility checks, testing, and tooling into the development lifecycle alongside good design practice.</p>
                   </div>
                </div>
             </div>
          </div>
+
+
+         <div class="govuk-grid-column-full govuk-!-margin-top-9 govuk-!-margin-bottom-5">
+            <div class="govuk-grid-row split-panel split-panel--bg-white">
+               <div class="govuk-grid-column-one-half text-column">
+                  <h2 class="govuk-heading-l">Expand your knowledge</h2>
+                  <p class="govuk-body">Use the knowledge hub to develop your understanding of accessibile and inclusive design further.</p>
+                  <p class="govuk-body"><a href="/knowledge-hub">Visit the hub</a></p>
+               </div>
+               <div class="govuk-grid-column-one-half image-column">
+                  <div class="image-container"
+                     style="background-image: url('https://images.unsplash.com/photo-1513258496099-48168024aec0?q=80&w=4140&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');">
+                  </div>
+               </div>
+            </div>
+         </div>
+         
       </div>
    </div>
 </section>
 
-<section style="background: #f1f7ff" class="govuk-!-margin-top-5 govuk-!-padding-top-6 govuk-!-padding-bottom-6">
+
+
+<section style="background: #ffffff" class="govuk-!-margin-top-0 govuk-!-padding-top-2 govuk-!-padding-bottom-4">
    <div class="govuk-width-container">
       <div class="govuk-grid-row">
          <div class="govuk-grid-column-full how-many-card govuk-!-padding-top-9 govuk-!-padding-bottom-9">
-            <h2 class="govuk-heading-l">How many people</h2>
+            <h2 class="govuk-heading-xl">How many people</h2>
             <div class="govuk-grid-row">
                <div class="govuk-grid-column-one-half govuk-!-padding-right-9">
-                  <p>Find out about the types of disabilties, impairments, and conditions that affect people who
+                  <p class="govuk-body-l">Find out about the types of disabilties, impairments, and conditions that affect people who
                      might use your service.</p>
-                  <p style="margin-bottom: 0px;"><a href="/project/how-many-people">Learn more about this tool</a></p>
+                  <p style="margin-bottom: 0px;" class="govuk-body-l"><a href="/project/how-many-people">Learn more about this tool</a></p>
                </div>
                <div class="govuk-grid-column-one-half">
-                  <form action="/app/how-many-people" method="post">
-                     <div class="govuk-form-group">
-                        <label class="govuk-label" for="numberOfUsers">
+                  <form action="/app/how-many-people" method="post" style="background: #F2F7FA;" class="govuk-!-padding-left-7 govuk-!-padding-top-7 govuk-!-padding-bottom-7 govuk-!-padding-right-0 ">
+                     <div class="govuk-form-group govuk-!-margin-bottom-0">
+                        <label class="govuk-body-l" for="numberOfUsers">
                            Estimated number of people
                         </label>
-                        <div class="inline-elements">
+                        <div class="inline-elements govuk-!-margin-top-3">
                            <input class="govuk-input govuk-!-width-two-thirds" id="numberOfUsers" name="numberOfUsers"
                               type="text" style="margin-bottom: 4px;">
                            <button type="submit" class="govuk-button" data-module="govuk-button"
@@ -106,42 +324,43 @@ the Department for Education."%}
 
 
 
-<section style="background: #ffffff">
+<section style="background: #f3f2f1;" class="govuk-!-padding-bottom-9">
    <div class="govuk-width-container">
       <div class="govuk-grid-row">
          <div class="govuk-grid-column-full govuk-!-margin-top-9">
-            <div class="dfe-grid-container">
+            <h2 class="govuk-heading-xl">Standards</h2>
+            <p class="govuk-body-l">The standards we're required to meet, and how to meet them, when building and running products and websites.</p>
+            <div class="dfe-grid-container govuk-!-margin-top-9">
+
                <div class="dfe-card">
-                  <img src="/assets/images/twopeople.jpg" alt="">
+                  <img src="/assets/images/standard.png" alt="">
                   <div class="dfe-card-container">
                      <h3 class="govuk-heading-m">
-                        <a href="/training/accessibility-inclusion-b" class="govuk-link govuk-link--no-visited-state dfe-card-link--header">Accessibility
-                           and inclusion</a>
+                        <a href="/standards"
+                           class="govuk-link govuk-link--no-visited-state dfe-card-link--header">DfE Standards</a>
                      </h3>
-                     <p>Learn about inclusion and accessibility in the Department for Education.</p>
+                     <p>The standards we must meet when building products and websites.</p>
                   </div>
                </div>
                <div class="dfe-card">
-                  <img src="/assets/images/people.jpg" alt="">
+                  <img src="/assets/images/audit.png" alt="">
                   <div class="dfe-card-container">
                      <h3 class="govuk-heading-m">
-                        <a href="/professions"
-                           class="govuk-link govuk-link--no-visited-state dfe-card-link--header">Best
-                           practice in your profession</a>
+                        <a href="/audits-statements/audits"
+                           class="govuk-link govuk-link--no-visited-state dfe-card-link--header">Audits</a>
                      </h3>
-                     <p>Understand what the different responsibilitiies are for each role in the agile delivery
-                        lifecycle.
+                     <p>Guidance for when, and what type of audits are required.
                      </p>
                   </div>
                </div>
                <div class="dfe-card">
-                  <img src="/assets/images/hands.jpg" alt="">
+                  <img src="/assets/images/statement.png" alt="">
                   <div class="dfe-card-container">
                      <h3 class="govuk-heading-m">
-                        <a href="/standards" class="govuk-link govuk-link--no-visited-state dfe-card-link--header">DfE
-                           Accessibility Standards</a>
+                        <a href="/audits-statements/accessibility-statements"
+                           class="govuk-link govuk-link--no-visited-state dfe-card-link--header">Accessibility statements</a>
                      </h3>
-                     <p>The accessibility standards all digital products and websites must meet.</p>
+                     <p>How to write and publish an accurate, standards-compliant accessibility statement.</p>
                   </div>
                </div>
             </div>
