@@ -1,0 +1,67 @@
+{% extends "layouts/full-nohero.html" %}
+
+{% set selectedNav = "Training" %}
+{% set pageName = "How assistive technology helps people" %}
+{% set pageDescription = ""%}
+{% set mainClasses = "govuk-!-padding-bottom-9" %}
+
+{% block hero %}
+
+    <div class="govuk-width-container">
+        <div class="govuk-breadcrumbs">
+            <ol class="govuk-breadcrumbs__list">
+                <li class="govuk-breadcrumbs__list-item">
+                    <a class="govuk-breadcrumbs__link" href="/">Home</a>
+                </li>
+                <li class="govuk-breadcrumbs__list-item">
+                    <a class="govuk-breadcrumbs__link" href="/training">Training</a>
+                </li>
+                <li class="govuk-breadcrumbs__list-item">
+                    {{pageName}}
+                </li>
+            </ol>
+        </div>
+    </div>
+
+{% endblock %}
+
+{% block content %}
+
+    <style>
+        .grey-text {
+            color: #585858;
+        }
+    </style>
+
+    <div class="govuk-width-container">
+
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-full">
+                <div class="govuk-grid-row">
+                    <div class="govuk-grid-column-two-thirds">
+                        <h1 class="govuk-heading-xl govuk-!-font-size-48">{{pageName}}</h1>
+
+                        <p class="govuk-body-l">The way that websites and digital content are built can often create barriers for people with disabilities. For example, most digital content relies on people having good vision to be able to read or watch content. </p>
+
+                        <p class="govuk-body-l">Assistive technology such as screen readers can help users to perceive and understand this content by having the content read to them audibly. </p>
+
+                        <p class="govuk-body-l">This is similar for users with motor disabilities, content often relies on precise movements such as moving a mouse or typing on a keyboard, not everyone has the fine motor skills to carry out these tasks. </p>
+
+                         <p class="govuk-body-l">AT such as voice control and dictation tools help to bridge this gap, uses can use this software to dictate their emails and control their equipment using just their voice.</p>
+
+                    </div>
+                </div>
+                <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+                <p class="govuk-!-margin-top-6">
+                    <a href="/training/accessibility-inclusion/many"
+                    class="dfe-manual-button dfe-manual-button--grey govuk-!-margin-right-2"
+                    role="button">Previous</a>
+                    <a href="/training/accessibility-inclusion/law-intro" class="dfe-manual-button"
+                    role="button">Next</a>
+                </p>
+            </div>
+        </div>
+        <div class="govuk-grid-column-one-third"></div>
+    </div>
+
+{% endblock %}

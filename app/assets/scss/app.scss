@@ -3020,3 +3020,40 @@ ol {
 .hljs-strong {
   font-weight: bold
 }
+
+.dfe-flex {
+  display: flex;
+  margin-bottom: 60px;
+
+}
+
+.dfe-flex-item {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.dfe-panel-do,
+.dfe-panel-dont {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.dfe-panel-do img,
+.dfe-panel-dont img {
+  max-width: 100%;
+  height: auto;
+}
+
+.dfe-panel-do {
+  background-color: rgba(74, 195, 128, 0.2);
+  padding: 20px;
+  border-top: 8px solid rgba(0, 130, 59, 1);
+}
+
+.dfe-panel-dont {
+  background-color: rgba(207, 93, 104, 0.2);
+  padding: 20px;
+  border-top: 8px solid rgba(177, 14, 30, 1);
+}

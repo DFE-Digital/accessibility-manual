@@ -1,0 +1,97 @@
+{% extends "layouts/full-nohero.html" %}
+
+{% set selectedNav = "Training" %}
+{% set pageName = "What is the main goal of accessibility in digital services?" %}
+{% set pageDescription = ""%}
+{% set mainClasses = "govuk-!-padding-bottom-9" %}
+
+{% block hero %}
+
+    <div class="govuk-width-container">
+        <div class="govuk-breadcrumbs">
+            <ol class="govuk-breadcrumbs__list">
+                <li class="govuk-breadcrumbs__list-item">
+                    <a class="govuk-breadcrumbs__link" href="/">Home</a>
+                </li>
+                <li class="govuk-breadcrumbs__list-item">
+                    <a class="govuk-breadcrumbs__link" href="/training">Training</a>
+                </li>
+                <li class="govuk-breadcrumbs__list-item">
+                Question 1
+            </li>
+            </ol>
+        </div>
+    </div>
+
+{% endblock %}
+
+{% block content %}
+
+    <style>
+        .grey-text {
+            color: #585858;
+        }
+    </style>
+
+    <div class="govuk-width-container">
+
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-full">
+                <div class="govuk-grid-row">
+                    <div class="govuk-grid-column-two-thirds">
+
+                        <div class="govuk-form-group">
+                            <fieldset class="govuk-fieldset" aria-describedby="q1-hint">
+                                <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+                                    <h1 class="govuk-fieldset__heading">
+                                        {{pageName}}
+                                    </h1>
+                                </legend>
+                                <div id="q1-hint" class="govuk-hint">
+      Select all you think apply
+    </div>
+                                <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+                                    <div class="govuk-checkboxes__item">
+                                        <input class="govuk-checkboxes__input" id="q1" name="q1" type="checkbox" value="a">
+                                        <label class="govuk-label govuk-checkboxes__label" for="q1">
+          To create nice-looking websites
+        </label>
+                                    </div>
+                                    <div class="govuk-checkboxes__item">
+                                        <input class="govuk-checkboxes__input" id="q1-2" name="q1" type="checkbox" value="b">
+                                        <label class="govuk-label govuk-checkboxes__label" for="q1-2">
+         To ensure everyone can use our websites and apps 
+        </label>
+                                    </div>
+                                    <div class="govuk-checkboxes__item">
+                                        <input class="govuk-checkboxes__input" id="q1-3" name="q1" type="checkbox" value="c">
+                                        <label class="govuk-label govuk-checkboxes__label" for="q1-3">
+          To improve the speed and performance of websites and apps
+        </label>
+                                    </div>
+                                    <div class="govuk-checkboxes__item">
+                                        <input class="govuk-checkboxes__input" id="q1-4" name="q1" type="checkbox" value="d">
+                                        <label class="govuk-label govuk-checkboxes__label" for="q1-4">
+          To make sure there is an accessibility statement
+        </label>
+                                    </div>
+                                </div>
+                            </fieldset>
+                        </div>
+
+                    </div>
+                </div>
+                <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+                <p class="govuk-!-margin-top-6">
+                    <a href="/training/accessibility-inclusion/check-intro"
+                    class="dfe-manual-button dfe-manual-button--grey govuk-!-margin-right-2"
+                    role="button">Previous</a>
+                    <a href="/training/accessibility-inclusion/situation"
+                    class="dfe-manual-button" role="button">Check your answer</a>
+                </p>
+            </div>
+        </div>
+        <div class="govuk-grid-column-one-third"></div>
+    </div>
+
+{% endblock %}
