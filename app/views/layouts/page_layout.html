@@ -461,40 +461,7 @@
     initAll();
   </script>
 
-  {# <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            // Function to generate slugs
-            function slugify(text) {
-                return text.toString().toLowerCase()
-                    .replace(/\s+/g, '-')          // Replace spaces with -
-                    .replace(/[^\w\-]+/g, '')      // Remove all non-word chars
-                    .replace(/\-\-+/g, '-')        // Replace multiple - with single -
-                    .replace(/^-+/, '')            // Trim - from start of text
-                    .replace(/-+$/, '');           // Trim - from end of text
-            }
 
-            // Select all headings from h2 to h6
-            const headings = document.querySelectorAll('h2, h3, h4, h5, h6');
-
-            headings.forEach(heading => {
-                // Generate slug from heading text
-                const slug = slugify(heading.textContent);
-
-                // Set the id attribute with the generated slug
-                heading.id = slug;
-
-                // Create a new anchor element
-                const anchor = document.createElement('a');
-                anchor.href = `#${slug}`;
-                anchor.textContent = '§';
-                anchor.style.marginRight = '5px';
-                anchor.classList.add('govuk-link', 'govuk-link--no-visited-state', 'section-link');
-
-                // Insert the anchor before the heading text
-                heading.insertAdjacentElement('afterbegin', anchor);
-            });
-        });
-    </script> #}
 </body>
 
 </html>

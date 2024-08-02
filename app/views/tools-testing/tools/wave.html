@@ -1,7 +1,7 @@
 {% extends "layouts/page_layout.html" %}
 
 {% set selectedNav = "Tools and testing" %}
-{% set pageName = "WAVE Evaluation " %}
+{% set pageName = "WAVE Evaluation" %}
 {% set pageDescription = "Guidance for installing and using WAVE Evaluation to test for accessibility issues."%}
 {% set mainClasses = "govuk-!-padding-top-0" %}
 {% set created = "1 August 2024" %}
@@ -47,16 +47,31 @@
 
     <p>Once installed, WAVE can be launched from your extensions bar. It will appear as a circle with a W in the centre.</p>
 
-    <p>When selected, WAVE will be a pop up which automatically starts the checks. You will need to select the details of the checks you want to appear visually on the screen. Within ‘view details’, select only alerts and errors to be flagged.</p>
+    <p>When selected, WAVE will open up to the side of your browser window and automatically starts the checks. You will need to select the details of the checks you want to appear visually on the screen. Within ‘view details’, select only alerts and errors to be flagged.</p>
 
     <h2 class="govuk-heading-l">Results</h2>
 
-    <img src="/assets/images/wave.png" alt="Screenshot showing results of the WAVE Evaluation tool. With a list of issues classified by errors, alerts and best practice." class="govuk-!-margin-top-5 govuk-!-margin-bottom-5">
-    <p>The toolkit shows any accessibility issues with your service or product. They will be labelled critical, serious, moderate or minor. </p>
+    <div class="govuk-grid-row">
+        <div class="govuk-grid-column-one-half">
+            <img src="/assets/images/wave.png" alt="Screenshot showing results of the WAVE Evaluation tool. With a list of issues classified by errors, alerts and best practice." class="govuk-!-margin-top-0 govuk-!-margin-bottom-5">
 
-    <p>You should prioritise any that are labelled critical or serious.</p>
+        </div>
+        <div class="govuk-grid-column-one-half">
+            <img src="/assets/images/wave-detail.png" alt="Screenshot showing results of the WAVE Evaluation tool. With a list of issues classified by errors, alerts and best practice." class="govuk-!-margin-top-0 govuk-!-margin-bottom-5">
 
-    <p>These issues are for you to consider in the context of your own product or service.</p>
+        </div>
+        <div class="govuk-grid-column-one-half">
+            <p>Example of the error summary view in WAVE showing the range of checks.</p>
+            <p>You only need to focus on the ‘errors’ and ‘alerts’.</p>
+        </div>
+        <div class="govuk-grid-column-one-half">
+
+            <p>Example of the details tab on WAVE, showing ‘errors’.</p>
+            <p>These are for you to prioritise and consider in the context of your own product or service.
+</p>
+
+        </div>
+    </div>
 
     <h2 class="govuk-heading-l">What to do next</h2>
 
