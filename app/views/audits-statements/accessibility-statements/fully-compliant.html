@@ -10,158 +10,153 @@ Accessibility Guidelines) Level AA."%}
 {% set githubIssueID = "31" %}
 {% set need = "This page exists to provide people with an accessibility statement template for a fully compliant product or website." %}
 
-
-
-
-
 {% block content %}
 
+    <div class="govuk-breadcrumbs">
+        <ol class="govuk-breadcrumbs__list">
+            <li class="govuk-breadcrumbs__list-item">
+                <a class="govuk-breadcrumbs__link" href="/">Home</a>
+            </li>
+            <li class="govuk-breadcrumbs__list-item">
+                <a class="govuk-breadcrumbs__link" href="/audits-statements">Audits and statements</a>
+            </li>
+            <li class="govuk-breadcrumbs__list-item">
+                {{pageName}}
+            </li>
+        </ol>
+    </div>
 
-<div class="govuk-breadcrumbs">
-    <ol class="govuk-breadcrumbs__list">
-        <li class="govuk-breadcrumbs__list-item">
-            <a class="govuk-breadcrumbs__link" href="/">Home</a>
-        </li>
-        <li class="govuk-breadcrumbs__list-item">
-            <a class="govuk-breadcrumbs__link" href="/audits-statements">Audits and statements</a>
-        </li>
-        <li class="govuk-breadcrumbs__list-item">
-            {{pageName}}
-        </li>
-    </ol>
-</div>
+    <span class="govuk-caption-l  govuk-!-margin-top-5">Accessibility statements</span>
+    <h1 class="govuk-heading-xl">{{pageName}}</h1>
 
-<span class="govuk-caption-l  govuk-!-margin-top-5">Accessibility statements</span>
-<h1 class="govuk-heading-xl">{{pageName}}</h1>
+    {% include 'partials/_statement_warning.html' %}
 
+    <h2 class="govuk-heading-l">Template</h2>
 
-{% include 'partials/_statement_warning.html' %}
-
-<h2 class="govuk-heading-l">Template</h2>
-
-<p>To add the fully compliant accessibility statement to your website, we have provided HTML code for you to use. You
+    <p>To add the fully compliant accessibility statement to your website, we have provided HTML code for you to use. You
     should personalise it for your service by replacing the content in square brackets, for example:</p>
 
-<p>Replace <code>[name of the service]</code> with the name of the website the statement is for.</p>
+    <p>Replace <code>[name of the service]</code> with the name of the website the statement is for.</p>
 
-
-<div class="govuk-tabs code-example govuk-!-margin-top-9" data-module="govuk-tabs">
-    <h2 class="govuk-tabs__title">
+    <div class="govuk-tabs code-example govuk-!-margin-top-9" data-module="govuk-tabs">
+        <h2 class="govuk-tabs__title">
         Contents
     </h2>
-    <ul class="govuk-tabs__list">
-        <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
-            <a class="govuk-tabs__tab" href="#full-example">
+        <ul class="govuk-tabs__list">
+            <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
+                <a class="govuk-tabs__tab" href="#full-example">
                 Example
             </a>
-        </li>
-        <li class="govuk-tabs__list-item">
-            <a class="govuk-tabs__tab" href="#full-html">
+            </li>
+            <li class="govuk-tabs__list-item">
+                <a class="govuk-tabs__tab" href="#full-html">
                 HTML code
             </a>
-        </li>
-    </ul>
-    <div class="govuk-tabs__panel govuk-tabs__panel--hidden " id="full-example">
-        <div
+            </li>
+        </ul>
+        <div class="govuk-tabs__panel govuk-tabs__panel--hidden " id="full-example">
+            <div
             aria-label="Example content for a fully compliant service accessibility statement for the purpose of demonstrating the content. ">
-            {%raw %}
+                {%raw %}
 
-            <h1 class="govuk-heading-xl">Accessibility statement</h1>
+                    <h1 class="govuk-heading-xl">Accessibility statement</h1>
 
-            <p class="govuk-body">This accessibility statement applies to [name of the
+                    <p class="govuk-body">This accessibility statement applies to [name of the
                 service].</p>
 
-            <p class="govuk-body">This website is run by the Department for Education. We want as
+                    <p class="govuk-body">This website is run by the Department for Education. We want as
                 many people as possible to be able to use this website. For example, that means you
                 should be able to:</p>
 
-            <ul class="govuk-list govuk-list--bullet">
-                <li>change colours, contrast levels and fonts</li>
+                    <ul class="govuk-list govuk-list--bullet">
+                        <li>change colours, contrast levels and fonts</li>
 
-                <li>zoom in up to 300% without the text spilling off the screen</li>
+                        <li>zoom in up to 300% without the text spilling off the screen</li>
 
-                <li>navigate most of the website using just a keyboard</li>
+                        <li>navigate most of the website using just a keyboard</li>
 
-                <li>navigate most of the website using speech recognition software</li>
+                        <li>navigate most of the website using speech recognition software</li>
 
-                <li>listen to most of the website using a screen reader (including the most recent
+                        <li>listen to most of the website using a screen reader (including the most recent
                     versions of JAWS, NVDA and VoiceOver)</li>
-            </ul>
+                    </ul>
 
-            <p class="govuk-body">We've also made the website text as simple as possible to
+                    <p class="govuk-body">We've also made the website text as simple as possible to
                 understand.</p>
 
-            <p class="govuk-body"><a href="https://mcmw.abilitynet.org.uk/" target="_blank"
+                    <p class="govuk-body">
+                        <a href="https://mcmw.abilitynet.org.uk/" target="_blank"
                     rel="noopener noreferrer">AbilityNet</a> has advice on making your device easier to use if
                 you have a disability.</p>
 
-            <h2 class="govuk-heading-l">Feedback and contact information</h2>
+                    <h2 class="govuk-heading-l">Feedback and contact information</h2>
 
-            <p class="govuk-body">If you need information on this website in a different format
+                    <p class="govuk-body">If you need information on this website in a different format
                 like accessible PDF, large print, easy read, audio recording or braille:</p>
 
-            <ul class="govuk-list govuk-list--bullet">
-                <li>email [email address]</li>
+                    <ul class="govuk-list govuk-list--bullet">
+                        <li>email [email address]</li>
 
-                <li>call [phone number]</li>
+                        <li>call [phone number]</li>
 
-                <li>[any other contact details]</li>
-            </ul>
+                        <li>[any other contact details]</li>
+                    </ul>
 
-            <p class="govuk-body">We'll consider your request and get back to you in [number]
+                    <p class="govuk-body">We'll consider your request and get back to you in [number]
                 days.</p>
 
-            <h2 class="govuk-heading-l">Reporting accessibility problems with this website</h2>
+                    <h2 class="govuk-heading-l">Reporting accessibility problems with this website</h2>
 
-            <p class="govuk-body">We're always looking to improve the accessibility of this
+                    <p class="govuk-body">We're always looking to improve the accessibility of this
                 website. If you find any problems not listed on this page or think we're not meeting
                 accessibility requirements, contact: [provide both details of how to report these
                 issues and contact details for the unit or person responsible for dealing with these
                 reports].</p>
 
-            <h2 class="govuk-heading-l">Enforcement procedure</h2>
+                    <h2 class="govuk-heading-l">Enforcement procedure</h2>
 
-            <p class="govuk-body">The Equality and Human Rights Commission (EHRC) is responsible
+                    <p class="govuk-body">The Equality and Human Rights Commission (EHRC) is responsible
                 for enforcing the Public Sector Bodies (Websites and Mobile Applications) (No. 2)
                 Accessibility Regulations 2018 (the &lsquo;accessibility regulations&rsquo;). If
                 you&rsquo;re not happy with how we respond to your complaint, <a rel="noopener noreferrer"
                     href="https://www.equalityadvisoryservice.com/" target="_blank">contact the Equality Advisory and
                     Support Service (<abbr title="Equality Advisory and Support Service">EASS</abbr>)</a>.</p>
 
-            <h2 class="govuk-heading-l">Technical information about this website's
+                    <h2 class="govuk-heading-l">Technical information about this website's
                 accessibility</h2>
 
-            <p class="govuk-body">The Department for Education is committed to making its websites
+                    <p class="govuk-body">The Department for Education is committed to making its websites
                 accessible, in accordance with the Public Sector Bodies (Websites and Mobile
                 Applications) (No. 2) Accessibility Regulations 2018.</p>
 
-            <h2 class="govuk-heading-l">Compliance status</h2>
+                    <h2 class="govuk-heading-l">Compliance status</h2>
 
-            <p class="govuk-body">This website is fully compliant with the <abbr
+                    <p class="govuk-body">This website is fully compliant with the <abbr
                     title="Web Content Accessibility Guidelines">WCAG</abbr> version 2.2 AA standard.</p>
 
-            <h2 class="govuk-heading-l">Preparation of this accessibility statement</h2>
+                    <h2 class="govuk-heading-l">Preparation of this accessibility statement</h2>
 
-            <p class="govuk-body">This statement was prepared on [date when it was first
+                    <p class="govuk-body">This statement was prepared on [date when it was first
                 published]. It was last reviewed on [date when it was last reviewed].</p>
 
-            <p class="govuk-body">This website was last tested on [date]. The test was carried out
+                    <p class="govuk-body">This website was last tested on [date]. The test was carried out
                 by [add name of organisation that carried out test, or indicate that you did your own
                 testing]</p>
 
-            <p class="govuk-body">We used this approach to deciding on a sample of pages to test
+                    <p class="govuk-body">We used this approach to deciding on a sample of pages to test
                 [add link to explanation of how you decided which pages to test].</p>
 
-            <p class="govuk-body">Accessibility statement version: 2.0.0</p>
+                    <p class="govuk-body">Accessibility statement version: 2.0.0</p>
 
-            {% endraw%}
-        </div>
-    </div>
-    <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="full-html" data-module="app-copy">
-        <div style="text-align: right"> <span class="govuk-visually-hidden" aria-live="assertive"></span>
-            <button class="app-copy-button govuk-button govuk-!-margin-bottom-0">Copy code</button>
-        </div>
-        <pre><code class="language-html">&lt;h1 class=&quot;govuk-heading-xl&quot;&gt;Accessibility statement&lt;/h1&gt;
+                    {% endraw%}
+                </div>
+            </div>
+            <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="full-html" data-module="app-copy">
+                <div style="text-align: right">
+                    <span class="govuk-visually-hidden" aria-live="assertive"></span>
+                    <button class="app-copy-button govuk-button govuk-!-margin-bottom-0">Copy code</button>
+                </div>
+                <pre><code class="language-html">&lt;h1 class=&quot;govuk-heading-xl&quot;&gt;Accessibility statement&lt;/h1&gt;
 
     &lt;p class=&quot;govuk-body&quot;&gt;This accessibility statement applies to [name of the service].&lt;/p&gt;
     

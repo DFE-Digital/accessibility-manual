@@ -2,21 +2,36 @@
 
 {% set selectedNav = "Tools and testing" %}
 {% set pageName = "Tools and testing" %}
-{% set pageDescription = "TK"%}
+{% set pageDescription = "Guidance for tools and testing techniques to check and identify accessibility problems in products and services."%}
 
 {% set mainClasses = "govuk-!-padding-top-0" %}
 
-
-
 {% block content %}
 
-<div class="govuk-width-container govuk-!-margin-top-9">
-   <div class="govuk-grid-row">
-      <div class="govuk-grid-column-two-thirds">
+   <div class="dfe-width-container govuk-!-margin-top-9">
+      <div class="govuk-grid-row">
+         <div class="govuk-grid-column-full">
 
+            <section>
+               <div class="govuk-grid-column-full govuk-!-margin-top-3 govuk-!-margin-bottom-5">
+                  <div class="govuk-grid-row split-panel" style="background: #f3f2f1;">
+                     <div class="govuk-grid-column-one-half text-column">
+                        <h2 class="govuk-heading-l">Testing tools and how to use them</h2>
+                        <p class="govuk-body">Use our guidance to help you understand how to use accessibility testing tools to find common issues.</p>
+                        <p class="govuk-body">
+                           <a href="/tools-testing/tools">Read the guidance</a>
+                        </p>
+                     </div>
+                     <div class="govuk-grid-column-one-half image-column">
+                        <div class="image-container"
+                     style="background-image: url('/assets/images/design.jpg');"></div>
+                     </div>
+                  </div>
+               </div>
+            </section>
 
+         </div>
       </div>
    </div>
-</div>
 
 {% endblock %}

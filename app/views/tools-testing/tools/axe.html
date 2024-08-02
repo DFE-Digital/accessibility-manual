@@ -1,0 +1,93 @@
+{% extends "layouts/page_layout.html" %}
+
+{% set selectedNav = "Tools and testing" %}
+{% set pageName = "axe DevTools" %}
+{% set pageDescription = "Guidance for installing and using axe DevTols to test for accessibility issues."%}
+{% set mainClasses = "govuk-!-padding-top-0" %}
+{% set created = "1 August 2024" %}
+{% set reviewed = "1 August 2024" %}
+{% set updated = "1 August 2024" %}
+{% set githubIssueID = "36" %}
+{% set need = "This page exists to help people understand how to use tools to test for, and understand accesisbility issues in a product." %}
+
+{% block content %}
+
+    <div class="govuk-breadcrumbs">
+        <ol class="govuk-breadcrumbs__list">
+            <li class="govuk-breadcrumbs__list-item">
+                <a class="govuk-breadcrumbs__link" href="/">Home</a>
+            </li>
+            <li class="govuk-breadcrumbs__list-item">
+                <a class="govuk-breadcrumbs__link" href="/tools-testing">Tools and testing</a>
+            </li>
+            <li class="govuk-breadcrumbs__list-item">
+                {{pageName}}
+            </li>
+        </ol>
+    </div>
+
+    <h1 class="govuk-heading-xl  govuk-!-margin-top-5">{{pageName}}</h1>
+
+    <h2 class="govuk-heading-l">Installation</h2>
+
+    <p class="govuk-body">{{pageName}} is a browser extention. Use the following links to install {{pageName}} for your browser.</p>
+
+    <ul class="govuk-list govuk-list--spaced">
+        <li class="govuk-list__item">
+            <a href="https://chromewebstore.google.com/detail/axe-devtools-web-accessib/lhdoppojpmngadmnindnejefpokejbdd" target="_blank">{{pageName}} for Chrome and Edge</a>
+        </li>
+        <li class="govuk-list__item">
+            <a href="https://addons.mozilla.org/en-GB/firefox/addon/axe-devtools/" target="_blank">{{pageName}} for Firefox</a>
+        </li>
+    </ul>
+
+    <p>{{pageName}} is not available for Safari.</p>
+
+    <h2 class="govuk-heading-l">How to use {{pageName}}</h2>
+
+    <p>Once installed, you can find the tool in dev tools in your browser.</p>
+
+    <h3 class="govuk-heading-m">On a Mac</h3>
+
+    <ol class="govuk-list govuk-list--number">
+        <li>Open the page you want to test</li>
+        <li>Press <code>Command + Option + I</code> to open dev tools</li>
+        <li>Click on the {{pageName}} tab (you may need to click a + icon to see all tools)</li>
+    </ol>
+
+    <h3 class="govuk-heading-m">On Windows devices</h3>
+
+    <ol class="govuk-list govuk-list--number">
+        <li>Open the page you want to test</li>
+        <li>Press <code>F12</code> to open dev tools</li>
+        <li>Click on the {{pageName}} tab (you may need to click a + icon to see all tools)</li>
+    </ol>
+
+    <p>You can then select 'fFull page scan' to start the automated accessibility checks.</p>
+
+    <h2 class="govuk-heading-l">Results</h2>
+
+    <img src="/assets/images/axe.png" alt="Screenshot showing results of the axe devtools Toolkit. With a list of issues classified by errors, alerts and best practice." class="govuk-!-margin-top-5 govuk-!-margin-bottom-5">
+    <p>The toolkit shows any accessibility issues with your service or product. They will be labelled critical, serious, moderate or minor. </p>
+
+    <p>You should prioritise any that are labelled critical or serious.</p>
+
+    <p>These issues are for you to consider in the context of your own product or service.</p>
+
+    <h2 class="govuk-heading-l">What to do next</h2>
+
+    <p>You need to check or verify that the accessibility issues the tool finds are issues, rather than false positives.</p>
+
+    <p>If an issue is genuine, speak to your developer or design team to consider, then implement, a fix.</p>
+
+    <p>You can read guidance for how to <a href="/knowledge-hub/managing-issues">manage and prioritise issues</a> in the knowledge hub.</p>
+
+    <style>
+        img {
+            box-sizing: border-box;
+            width: 100%;
+            padding: 25px;
+            border: 1px solid #666666;
+        }
+    </style>
+{% endblock %}

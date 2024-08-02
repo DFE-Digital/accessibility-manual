@@ -11,47 +11,46 @@ help with, or give feedback, on accessibility issues."%}
 {% set need = "This page exists to help people use the correct accessibility statement for their product or website." %}
 
 {% block sidenav %}
-{% include "layouts/_newnav.html" %}
+    {% include "layouts/_newnav.html" %}
 {% endblock %}
 
-
 {% block content %}
-<div class="govuk-breadcrumbs">
-    <ol class="govuk-breadcrumbs__list">
-        <li class="govuk-breadcrumbs__list-item">
-            <a class="govuk-breadcrumbs__link" href="/">Home</a>
-        </li>
-        <li class="govuk-breadcrumbs__list-item">
-            <a class="govuk-breadcrumbs__link" href="/audits-statements">Audits and statements</a>
-        </li>
-        <li class="govuk-breadcrumbs__list-item">
-            {{pageName}}
-        </li>
-    </ol>
-</div>
+    <div class="govuk-breadcrumbs">
+        <ol class="govuk-breadcrumbs__list">
+            <li class="govuk-breadcrumbs__list-item">
+                <a class="govuk-breadcrumbs__link" href="/">Home</a>
+            </li>
+            <li class="govuk-breadcrumbs__list-item">
+                <a class="govuk-breadcrumbs__link" href="/audits-statements">Audits and statements</a>
+            </li>
+            <li class="govuk-breadcrumbs__list-item">
+                {{pageName}}
+            </li>
+        </ol>
+    </div>
 
-<span class="govuk-caption-l  govuk-!-margin-top-5">Accessibility statements</span>
-<h1 class="govuk-heading-xl">{{pageName}}</h1>
+    <span class="govuk-caption-l  govuk-!-margin-top-5">Accessibility statements</span>
+    <h1 class="govuk-heading-xl">{{pageName}}</h1>
 
+    {% include 'partials/_statement_warning.html' %}
 
-{% include 'partials/_statement_warning.html' %}
+    <h2 class="govuk-heading-l">Templates</h2>
 
-
-<h2 class="govuk-heading-l">Templates</h2>
-
-
-
-<h3 class="govuk-heading-m"><a href="/audits-statements/accessibility-statements/fully-compliant">Fully compliant</a>
-</h3>
-<p>All pages of the product or website, including every step in any transactional service, must meet all WCAG level A
+    <h3 class="govuk-heading-m">
+        <a href="/audits-statements/accessibility-statements/fully-compliant">Fully compliant</a>
+    </h3>
+    <p>All pages of the product or website, including every step in any transactional service, must meet all WCAG level A
     and AA success criteria in full.</p>
 
-<h3 class="govuk-heading-m"><a href="/audits-statements/accessibility-statements/partially-compliant">Partially
-        compliant</a></h3>
-<p>1 or more, but less than half, of WCAG Level A and AA success criteria have not been met.</p>
+    <h3 class="govuk-heading-m">
+        <a href="/audits-statements/accessibility-statements/partially-compliant">Partially
+        compliant</a>
+    </h3>
+    <p>1 or more, but less than half, of WCAG Level A and AA success criteria have not been met.</p>
 
-<h3 class="govuk-heading-m"><a href="/audits-statements/accessibility-statements/non-compliant">Non-compliant</a></h3>
-<p>More than half of all WCAG Level A and AA success criteria have not been met.</p>
-
+    <h3 class="govuk-heading-m">
+        <a href="/audits-statements/accessibility-statements/non-compliant">Non-compliant</a>
+    </h3>
+    <p>More than half of all WCAG Level A and AA success criteria have not been met.</p>
 
 {% endblock %}
