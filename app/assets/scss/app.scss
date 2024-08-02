@@ -3265,8 +3265,15 @@ ol {
   }
 }
 
-.section-link{
+.section-link {
   color: $color_dfe-grey-1 !important;
   text-decoration: none;
   font-weight: 400 !important;
+}
+
+.screenshot {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 25px;
+  border: 1px solid #666666;
 }

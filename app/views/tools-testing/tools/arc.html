@@ -51,17 +51,18 @@
 
     <ol class="govuk-list govuk-list--number">
         <li>Open the page you want to test</li>
-        <li>Press <code>Command + Option + I</code> to open dev tools</li>
-        <li>Click on the ARC Toolkit tab (you may need to click a + icon to see all tools)</li>
+        <li>Select <code>Command + Option + I</code> to open dev tools</li>
     </ol>
 
     <h3 class="govuk-heading-m">On Windows devices</h3>
 
     <ol class="govuk-list govuk-list--number">
         <li>Open the page you want to test</li>
-        <li>Press <code>F12</code> to open dev tools</li>
-        <li>Click on the ARC Toolkit tab (you may need to click a + icon to see all tools)</li>
+        <li>Select <code>F12</code> to open dev tools</li>
+ 
     </ol>
+
+    <p>Select the {{pageName}} option from the dev tools panel (you may need to select a + icon to see all tools)</p>
 
     <p>You can then select ‘run tests’ to start the automated accessibility checks.</p>
 
@@ -70,7 +71,7 @@
     <p>The toolkit shows errors, alerts and best practice.  These are for you to consider in the context of your own product or service.</p>
 
     <p>Issues labelled best practice are not necessarily accessibility failures but are things you should investigate. This will improve the general user experience for people with disabilities.</p>
-    <img src="/assets/images/arc-results.png" alt="Screenshot showing results of the ARC Toolkit. With a list of issues classified by errors, alerts and best practice." class="govuk-!-margin-top-5 govuk-!-margin-bottom-5">
+    <img src="/assets/images/arc-results.png" alt="Screenshot showing results of the ARC Toolkit. With a list of issues classified by errors, alerts and best practice." class="screenshot govuk-!-margin-top-5 govuk-!-margin-bottom-5">
     <p>The toolkit shows errors, alerts and best practice. These are for you to consider in the context of your own product or service.</p>
     <p>Issues labelled best practice are not necessarily accessibility failures but are things you should investigate. This will improve the general user experience for people with disabilities. </p>
 
@@ -83,12 +84,5 @@
 <p>You can read guidance for how to <a href="/knowledge-hub/managing-issues">manage and prioritise issues</a> in the knowledge hub.</p>
 
 
-<style>
-    img{
-box-sizing: border-box;    
-width:100%; 
-padding: 25px; 
-border: 1px solid #666666;
-    }
-    </style>
+
 {% endblock %}

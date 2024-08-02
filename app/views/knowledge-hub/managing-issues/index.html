@@ -49,7 +49,8 @@ lifecycle."%}
    <ul class="govuk-list govuk-list--bullet">
 
       <li>issue description</li>
-      <li><a href="/knowledge-hub/wcag/conformance">level of conformance</a> (A, AA, AAA)</li>
+      <li>
+         <a href="/knowledge-hub/wcag/conformance">level of conformance</a> (A, AA, AAA)</li>
       <li>date the issue was found</li>
       <li>date the issue is to be fixed, or the fix date</li>
       <li>whether the issue is open or closed</li>
@@ -62,41 +63,80 @@ lifecycle."%}
 
    <p>Issues discovered from testing or audits need to be prioritised to ensure that the ones with the highest user impact are resolved first. </p>
    <p>Issues raised as level A compliant are the highest priority. </p>
-   <p>They should be addressed immediately, as potentially pose a high level of risk to the department, whilst also being a known blocker for users. </p>
+   <p>They should be addressed immediately, as they potentially pose a high level of risk to the department, whilst also being a known blocker for users. </p>
 
    <p>Your issues should be addressed using the following approach:</p>
-   <ul class="govuk-list govuk-list--bullet">
-      <li>high impact, low effort</li>
-      <li>high impact, high effort</li>
-      <li>low impact, low effort</li>
-      <li>low impact, high effort</li>
-   </ul>
+
+   <table class="govuk-table">
+      <thead class="govuk-table__head">
+         <tr class="govuk-table__row">
+            <th scope="col" class="govuk-table__header">Impact and effort</th>
+            <th scope="col" class="govuk-table__header">Priority</th>
+         </tr>
+      </thead>
+      <tbody class="govuk-table__body">
+         <tr class="govuk-table__row">
+            <td class="govuk-table__cell">High impact, low effort</td>
+            <td class="govuk-table__cell">High</td>
+         </tr>
+         <tr class="govuk-table__row">
+            <td class="govuk-table__cell">High impact, high effort</td>
+            <td class="govuk-table__cell">High / Medium</td>
+         </tr>
+         <tr class="govuk-table__row">
+            <td class="govuk-table__cell">Low impact, low effort</td>
+            <td class="govuk-table__cell">Medium</td>
+         </tr>
+         <tr class="govuk-table__row">
+            <td class="govuk-table__cell">Low impact, high effort</td>
+            <td class="govuk-table__cell">Low</td>
+         </tr>
+      </tbody>
+   </table>
 
    <p>In most circumstances, level A issues will create the biggest barriers for users, followed by AA, and then AAA, although this is not always the case. </p>
 
-   <p>It’s important to understand the issue and the potential impact and barrier it could present to a user. This includes understanding where in the user journey it occurs. Consider if the issue means that a user cannot continue to use the service, or if it's found across the service or is an isolated issue.  </p>
+   <p>It’s important to understand the issue and the potential impact it could have on a user.</p>
+
+   <p>This includes understanding where in the user journey it occurs. Consider if the issue means that a user cannot continue to use the service, or if it's found across the service, or is an isolated issue. For example: </p>
+
+   <ul class="govuk-list govuk-list--bullet">
+      <li>is it on a page that prevents access the service</li>
+      <li>is it an issue that occurs on every page</li>
+      <li>is it an issue that occurs on a specific page for specific functionality</li>
+   </ul>
+
+   <p>By understand the impact of the issue, you can prioritise it accordingly.</p>
 
    <p>If you require further assistance in prioritising issues, the <a href="/support">DesignOps team</a> can help you.</p>
 
-<h2 class="govuk-heading-l">Remediating issues</h2>
-  <p>After you have prioritised any issues, you’ll need to plan how you will remediate issues. The approach to fixing accessibility issues will differ depending on the type of issue. </p>
+   <h2 class="govuk-heading-l">Remediating issues</h2>
+   <p>After you have prioritised any issues, you’ll need to plan how you will remediate them. The approach to fixing athem will differ depending on the type of issue. </p>
 
-  <p>Some more technical issues will need to be raised with your developers to change the way that certain components have been implemented, whereas issues that have arisen due to design issues, will need to be passed back to the relevant designer to resolve. </p>
+   <p>Some more technical issues will need to be raised with your developers to change the way that certain components have been implemented, whereas issues that have arisen due to design decisions, will need to be passed back to the relevant designer to resolve. </p>
 
-  <p>Some issues may mean that certain parts of your product or website need redesigning. If you would like input from an accessibility expert on best practice, <a href="/support">contact the DesignOps team</a> for support. </p>
+   <p>Some issues may mean that certain parts of your product or website need redesigning. If you would like input from an expert on good practice, <a href="/support">contact the DesignOps team</a> for support. </p>
 
-  <p>Fix issues based on priority order, starting with high priority, followed by medium, and then low. Ensure that you update your issues and track them through to resolution. Include the fix method in your documentation. This will help when you pass your service back to your audit supplier for them to carry out a retest. </p>
+   <p>Fix issues based on priority order, starting with high priority, followed by medium, and then low. Ensure that you update your issues and track them through to resolution. Include the fix method in your documentation. This will help when you pass your service back to your audit supplier for them to carry out a retest. </p>
 
-  <p>Contact your audit supplier as you progress with fixing issues, so you can arrange a date for your retest. </p>
+   <p>Contact your audit supplier as you progress with fixing issues, so you can arrange a date for your retest. </p>
 
-<h2 class="govuk-heading-l">Updating your accessibility statement</h2>
-  <p>Following remediation of your issues, you must update your accessibility statement. Depending on the number of issues you started with, and have now fixed, the conformance level of your product or website may change.</p>
+   <h2 class="govuk-heading-l">Updating your accessibility statement</h2>
+   <p>Following remediation of your issues, you must update your accessibility statement. Depending on the number of issues you started with, and have now fixed, the conformance level of your product or website may change.</p>
 
-  <p>You will also need to close any issues that are now fixed and update your accessibility statement accordingly.</p>
+   <p>You will also need to close any issues that are now fixed and update your accessibility statement accordingly.</p>
 
-  <p>You must not mark issues as closed and remove them from your accessibility statement unless they have been marked as fixed by your audit supplier or the <a href="/support">DesignOps team</a>.</p>
 
-<p>There are <a href="/audits-statements/accessibility-statements">accessibility statement templates</a> and guidance for how to meet the DfE DDT <a href="/standards/accessibility-statements/how-to-meet">standard for the publication of accessibility statements</a></p>
+<div class="govuk-warning-text">
+  <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+  <strong class="govuk-warning-text__text">
+    <span class="govuk-visually-hidden">Warning</span>
+   You must not mark issues as closed and remove them from your accessibility statement until you are confident they have been confirmed as resolved. This could be done by an accessibility expert within DfE, your audit supplier, or the <a href="/support">DesignOps&nbsp;team</a>.
+  </strong>
+</div>
 
+
+   <p>There are <a href="/audits-statements/accessibility-statements">accessibility statement templates</a> and guidance for how to meet the DfE DDT <a href="/standards/accessibility-statements/how-to-meet">standard for the publication of accessibility statements</a>
+   </p>
 
 {% endblock %}

@@ -47,27 +47,29 @@
 
     <p>Once installed, you can find the tool in dev tools in your browser.</p>
 
+
     <h3 class="govuk-heading-m">On a Mac</h3>
 
     <ol class="govuk-list govuk-list--number">
         <li>Open the page you want to test</li>
-        <li>Press <code>Command + Option + I</code> to open dev tools</li>
-        <li>Click on the {{pageName}} tab (you may need to click a + icon to see all tools)</li>
+        <li>Select <code>Command + Option + I</code> to open dev tools</li>
     </ol>
 
     <h3 class="govuk-heading-m">On Windows devices</h3>
 
     <ol class="govuk-list govuk-list--number">
         <li>Open the page you want to test</li>
-        <li>Press <code>F12</code> to open dev tools</li>
-        <li>Click on the {{pageName}} tab (you may need to click a + icon to see all tools)</li>
+        <li>Select <code>F12</code> to open dev tools</li>
+ 
     </ol>
 
-    <p>You can then select 'fFull page scan' to start the automated accessibility checks.</p>
+    <p>Select the {{pageName}} option from the dev tools panel (you may need to select a + icon to see all tools)</p>
+
+    <p>You can then select 'Full page scan' to start the automated accessibility checks.</p>
 
     <h2 class="govuk-heading-l">Results</h2>
 
-    <img src="/assets/images/axe.png" alt="Screenshot showing results of the axe devtools Toolkit. With a list of issues classified by errors, alerts and best practice." class="govuk-!-margin-top-5 govuk-!-margin-bottom-5">
+    <img src="/assets/images/axe.png" alt="Screenshot showing results of the axe devtools Toolkit. With a list of issues classified by errors, alerts and best practice." class="screenshot govuk-!-margin-top-5 govuk-!-margin-bottom-5">
     <p>The toolkit shows any accessibility issues with your service or product. They will be labelled critical, serious, moderate or minor. </p>
 
     <p>You should prioritise any that are labelled critical or serious.</p>
@@ -82,12 +84,5 @@
 
     <p>You can read guidance for how to <a href="/knowledge-hub/managing-issues">manage and prioritise issues</a> in the knowledge hub.</p>
 
-    <style>
-        img {
-            box-sizing: border-box;
-            width: 100%;
-            padding: 25px;
-            border: 1px solid #666666;
-        }
-    </style>
+
 {% endblock %}
