@@ -1,0 +1,15 @@
+{
+    "parserOptions": {
+        "ecmaVersion": 2020,
+        "sourceType": "module",
+        "ecmaFeatures": {
+            "jsx": true
+        }
+    },
+    "plugins": [
+        "eslint-plugin-custom-rules"
+    ],
+    "rules": {
+        "custom/noopener": "warn"
+    }
+}

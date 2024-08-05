@@ -3036,6 +3036,14 @@ ol {
   display: flex;
   flex-direction: column;
   width: 100%;
+  margin: 30px 0px;
+}
+
+@media (max-width: 768px) {
+  .dfe-flex {
+    flex-direction: column;
+    width: 100%;
+  }
 }
 
 .dfe-panel-do,

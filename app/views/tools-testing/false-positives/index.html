@@ -1,0 +1,89 @@
+{% extends "layouts/page_layout.html" %}
+
+{% set selectedNav = "Tools and testing" %}
+{% set pageName = "False positives and false assurance" %}
+{% set pageDescription = ""%}
+{% set mainClasses = "govuk-!-padding-top-0" %}
+{% set created = "1 August 2024" %}
+{% set reviewed = "1 August 2024" %}
+{% set updated = "1 August 2024" %}
+{% set githubIssueID = "36" %}
+{% set need = "This page exists to help people understand how to use tools to test for, and understand accesisbility issues in a product." %}
+
+{% block content %}
+
+    <div class="govuk-breadcrumbs">
+        <ol class="govuk-breadcrumbs__list">
+            <li class="govuk-breadcrumbs__list-item">
+                <a class="govuk-breadcrumbs__link" href="/">Home</a>
+            </li>
+            <li class="govuk-breadcrumbs__list-item">
+                <a class="govuk-breadcrumbs__link" href="/tools-testing">Tools and testing</a>
+            </li>
+            <li class="govuk-breadcrumbs__list-item">
+                {{pageName}}
+            </li>
+        </ol>
+    </div>
+
+    <h1 class="govuk-heading-xl  govuk-!-margin-top-5">{{pageName}}</h1>
+
+    <p class="govuk-body">When using automated tools, it’s important to validate the results to avoid identifying false positives and ensure that no issues have been missed, thereby preventing false assurances.</p>
+
+    <h2 class="govuk-heading-l">False positives</h2>
+
+    <p class="govuk-body">False positives are issues that are flagged by automated tools as accessibility issues, but are not actually issues when reviewed manually.</p>
+
+    <p>Automated tools do not understand context.</p>
+
+        <div class="govuk-inset-text">
+        <p class="govuk-body">
+            <span class="govuk-!-font-weight-bold">For example</span><br /><br />automated checks may raise issues related to <a href="https://www.w3.org/WAI/WCAG21/Understanding/contrast-minimum.html" rel="noopener noreferrer">contrast minimum</a> even for content that is exempt, such as logos and branding.
+                    </p>
+    </div>
+
+
+
+    <p>Logos, which might not always have sufficiently contrasting foreground and background colours are not required to meet these criteria. Therefore, this is considered a false positive.</p>
+
+    <h2 class="govuk-heading-l">False assurance</h2>
+
+    <p class="govuk-body">Automated tools may also give a false sense of compliance, this is not only because the tools only identify around 30 to 40% of issues, but also because of how the tools scan code to decide if accessibility issues are present.</p>
+
+    <div class="govuk-inset-text">
+        <p class="govuk-body">
+            <span class="govuk-!-font-weight-bold">For example</span><br /><br />When scanning images for alt text, the automated tools are looking for a yes, or no answer, does the image have alt text or not.
+                    </p>
+    </div>
+
+    <p>This can provide false assurance because if an image contains alt text it would pass this test, but the alt text may not be descriptive. </p>
+
+    <p>There is an exception to when alt text can be omitted, such as when an image is purely decorative and does not add any context to the page.</p><p>In this case, add an empty alt tag as follows <code>alt=""</code>.</p>
+
+    <p>If an image of a classroom had an alt tag of alt=”car” or alt=”image123”, this would still pass the automated test, whereas it should fail because of the lack of context that this provides to users. </p>
+
+
+    <div class="govuk-grid-row dfe-flex">
+                        <div class="govuk-grid-column-one-half dfe-flex-item">
+                            <div class="dfe-panel-do">
+                                <h3 class="govuk-heading-m">Do</h3>
+                                <p class="govuk-!-margin-bottom-5">Ensure alt text accruately describes the image.</p>
+                                <img src="/assets/images/classroom.jpg" style="width:100%;"
+                                    class="govuk-!-margin-bottom-5" alt="A teacher standing in front of a class of children who are sitting at desks.">
+<code  style="background: #ffffff; padding: 10px;"> alt="description: A teacher standing in front of a class of children who are sitting at desks."</code>
+                            </div>
+                        </div>
+                        <div class="govuk-grid-column-one-half dfe-flex-item">
+                            <div class="dfe-panel-dont">
+                                <h3 class="govuk-heading-m">Don't</h3>
+                                <p class="govuk-!-margin-bottom-5">Use the filename or misleading descriptions. </p>
+                                <img src="/assets/images/classroom.jpg" style="width:100%;"
+                                    class="govuk-!-margin-bottom-5" alt="">
+<code style="background: #ffffff; padding: 10px;"> alt="image123"</code>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+{% endblock %}
