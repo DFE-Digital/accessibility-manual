@@ -1,0 +1,68 @@
+{% extends "layouts/full-nohero.html" %}
+
+{% set selectedNav = "Support" %}
+{% set pageName = "Suggest accessibility and inclusive design training modules" %}
+{% set pageDescription = ""%}
+{% set mainClasses = "govuk-!-padding-bottom-9" %}
+
+{%- block head %}
+    {#- Don't index this page #}
+    <meta name="robots" content="noindex, nofollow">
+{% endblock %}
+
+{%- block hero %}
+    <div class="govuk-width-container">
+        <a href="javascript:history.back()" class="govuk-back-link">Back</a>
+    </div>
+
+{% endblock %}
+
+{%- block content %}
+
+    <div class="govuk-width-container">
+
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-two-thirds">
+                <form action="/form/training" method="post">
+
+                    <h1 class="govuk-heading-xl">{{pageName}}</h1>
+
+                    <div class="govuk-form-group">
+
+                        <label class="govuk-label " for="more-detail">
+      Tell us about your suggestion
+    </label>
+
+                        <div id="more-detail-hint" class="govuk-hint">
+    Include information about sources of training, topics, themes, and any other relevant information.
+  </div>
+                        <textarea class="govuk-textarea" id="more-detail" name="moreDetail" rows="10" aria-describedby="more-detail-hint"></textarea>
+                    </div>
+
+                    <p>If you're happy for us to get in contact with you about your suggestion, please provide your email address and name.</p>
+
+                    <div class="govuk-form-group">
+                        <label class="govuk-label " for="email">
+        Your email address
+        </label>
+                        <input class="govuk-input govuk-!-width-one-half" id="email" name="email" type="email" autocomplete="email">
+                    </div>
+
+                    <div class="govuk-form-group">
+                        <label class="govuk-label " for="name">
+        Your name
+        </label>
+                        <input class="govuk-input govuk-!-width-one-half" id="name" name="name" type="text" autocomplete="name">
+                    </div>
+                    <div class="govuk-button-group">
+                        <button type="submit" class="govuk-button" data-module="govuk-button">
+  Submit suggestion
+</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+    </div>
+
+{% endblock %}

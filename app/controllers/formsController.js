@@ -38,27 +38,61 @@ exports.p_support = async function (req, res) {
             errors, data: req.body
         });
     }
-    else{
+    else {
         notify
-        .sendEmail(process.env.email_accessibility_support, 'design.ops@education.gov.uk', {
-          personalisation: {
-            name: name,
-            email: email,
-            contact: contact,
-            query: query,
-            steps: steps
-          },
-        })
-        .then((response) => { })
-        .catch((err) => console.log(err));
+            .sendEmail(process.env.email_accessibility_support, 'design.ops@education.gov.uk', {
+                personalisation: {
+                    name: name,
+                    email: email,
+                    contact: contact,
+                    query: query,
+                    steps: steps
+                },
+            })
+            .then((response) => { })
+            .catch((err) => console.log(err));
 
         return res.render('support/form/success');
-        
+
+    }
+}
+
+exports.p_training = async function (req, res) {
+
+    // Check the form fields are completed
+    const { name, email, moreDetail } = req.body;
+
+    let errors = [];
+
+   
+
+    if (!moreDetail) {
+        errors.push({ msg: 'Enter some details of training', field: 'moreDetail' });
     }
 
+   
+    if (errors.length > 0) {
+        return res.render('forms/training', {
+            errors, data: req.body
+        });
+    }
+    else {
+        notify
+            .sendEmail(process.env.email_accessibility_training, '', {
+                personalisation: {
+                    name: name,
+                    email: email,
+                    moreDetail: moreDetail
+                },
+            })
+            .then((response) => { })
+            .catch((err) => console.log(err));
 
+        return res.render('forms/success');
 
+    }
 }
+
 
 
 function validateEmail(email) {

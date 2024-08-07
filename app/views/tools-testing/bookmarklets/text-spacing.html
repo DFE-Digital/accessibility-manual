@@ -1,0 +1,66 @@
+{% extends "layouts/page_layout.html" %}
+
+{% set selectedNav = "Tools and testing" %}
+{% set pageName = "Text spacing" %}
+{% set pageDescription = ""%}
+{% set mainClasses = "govuk-!-padding-top-0" %}
+{% set created = "6 August 2024" %}
+{% set reviewed = "6 August 2024" %}
+{% set updated = "6 August 2024" %}
+{% set githubIssueID = "70" %}
+{% set need = "This page exists to help people understand how to use tools to test for, and understand accesisbility issues in a product." %}
+
+{% block content %}
+
+  <div class="govuk-breadcrumbs">
+    <ol class="govuk-breadcrumbs__list">
+      <li class="govuk-breadcrumbs__list-item">
+        <a class="govuk-breadcrumbs__link" href="/">Home</a>
+      </li>
+      <li class="govuk-breadcrumbs__list-item">
+        <a class="govuk-breadcrumbs__link" href="/tools-testing">Tools and testing</a>
+      </li>
+      <li class="govuk-breadcrumbs__list-item">
+        {{pageName}}
+      </li>
+    </ol>
+  </div>
+
+  <h1 class="govuk-heading-xl  govuk-!-margin-top-5">{{pageName}}</h1>
+
+  <div class="govuk-inset-text">
+    <p>Drag the following link to your bookmarks bar to install the bookmarklet.</p>
+    <a href="javascript:(function()%7B%0A%09document.querySelectorAll('*').forEach(function%20(el)%20%7B%0A%09%09if%20(el.nodeName.toLowerCase()%20%3D%3D%3D%20'p')%20%7B%0A%09%09%09el.style.setProperty('margin-bottom'%2C%20'2em'%2C%20'important')%3B%0A%09%09%7D%0A%09%09el.style.setProperty('line-height'%2C%20'1.5'%2C%20'important')%3B%0A%09%09el.style.setProperty('letter-spacing'%2C%20'0.12em'%2C%20'important')%3B%0A%09%09el.style.setProperty('word-spacing'%2C%20'0.16em'%2C%20'important')%3B%0A%09%7D)%0A%7D)()%3B">Text spacing</a>
+  </div>
+
+  <p>Once the bookmarklet is installed, visit a webpage and click the bookmarklet in your bookmark bar.</p>
+
+  <p>Text spacing is a Level AA WCAG criteria. The criteria stipulates that when increasing text spacing, there is no loss of content or functionality. </p>
+  <p>The following settings must be able to be set and users should lose no access to content:</p>
+
+  <ul class="govuk-list govuk-list--bullet">
+    <li>line height (line spacing) to at least 1.5 times the font size</li>
+    <li>spacing following paragraphs to at least 2 times the font size</li>
+    <li>letter spacing (tracking) to at least 0.12 times the font size</li>
+    <li>word spacing to at least 0.16 times the font size</li>
+  </ul>
+
+  <p>These settings can make content on the screen much easier to read for some users. Some people with dyslexia and other cognitive disabilities often find it easier to read and understand content that has been given spacing.</p>
+
+  <h3 class="govuk-heading-m">Before</h3>
+
+  <img src="/assets/images/text-spacing-before.png" alt="Screenshot of get into teaching service showing a navigation bar with the links, Is teaching right for me? and How to become a teacher" class="screenshot govuk-!-margin-top-5 govuk-!-margin-bottom-5">
+  <p>
+    <a href="/assets/images/text-spacing-before.png" target="_blank">View larger image in a new tab</a>
+  </p>
+
+  <h3 class="govuk-heading-m">After</h3>
+
+  <img src="/assets/images/text-spacing-after.png" alt="Screenshot of get into teaching service showing a navigation bar with the links, Is teaching right for me? and How to become a teacher with a green circle on the links." class="screenshot govuk-!-margin-top-5 govuk-!-margin-bottom-5">
+  <p>
+    <a href="/assets/images/text-spacing-after.png" target="_blank">View larger image in a new tab</a>
+  </p>
+
+
+
+{% endblock %}

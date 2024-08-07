@@ -1,0 +1,93 @@
+{% extends "layouts/page_layout.html" %}
+
+{% set selectedNav = "Audits and statements" %}
+{% set pageName = "Audits" %}
+{% set pageDescription = "What an accessibility audit is, why you need one and the outcome for your team."%}
+{% set created = "6 August 2024" %}
+{% set reviewed = "6 August 2024" %}
+{% set updated = "6 August 2024" %}
+{% set githubIssueID = "34" %}
+{% set need = "This page exists to help people understand the need, and how to get an accessibility audit, and what to do with the results." %}
+
+{% block sidenav %}
+    {% include "layouts/_newnav.html" %}
+{% endblock %}
+
+{% block content %}
+    <div class="govuk-breadcrumbs">
+        <ol class="govuk-breadcrumbs__list">
+            <li class="govuk-breadcrumbs__list-item">
+                <a class="govuk-breadcrumbs__link" href="/">Home</a>
+            </li>
+            <li class="govuk-breadcrumbs__list-item">
+                <a class="govuk-breadcrumbs__link" href="/audits-statements">Audits and statements</a>
+            </li>
+            <li class="govuk-breadcrumbs__list-item">
+                {{pageName}}
+            </li>
+        </ol>
+    </div>
+
+    <h1 class="govuk-heading-xl">{{pageName}}</h1>
+
+    <p>What an accessibility audit is, why you need one and the outcome for your team.</p>
+
+    <p>An accessibility audit is a comprehensive set of tests run by an independent team of accessibility specialists. The audit will check to make sure your service or website meets the WCAG 2.2 Level AA accessibility standard and how well it performs with <a href="https://www.gov.uk/service-manual/technology/testing-with-assistive-technologies" rel="noreferrer noopener">assistive technologies</a>.</p>
+
+    <p>Whether you need an internal or external audit will depend on the complexity of your service.</p>
+
+    <div class="govuk-inset-text">
+     <p>When you are ready to request an audit you can use the <a class="govuk-link" href="/">triage tool</a> to get help understanding the type of audit you need.</p>
+     </div>
+
+    <h2 class="govuk-heading-l">Why you need an audit</h2>
+
+    <p>An audit provides the information you need to complete an accessibility statement for your service. In order for DfE to meet its legislative requirements, you must include an accessibility statement in your service.</p>
+    <p>The audit report will detail:</p>
+    <ul class="govuk-list govuk-list--bullet">
+        <li>where your service is failing to provide a good user experience, especially for those with disabilities</li>
+        <li>why you’ve not met the criteria and how to resolve issues</li>
+    </ul>
+    <p>You’ll use the information from the report in your accessibility statement. This will provide users with an understanding of where they could face accessibility barriers. They can then make a choice to use your service or think about workarounds.</p>
+
+    <h2 class="govuk-heading-l">Plan for an audit from the start</h2>
+    <p>Delivery and product managers should budget for accessibility from the beginning of a project. This includes considering time, resource and cost.</p>
+    <p>The average cost of an external audit is around £8,000 to £10,000 but it can be more. There is no cost for an internal audit.</p>
+    <p>The size and complexity of your service will determine what type of audit you need. If you understand the potential figure early in the project, you can plan your budget for accessibility testing. Internal and external audits both need to be planned in the same way.</p>
+    <p>Start to plan for an audit in alpha phase, even though you will not need to do one until beta, when you’re building production-quality code.</p>
+    <p>You must not audit prototype code or kit.</p>
+    <p>Delivery and product managers should also consider that, when the team receives the report, the team will need time and resources to fix any issues and potentially redesign sections of your service to make sure they’re accessible.</p>
+    <p>You must get an accessibility audit before your service moves into public beta.</p>
+
+    <h2 class="govuk-heading-l">What to prepare before an audit</h2>
+    <p>You must provide the accessibility auditors with essential information to:</p>
+    <ul class="govuk-list govuk-list--bullet">
+        <li>access the service</li>
+        <li>understand the scope of the test</li>
+        <li>have all the relevant data to complete the user journeys</li>
+    </ul>
+    <p>You’ll need to provide this information before the audit so that the auditors have what they need to start. This will help to avoid delays in testing.</p>
+
+    <h3 class="govuk-heading-m">How to understand the scope of your audit</h3>
+    <p>Before you request an audit, you need to work out what exactly needs to be audited. Documenting audit requirements and reporting should be done in line with Website Accessibility Conformance Evaluation Methodology (WCAG-EM).</p>
+    <p>An accessibility statement is a legal document. The contents are informed by the findings of an accessibility audit, so it’s important that audit requirements are in line with <a class="govuk-link" href="https://www.w3.org/WAI/test-evaluate/conformance/wcag-em/">Website Accessibility Conformance Evaluation Methodology (WCAG-EM)</a>.</p>
+   
+
+    <h2 class="govuk-heading-l">What happens after the audit</h2>
+    <p>You will receive a report which includes accessibility and best practice issues that may affect users with disabilities. Your report will record each issue against the WCAG criteria which it fails against, provide an overview of the issue and how it may affect a user. It will also include a potential way to fix the issue. Some audit providers will prioritise issues for you.</p>
+
+    <h3 class="govuk-heading-m">Actions for the team after the audit</h3>
+    <ol class="govuk-list govuk-list--number">
+        <li>Review the audit as a team.</li>
+        <li>Prioritise any issues.</li>
+        <li>Log issues so you can keep track of them, for example in a spreadsheet.</li>
+        <li>Start to fix issues.</li>
+        <li>Update the log as each issue is fixed.</li>
+        <li>Request a retest for accessibility.</li>
+        <li>Add any unresolved issues to your accessibility statement.</li>
+    </ol>
+
+    <h2 class="govuk-heading-l">Before your service goes live</h2>
+    <p>Most of your accessibility issues should be resolved before users access your service. Any high-impact issues should have been fixed and if any low-impact issues remain, there should be a timeline provided in the statement for them to be resolved.</p>
+
+{% endblock %}

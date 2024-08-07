@@ -37,58 +37,87 @@
 
         <div class="govuk-grid-row">
             <div class="govuk-grid-column-full">
-                <div class="govuk-grid-row">
-                    <div class="govuk-grid-column-two-thirds">
+                <form action="/training/accessibility-inclusion/question-1" method="post">
 
-                        <div class="govuk-form-group">
-                            <fieldset class="govuk-fieldset" aria-describedby="q1-hint">
-                                <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
-                                    <h1 class="govuk-fieldset__heading">
-                                        {{pageName}}
-                                    </h1>
-                                </legend>
-                                <div id="q1-hint" class="govuk-hint">
+                    <div class="govuk-grid-row">
+                        <div class="govuk-grid-column-two-thirds">
+
+                            {% if errors %}
+
+                            <div class="govuk-error-summary" data-module="govuk-error-summary">
+  <div role="alert">
+    <h2 class="govuk-error-summary__title">
+      There is a problem
+    </h2>
+    <div class="govuk-error-summary__body">
+      <ul class="govuk-list govuk-error-summary__list">
+        <li>
+          <a href="#q1">Sorry, your answer is incorrect. Try again.</a>
+        </li>
+       
+      </ul>
+    </div>
+  </div>
+</div>
+
+{% endif %}
+
+
+                            <div class="govuk-form-group {% if errors %}govuk-form-group--error{% endif%}">
+                                <fieldset class="govuk-fieldset" aria-describedby="q1-hint">
+                                    <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+                                        <h1 class="govuk-fieldset__heading">
+                                            {{pageName}}
+                                        </h1>
+                                    </legend>
+                                    {% if errors %}
+                                     <p id="countries-error" class="govuk-error-message">
+      <span class="govuk-visually-hidden">Error:</span> Sorry, your answer is incorrect. Try again.
+    </p>
+    {% endif %}
+                                    <div id="q1-hint" class="govuk-hint">
       Select all you think apply
     </div>
-                                <div class="govuk-checkboxes" data-module="govuk-checkboxes">
-                                    <div class="govuk-checkboxes__item">
-                                        <input class="govuk-checkboxes__input" id="q1" name="q1" type="checkbox" value="a">
-                                        <label class="govuk-label govuk-checkboxes__label" for="q1">
+                                    <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+                                        <div class="govuk-checkboxes__item">
+                                            <input class="govuk-checkboxes__input" id="q1" name="q1" type="checkbox" value="a" {% if q1 === 'a' %}checked{% endif%}>
+                                            <label class="govuk-label govuk-checkboxes__label" for="q1">
           To create nice-looking websites
         </label>
-                                    </div>
-                                    <div class="govuk-checkboxes__item">
-                                        <input class="govuk-checkboxes__input" id="q1-2" name="q1" type="checkbox" value="b">
-                                        <label class="govuk-label govuk-checkboxes__label" for="q1-2">
+                                        </div>
+                                        <div class="govuk-checkboxes__item">
+                                            <input class="govuk-checkboxes__input" id="q1-2" name="q1" type="checkbox" value="b" {% if q1 === 'b' %}checked{% endif%}>
+                                            <label class="govuk-label govuk-checkboxes__label" for="q1-2">
          To ensure everyone can use our websites and apps 
         </label>
-                                    </div>
-                                    <div class="govuk-checkboxes__item">
-                                        <input class="govuk-checkboxes__input" id="q1-3" name="q1" type="checkbox" value="c">
-                                        <label class="govuk-label govuk-checkboxes__label" for="q1-3">
+                                        </div>
+                                        <div class="govuk-checkboxes__item">
+                                            <input class="govuk-checkboxes__input" id="q1-3" name="q1" type="checkbox" value="c" {% if q1 === 'c' %}checked{% endif%}>
+                                            <label class="govuk-label govuk-checkboxes__label" for="q1-3">
           To improve the speed and performance of websites and apps
         </label>
-                                    </div>
-                                    <div class="govuk-checkboxes__item">
-                                        <input class="govuk-checkboxes__input" id="q1-4" name="q1" type="checkbox" value="d">
-                                        <label class="govuk-label govuk-checkboxes__label" for="q1-4">
+                                        </div>
+                                        <div class="govuk-checkboxes__item">
+                                            <input class="govuk-checkboxes__input" id="q1-4" name="q1" type="checkbox" value="d" {% if q1 === 'd' %}checked{% endif%}>
+                                            <label class="govuk-label govuk-checkboxes__label" for="q1-4">
           To make sure there is an accessibility statement
         </label>
+                                        </div>
                                     </div>
-                                </div>
-                            </fieldset>
-                        </div>
+                                </fieldset>
+                            </div>
 
+                        </div>
                     </div>
-                </div>
-                <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
-                <p class="govuk-!-margin-top-6">
-                    <a href="/training/accessibility-inclusion/check-intro"
+                    <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+                    <p class="govuk-!-margin-top-6">
+                        <a href="/training/accessibility-inclusion/check-intro"
                     class="dfe-manual-button dfe-manual-button--grey govuk-!-margin-right-2"
                     role="button">Previous</a>
-                    <a href="/training/accessibility-inclusion/situation"
-                    class="dfe-manual-button" role="button">Check your answer</a>
-                </p>
+                        <button
+                    class="dfe-manual-button">Check your answer</button>
+                    </p>
+                </form>
             </div>
         </div>
         <div class="govuk-grid-column-one-third"></div>
