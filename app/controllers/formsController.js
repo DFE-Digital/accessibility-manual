@@ -3,6 +3,8 @@ const NotifyClient = require('notifications-node-client').NotifyClient;
 const notify = new NotifyClient(process.env.notify_accessibilitymanual_key);
 
 
+
+
 exports.p_support = async function (req, res) {
 
     // Check the form fields are completed
@@ -40,7 +42,7 @@ exports.p_support = async function (req, res) {
     }
     else {
         notify
-            .sendEmail(process.env.email_accessibility_support, 'design.ops@education.gov.uk', {
+            .sendEmail(process.env.email_accessibility_support, process.env.designopsemail, {
                 personalisation: {
                     name: name,
                     email: email,
@@ -60,14 +62,29 @@ exports.p_support = async function (req, res) {
 exports.p_training = async function (req, res) {
 
     // Check the form fields are completed
-    const { name, email, moreDetail } = req.body;
+    let { name, email, moreDetail } = req.body;
 
     let errors = [];
 
-   
+    const fetch = await import('node-fetch').then(module => module.default);
+
+
+    const recaptchaResponse = req.body['g-recaptcha-response'];
+    const secretKey = process.env.RECAPTCHA_SECRET_KEY;
+    const recaptchaUrl = `https://www.google.com/recaptcha/api/siteverify?secret=${secretKey}&response=${recaptchaResponse}`;
+
+    const recaptchaVerify = await fetch(recaptchaUrl, { method: 'POST' });
+    const recaptchaJson = await recaptchaVerify.json();
+
+
+    if (!recaptchaJson.success || recaptchaJson.score < 0.5) {
+        return res.render('forms/training', {
+            errors: [{ msg: 'We cannot submit your form at this time.' }], data: req.body
+        });
+    }
 
     if (!moreDetail) {
-        errors.push({ msg: 'Enter some details of training', field: 'moreDetail' });
+        errors.push({ msg: 'Enter some details of your suggestion', field: 'moreDetail' });
     }
 
    
@@ -77,8 +94,17 @@ exports.p_training = async function (req, res) {
         });
     }
     else {
+
+        if (!name) {
+            name = "Not provided";
+        }
+
+        if (!email) {
+            email = "Not provided";
+        }
+
         notify
-            .sendEmail(process.env.email_accessibility_training, '', {
+            .sendEmail(process.env.email_accessibility_training, process.env.designopsemail, {
                 personalisation: {
                     name: name,
                     email: email,
@@ -88,7 +114,7 @@ exports.p_training = async function (req, res) {
             .then((response) => { })
             .catch((err) => console.log(err));
 
-        return res.render('forms/success');
+        return res.render('forms/training-complete');
 
     }
 }

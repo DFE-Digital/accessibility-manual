@@ -1,68 +1,92 @@
 {% extends "layouts/full-nohero.html" %}
-
-{% set selectedNav = "Support" %}
+{% set selectedNav = "Training" %}
 {% set pageName = "Suggest accessibility and inclusive design training modules" %}
-{% set pageDescription = ""%}
+{% set pageDescription = "" %}
 {% set mainClasses = "govuk-!-padding-bottom-9" %}
-
 {%- block head %}
-    {#- Don't index this page #}
-    <meta name="robots" content="noindex, nofollow">
+{#- Don't index this page #}
+<meta name="robots" content="noindex, nofollow">
 {% endblock %}
-
 {%- block hero %}
-    <div class="govuk-width-container">
-        <a href="javascript:history.back()" class="govuk-back-link">Back</a>
-    </div>
-
+<div class="govuk-width-container">
+   <a href="/training" class="govuk-back-link">Back</a>
+</div>
 {% endblock %}
-
 {%- block content %}
+<div class="govuk-width-container">
+   <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+         <form id="trainingForm" action="/forms/training" method="post">
 
-    <div class="govuk-width-container">
-
-        <div class="govuk-grid-row">
-            <div class="govuk-grid-column-two-thirds">
-                <form action="/form/training" method="post">
-
-                    <h1 class="govuk-heading-xl">{{pageName}}</h1>
-
-                    <div class="govuk-form-group">
-
-                        <label class="govuk-label " for="more-detail">
-      Tell us about your suggestion
-    </label>
-
-                        <div id="more-detail-hint" class="govuk-hint">
-    Include information about sources of training, topics, themes, and any other relevant information.
-  </div>
-                        <textarea class="govuk-textarea" id="more-detail" name="moreDetail" rows="10" aria-describedby="more-detail-hint"></textarea>
-                    </div>
-
-                    <p>If you're happy for us to get in contact with you about your suggestion, please provide your email address and name.</p>
-
-                    <div class="govuk-form-group">
-                        <label class="govuk-label " for="email">
-        Your email address
-        </label>
-                        <input class="govuk-input govuk-!-width-one-half" id="email" name="email" type="email" autocomplete="email">
-                    </div>
-
-                    <div class="govuk-form-group">
-                        <label class="govuk-label " for="name">
-        Your name
-        </label>
-                        <input class="govuk-input govuk-!-width-one-half" id="name" name="name" type="text" autocomplete="name">
-                    </div>
-                    <div class="govuk-button-group">
-                        <button type="submit" class="govuk-button" data-module="govuk-button">
-  Submit suggestion
-</button>
-                    </div>
-                </form>
+          {% if errors %}
+            <div class="govuk-error-summary" aria-labelledby="error-summary-title" role="alert" tabindex="-1" data-module="govuk-error-summary">
+                <h2 class="govuk-error-summary__title" id="error-summary-title">
+                    There is a problem
+                </h2>
+                <div class="govuk-error-summary__body">
+                    <ul class="govuk-list govuk-error-summary__list">
+                        {% for error in errors %}
+                        <li>
+                            <a href="#{{ error.field }}">{{ error.msg }}</a>
+                        </li>
+                        {% endfor %}
+                    </ul>
+                </div>
             </div>
-        </div>
+            {% endif %}
 
-    </div>
-
+            <h1 class="govuk-heading-xl">{{ pageName }}</h1>
+            <div class="govuk-form-group {% if errors %}govuk-form-group--error{% endif %}">
+               <label class="govuk-label " for="more-detail">
+               Tell us about your suggestion
+               </label>
+               <div id="more-detail-hint" class="govuk-hint">
+                  Include information about sources of training, topics, themes, and any other relevant information.
+               </div>
+               {% if errors %}
+               <p id="more-detail-error" class="govuk-error-message">
+    <span class="govuk-visually-hidden">Error:</span> Enter some details of your suggestion
+  </p> {% endif %}
+               <textarea class="govuk-textarea {% if errors %}govuk-textarea--error{% endif %}" id="moreDetail" name="moreDetail" rows="10" aria-describedby="more-detail-hint"></textarea>
+            </div>
+            <p>If you're happy for us to get in contact with you about your suggestion, please provide your email address and name.</p>
+            <div class="govuk-form-group">
+               <label class="govuk-label " for="email">
+               Your email address
+               </label>
+               <input class="govuk-input govuk-!-width-one-half" id="email" name="email" type="email" autocomplete="email">
+            </div>
+            <div class="govuk-form-group">
+               <label class="govuk-label " for="name">
+               Your name
+               </label>
+               <input class="govuk-input govuk-!-width-one-half" id="name" name="name" type="text" autocomplete="name">
+            </div>
+            <div style="display:none;">
+               <label for="website">Leave this field empty</label>
+               <input type="text" id="website" name="website">
+            </div>
+            <div class="govuk-button-group">
+               <button type="submit" class="govuk-button" data-module="govuk-button">
+               Submit suggestion
+               </button>
+            </div>
+            <input type="hidden" name="g-recaptcha-response" id="g-recaptcha-response">
+         </form>
+      </div>
+   </div>
+</div>
+{% endblock %}
+{% block scripts %}
+<script>
+   grecaptcha.ready(function() {
+       document.getElementById('trainingForm').addEventListener('submit', function(event) {
+           event.preventDefault();
+           grecaptcha.execute('6LeqWyEqAAAAAJMR2CWJZ8OjX1HM5Glj54yQQD27', {action: 'submit'}).then(function(token) {
+               document.getElementById('g-recaptcha-response').value = token;
+               document.getElementById('trainingForm').submit();
+           });
+       });
+   });
+</script>
 {% endblock %}

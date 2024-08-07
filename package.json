@@ -38,6 +38,7 @@
     "https": "^1.0.0",
     "lunr": "^2.3.9",
     "marked": "^4.3.0",
+    "node-fetch": "^3.3.2",
     "notifications-node-client": "^7.0.0",
     "nunjucks": "^3.2.4",
     "nunjucks-date": "^1.5.0",

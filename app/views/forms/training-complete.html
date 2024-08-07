@@ -1,14 +1,8 @@
-{% extends "layouts/full.html" %}
-
-{% set selectedNav = "Support" %}
-{% set pageName = "Get support from DesignOps with an accessibility query" %}
-{% set pageDescription = "Complete the form to request support with an accessibility-related query."%}
-{% set setSelectedSideNav = "Overview" %}
-{% set created = "19 July 2024" %}
-{% set reviewed = "19 July 2024" %}
-{% set updated = "22 July 2024" %}
-{% set githubIssueID = "66" %}
-{% set need = "This page exists to help people get support and help when they need it." %}
+{% extends "layouts/full-nohero.html" %}
+{% set selectedNav = "Training" %}
+{% set pageName = "Suggest accessibility and inclusive design training modules" %}
+{% set pageDescription = "" %}
+{% set mainClasses = "govuk-!-padding-bottom-9" %}
 {%- block head %}
 {#- Don't index this page #}
 <meta name="robots" content="noindex, nofollow">
@@ -45,10 +39,10 @@
 
         <h2 class="govuk-heading-l govuk-!-margin-top-7">What happens next</h2>
         <p class="govuk-body">
-        We'll respond within 1 working day.
+        We'll review your suggestion and if you've provided contact details, get in touch if we need more information.
         </p>
         <p class="govuk-body">
-          <a href="/support" class="govuk-link">Back to support</a> 
+          <a href="/training" class="govuk-link">Back to training</a> 
         </p>
       </div>
     </div>
