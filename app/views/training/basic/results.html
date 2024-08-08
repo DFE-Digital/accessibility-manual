@@ -1,0 +1,123 @@
+{% extends "layouts/full-nohero.html" %}
+
+{% set selectedNav = "Training" %}
+{% set pageName = "Training Results" %}
+{% set pageDescription = "" %}
+{% set mainClasses = "govuk-!-padding-bottom-9" %}
+
+{% block hero %}
+    <div class="govuk-width-container">
+        <div class="govuk-breadcrumbs">
+            <ol class="govuk-breadcrumbs__list">
+                <li class="govuk-breadcrumbs__list-item">
+                    <a class="govuk-breadcrumbs__link" href="/">Home</a>
+                </li>
+                <li class="govuk-breadcrumbs__list-item">
+                    <a class="govuk-breadcrumbs__link" href="/training">Training</a>
+                </li>
+                <li class="govuk-breadcrumbs__list-item">
+                    Results
+                </li>
+            </ol>
+        </div>
+    </div>
+{% endblock %}
+
+{% block content %}
+
+    <style>
+        .result-panel {
+            border: 1px solid #C5C7C9;
+            padding: 30px;
+            margin-bottom: 30px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        .result-panel-true {
+            border: 2px solid #00703c;
+            border-left: 10px solid #00703c;
+        }
+
+        .result-panel-false {
+            border: 2px solid #d4351c;
+            border-left: 10px solid #d4351c;
+        }
+    </style>
+
+    <div class="govuk-width-container">
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-two-thirds">
+                <h1 class="govuk-heading-xl govuk-!-margin-bottom-3">Your results</h1>
+                <p class="govuk-body-l">You got {{ score }} out of {{ results.length }} correct.</p>
+
+                {% for result in results %}
+                    <div class="result-panel result-panel-{{result.isCorrect}}">
+                        <div class="result-panel-header">
+                            <h2 class="govuk-heading-m">{{ result.question }}</h2>
+                            <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+                        </div>
+
+                        {% if result.isCorrect %}
+
+                            <p class="govuk-body govuk-!-font-weight-bold">You got this right.<p>
+
+                                    <p class="govuk-!-margin-bottom-0">
+                                        {{ result.options[result.correctAnswer] }}</p>
+
+                                {% endif %}
+
+                                {% if not result.isCorrect %}
+
+                                    <p class="govuk-body govuk-!-font-weight-bold">You got this wrong, you answered:<p>
+
+                                            <p>
+                                                {{ result.options[result.userAnswer] }}</p>
+
+                                            <details class="govuk-details govuk-!-margin-bottom-0">
+                                                <summary class="govuk-details__summary">
+                                                    <span class="govuk-details__summary-text">
+      View the correct answer
+    </span>
+                                                </summary>
+                                                <div class="govuk-details__text">
+                                                    {{ result.options[result.correctAnswer] }}
+                                                </div>
+                                            </details>
+
+                                        {% endif %}
+
+                                    </div>
+                                {% endfor %}
+                            </div>
+                        </div>
+                    </div>
+                {% endblock %}
+
+                {% block scripts %}
+                    <script>
+                        function toggleAnswer(event, index) {
+                            event.preventDefault();
+                            var answerElement = document.getElementById('correct-answer-' + index);
+                            if (answerElement.style.display === 'none') {
+                                answerElement.style.display = 'block';
+                            } else {
+                                answerElement.style.display = 'none';
+                            }
+                        }
+
+                        document.addEventListener('DOMContentLoaded', function () {
+                            var links = document.querySelectorAll('.result-panel-header h2');
+                            links.forEach(function (link) {
+                                link.addEventListener('click', function () {
+                                    var body = this.parentElement.nextElementSibling;
+                                    if (body.style.display === 'none') {
+                                        body.style.display = 'block';
+                                    } else {
+                                        body.style.display = 'none';
+                                    }
+                                });
+                            });
+                        });
+                    </script>
+                {% endblock %}

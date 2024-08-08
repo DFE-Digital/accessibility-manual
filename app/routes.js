@@ -22,6 +22,9 @@ router.get("/app/how-many-people/:number", appsController.g_howmanypeople);
 router.post("/app/how-many-people", appsController.p_howmanypeople);
 
 
-router.post("/training/accessibility-inclusion/question-1", trainingController.p_basic_q1);
+// Training question handlers
 
+router.get('/training/basic/question', trainingController.startTraining);
+router.post('/training/basic/question', trainingController.handleAnswer);
+router.get('/training/basic/results', trainingController.getResults);
 module.exports = router

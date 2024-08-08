@@ -1,0 +1,92 @@
+[
+    {
+        "question": "Which of the following best describes the WCAG principle of 'Perceivable'?",
+        "options": [
+            "Ensuring all content is in plain English",
+            "Providing text alternatives for images and making content available in multiple formats",
+            "Using bright colours to attract attention"
+        ],
+        "correctAnswer": 1
+    },
+    {
+        "question": "The Public Sector Bodies (Websites and Mobile Applications) Accessibility Regulations 2018 require compliance with which set of guidelines?",
+        "options": [
+            "Equality Act 2010",
+            "Public Sector Duty",
+            "Web Content Accessibility Guidelines (WCAG) 2.2"
+        ],
+        "correctAnswer": 2
+    },
+    {
+        "question": "How can learning from diversity improve digital design?",
+        "options": [
+            "By focusing on the needs of the majority",
+            "By considering a wide range of user needs and preferences",
+            "By standardising all content to a single format"
+        ],
+        "correctAnswer": 1
+    },
+    {
+        "question": "What is a benefit of the 'Solve for one, extend to many' principle?",
+        "options": [
+            "It only benefits users with specific disabilities",
+            "It reduces the need for further accessibility testing",
+            "Solutions designed for a specific need can help others"
+        ],
+        "correctAnswer": 2
+    },
+    {
+        "question": "Which scenario demonstrates the principle of 'Recognise exclusion'?",
+        "options": [
+            "Identifying that a video without captions excludes users with hearing impairments, and adding captions",
+            "Designing a website with a complex navigation",
+            "Creating content that only works on the latest web browsers"
+        ],
+        "correctAnswer": 0
+    },
+    {
+        "question": "Why is it important to consider permanent, situational, and temporary disabilities in design?",
+        "options": [
+            "To make designs simpler and easier to use",
+            "To create designs that work for a wide range of situations and abilities",
+            "To ensure compliance with accessibility laws"
+        ],
+        "correctAnswer": 1
+    },
+    {
+        "question": "What does 'Robust' mean in the context of WCAG 2.2?",
+        "options": [
+            "Content that works across different devices and assistive technologies",
+            "Content that can be translated into multiple languages",
+            "Content that is visually appealing"
+        ],
+        "correctAnswer": 0
+    },
+    {
+        "question": "Which of the following is an example of making a website operable?",
+        "options": [
+            "Using a small font size",
+            "Providing keyboard shortcuts for navigation",
+            "Using a complex layout"
+        ],
+        "correctAnswer": 1
+    },
+    {
+        "question": "How does adding alt text to images help achieve the 'Perceivable' principle?",
+        "options": [
+            "It makes images load faster",
+            "It improves the website's appearance",
+            "It allows users with visual impairments to understand the content of images"
+        ],
+        "correctAnswer": 2
+    },
+    {
+        "question": "Why does providing clear and consistent navigation help users?",
+        "options": [
+            "It makes the website look more professional",
+            "It helps users find what they are looking for quickly and easily",
+            "It reduces the need for accessibility testing"
+        ],
+        "correctAnswer": 1
+    }
+]

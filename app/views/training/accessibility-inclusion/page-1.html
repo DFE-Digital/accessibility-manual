@@ -1,7 +1,7 @@
 {% extends "layouts/full-nohero.html" %}
 
 {% set selectedNav = "Training" %}
-{% set pageName = "Introduction to the basics of accessibility and inclusive design" %}
+{% set pageName = "What is accessibility and inclusive design?" %}
 {% set pageDescription = ""%}
 {% set mainClasses = "govuk-!-padding-bottom-9" %}
 
@@ -32,18 +32,25 @@
                 <div class="govuk-grid-row">
                     <div class="govuk-grid-column-two-thirds">
                         <h1 class="govuk-heading-xl">{{pageName}}</h1>
-                        <p class="govuk-body-l">Welcome to the Department for Education's training module on accessibility and inclusive design. </p>
-                        <p class="govuk-body-l">This training is designed to help you understand the basics of creating accessible and inclusive digital content.</p>
-                        <p class="govuk-body-l">It takes about 10 to 15 minutes to complete and there are 10 questions at the end to check your understanding.</p>
+
+                        <p class="govuk-body-l"><strong>Accessibility</strong> is about ensuring that everyone can use our digital services to achieve the outcomes they need.</p>
+                        <p class="govuk-body-l">This includes making sure our websites, mobile apps, and digital content are usable by people with a variety of disabilities.</p>
+                        <p class="govuk-body-l"><strong>Inclusive design</strong> involves creating products and services that are accessible to, and usable by, as many people as possible irrespective of ability.</p>
+                        <p class="govuk-body-l">It anticipates diversity in users and aims to address the needs of all people, including those with disabilities, right from the start of the design process.</p>
                     </div>
                     <div class="govuk-grid-column-one-third center-image"></div>
                 </div>
                 <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
-                <p class="govuk-!-margin-top-6">
-                    <a href="/training/accessibility-inclusion/page-1" class="dfe-manual-button"
-                    role="button">Next</a>
-                </p>
-            </div>
-        </div>
 
-    {% endblock %}
+                <p class="govuk-!-margin-top-6">
+                    <a href="/training/accessibility-inclusion"
+                    class="dfe-manual-button dfe-manual-button--grey govuk-!-margin-right-2"
+                    role="button">Previous</a>
+                    <a href="/training/accessibility-inclusion/page-2"
+                    class="dfe-manual-button" role="button">Next</a>
+                </p>
+            </p>
+        </div>
+    </div>
+
+{% endblock %}

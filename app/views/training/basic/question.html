@@ -1,0 +1,55 @@
+{% extends "layouts/full-nohero.html" %}
+
+{% set selectedNav = "Training" %}
+{% set pageName = "Training Questions" %}
+{% set pageDescription = "" %}
+{% set mainClasses = "govuk-!-padding-bottom-9" %}
+
+{% block hero %}
+    <div class="govuk-width-container">
+        <div class="govuk-breadcrumbs">
+            <ol class="govuk-breadcrumbs__list">
+                <li class="govuk-breadcrumbs__list-item">
+                    <a class="govuk-breadcrumbs__link" href="/">Home</a>
+                </li>
+                <li class="govuk-breadcrumbs__list-item">
+                    <a class="govuk-breadcrumbs__link" href="/training">Training</a>
+                </li>
+                <li class="govuk-breadcrumbs__list-item">
+                    Question {{ questionIndex + 1 }}
+                </li>
+            </ol>
+        </div>
+    </div>
+{% endblock %}
+
+{% block content %}
+    <div class="govuk-width-container">
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-two-thirds">
+                <form action="/training/basic/question" method="post">
+                    <div class="govuk-form-group">
+                        <fieldset class="govuk-fieldset" aria-describedby="example-hint">
+                            <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                                <h1 class="govuk-fieldset__heading">
+                                    {{ question.question }}
+                                </h1>
+                            </legend>
+                            <div class="govuk-radios">
+                                {% for option in question.options %}
+                                    <div class="govuk-radios__item">
+                                        <input class="govuk-radios__input" id="question-{{ questionIndex }}-option-{{ loop.index0 }}" name="answer" type="radio" value="{{ loop.index0 }}">
+                                        <label class="govuk-label govuk-radios__label" for="question-{{ questionIndex }}-option-{{ loop.index0 }}">
+                                            {{ option }}
+                                        </label>
+                                    </div>
+                                {% endfor %}
+                            </div>
+                        </fieldset>
+                    </div>
+                    <button class="govuk-button" data-module="govuk-button">Next</button>
+                </form>
+            </div>
+        </div>
+    </div>
+{% endblock %}
