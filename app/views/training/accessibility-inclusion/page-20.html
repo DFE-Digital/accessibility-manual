@@ -1,0 +1,62 @@
+{% extends "layouts/full-nohero.html" %}
+
+{% set selectedNav = "Training" %}
+{% set pageName = "Keep learning" %}
+{% set pageDescription = ""%}
+{% set mainClasses = "govuk-!-padding-bottom-9" %}
+
+{% block hero %}
+
+    <div class="govuk-width-container">
+        <div class="govuk-breadcrumbs">
+            <ol class="govuk-breadcrumbs__list">
+                <li class="govuk-breadcrumbs__list-item">
+                    <a class="govuk-breadcrumbs__link" href="/">Home</a>
+                </li>
+                <li class="govuk-breadcrumbs__list-item">
+                    <a class="govuk-breadcrumbs__link" href="/training">Training</a>
+                </li>
+                <li class="govuk-breadcrumbs__list-item">
+                    {{pageName}}
+                </li>
+            </ol>
+        </div>
+    </div>
+{% endblock %}
+
+{% block content %}
+    <div class="govuk-width-container">
+
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-full">
+                <div class="govuk-grid-row">
+                    <div class="govuk-grid-column-two-thirds">
+                         <h1 class="govuk-heading-xl govuk-!-font-size-48">{{pageName}}</h1>
+                        <p class="govuk-body-l">You'll learn more about accessibility and inclusive design, the more you practice it in your day-to-day work.</p>
+                        <p class="govuk-body-l">Here are some ways to keep learning:</p>
+                        <ul class="govuk-list govuk-list--bullet govuk-body-l govuk-list--spaced">
+                            <li>talk to your users and really understand how they use your content</li>
+                            <li>get involved or observe user research even if you're not in a digital delivery team</li>
+                            <li>visit the <a href="https://educationgovuk.sharepoint.com/sites/lvewp00043/SitePages/Experience-Lab.aspx" target="_blank">Experience Lab in Sheffield (opens in new tab)</a></li>
+                            <li>check back regularly for new training and resources </li>
+                            <li>join the <a href="https://ukgovernmentdfe.slack.com/archives/CADP1R39Q" target="_blank">accessibility community on Slack (opens in new tab)</a></li>
+                        </ul>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+
+        <p class="govuk-!-margin-top-6">
+            <a href="/training/accessibility-inclusion/page-19"
+                    class="dfe-manual-button dfe-manual-button--grey govuk-!-margin-right-2"
+                    role="button">Previous</a>
+            <a href="/training/accessibility-inclusion/page-21"
+                    class="dfe-manual-button" role="button">Next</a>
+        </p>
+    </p>
+</div>
+
+{% endblock %}

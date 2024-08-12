@@ -27,62 +27,7 @@
 
 {% block content %}
 
-<style>
-    .grey-text {
-        color: #585858;
-    }
 
-    .grid-5-container {
-        display: grid;
-        grid-template-columns: repeat(5, 1fr);
-        gap: 25px;
-        margin: 60px 0px;
-    }
-
-    .grid-item {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .grid-item img {
-        max-width: 100%;
-        height: auto;
-        display: block;
-        margin-bottom: 10px;
-    }
-
-    .grid-item p {
-        margin-top: 0;
-        text-align: center;
-    }
-
-    /* Responsive layout */
-    @media (max-width: 1200px) {
-        .grid-5-container {
-            grid-template-columns: repeat(4, 1fr);
-        }
-    }
-
-    @media (max-width: 900px) {
-        .grid-5-container {
-            grid-template-columns: repeat(3, 1fr);
-        }
-    }
-
-    @media (max-width: 600px) {
-        .grid-5-container {
-            grid-template-columns: repeat(2, 1fr);
-        }
-    }
-
-    @media (max-width: 400px) {
-        .grid-5-container {
-            grid-template-columns: 1fr;
-        }
-    }
-</style>
 
 <div class="govuk-width-container">
 

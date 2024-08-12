@@ -11,8 +11,8 @@
 {% set need = "This page exists to help people get support and help when they need it." %}
 {% set mainClasses = "govuk-!-padding-top-0" %}
 {%- block head %}
-{#- Don't index this page #}
-<meta name="robots" content="noindex, nofollow">
+   {#- Don't index this page #}
+   <meta name="robots" content="noindex, nofollow">
 {% endblock %}
 {% set nameError = "" %}
 {% set emailError = "" %}
@@ -21,53 +21,53 @@
 {% set stepsError = "" %}
 
 {% for error in errors %}
-    {% if error.field === "name" %}
-        {% set nameError = error.msg %}
-    {% elseif error.field === "email" %}
-        {% set emailError = error.msg %}
-    {% elseif error.field === "contact" %}
-        {% set contactError = error.msg %}
-    {% elseif error.field === "query" %}
-        {% set queryError = error.msg %}
-    {% elseif error.field === "steps" %}
-        {% set stepsError = error.msg %}
-    {% endif %}
+   {% if error.field === "name" %}
+      {% set nameError = error.msg %}
+   {% elseif error.field === "email" %}
+      {% set emailError = error.msg %}
+   {% elseif error.field === "contact" %}
+      {% set contactError = error.msg %}
+   {% elseif error.field === "query" %}
+      {% set queryError = error.msg %}
+   {% elseif error.field === "steps" %}
+      {% set stepsError = error.msg %}
+   {% endif %}
 {% endfor %}
 
 {% block hero %}
-<section class="dfe-page-hero govuk-!-padding-bottom-9" style="background: #003a69;">
-    <div class="govuk-width-container">
-        <div class="govuk-grid-row">
+   <section class="dfe-page-hero">
+      <div class="govuk-width-container">
+         <div class="govuk-grid-row">
             <div class="govuk-grid-column-two-thirds">
-                <h1 class="govuk-heading-xl">{{ pageName }}</h1>
-                <p class="govuk-body-l">{{ pageDescription }}</p>
+               <h1 class="govuk-heading-xl">{{ pageName }}</h1>
+               <p class="govuk-body-l">{{ pageDescription }}</p>
             </div>
-        </div>
-    </div>
-</section>
+         </div>
+      </div>
+   </section>
 {% endblock %}
 
 {% block content %}
-<div class="govuk-width-container govuk-!-margin-top-3">
-    <div class="govuk-grid-row">
-        <div class="govuk-grid-column-two-thirds">
+   <div class="govuk-width-container govuk-!-margin-top-3">
+      <div class="govuk-grid-row">
+         <div class="govuk-grid-column-two-thirds">
             <a href="/support" class="govuk-back-link">Back to support</a>
 
             {% if errors %}
-            <div class="govuk-error-summary" aria-labelledby="error-summary-title" role="alert" tabindex="-1" data-module="govuk-error-summary">
-                <h2 class="govuk-error-summary__title" id="error-summary-title">
+               <div class="govuk-error-summary" aria-labelledby="error-summary-title" role="alert" tabindex="-1" data-module="govuk-error-summary">
+                  <h2 class="govuk-error-summary__title" id="error-summary-title">
                     There is a problem
                 </h2>
-                <div class="govuk-error-summary__body">
-                    <ul class="govuk-list govuk-error-summary__list">
+                  <div class="govuk-error-summary__body">
+                     <ul class="govuk-list govuk-error-summary__list">
                         {% for error in errors %}
-                        <li>
-                            <a href="#{{ error.field }}">{{ error.msg }}</a>
-                        </li>
+                           <li>
+                              <a href="#{{ error.field }}">{{ error.msg }}</a>
+                           </li>
                         {% endfor %}
-                    </ul>
-                </div>
-            </div>
+                     </ul>
+                  </div>
+               </div>
             {% endif %}
 
             <h2 class="govuk-heading-l govuk-!-margin-top-5">Your request</h2>
@@ -75,71 +75,71 @@
             <p>We aim to respond to queries within 1 working day, between Monday and Friday.</p>
 
             <form method="post" action="/support/form/support">
-                <div class="govuk-form-group {% if nameError %}govuk-form-group--error{% endif %}">
-                    <label class="govuk-label" for="name">Your name</label>
-                    {% if nameError %}
-                    <span class="govuk-error-message">{{ nameError }}</span>
-                    {% endif %}
-                    <input class="govuk-input {% if nameError %}govuk-input--error{% endif %}" id="name" name="name" type="text" autocomplete="name" value="{{ data.name }}">
-                </div>
+               <div class="govuk-form-group {% if nameError %}govuk-form-group--error{% endif %}">
+                  <label class="govuk-label" for="name">Your name</label>
+                  {% if nameError %}
+                     <span class="govuk-error-message">{{ nameError }}</span>
+                  {% endif %}
+                  <input class="govuk-input {% if nameError %}govuk-input--error{% endif %}" id="name" name="name" type="text" autocomplete="name" value="{{ data.name }}">
+               </div>
 
-                <div class="govuk-form-group {% if emailError %}govuk-form-group--error{% endif %}">
-                    <label class="govuk-label" for="email">Your email address</label>
-                    {% if emailError %}
-                    <span class="govuk-error-message">{{ emailError }}</span>
-                    {% endif %}
-                    <input class="govuk-input {% if emailError %}govuk-input--error{% endif %}" id="email" name="email" type="text" autocomplete="email" value="{{ data.email }}">
-                </div>
+               <div class="govuk-form-group {% if emailError %}govuk-form-group--error{% endif %}">
+                  <label class="govuk-label" for="email">Your email address</label>
+                  {% if emailError %}
+                     <span class="govuk-error-message">{{ emailError }}</span>
+                  {% endif %}
+                  <input class="govuk-input {% if emailError %}govuk-input--error{% endif %}" id="email" name="email" type="text" autocomplete="email" value="{{ data.email }}">
+               </div>
 
-                <div class="govuk-form-group {% if contactError %}govuk-form-group--error{% endif %}">
-                    <fieldset class="govuk-fieldset">
-                        <legend class="govuk-fieldset__legend">What is the best way to respond to you?</legend>
-                        {% if contactError %}
+               <div class="govuk-form-group {% if contactError %}govuk-form-group--error{% endif %}">
+                  <fieldset class="govuk-fieldset">
+                     <legend class="govuk-fieldset__legend">What is the best way to respond to you?</legend>
+                     {% if contactError %}
                         <span class="govuk-error-message">{{ contactError }}</span>
-                        {% endif %}
-                        <div class="govuk-radios" data-module="govuk-radios">
-                            <div class="govuk-radios__item">
-                                <input class="govuk-radios__input" id="contact" name="contact" type="radio" value="Email" {% if data.contact === 'Email' %}checked{% endif %}>
-                                <label class="govuk-label govuk-radios__label" for="contact">Email</label>
-                            </div>
-                            <div class="govuk-radios__item">
-                                <input class="govuk-radios__input" id="contact-2" name="contact" type="radio" value="Slack message" {% if data.contact === 'Slack message' %}checked{% endif %}>
-                                <label class="govuk-label govuk-radios__label" for="contact-2">Slack message</label>
-                            </div>
-                            <div class="govuk-radios__item">
-                                <input class="govuk-radios__input" id="contact-3" name="contact" type="radio" value="Teams message" {% if data.contact === 'Teams message' %}checked{% endif %}>
-                                <label class="govuk-label govuk-radios__label" for="contact-3">Teams message</label>
-                            </div>
-                            <div class="govuk-radios__item">
-                                <input class="govuk-radios__input" id="contact-4" name="contact" type="radio" value="Phone" {% if data.contact === 'Phone' %}checked{% endif %}>
-                                <label class="govuk-label govuk-radios__label" for="contact-4">Phone</label>
-                                <div id="signIn-2-item-hint" class="govuk-hint govuk-radios__hint">
+                     {% endif %}
+                     <div class="govuk-radios" data-module="govuk-radios">
+                        <div class="govuk-radios__item">
+                           <input class="govuk-radios__input" id="contact" name="contact" type="radio" value="Email" {% if data.contact === 'Email' %}checked{% endif %}>
+                           <label class="govuk-label govuk-radios__label" for="contact">Email</label>
+                        </div>
+                        <div class="govuk-radios__item">
+                           <input class="govuk-radios__input" id="contact-2" name="contact" type="radio" value="Slack message" {% if data.contact === 'Slack message' %}checked{% endif %}>
+                           <label class="govuk-label govuk-radios__label" for="contact-2">Slack message</label>
+                        </div>
+                        <div class="govuk-radios__item">
+                           <input class="govuk-radios__input" id="contact-3" name="contact" type="radio" value="Teams message" {% if data.contact === 'Teams message' %}checked{% endif %}>
+                           <label class="govuk-label govuk-radios__label" for="contact-3">Teams message</label>
+                        </div>
+                        <div class="govuk-radios__item">
+                           <input class="govuk-radios__input" id="contact-4" name="contact" type="radio" value="Phone" {% if data.contact === 'Phone' %}checked{% endif %}>
+                           <label class="govuk-label govuk-radios__label" for="contact-4">Phone</label>
+                           <div id="signIn-2-item-hint" class="govuk-hint govuk-radios__hint">
                                     Include your phone number in the question field
                                 </div>
-                            </div>
                         </div>
-                    </fieldset>
-                </div>
+                     </div>
+                  </fieldset>
+               </div>
 
-                <div class="govuk-form-group {% if queryError %}govuk-form-group--error{% endif %}">
-                    <label class="govuk-label" for="query">Your question</label>
-                    <div id="query-hint" class="govuk-hint">Please provide as much detail as possible to help us understand your query</div>
-                    {% if queryError %}
-                    <span class="govuk-error-message">{{ queryError }}</span>
-                    {% endif %}
-                    <textarea class="govuk-textarea {% if queryError %}govuk-textarea--error{% endif %}" id="query" name="query" rows="10" aria-describedby="query-hint">{{ data.query }}</textarea>
-                </div>
+               <div class="govuk-form-group {% if queryError %}govuk-form-group--error{% endif %}">
+                  <label class="govuk-label" for="query">Your question</label>
+                  <div id="query-hint" class="govuk-hint">Please provide as much detail as possible to help us understand your query</div>
+                  {% if queryError %}
+                     <span class="govuk-error-message">{{ queryError }}</span>
+                  {% endif %}
+                  <textarea class="govuk-textarea {% if queryError %}govuk-textarea--error{% endif %}" id="query" name="query" rows="10" aria-describedby="query-hint">{{ data.query }}</textarea>
+               </div>
 
-                <div class="govuk-form-group">
-                    <label class="govuk-label" for="steps">What guidance or steps have you taken so far?</label>
-                    <div id="steps-hint" class="govuk-hint">Optional, but can help us understand what you have already tried</div>
-                    <textarea class="govuk-textarea" id="steps" name="steps" rows="5" aria-describedby="steps-hint">{{ data.steps }}</textarea>
-                </div>
+               <div class="govuk-form-group">
+                  <label class="govuk-label" for="steps">What guidance or steps have you taken so far?</label>
+                  <div id="steps-hint" class="govuk-hint">Optional, but can help us understand what you have already tried</div>
+                  <textarea class="govuk-textarea" id="steps" name="steps" rows="5" aria-describedby="steps-hint">{{ data.steps }}</textarea>
+               </div>
 
-                <p>Your details will only be used to deal with this request.</p>
-                <button type="submit" class="govuk-button">Submit request</button>
+               <p>Your details will only be used to deal with this request.</p>
+               <button type="submit" class="govuk-button">Submit request</button>
             </form>
-        </div>
-    </div>
-</div>
+         </div>
+      </div>
+   </div>
 {% endblock %}

@@ -8,280 +8,276 @@ accessible and inclusive."%}
 {% set mainClasses = "govuk-!-padding-top-0" %}
 
 {% block hero %}
-<section class="dfe-page-hero govuk-!-padding-bottom-9">
-   <div class="govuk-width-container">
-      <div class="govuk-grid-row">
-         <div class="govuk-grid-column-two-thirds">
-            <h1 class="govuk-heading-xl">{{pageName}}</h1>
+   <section class="dfe-page-hero govuk-!-padding-bottom-9">
+      <div class="govuk-width-container">
+         <div class="govuk-grid-row">
+            <div class="govuk-grid-column-two-thirds">
+               <h1 class="govuk-heading-xl">{{pageName}}</h1>
 
+            </div>
          </div>
       </div>
-   </div>
-</section>
+   </section>
 {% endblock %}
 
 {% block content %}
 
+   <style>
+      .inline-elements {
+         display: flex;
+         align-items: center;
+      }
 
-<style>
-   .inline-elements {
-      display: flex;
-      align-items: center;
-   }
+      .inline-elements .govuk-input {
+         margin-right: 1em;
+         /* Adjust as needed */
+      }
 
-   .inline-elements .govuk-input {
-      margin-right: 1em;
-      /* Adjust as needed */
-   }
-
-   .inline-elements .govuk-button {
-      /* Additional styling if necessary */
-   }
-
-   .how-many-banner {
-      background: url('/assets/images/hmp-bg.jpg') lightgray 50% / cover no-repeat;
-      padding: 50px 65px;
-   }
-
-   .how-many-card {
-      background-color: #ffffff;
-      padding: 40px;
-   }
-
-   @media (max-width: 768px) {
+      .inline-elements .govuk-button {
+         /* Additional styling if necessary */
+      }
 
       .how-many-banner {
-         background: url('/assets/images/hmp-bg.jpg') lightgray 50% / cover no-repeat;
-         padding: 20px 35px;
+         background: url("/assets/images/hmp-bg.jpg") lightgray 50% / cover no-repeat;
+         padding: 50px 65px;
       }
 
       .how-many-card {
          background-color: #ffffff;
-         padding: 20px;
+         padding: 40px;
       }
 
-      .inline-elements {
-         display: block;
+      @media (max-width: 768px) {
+
+         .how-many-banner {
+            background: url("/assets/images/hmp-bg.jpg") lightgray 50% / cover no-repeat;
+            padding: 20px 35px;
+         }
+
+         .how-many-card {
+            background-color: #ffffff;
+            padding: 20px;
+         }
+
+         .inline-elements {
+            display: block;
+         }
       }
-   }
-</style>
+   </style>
 
-
-
-
-<div class="govuk-width-container govuk-!-margin-top-7">
-   <div class="govuk-grid-row">
-      <div class="govuk-grid-column-full">
-         <h2 class="govuk-heading-l">Understand accessibility</h2>
-         <p class="govuk-body-l">Your starting point for why accessibility is important and the impact good and bad
+   <div class="govuk-width-container govuk-!-margin-top-7">
+      <div class="govuk-grid-row">
+         <div class="govuk-grid-column-full">
+            <h2 class="govuk-heading-l">Understand accessibility</h2>
+            <p class="govuk-body-l">Your starting point for why accessibility is important and the impact good and bad
             accessibility practices have on users of our services.</p>
-      </div>
-   </div>
-   <div class="dfe-grid-container">
-      <div class="dfe-card">
-         <img src="/assets/images/people-grey.jpg" alt="">
-         <div class="dfe-card-container">
-            <h3 class="govuk-heading-m">
-               <a href="/standards" class="govuk-link govuk-link--no-visited-state dfe-card-link--header">Standards</a>
-            </h3>
-            <p>The accessibility standards all digital services are expected to meet.</p>
          </div>
       </div>
-      <div class="dfe-card">
-         <img src="/assets/images/point.jpg" alt="">
-         <div class="dfe-card-container">
-            <h3 class="govuk-heading-m">
-               <a href="#" class="govuk-link govuk-link--no-visited-state dfe-card-link--header">Principles</a>
-            </h3>
-            <p>The four principles of accessibility and how to apply them.</p>
+      <div class="dfe-grid-container">
+         <div class="dfe-card">
+            <img src="/assets/images/people-grey.jpg" alt="">
+            <div class="dfe-card-container">
+               <h3 class="govuk-heading-m">
+                  <a href="/standards" class="govuk-link govuk-link--no-visited-state dfe-card-link--header">Standards</a>
+               </h3>
+               <p>The accessibility standards all digital services are expected to meet.</p>
+            </div>
          </div>
-      </div>
-      <div class="dfe-card">
-         <img src="/assets/images/people.jpg" alt="">
-         <div class="dfe-card-container">
-            <h3 class="govuk-heading-m">
-               <a href="/responsibilities"
+         <div class="dfe-card">
+            <img src="/assets/images/point.jpg" alt="">
+            <div class="dfe-card-container">
+               <h3 class="govuk-heading-m">
+                  <a href="#" class="govuk-link govuk-link--no-visited-state dfe-card-link--header">Principles</a>
+               </h3>
+               <p>The four principles of accessibility and how to apply them.</p>
+            </div>
+         </div>
+         <div class="dfe-card">
+            <img src="/assets/images/people.jpg" alt="">
+            <div class="dfe-card-container">
+               <h3 class="govuk-heading-m">
+                  <a href="/responsibilities"
                   class="govuk-link govuk-link--no-visited-state dfe-card-link--header">Responsibilities</a>
-            </h3>
-            <p>Understand what the different responsibilitiies are for each role in the agile delivery lifecycle.</p>
+               </h3>
+               <p>Understand what the different responsibilitiies are for each role in the agile delivery lifecycle.</p>
+            </div>
          </div>
       </div>
    </div>
-</div>
 
-<div class="govuk-width-container govuk-!-margin-top-9">
-   <div class="govuk-grid-row">
-      <div class="govuk-grid-column-full ">
-         <div class=" how-many-banner">
-            <div class="govuk-grid-row">
-               <div class="govuk-grid-column-one-half how-many-card">
+   <div class="govuk-width-container govuk-!-margin-top-9">
+      <div class="govuk-grid-row">
+         <div class="govuk-grid-column-full ">
+            <div class=" how-many-banner">
+               <div class="govuk-grid-row">
+                  <div class="govuk-grid-column-one-half how-many-card">
 
-                  <div class="">
-                     <h2 class="govuk-heading-l">How many people</h2>
-                     <p>Understand how many people using your service might have a disability or impairment</p>
-                     <form>
-                        <div class="govuk-form-group">
-                           <label class="govuk-label" for="event-name">
+                     <div class="">
+                        <h2 class="govuk-heading-l">How many people</h2>
+                        <p>Understand how many people using your service might have a disability or impairment</p>
+                        <form>
+                           <div class="govuk-form-group">
+                              <label class="govuk-label" for="event-name">
                               Number of people
                            </label>
-                           <div class="inline-elements">
-                              <input class="govuk-input" id="event-name" name="eventName" type="text"
+                              <div class="inline-elements">
+                                 <input class="govuk-input" id="event-name" name="eventName" type="text"
                                  style="margin-bottom: 4px;">
-                              <button type="submit" class="govuk-button" data-module="govuk-button"
+                                 <button type="submit" class="govuk-button" data-module="govuk-button"
                                  style="margin-bottom: 4px;">
                                  Calculate
                               </button>
+                              </div>
                            </div>
-                        </div>
-                     </form>
-                     <p style="margin-bottom: 0px;"><a href="">Learn more about this tool</a></p>
+                        </form>
+                        <p style="margin-bottom: 0px;">
+                           <a href="">Learn more about this tool</a>
+                        </p>
+                     </div>
                   </div>
-               </div>
 
+               </div>
+            </div>
+
+         </div>
+      </div>
+   </div>
+
+   <div class="govuk-width-container govuk-!-margin-top-9">
+      <div class="govuk-grid-row">
+         <div class="govuk-grid-column-full">
+            <h2 class="govuk-heading-l">Learn about accessibility</h2>
+         </div>
+      </div>
+      <div class="dfe-grid-container">
+         <div class="dfe-card">
+            <div class="dfe-card-container">
+               <h3 class="govuk-heading-m">
+                  <a href="#" class="govuk-link govuk-link--no-visited-state dfe-card-link--header">Common issues</a>
+               </h3>
+               <p>The most common issues we find in services and how you can prevent them.</p>
+            </div>
+         </div>
+         <div class="dfe-card">
+            <div class="dfe-card-container">
+               <h3 class="govuk-heading-m">
+                  <a href="#" class="govuk-link govuk-link--no-visited-state dfe-card-link--header">Champions scheme</a>
+               </h3>
+               <p>Who the champions are and how they can help you in their role.</p>
+            </div>
+         </div>
+         <div class="dfe-card">
+            <div class="dfe-card-container">
+               <h3 class="govuk-heading-m">
+                  <a href="#" class="govuk-link govuk-link--no-visited-state dfe-card-link--header">Training</a>
+               </h3>
+               <p>Online training modules that are open for anyone to use and complete.</p>
+            </div>
+         </div>
+      </div>
+   </div>
+
+   <div class="govuk-width-container govuk-!-margin-top-9">
+      <div class="govuk-grid-row">
+         <div class="govuk-grid-column-full">
+            <h2 class="govuk-heading-l">Assuring your service</h2>
+
+         </div>
+      </div>
+      <div class="dfe-grid-container">
+         <div class="dfe-card">
+            <div class="dfe-card-container">
+               <h3 class="govuk-heading-m">
+                  <a href="#" class="govuk-link govuk-link--no-visited-state dfe-card-link--header">Audits</a>
+               </h3>
+               <p>Find out what audit you need, when and how to get one and get support if you need it.</p>
+            </div>
+         </div>
+         <div class="dfe-card">
+            <div class="dfe-card-container">
+               <h3 class="govuk-heading-m">
+                  <a href="#" class="govuk-link govuk-link--no-visited-state dfe-card-link--header">Accessibility
+                  statements</a>
+               </h3>
+               <p>Your service is legally required to have an accessibility statement that is accurate and up to date.</p>
+            </div>
+         </div>
+      </div>
+      <div class="dfe-grid-container">
+
+         <div class="dfe-card">
+            <div class="dfe-card-container">
+               <h3 class="govuk-heading-m">
+                  <a href="#" class="govuk-link govuk-link--no-visited-state dfe-card-link--header">Prioritise</a>
+               </h3>
+               <p>Ensuring issues are resolved promptly and techniques for prioritising resolving accessibility issues.</p>
+            </div>
+         </div>
+         <div class="dfe-card">
+            <div class="dfe-card-container">
+               <h3 class="govuk-heading-m">
+                  <a href="#" class="govuk-link govuk-link--no-visited-state dfe-card-link--header">Remediate</a>
+               </h3>
+               <p>Correct the issue, test it, and validate it.</p>
+            </div>
+         </div>
+         <div class="dfe-card">
+            <div class="dfe-card-container">
+               <h3 class="govuk-heading-m">
+                  <a href="#" class="govuk-link govuk-link--no-visited-state dfe-card-link--header">Monitor</a>
+               </h3>
+               <p>How to monitor issues, ensure accessibility statements are updated and share issues in the open for
+               others to learn from.</p>
+            </div>
+         </div>
+      </div>
+   </div>
+
+   <div class="govuk-width-container govuk-!-margin-top-7">
+      <div class="govuk-grid-row">
+         <div class="govuk-grid-column-full">
+            <h2 class="govuk-heading-l">User-centred design and delivery</h2>
+
+         </div>
+      </div>
+      <div class="dfe-grid-container">
+         <div class="dfe-card">
+            <div class="dfe-card-container">
+               <h3 class="govuk-heading-m">
+                  <a href="#" class="govuk-link govuk-link--no-visited-state dfe-card-link--header">Testing with users</a>
+               </h3>
+               <p>Understand who your users are and identify those most at risk of exclusion.</p>
+            </div>
+         </div>
+         <div class="dfe-card">
+            <div class="dfe-card-container">
+               <h3 class="govuk-heading-m">
+                  <a href="#" class="govuk-link govuk-link--no-visited-state dfe-card-link--header">Testing tools</a>
+               </h3>
+               <p>A range of tools and methods to test your products and services, how to use them and understand the
+               results.</p>
+            </div>
+         </div>
+         <div class="dfe-card">
+            <div class="dfe-card-container">
+               <h3 class="govuk-heading-m">
+                  <a href="#" class="govuk-link govuk-link--no-visited-state dfe-card-link--header">Design systems</a>
+               </h3>
+               <p>Ensure that the team understands the design system and how it is not guaranteed to create an accessible
+               service.</p>
+            </div>
+         </div>
+         <div class="dfe-card">
+            <div class="dfe-card-container">
+               <h3 class="govuk-heading-m">
+                  <a href="#" class="govuk-link govuk-link--no-visited-state dfe-card-link--header">Iterating your
+                  service</a>
+               </h3>
+               <p>When your iterating your service, ensure accessibility is at the forefront of your thinking.</p>
             </div>
          </div>
 
       </div>
    </div>
-</div>
-
-
-<div class="govuk-width-container govuk-!-margin-top-9">
-   <div class="govuk-grid-row">
-      <div class="govuk-grid-column-full">
-         <h2 class="govuk-heading-l">Learn about accessibility</h2>
-      </div>
-   </div>
-   <div class="dfe-grid-container">
-      <div class="dfe-card">
-         <div class="dfe-card-container">
-            <h3 class="govuk-heading-m">
-               <a href="#" class="govuk-link govuk-link--no-visited-state dfe-card-link--header">Common issues</a>
-            </h3>
-            <p>The most common issues we find in services and how you can prevent them.</p>
-         </div>
-      </div>
-      <div class="dfe-card">
-         <div class="dfe-card-container">
-            <h3 class="govuk-heading-m">
-               <a href="#" class="govuk-link govuk-link--no-visited-state dfe-card-link--header">Champions scheme</a>
-            </h3>
-            <p>Who the champions are and how they can help you in their role.</p>
-         </div>
-      </div>
-      <div class="dfe-card">
-         <div class="dfe-card-container">
-            <h3 class="govuk-heading-m">
-               <a href="#" class="govuk-link govuk-link--no-visited-state dfe-card-link--header">Training</a>
-            </h3>
-            <p>Online training modules that are open for anyone to use and complete.</p>
-         </div>
-      </div>
-   </div>
-</div>
-
-<div class="govuk-width-container govuk-!-margin-top-9">
-   <div class="govuk-grid-row">
-      <div class="govuk-grid-column-full">
-         <h2 class="govuk-heading-l">Assuring your service</h2>
-
-      </div>
-   </div>
-   <div class="dfe-grid-container">
-      <div class="dfe-card">
-         <div class="dfe-card-container">
-            <h3 class="govuk-heading-m">
-               <a href="#" class="govuk-link govuk-link--no-visited-state dfe-card-link--header">Audits</a>
-            </h3>
-            <p>Find out what audit you need, when and how to get one and get support if you need it.</p>
-         </div>
-      </div>
-      <div class="dfe-card">
-         <div class="dfe-card-container">
-            <h3 class="govuk-heading-m">
-               <a href="#" class="govuk-link govuk-link--no-visited-state dfe-card-link--header">Accessibility
-                  statements</a>
-            </h3>
-            <p>Your service is legally required to have an accessibility statement that is accurate and up to date.</p>
-         </div>
-      </div>
-   </div>
-   <div class="dfe-grid-container">
-
-      <div class="dfe-card">
-         <div class="dfe-card-container">
-            <h3 class="govuk-heading-m">
-               <a href="#" class="govuk-link govuk-link--no-visited-state dfe-card-link--header">Prioritise</a>
-            </h3>
-            <p>Ensuring issues are resolved promptly and techniques for prioritising resolving accessibility issues.</p>
-         </div>
-      </div>
-      <div class="dfe-card">
-         <div class="dfe-card-container">
-            <h3 class="govuk-heading-m">
-               <a href="#" class="govuk-link govuk-link--no-visited-state dfe-card-link--header">Remediate</a>
-            </h3>
-            <p>Correct the issue, test it, and validate it.</p>
-         </div>
-      </div>
-      <div class="dfe-card">
-         <div class="dfe-card-container">
-            <h3 class="govuk-heading-m">
-               <a href="#" class="govuk-link govuk-link--no-visited-state dfe-card-link--header">Monitor</a>
-            </h3>
-            <p>How to monitor issues, ensure accessibility statements are updated and share issues in the open for
-               others to learn from.</p>
-         </div>
-      </div>
-   </div>
-</div>
-
-<div class="govuk-width-container govuk-!-margin-top-7">
-   <div class="govuk-grid-row">
-      <div class="govuk-grid-column-full">
-         <h2 class="govuk-heading-l">User-centred design and delivery</h2>
-
-      </div>
-   </div>
-   <div class="dfe-grid-container">
-      <div class="dfe-card">
-         <div class="dfe-card-container">
-            <h3 class="govuk-heading-m">
-               <a href="#" class="govuk-link govuk-link--no-visited-state dfe-card-link--header">Testing with users</a>
-            </h3>
-            <p>Understand who your users are and identify those most at risk of exclusion.</p>
-         </div>
-      </div>
-      <div class="dfe-card">
-         <div class="dfe-card-container">
-            <h3 class="govuk-heading-m">
-               <a href="#" class="govuk-link govuk-link--no-visited-state dfe-card-link--header">Testing tools</a>
-            </h3>
-            <p>A range of tools and methods to test your products and services, how to use them and understand the
-               results.</p>
-         </div>
-      </div>
-      <div class="dfe-card">
-         <div class="dfe-card-container">
-            <h3 class="govuk-heading-m">
-               <a href="#" class="govuk-link govuk-link--no-visited-state dfe-card-link--header">Design systems</a>
-            </h3>
-            <p>Ensure that the team understands the design system and how it is not guaranteed to create an accessible
-               service.</p>
-         </div>
-      </div>
-      <div class="dfe-card">
-         <div class="dfe-card-container">
-            <h3 class="govuk-heading-m">
-               <a href="#" class="govuk-link govuk-link--no-visited-state dfe-card-link--header">Iterating your
-                  service</a>
-            </h3>
-            <p>When your iterating your service, ensure accessibility is at the forefront of your thinking.</p>
-         </div>
-      </div>
-
-   </div>
-</div>
-
 
 {% endblock %}

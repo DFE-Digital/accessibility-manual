@@ -1,0 +1,99 @@
+{% extends "layouts/full-nohero.html" %}
+
+{% set selectedNav = "Training" %}
+{% set pageName = "Temporary disabilities" %}
+{% set pageDescription = ""%}
+{% set mainClasses = "govuk-!-padding-bottom-9" %}
+
+{% block hero %}
+
+    <div class="govuk-width-container">
+        <div class="govuk-breadcrumbs">
+            <ol class="govuk-breadcrumbs__list">
+                <li class="govuk-breadcrumbs__list-item">
+                    <a class="govuk-breadcrumbs__link" href="/">Home</a>
+                </li>
+                <li class="govuk-breadcrumbs__list-item">
+                    <a class="govuk-breadcrumbs__link" href="/training">Training</a>
+                </li>
+                <li class="govuk-breadcrumbs__list-item">
+                    {{pageName}}
+                </li>
+            </ol>
+        </div>
+    </div>
+{% endblock %}
+
+{% block content %}
+    <div class="govuk-width-container">
+
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-full">
+                <div class="govuk-grid-row">
+                    <div class="govuk-grid-column-two-thirds">
+                        <h1 class="govuk-heading-xl">{{pageName}}</h1>
+
+                        <p class="govuk-body-l">Temporary impairments are short-term conditions that affect an individual's
+                        abilities for a limited period. </p>
+
+                        <p class="govuk-body-l">Examples of temporary disabilities include people who have an eye infection,
+                        a broken arm or have a head injury or concussion.</p>
+                    </div>
+                </div>
+                <div class="govuk-grid-row">
+                    <div class="govuk-grid-column-full">
+                        <div class="grid-5-container">
+                            <div class="grid-item">
+                                <img src="/assets/images/eyeinfection.png" style="height:230px;"
+                                class="govuk-!-margin-bottom-5"
+                                alt="Line drawing of an person with dark glasses and a cane representing blindless">
+                                <p>Eye infection</p>
+                            </div>
+                            <div class="grid-item">
+                                <img src="/assets/images/earinfection.png" style="height:230px;"
+                                class="govuk-!-margin-bottom-5"
+                                alt="Line drawing of a person using sign language representing deafness">
+                                <p>Ear infection</p>
+                            </div>
+                            <div class="grid-item">
+                                <img src="/assets/images/brokenarm.png" style="height:230px;"
+                                class="govuk-!-margin-bottom-5"
+                                alt="Line drawing of a person with a prosthetic leg and missing left arm representing mobility issues">
+                                <p>Broken arm</p>
+                            </div>
+                            <div class="grid-item">
+                                <img src="/assets/images/throatinfection.png" style="height:230px;"
+                                class="govuk-!-margin-bottom-5"
+                                alt="Line drawing of a person without a mouth representing being non-verbal">
+                                <p>Throat infection</p>
+                            </div>
+                            <div class="grid-item">
+                                <img src="/assets/images/concussion.png" style="height:230px;"
+                                class="govuk-!-margin-bottom-5"
+                                alt="Line drawing of a person with a speech bubble of confused lettering represeing dyslexia">
+                                <p>Concussion</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="govuk-grid-row">
+                    <div class="govuk-grid-column-two-thirds">
+                        <p class="govuk-body-l">Like permanent disabilities, anyone can suffer from one or more temporary
+                        conditions at the same time.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+
+        <p class="govuk-!-margin-top-6">
+            <a href="/training/accessibility-inclusion/page-9"
+                    class="dfe-manual-button dfe-manual-button--grey govuk-!-margin-right-2"
+                    role="button">Previous</a>
+            <a href="/training/accessibility-inclusion/page-11"
+                    class="dfe-manual-button" role="button">Next</a>
+        </p>
+    </p>
+</div>
+
+{% endblock %}

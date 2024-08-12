@@ -1,10 +1,10 @@
-{% extends "layouts/homepage.html" %}
+{% extends "layouts/full.html" %}
 
 {% set selectedNav = "Training" %}
 {% set pageName = "Training" %}
 {% set pageDescription = "Online training for learning about, and developing accessibility awareness and knowledge."%}
 
-{% set mainClasses = "govuk-!-padding-top-0" %}
+{% set mainClasses = "govuk-!-padding-top-0 govuk-!-padding-bottom-0" %}
 
 {% block content %}
 
@@ -18,9 +18,9 @@
                             <div class="govuk-grid-column-one-half text-column">
                                 <strong class="govuk-tag govuk-tag--green">Everyone</strong>
                                 <h2 class="govuk-heading-l govuk-!-margin-top-3">Introduction to accessibility and inclusive design</h2>
-                                <p class="govuk-body">Training for everyone to understand the basics of accessibility and inclusive design.</p>
+                                <p class="govuk-body-l">Training for everyone to understand the basics of accessibility and inclusive design.</p>
 
-                                <p class="">Learning time: 10 Minutes</p>
+                                <p class="govuk-body">Learning time: 10 Minutes</p>
                                 <p class="govuk-!-margin-bottom-0">
                                     <a href="/training/accessibility-inclusion">Start training</a>
                                 </p>
@@ -37,17 +37,83 @@
         </div>
     </div>
 
-    <div class="dfe-width-container govuk-!-margin-top-9">
-        <div class="govuk-grid-row">
-            <div class="govuk-grid-column-full">
+   <section style="background-color:#ffffff;" class="govuk-!-padding-top-5 govuk-!-padding-bottom-5 govuk-!-margin-top-5">
+      <div class="govuk-width-container">
 
-                <h2 class="govuk-heading-l">More training courses coming soon</h2>
+         <h2 class="govuk-heading-l">More training courses coming soon</h2>
 
                 <p>We're working on providing more training modules for different topics and themes.</p>
                 <p>If you have any suggestions <a href="/forms/training">complete this form</a>.</p>
 
-            </div>
-        </div>
-    </div>
+      
+         
+      </div>
+   </section>
 
+<section style="background-color:#f0f4f5;"  class="govuk-!-padding-top-5 govuk-!-padding-bottom-9 govuk-!-margin-top-5">
+    <div class="dfe-width-container govuk-!-margin-top-9">
+          <div class="govuk-grid-row">
+            <div class="govuk-grid-column-full">
+               <h2 class="govuk-heading-l">Resources in DfE</h2>
+               <p class="govuk-body">If you are looking for information regarding workplace adjustments, how to get assistive technology, creating accessible Microsoft documents or the accessibility champions scheme, this can all be found in the <a href="https://educationgovuk.sharepoint.com/sites/lvewp00043/SitePages/Tools-and-Resources.aspx" target="_blank" rel="noopener noreferrer">Digital Accessibility Hub (DfE Intranet)</a>.</p>
+               <p>This content has been created, and is owned by the Department for Education accessibility team.</p>
+               <p>All these links open pages on the DfE Intranet. If you are not a DfE employee, you will not be able to access this content.</p>
+               <div class="dfe-grid-container govuk-!-margin-top-9">
+
+                  <div class="dfe-card">
+                     <img src="/assets/images/champions.png" alt="">
+                     <div class="dfe-card-container">
+                        <h3 class="govuk-heading-m">
+                           <a href="https://educationgovuk.sharepoint.com/sites/lvewp00043/SitePages/Champions-Homepage.aspx" target="_blank"
+                           class="govuk-link govuk-link--no-visited-state dfe-card-link--header">Accessibility Champion Scheme</a>
+                        </h3>
+                        <p>Learn about the Accessibility Champion Scheme and how to become a champion.</p>
+                     </div>
+                  </div>
+                  <div class="dfe-card">
+                     <img src="/assets/images/ux.png" alt="">
+                     <div class="dfe-card-container">
+                        <h3 class="govuk-heading-m">
+                           <a href="https://educationgovuk.sharepoint.com/sites/lvewp00043/SitePages/Experience-Lab.aspx" target="_blank"
+                           class="govuk-link govuk-link--no-visited-state dfe-card-link--header">Visit the Experience Lab in Sheffield</a>
+                        </h3>
+                        <p>Visit the lab in Sheffield and learn about assitive technology and test your services.
+                     </p>
+                     </div>
+                  </div>
+                  <div class="dfe-card">
+                     <img src="/assets/images/microsoft.png" alt="">
+                     <div class="dfe-card-container">
+                        <h3 class="govuk-heading-m">
+                           <a href="https://educationgovuk.sharepoint.com/sites/lvewp00043/SitePages/Are-you-using-PowerPoint-correctly-.aspx" target="_blank"
+                           class="govuk-link govuk-link--no-visited-state dfe-card-link--header">Documents and presentations</a>
+                        </h3>
+                        <p>Learn how to make documents and presentations more accessible.</p>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+
+          <div class="govuk-grid-row">
+
+            <div class="govuk-grid-column-full govuk-!-margin-top-9 govuk-!-margin-bottom-5">
+               <div class="govuk-grid-row split-panel split-panel--bg-white ">
+                  <div class="govuk-grid-column-one-half text-column">
+                     <h2 class="govuk-heading-l">Accessibility Awareness Month</h2>
+                     <p class="govuk-body">Every May, we run a month of events in DfE centred around raising the awareness and understanding of accessibility and inclusive design, featuring workshops, external speakers and training sessions.</p>
+                     <p class="govuk-body">
+                        <a href="https://educationgovuk.sharepoint.com/sites/DesignOps/SitePages/Accessibility-Awareness-Month.aspx?csf=1&web=1&e=lzubaj">Watch events from May 2024</a>
+                     </p>
+                  </div>
+                  <div class="govuk-grid-column-one-half image-column">
+                     <div class="image-container"
+                     style="background-image: url('/assets/images/event.jpg');"></div>
+                  </div>
+               </div>
+            </div>
+
+         </div>
+    </div>
+  </section>
 {% endblock %}

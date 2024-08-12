@@ -56,7 +56,7 @@
     {
         "question": "What does 'Robust' mean in the context of WCAG 2.2?",
         "options": [
-            "Content that works across different devices and assistive technologies",
+            "Content that works across different devices, browsers, and assistive technologies",
             "Content that can be translated into multiple languages",
             "Content that is visually appealing"
         ],

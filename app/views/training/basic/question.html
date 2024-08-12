@@ -31,6 +31,7 @@
                     <div class="govuk-form-group">
                         <fieldset class="govuk-fieldset" aria-describedby="example-hint">
                             <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                                <span class="govuk-caption-xl">Question {{ questionIndex + 1 }}</span>
                                 <h1 class="govuk-fieldset__heading">
                                     {{ question.question }}
                                 </h1>
@@ -47,7 +48,12 @@
                             </div>
                         </fieldset>
                     </div>
-                    <button class="govuk-button" data-module="govuk-button">Next</button>
+                    <div class="govuk-button-group">
+                      
+                       <button class="govuk-button" data-module="govuk-button">Next</button>
+                        
+                    </div>
+
                 </form>
             </div>
         </div>

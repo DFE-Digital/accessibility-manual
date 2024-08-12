@@ -1,0 +1,75 @@
+{% extends "layouts/full-nohero.html" %}
+
+{% set selectedNav = "Training" %}
+{% set pageName = "Web Content Accessibility Guidelines (WCAG)" %}
+{% set pageDescription = ""%}
+{% set mainClasses = "govuk-!-padding-bottom-9" %}
+
+{% block hero %}
+
+    <div class="govuk-width-container">
+        <div class="govuk-breadcrumbs">
+            <ol class="govuk-breadcrumbs__list">
+                <li class="govuk-breadcrumbs__list-item">
+                    <a class="govuk-breadcrumbs__link" href="/">Home</a>
+                </li>
+                <li class="govuk-breadcrumbs__list-item">
+                    <a class="govuk-breadcrumbs__link" href="/training">Training</a>
+                </li>
+                <li class="govuk-breadcrumbs__list-item">
+                    {{pageName}}
+                </li>
+            </ol>
+        </div>
+    </div>
+{% endblock %}
+
+{% block content %}
+    <div class="govuk-width-container">
+
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-full">
+                <div class="govuk-grid-row">
+                    <div class="govuk-grid-column-two-thirds">
+                        <h1 class="govuk-heading-xl">{{pageName}}</h1>
+                        <p class="govuk-body-l">While this is not a law in itself, WCAG is enforced in law through the Public Sector Bodies (Websites and Mobile Applications) Accessibility Regulations 2018.</p>
+                        <p class="govuk-body-l">The guidelines detail criteria for making digital content accessible to people with disabilities.</p>
+                        <p class="govuk-body-l">They are organised into four principles, often referred to as POUR:</p>
+
+                        <h2 class="govuk-heading-m">Perceivable</h2>
+
+                        <p class="govuk-body-l">Information and user interface components must be presentable to users in ways they can perceive.</p>
+
+                        <h2 class="govuk-heading-m">Operable</h2>
+
+                        <p class="govuk-body-l">User interface components and navigation must work for a range of users.</p>
+
+                        <h2 class="govuk-heading-m">Understandable</h2>
+
+                        <p class="govuk-body-l">Information and the user interface must be understandable.</p>
+
+                        <h2 class="govuk-heading-m">Robust</h2>
+
+                        <p class="govuk-body-l">Content must be interpreted reliably by browsers and assistive technologies.</p>
+
+                      
+                        <p class="govuk-body-l">Each principle has a number of guidelines which we need to meet.</p>
+                        <p class="govuk-body-l">There are three levels of conformance: A, AA, and AAA. Level A is the minimum level of conformance, and level AAA is the highest. Within DfE, we are required to meet Level AA conformance.</p>
+
+                    </div>
+                    <div class="govuk-grid-column-one-third center-image"></div>
+                </div>
+                <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+
+                <p class="govuk-!-margin-top-6">
+                    <a href="/training/accessibility-inclusion/page-5"
+                    class="dfe-manual-button dfe-manual-button--grey govuk-!-margin-right-2"
+                    role="button">Previous</a>
+                    <a href="/training/accessibility-inclusion/page-7"
+                    class="dfe-manual-button" role="button">Next</a>
+                </p>
+            </p>
+        </div>
+    </div>
+
+{% endblock %}

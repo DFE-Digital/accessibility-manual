@@ -233,9 +233,10 @@ const checkCommitmentStatement = ($) => {
 
 const checkComplianceStatement = ($) => {
     const complianceStatements = [
-        "This website is fully compliant",
-        "This website is partially compliant",
-        "This website is not compliant"
+        "fully compliant",
+        "partially compliant",
+        "not compliant",
+        "compliant"
     ];
 
     let match = null;
