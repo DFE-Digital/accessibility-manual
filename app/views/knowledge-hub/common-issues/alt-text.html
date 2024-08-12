@@ -1,0 +1,60 @@
+{% extends "layouts/page_layout.html" %}
+
+{% set selectedNav = "Knowledge hub" %}
+{% set pageName = "Images, charts, and alt text" %}
+{% set pageDescription = "How to ensure people can understand images, charts, and graphics with alt text and descriptions."%}
+{% set mainClasses = "govuk-!-padding-top-0" %}
+{% set created = "12 August 2024" %}
+{% set reviewed = "12 August 2024" %}
+{% set updated = "12 August 2024" %}
+{% set githubIssueID = "43" %}
+{% set need = "This page exists to help people understand how to prevent introducing common accessibility issues in products and services." %}
+
+{% block content %}
+
+    <div class="govuk-breadcrumbs">
+        <ol class="govuk-breadcrumbs__list">
+            <li class="govuk-breadcrumbs__list-item">
+                <a class="govuk-breadcrumbs__link" href="/">Home</a>
+            </li>
+            <li class="govuk-breadcrumbs__list-item">
+                <a class="govuk-breadcrumbs__link" href="/knowledge-hub">Knowledge hub</a>
+            </li>
+            <li class="govuk-breadcrumbs__list-item">
+                {{pageName}}
+            </li>
+        </ol>
+    </div>
+
+    <h1 class="govuk-heading-xl  govuk-!-margin-top-5">{{pageName}}</h1>
+
+    <p>People with a sight impairment or are blind rely on good alternative descriptions to understand none-text content.</p>
+    <p>Where images provide information or context to content, they should be given alternative descriptions which describe or provide the same information as a user would receive visually.</p>
+
+    <p>Where images are more complex such as graphs, charts or maps, a longer description is required.</p>
+    <p>In these cases, two descriptions should be provided, a short description which explains what the image is, and a longer description which gives more information on the content of the image. </p>
+
+    <p>Not all images need a description. If the image is purely decorative, it does not require alternative text. Ensure you use alt=”” so that screen readers will skip these images.</p>
+
+   <div class="govuk-grid-row dfe-flex">
+        <div class="govuk-grid-column-one-half dfe-flex-item">
+            <div class="dfe-panel-do">
+                <h3 class="govuk-heading-m">Do</h3>
+                <p class="govuk-!-margin-bottom-5">Ensure alt text accruately describes the image.</p>
+                <img src="/assets/images/classroom.jpg" style="width:100%;"
+                                    class="govuk-!-margin-bottom-5" alt="A teacher standing in front of a class of children who are sitting at desks.">
+                <code  style="background: #ffffff; padding: 10px;"> alt="A teacher standing in front of a class of children who are sitting at desks."</code>
+            </div>
+        </div>
+        <div class="govuk-grid-column-one-half dfe-flex-item">
+            <div class="dfe-panel-dont">
+                <h3 class="govuk-heading-m">Don't</h3>
+                <p class="govuk-!-margin-bottom-5">Use the filename or misleading descriptions. </p>
+                <img src="/assets/images/classroom.jpg" style="width:100%;"
+                                    class="govuk-!-margin-bottom-5" alt="">
+                <code style="background: #ffffff; padding: 10px;"> alt="image123"</code>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

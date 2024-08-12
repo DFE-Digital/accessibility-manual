@@ -1,0 +1,61 @@
+{% extends "layouts/page_layout.html" %}
+
+{% set selectedNav = "Knowledge hub" %}
+{% set pageName = "Common accessibility issues" %}
+{% set pageDescription = "Common accesibility issues in DfE products and services and how to prevent them."%}
+{% set mainClasses = "govuk-!-padding-top-0" %}
+{% set created = "12 August 2024" %}
+{% set reviewed = "12 August 2024" %}
+{% set updated = "12 August 2024" %}
+{% set githubIssueID = "43" %}
+{% set need = "This page exists to help people understand how to prevent introducing common accessibility issues in products and services." %}
+
+{% block content %}
+
+    <div class="govuk-breadcrumbs">
+        <ol class="govuk-breadcrumbs__list">
+            <li class="govuk-breadcrumbs__list-item">
+                <a class="govuk-breadcrumbs__link" href="/">Home</a>
+            </li>
+            <li class="govuk-breadcrumbs__list-item">
+                <a class="govuk-breadcrumbs__link" href="/knowledge-hub">Knowledge hub</a>
+            </li>
+            <li class="govuk-breadcrumbs__list-item">
+                {{pageName}}
+            </li>
+        </ol>
+    </div>
+
+    <h1 class="govuk-heading-xl  govuk-!-margin-top-5">{{pageName}}</h1>
+
+    <p>Within the department many of our services contain similar accessibility issues. Many of these issues can be avoided by using the DfE accessibility and inclusive design manual, and becoming familiar with the content.</p>
+
+    <p>We update the list regularly as we identify trends and changes in the issues we encounter.</p>
+
+    <h2 class="govuk-heading-l">Top issues</h2>
+
+    <p>You can find out more about each issue, and how to avoid it, by following the links:</p>
+
+    <ul class="govuk-list govuk-list--bullet">
+
+        <li>
+            <a href="/knowledge-hub/common-issues/error-messages">form error messages</a>
+        </li>
+        <li>
+            <a href="/knowledge-hub/common-issues/alt-text">images, charts, and alt text</a>
+        </li>
+        <li>
+            <a href="">non-descriptive links</a>
+        </li>
+        <li>
+            <a href="">content with insufficient contrast</a>
+        </li>
+        <li>
+            <a href="">incorrect heading structure</a>
+        </li>
+        <li>
+            <a href="">status changes to content not provided to screen readers</a>
+        </li>
+    </ul>
+
+{% endblock %}

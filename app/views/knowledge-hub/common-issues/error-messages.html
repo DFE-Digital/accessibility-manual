@@ -1,0 +1,163 @@
+{% extends "layouts/page_layout.html" %}
+
+{% set selectedNav = "Knowledge hub" %}
+{% set pageName = "Form error messages" %}
+{% set pageDescription = "How to ensure people can understand and resolve errors when using a service."%}
+{% set mainClasses = "govuk-!-padding-top-0" %}
+{% set created = "12 August 2024" %}
+{% set reviewed = "12 August 2024" %}
+{% set updated = "12 August 2024" %}
+{% set githubIssueID = "43" %}
+{% set need = "This page exists to help people understand how to prevent introducing common accessibility issues in products and services." %}
+
+{% block content %}
+
+    <div class="govuk-breadcrumbs">
+        <ol class="govuk-breadcrumbs__list">
+            <li class="govuk-breadcrumbs__list-item">
+                <a class="govuk-breadcrumbs__link" href="/">Home</a>
+            </li>
+            <li class="govuk-breadcrumbs__list-item">
+                <a class="govuk-breadcrumbs__link" href="/knowledge-hub">Knowledge hub</a>
+            </li>
+            <li class="govuk-breadcrumbs__list-item">
+                {{pageName}}
+            </li>
+        </ol>
+    </div>
+
+    <h1 class="govuk-heading-xl  govuk-!-margin-top-5">{{pageName}}</h1>
+
+    <p>Error messages are essential for users to understand where they have made a mistake, what the mistake or mistakes are, and how to correct them.</p>
+    <p>If users are just told they have made a mistake, this is not helpful, content should be provided to tell a user the exact part of a form that has been filled out incorrectly, for example if characters have been used that are not accepted within that field. </p>
+
+
+
+    <h2 class="govuk-heading-l">Use descriptive error messages</h2>
+
+    <p>When a user makes a mistake, it is important to provide them with a clear and concise error message that explains what the problem is and how to fix it. This will help users to understand what they need to do to correct the error and continue with their task.</p>
+
+     <div class="govuk-grid-row dfe-flex">
+        <div class="govuk-grid-column-one-half dfe-flex-item">
+            <div class="dfe-panel-do">
+                <h3 class="govuk-heading-s">Do</h3>    
+                 <p class="govuk-!-margin-bottom-5">Use descriptive error messages that explain what the problem is and how
+                to fix it.</p>
+                <img src="/assets/images/error-description-do.png" style="width:100%;" class="govuk-!-margin-bottom-5"
+                alt="The words, 'There is a problem', and the message, 'Your first name is missing' in red text">
+           
+            </div>
+        </div>
+        <div class="govuk-grid-column-one-half dfe-flex-item">
+            <div class="dfe-panel-dont">
+                <h3 class="govuk-heading-s">Don't</h3>
+               <p class="govuk-!-margin-bottom-5">Don't use generic error messages that are ambiguous or don't explain the problem.</p>
+                <img src="/assets/images/error-description-dont.png" style="width:100%;" class="govuk-!-margin-bottom-5"
+                  alt="The words, 'There is a problem', and the message, 'Information is missing' in red text">
+            </div>
+        </div>
+    </div>
+
+    <h2 class="govuk-heading-l">Showing errors from a server or databse</h2>
+
+    <p>Sometimes errors are raised from the server or database, these errors are not user friendly and can be confusing to users. It is important to catch these errors and provide a user friendly message to the user.</p>
+
+         <div class="govuk-grid-row dfe-flex">
+        <div class="govuk-grid-column-one-half dfe-flex-item">
+            <div class="dfe-panel-do">
+                <h3 class="govuk-heading-s">Do</h3>    
+                 <p class="govuk-!-margin-bottom-5">Use descriptive error messages that explain what the problem is and how
+                to fix it.</p>
+                <img src="/assets/images/error-db-do.png" style="width:100%;" class="govuk-!-margin-bottom-5"
+                alt="The words, 'There is a problem', and the message, 'Your first name is missing' in red text">
+           
+            </div>
+        </div>
+        <div class="govuk-grid-column-one-half dfe-flex-item">
+            <div class="dfe-panel-dont">
+                <h3 class="govuk-heading-s">Don't</h3>
+               <p class="govuk-!-margin-bottom-5">Don't show databse generated errors they can expose information to hackers.</p>
+                <img src="/assets/images/error-db-dont.png" style="width:100%;" class="govuk-!-margin-bottom-5"
+                  alt="The words, 'There is a problem', and the message, 'Information is missing' in red text">
+            </div>
+        </div>
+    </div>
+
+
+    <h2 class="govuk-heading-l">Link errors to inputs</h2>
+
+<p>Linking the error message in an error summary section, to the input makes it easier for users to find and correct the error. This is particularly important for users who are using screen readers, as it helps them to understand which input the error message is referring to.</p>
+
+
+         <div class="govuk-grid-row dfe-flex">
+        <div class="govuk-grid-column-one-half dfe-flex-item">
+            <div class="dfe-panel-do">
+                <h3 class="govuk-heading-s">Do</h3>    
+                 <p class="govuk-!-margin-bottom-5">Link the error message to the ID of the input that has the error.</p>
+                <img src="/assets/images/error-link-do.png" style="width:100%;" class="govuk-!-margin-bottom-5"
+                alt="The words, 'There is a problem', and the message, 'Your first name is missing' in red text">
+           
+            </div>
+        </div>
+        <div class="govuk-grid-column-one-half dfe-flex-item">
+            <div class="dfe-panel-dont">
+                <h3 class="govuk-heading-s">Don't</h3>
+               <p class="govuk-!-margin-bottom-5">Don't use plain text in error messages it makes it harder to navigate the form.</p>
+                <img src="/assets/images/error-link-dont.png" style="width:100%;" class="govuk-!-margin-bottom-5"
+                  alt="The words, 'There is a problem', and the message, 'Information is missing' in red text">
+            </div>
+        </div>
+    </div>
+
+
+<h2 class="govuk-heading-l">Use error summaries</h2>
+
+<p>Error summaries are a list of all the errors on a page, they are usually placed at the top of the page and are used to help users quickly identify and correct any errors they have made.</p>
+<p>Error summaries are particularly useful for users who are using screen readers, as they provide a clear and concise list of all the errors on a page.</p>
+
+
+         <div class="govuk-grid-row dfe-flex">
+        <div class="govuk-grid-column-one-half dfe-flex-item">
+            <div class="dfe-panel-do">
+                <h3 class="govuk-heading-s">Do</h3>    
+                 <p class="govuk-!-margin-bottom-5">Ensure the error is linked to the input in error, and is descriptive.</p>
+                <img src="/assets/images/error-label-do.png" style="width:100%;" class="govuk-!-margin-bottom-5"
+                alt="The words, 'There is a problem', and the message, 'Your first name is missing' in red text">
+           
+            </div>
+        </div>
+        <div class="govuk-grid-column-one-half dfe-flex-item">
+            <div class="dfe-panel-dont">
+                <h3 class="govuk-heading-s">Don't</h3>
+               <p class="govuk-!-margin-bottom-5">Don't have different error messages in the summary and against the input.</p>
+                <img src="/assets/images/error-label-dont.png" style="width:100%;" class="govuk-!-margin-bottom-5"
+                  alt="The words, 'There is a problem', and the message, 'Information is missing' in red text">
+            </div>
+        </div>
+    </div>
+
+
+           <div class="dfe-manual-callout">
+      <div class="dfe-manual-callout--header">
+         <img src="/assets/images/new-window.png" alt="" />
+         <h3 class="govuk-heading-m">Follow GOV.UK Design system guidance</h3>
+      </div>
+
+      <div class="dfe-manual-callout--content">
+         <p>The GOV.UK Design System provides guidance on the following components and patterns:</p>
+
+              <ul class="govuk-list govuk-list--bullet">
+                    <li>
+                        <a href="https://design-system.service.gov.uk/components/error-message/" rel="noopener noreferrer" target="_blank">Error messages <span class="govuk-visually-hidden">(link opens in a new tab)</span></a>
+                    </li>
+                    <li>
+                        <a href="https://design-system.service.gov.uk/components/error-summary/" rel="noopener noreferrer" target="_blank">Error summary <span class="govuk-visually-hidden">(link opens in a new tab)</span></a>
+                    </li>
+                    <li>
+                        <a href="https://design-system.service.gov.uk/patterns/validation/" rel="noopener noreferrer" target="_blank">Recovering from validation errors <span class="govuk-visually-hidden">(link opens in a new tab)</span></a>
+                    </li>
+     
+      </div>
+   </div>
+
+{% endblock %}
