@@ -7,64 +7,61 @@
 
 {% block hero %}
 
-<div class="govuk-width-container">
-    <div class="govuk-breadcrumbs">
-        <ol class="govuk-breadcrumbs__list">
-            <li class="govuk-breadcrumbs__list-item">
-                <a class="govuk-breadcrumbs__link" href="/">Home</a>
-            </li>
-            <li class="govuk-breadcrumbs__list-item">
-                <a class="govuk-breadcrumbs__link" href="/training">Training</a>
-            </li>
-            <li class="govuk-breadcrumbs__list-item">
-                {{pageName}}
-            </li>
-        </ol>
+    <div class="govuk-width-container">
+        <div class="govuk-breadcrumbs">
+            <ol class="govuk-breadcrumbs__list">
+                <li class="govuk-breadcrumbs__list-item">
+                    <a class="govuk-breadcrumbs__link" href="/">Home</a>
+                </li>
+                <li class="govuk-breadcrumbs__list-item">
+                    <a class="govuk-breadcrumbs__link" href="/training">Training</a>
+                </li>
+                <li class="govuk-breadcrumbs__list-item">
+                    {{pageName}}
+                </li>
+            </ol>
+        </div>
     </div>
-</div>
 
 {% endblock %}
 
 {% block content %}
 
-<style>
-    .grey-text {
-        color: #585858;
-    }
-</style>
+    <style>
+        .grey-text {
+            color: #585858;
+        }
+    </style>
 
-<div class="govuk-width-container">
+    <div class="govuk-width-container">
 
-    <div class="govuk-grid-row">
-        <div class="govuk-grid-column-full">
-            <div class="govuk-grid-row">
-                <div class="govuk-grid-column-two-thirds">
-                    <h1 class="govuk-heading-xl govuk-!-font-size-48">{{pageName}}</h1>
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-full">
+                <div class="govuk-grid-row">
+                    <div class="govuk-grid-column-two-thirds">
+                        <h1 class="govuk-heading-xl govuk-!-font-size-48">{{pageName}}</h1>
 
-                    <p class="govuk-body-l">When we design content, products, and services that consider people
+                        <p class="govuk-body-l">When we design content, products, and services that consider people
                         disabilities, we are creating things that work for everyone. </p>
 
-
-                    <p class="govuk-body-l">However, to ensure what we do really is for everyone, we need to consider
+                        <p class="govuk-body-l">However, to ensure what we do really is for everyone, we need to consider
                         social and economic factors that impact people.</p>
 
-                    <p class="govuk-body-l">This is called <span class="govuk-!-font-weight-bold">inclusive design</span>.</p>
+                        <p class="govuk-body-l">This is called <span class="govuk-!-font-weight-bold">inclusive design</span>.</p>
 
+                    </div>
                 </div>
+                <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+                <p class="govuk-!-margin-top-6">
+                    <a href="/training/accessibility-inclusion/situational"
+                    class="govuk-button govuk-button--grey govuk-!-margin-right-2"
+                    role="button">Previous</a>
+                    <a href="/training/accessibility-inclusion/id-intro"
+                    class="govuk-button" role="button">Next</a>
+                </p>
             </div>
-            <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
-            <p class="govuk-!-margin-top-6"><a href="/training/accessibility-inclusion/situational"
-                    class="dfe-manual-button dfe-manual-button--grey govuk-!-margin-right-2"
-                    role="button">Previous</a><a href="/training/accessibility-inclusion/id-intro"
-                    class="dfe-manual-button" role="button">Next</a></p>
         </div>
+        <div class="govuk-grid-column-one-third"></div>
     </div>
-    <div class="govuk-grid-column-one-third">
-
-    </div>
-</div>
-
-
-
 
 {% endblock %}

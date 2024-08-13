@@ -7,71 +7,69 @@
 
 {% block hero %}
 
-<div class="govuk-width-container">
-    <div class="govuk-breadcrumbs">
-        <ol class="govuk-breadcrumbs__list">
-            <li class="govuk-breadcrumbs__list-item">
-                <a class="govuk-breadcrumbs__link" href="/">Home</a>
-            </li>
-            <li class="govuk-breadcrumbs__list-item">
-                <a class="govuk-breadcrumbs__link" href="/training">Training</a>
-            </li>
-            <li class="govuk-breadcrumbs__list-item">
-                {{pageName}}
-            </li>
-        </ol>
+    <div class="govuk-width-container">
+        <div class="govuk-breadcrumbs">
+            <ol class="govuk-breadcrumbs__list">
+                <li class="govuk-breadcrumbs__list-item">
+                    <a class="govuk-breadcrumbs__link" href="/">Home</a>
+                </li>
+                <li class="govuk-breadcrumbs__list-item">
+                    <a class="govuk-breadcrumbs__link" href="/training">Training</a>
+                </li>
+                <li class="govuk-breadcrumbs__list-item">
+                    {{pageName}}
+                </li>
+            </ol>
+        </div>
     </div>
-</div>
 
 {% endblock %}
 
 {% block content %}
 
-<style>
-    .grey-text {
-        color: #585858;
-    }
-</style>
+    <style>
+        .grey-text {
+            color: #585858;
+        }
+    </style>
 
-<div class="govuk-width-container">
+    <div class="govuk-width-container">
 
-    <div class="govuk-grid-row">
-        <div class="govuk-grid-column-full">
-            <div class="govuk-grid-row">
-                <div class="govuk-grid-column-two-thirds">
-                    <h1 class="govuk-heading-xl govuk-!-font-size-48">{{pageName}}</h1>
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-full">
+                <div class="govuk-grid-row">
+                    <div class="govuk-grid-column-two-thirds">
+                        <h1 class="govuk-heading-xl govuk-!-font-size-48">{{pageName}}</h1>
 
-                    <p class="govuk-body-l">People with learning disabilities, memory issues, or cognitive impairments
+                        <p class="govuk-body-l">People with learning disabilities, memory issues, or cognitive impairments
                         benefit from clear, simple content, consistent navigation, and tools that help with focus and
                         comprehension.</p>
 
-                    <div class="govuk-inset-text">
-                        <p class="govuk-body-l  govuk-!-margin-bottom-0">Around half of UK people have some form of cognitive disability.</p>
-                    </div>
+                        <div class="govuk-inset-text">
+                            <p class="govuk-body-l  govuk-!-margin-bottom-0">Around half of UK people have some form of cognitive disability.</p>
+                        </div>
 
-                    <p class="govuk-body-l">We should use plain language, avoid jargon, and structure content in a
+                        <p class="govuk-body-l">We should use plain language, avoid jargon, and structure content in a
                         logical and consistent manner. This helps people where English may not be their first language.
                     </p>
 
-                    <p class="govuk-body-l">For example, writing clear headings, using bullet points for easier
+                        <p class="govuk-body-l">For example, writing clear headings, using bullet points for easier
                         readability, and avoiding complex language, and idioms. Using the DfE content style guide and
                         GOV.UK style guide to help write content.</p>
 
+                    </div>
                 </div>
+                <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+                <p class="govuk-!-margin-top-6">
+                    <a href="/training/accessibility-inclusion/motor"
+                    class="govuk-button govuk-button--grey govuk-!-margin-right-2"
+                    role="button">Previous</a>
+                    <a href="/training/accessibility-inclusion/situation"
+                    class="govuk-button" role="button">Next</a>
+                </p>
             </div>
-            <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
-            <p class="govuk-!-margin-top-6"><a href="/training/accessibility-inclusion/motor"
-                    class="dfe-manual-button dfe-manual-button--grey govuk-!-margin-right-2"
-                    role="button">Previous</a><a href="/training/accessibility-inclusion/situation"
-                    class="dfe-manual-button" role="button">Next</a></p>
         </div>
+        <div class="govuk-grid-column-one-third"></div>
     </div>
-    <div class="govuk-grid-column-one-third">
-
-    </div>
-</div>
-
-
-
 
 {% endblock %}

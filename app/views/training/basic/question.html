@@ -6,20 +6,9 @@
 {% set mainClasses = "govuk-!-padding-bottom-9" %}
 
 {% block hero %}
+
     <div class="govuk-width-container">
-        <div class="govuk-breadcrumbs">
-            <ol class="govuk-breadcrumbs__list">
-                <li class="govuk-breadcrumbs__list-item">
-                    <a class="govuk-breadcrumbs__link" href="/">Home</a>
-                </li>
-                <li class="govuk-breadcrumbs__list-item">
-                    <a class="govuk-breadcrumbs__link" href="/training">Training</a>
-                </li>
-                <li class="govuk-breadcrumbs__list-item">
-                    Question {{ questionIndex + 1 }}
-                </li>
-            </ol>
-        </div>
+        <a href="javascript:history.back()" class="govuk-back-link">Back</a>
     </div>
 {% endblock %}
 

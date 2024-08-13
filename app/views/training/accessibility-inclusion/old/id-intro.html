@@ -1,49 +1,55 @@
-{% extends "layouts/full-nohero.html" %} {% set selectedNav = "Training" %} {% set pageName = "Inclusive design" %} {% set pageDescription = ""%}
-{% set mainClasses = "govuk-!-padding-bottom-9" %} {% block hero %}
+{% extends "layouts/full-nohero.html" %}
+{% set selectedNav = "Training" %}
+{% set pageName = "Inclusive design" %}
+{% set pageDescription = ""%}
+{% set mainClasses = "govuk-!-padding-bottom-9" %}
+{% block hero %}
 
-<div class="govuk-width-container">
-  <div class="govuk-breadcrumbs">
-    <ol class="govuk-breadcrumbs__list">
-      <li class="govuk-breadcrumbs__list-item">
-        <a class="govuk-breadcrumbs__link" href="/">Home</a>
-      </li>
-      <li class="govuk-breadcrumbs__list-item">
-        <a class="govuk-breadcrumbs__link" href="/training">Training</a>
-      </li>
-      <li class="govuk-breadcrumbs__list-item">
-        {{pageName}}
-      </li>
-    </ol>
-  </div>
-</div>
-
-{% endblock %} {% block content %}
-
-<style>
-  .grey-text {
-    color: #585858;
-  }
-</style>
-
-<div class="govuk-width-container">
-  <div class="govuk-grid-row">
-    <div class="govuk-grid-column-full">
-      <div class="govuk-grid-row">
-        <div class="govuk-grid-column-two-thirds">
-          <h1 class="govuk-heading-xl govuk-!-font-size-80 govuk-!-margin-top-9">{{pageName}}</h1>
-
-          <p class="govuk-body-l">In this next section you'll learn about how inclusive design goes beyond supporting people with disabilities.</p>
+    <div class="govuk-width-container">
+        <div class="govuk-breadcrumbs">
+            <ol class="govuk-breadcrumbs__list">
+                <li class="govuk-breadcrumbs__list-item">
+                    <a class="govuk-breadcrumbs__link" href="/">Home</a>
+                </li>
+                <li class="govuk-breadcrumbs__list-item">
+                    <a class="govuk-breadcrumbs__link" href="/training">Training</a>
+                </li>
+                <li class="govuk-breadcrumbs__list-item">
+                    {{pageName}}
+                </li>
+            </ol>
         </div>
-      </div>
-      <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible" />
-      <p class="govuk-!-margin-top-6">
-        <a href="/training/accessibility-inclusion/for-all" class="dfe-manual-button dfe-manual-button--grey govuk-!-margin-right-2" role="button"
-          >Previous</a
-        ><a href="/training/accessibility-inclusion/inclusive-design" class="dfe-manual-button" role="button">Next</a>
-      </p>
     </div>
-  </div>
-  <div class="govuk-grid-column-one-third"></div>
-</div>
+
+{% endblock %}
+{% block content %}
+
+    <style>
+        .grey-text {
+            color: #585858;
+        }
+    </style>
+
+    <div class="govuk-width-container">
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-full">
+                <div class="govuk-grid-row">
+                    <div class="govuk-grid-column-two-thirds">
+                        <h1 class="govuk-heading-xl govuk-!-font-size-80 govuk-!-margin-top-9">{{pageName}}</h1>
+
+                        <p class="govuk-body-l">In this next section you'll learn about how inclusive design goes beyond supporting people with disabilities.</p>
+                    </div>
+                </div>
+                <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible" />
+                <p class="govuk-!-margin-top-6">
+                    <a href="/training/accessibility-inclusion/for-all" class="govuk-button govuk-button--grey govuk-!-margin-right-2" role="button"
+          >Previous</a
+        >
+                    <a href="/training/accessibility-inclusion/inclusive-design" class="govuk-button" role="button">Next</a>
+                </p>
+            </div>
+        </div>
+        <div class="govuk-grid-column-one-third"></div>
+    </div>
 
 {% endblock %}

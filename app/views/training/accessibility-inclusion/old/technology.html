@@ -7,64 +7,63 @@
 
 {% block hero %}
 
-<div class="govuk-width-container">
-    <div class="govuk-breadcrumbs">
-        <ol class="govuk-breadcrumbs__list">
-            <li class="govuk-breadcrumbs__list-item">
-                <a class="govuk-breadcrumbs__link" href="/">Home</a>
-            </li>
-            <li class="govuk-breadcrumbs__list-item">
-                <a class="govuk-breadcrumbs__link" href="/training">Training</a>
-            </li>
-            <li class="govuk-breadcrumbs__list-item">
-                {{pageName}}
-            </li>
-        </ol>
+    <div class="govuk-width-container">
+        <div class="govuk-breadcrumbs">
+            <ol class="govuk-breadcrumbs__list">
+                <li class="govuk-breadcrumbs__list-item">
+                    <a class="govuk-breadcrumbs__link" href="/">Home</a>
+                </li>
+                <li class="govuk-breadcrumbs__list-item">
+                    <a class="govuk-breadcrumbs__link" href="/training">Training</a>
+                </li>
+                <li class="govuk-breadcrumbs__list-item">
+                    {{pageName}}
+                </li>
+            </ol>
+        </div>
     </div>
-</div>
 
 {% endblock %}
 
 {% block content %}
 
-<style>
-    .grey-text {
-        color: #585858;
-    }
-</style>
+    <style>
+        .grey-text {
+            color: #585858;
+        }
+    </style>
 
-<div class="govuk-width-container">
+    <div class="govuk-width-container">
 
-    <div class="govuk-grid-row">
-        <div class="govuk-grid-column-full">
-            <div class="govuk-grid-row">
-                <div class="govuk-grid-column-two-thirds">
-                    <h1 class="govuk-heading-xl govuk-!-font-size-48">{{pageName}}</h1>
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-full">
+                <div class="govuk-grid-row">
+                    <div class="govuk-grid-column-two-thirds">
+                        <h1 class="govuk-heading-xl govuk-!-font-size-48">{{pageName}}</h1>
 
-                    <p class="govuk-body-l">Assistive technology (AT) is software utilised by people with disabilities
+                        <p class="govuk-body-l">Assistive technology (AT) is software utilised by people with disabilities
                         and neurodiverse people to assist them in navigating and interacting with websites, apps and
                         digital content.</p>
 
-                    <p class="govuk-body-l">This technology provides a way for people to use their hardware and software
+                        <p class="govuk-body-l">This technology provides a way for people to use their hardware and software
                         in a way that may be difficult, or impossible without AT. </p>
 
-                    <p class="govuk-body-l">There are many different types of assistive technology, these include screen
+                        <p class="govuk-body-l">There are many different types of assistive technology, these include screen
                         readers, voice control software, magnification tools as well as literacy tools.</p>
-                    
 
                     </div>
+                </div>
+                <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+                <p class="govuk-!-margin-top-6">
+                    <a href="/training/accessibility-inclusion/at-intro"
+                    class="govuk-button govuk-button--grey govuk-!-margin-right-2"
+                    role="button">Previous</a>
+                    <a href="/training/accessibility-inclusion/how-at-helps" class="govuk-button"
+                    role="button">Next</a>
+                </p>
             </div>
-            <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
-            <p class="govuk-!-margin-top-6"><a href="/training/accessibility-inclusion/at-intro"
-                    class="dfe-manual-button dfe-manual-button--grey govuk-!-margin-right-2"
-                    role="button">Previous</a><a href="/training/accessibility-inclusion/how-at-helps" class="dfe-manual-button"
-                    role="button">Next</a></p>
         </div>
+        <div class="govuk-grid-column-one-third"></div>
     </div>
-    <div class="govuk-grid-column-one-third">
-
-    </div>
-</div>
-
 
 {% endblock %}

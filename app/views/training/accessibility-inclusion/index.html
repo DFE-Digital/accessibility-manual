@@ -8,19 +8,7 @@
 {% block hero %}
 
     <div class="govuk-width-container">
-        <div class="govuk-breadcrumbs">
-            <ol class="govuk-breadcrumbs__list">
-                <li class="govuk-breadcrumbs__list-item">
-                    <a class="govuk-breadcrumbs__link" href="/">Home</a>
-                </li>
-                <li class="govuk-breadcrumbs__list-item">
-                    <a class="govuk-breadcrumbs__link" href="/training">Training</a>
-                </li>
-                <li class="govuk-breadcrumbs__list-item">
-                    {{pageName}}
-                </li>
-            </ol>
-        </div>
+        <a href="/training" class="govuk-back-link">Back</a>
     </div>
 {% endblock %}
 
@@ -34,13 +22,13 @@
                         <h1 class="govuk-heading-xl govuk-!-font-size-80 govuk-!-margin-top-9">{{pageName}}</h1>
                         <p class="govuk-body-l">Over the next 10 minutes, learn about what accessibility and inclusive design means.</p>
 
-                         <p class="govuk-body-l">You don't need any prior knowledge of either topic, and there are 10 questions at the end to help you check your understanding.</p>
+                        <p class="govuk-body-l">You don't need any prior knowledge of either topic, and there are 10 questions at the end to help you check your understanding.</p>
                     </div>
 
                 </div>
                 <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
                 <p class="govuk-!-margin-top-6">
-                    <a href="/training/accessibility-inclusion/page-1" class="dfe-manual-button"
+                    <a href="/training/accessibility-inclusion/page-1" class="govuk-button"
                     role="button">Start</a>
                 </p>
             </div>

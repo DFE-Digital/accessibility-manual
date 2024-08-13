@@ -1,25 +1,13 @@
 {% extends "layouts/full-nohero.html" %}
 
 {% set selectedNav = "Training" %}
-{% set pageName = "Training Results" %}
+{% set pageName = "You've completed the basic introduction to accessibility and inclusive design training" %}
 {% set pageDescription = "" %}
 {% set mainClasses = "govuk-!-padding-bottom-9" %}
 
 {% block hero %}
     <div class="govuk-width-container">
-        <div class="govuk-breadcrumbs">
-            <ol class="govuk-breadcrumbs__list">
-                <li class="govuk-breadcrumbs__list-item">
-                    <a class="govuk-breadcrumbs__link" href="/">Home</a>
-                </li>
-                <li class="govuk-breadcrumbs__list-item">
-                    <a class="govuk-breadcrumbs__link" href="/training">Training</a>
-                </li>
-                <li class="govuk-breadcrumbs__list-item">
-                    Results
-                </li>
-            </ol>
-        </div>
+        
     </div>
 {% endblock %}
 
@@ -48,7 +36,24 @@
     <div class="govuk-width-container">
         <div class="govuk-grid-row">
             <div class="govuk-grid-column-two-thirds">
-                <h1 class="govuk-heading-xl govuk-!-margin-bottom-3">Your results</h1>
+
+                <h1 class="govuk-heading-xl govuk-!-font-size-48">{{pageName}}</h1>
+                <p class="govuk-body-l">You'll learn more about accessibility and inclusive design, the more you practice it in your day-to-day work.</p>
+                <p class="govuk-body-l">Here are some ways to keep learning:</p>
+                <ul class="govuk-list govuk-list--bullet govuk-body-l govuk-list--spaced">
+                    <li>talk to your users and really understand how they use your content</li>
+                    <li>get involved or observe user research even if you're not in a digital delivery team</li>
+                    <li>check back regularly for new training and resources </li>
+                  
+                </ul>
+            </div>
+        </div>
+        <div class="govuk-grid-row govuk-!-margin-top-5">
+            <div class="govuk-grid-column-full">
+                <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible"></div>
+            <div class="govuk-grid-column-two-thirds">
+
+                <h2 class="govuk-heading-l govuk-!-margin-bottom-3">Your answers</h2>
                 <p class="govuk-body-l">You got {{ score }} out of {{ results.length }} correct.</p>
 
                 {% for result in results %}
@@ -76,9 +81,7 @@
 
                                             <details class="govuk-details govuk-!-margin-bottom-0">
                                                 <summary class="govuk-details__summary">
-                                                    <span class="govuk-details__summary-text">
-      View the correct answer
-    </span>
+                                                    <span class="govuk-details__summary-text">View the correct answer</span>
                                                 </summary>
                                                 <div class="govuk-details__text">
                                                     {{ result.options[result.correctAnswer] }}
@@ -90,34 +93,48 @@
                                     </div>
                                 {% endfor %}
                             </div>
+                            <div class="govuk-grid-column-one-third">
+                                    <h2 class="govuk-heading-m">What to do next</h2>
+
+                                     <ul class="govuk-list govuk-body-l govuk-list--spaced">
+                   
+                    <li><a href="https://educationgovuk.sharepoint.com/sites/lvewp00043/SitePages/Experience-Lab.aspx" target="_blank">Visit the Experience Lab in Sheffield</a>
+                    </li>
+                    <li><a href="https://ukgovernmentdfe.slack.com/archives/CADP1R39Q" target="_blank">Join the accessibility community on Slack</a>
+                    </li>
+                    <li><a href="/knowledge-hub">Understand more about accessibility in the Knowledge Hub</a>
+                    </li>
+                </ul>
+                            
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                {% endblock %}
+                    {% endblock %}
 
-                {% block scripts %}
-                    <script>
-                        function toggleAnswer(event, index) {
-                            event.preventDefault();
-                            var answerElement = document.getElementById('correct-answer-' + index);
-                            if (answerElement.style.display === 'none') {
-                                answerElement.style.display = 'block';
-                            } else {
-                                answerElement.style.display = 'none';
+                    {% block scripts %}
+                        <script>
+                            function toggleAnswer(event, index) {
+                                event.preventDefault();
+                                var answerElement = document.getElementById('correct-answer-' + index);
+                                if (answerElement.style.display === 'none') {
+                                    answerElement.style.display = 'block';
+                                } else {
+                                    answerElement.style.display = 'none';
+                                }
                             }
-                        }
 
-                        document.addEventListener('DOMContentLoaded', function () {
-                            var links = document.querySelectorAll('.result-panel-header h2');
-                            links.forEach(function (link) {
-                                link.addEventListener('click', function () {
-                                    var body = this.parentElement.nextElementSibling;
-                                    if (body.style.display === 'none') {
-                                        body.style.display = 'block';
-                                    } else {
-                                        body.style.display = 'none';
-                                    }
+                            document.addEventListener('DOMContentLoaded', function () {
+                                var links = document.querySelectorAll('.result-panel-header h2');
+                                links.forEach(function (link) {
+                                    link.addEventListener('click', function () {
+                                        var body = this.parentElement.nextElementSibling;
+                                        if (body.style.display === 'none') {
+                                            body.style.display = 'block';
+                                        } else {
+                                            body.style.display = 'none';
+                                        }
+                                    });
                                 });
                             });
-                        });
-                    </script>
-                {% endblock %}
+                        </script>
+                    {% endblock %}

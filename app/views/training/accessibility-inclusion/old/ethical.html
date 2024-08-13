@@ -7,49 +7,48 @@
 
 {% block hero %}
 
-<div class="govuk-width-container">
-    <div class="govuk-breadcrumbs">
-        <ol class="govuk-breadcrumbs__list">
-            <li class="govuk-breadcrumbs__list-item">
-                <a class="govuk-breadcrumbs__link" href="/">Home</a>
-            </li>
-            <li class="govuk-breadcrumbs__list-item">
-                <a class="govuk-breadcrumbs__link" href="/training">Training</a>
-            </li>
-            <li class="govuk-breadcrumbs__list-item">
-                {{pageName}}
-            </li>
-        </ol>
+    <div class="govuk-width-container">
+        <div class="govuk-breadcrumbs">
+            <ol class="govuk-breadcrumbs__list">
+                <li class="govuk-breadcrumbs__list-item">
+                    <a class="govuk-breadcrumbs__link" href="/">Home</a>
+                </li>
+                <li class="govuk-breadcrumbs__list-item">
+                    <a class="govuk-breadcrumbs__link" href="/training">Training</a>
+                </li>
+                <li class="govuk-breadcrumbs__list-item">
+                    {{pageName}}
+                </li>
+            </ol>
+        </div>
     </div>
-</div>
 
 {% endblock %}
 
 {% block content %}
 
-<div class="govuk-width-container">
-    <div class="govuk-grid-row">
-        <div class="govuk-grid-column-two-thirds">
-            <h1 class="govuk-heading-xl">Why accessibility is important</h1>
+    <div class="govuk-width-container">
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-two-thirds">
+                <h1 class="govuk-heading-xl">Why accessibility is important</h1>
+            </div>
         </div>
-    </div>
 
-    <div class="govuk-grid-row">
-        <div class="govuk-grid-column-full">
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-full">
 
-            <p>There are 3 main reasons to ensure our products and websites are accessible</p>
+                <p>There are 3 main reasons to ensure our products and websites are accessible</p>
 
-
-            <div class="govuk-grid-row govuk-!-margin-top-9 govuk-!-margin-bottom-9">
-                <div class="govuk-grid-column-two-thirds">
-                    <h3 class="govuk-heading-l">It's ethical</h3>
-                    <p>Accessibility is a about fairness and equity. Providing accessible access to services, products,
+                <div class="govuk-grid-row govuk-!-margin-top-9 govuk-!-margin-bottom-9">
+                    <div class="govuk-grid-column-two-thirds">
+                        <h3 class="govuk-heading-l">It's ethical</h3>
+                        <p>Accessibility is a about fairness and equity. Providing accessible access to services, products,
                         and information
                         demonstrates a commitment to inclusivity and respect for all individuals, regardless of their
                         abilities or capabilities.</p>
-                    <p>We should ensure that when we're designing products and services, we include people in the design
+                        <p>We should ensure that when we're designing products and services, we include people in the design
                         stage with a diverse background to inform that process.</p>
-                    <p>We should also test with as many people as possible from a range of backgrounds, technical
+                        <p>We should also test with as many people as possible from a range of backgrounds, technical
                         ability and skills, and with people with and without disabilities or who use assistive or
                         adaptive technologies. You can learn more about what these and a how to do this in the <a href="">knowledge hub</a>.</p>
                     </p>
@@ -60,18 +59,17 @@
             <p>Ensuring products and services are designed this way, means they work for everyone, not just those with impairments.</p>
 
             <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
-            <p class="govuk-!-margin-top-6"><a href="/training/accessibility-inclusion/why"
-                    class="dfe-manual-button dfe-manual-button--grey govuk-!-margin-right-2"
-                    role="button">Previous</a><a href="/training/accessibility-inclusion/ethical"
-                    class="dfe-manual-button" role="button">Next</a></p>
+            <p class="govuk-!-margin-top-6">
+                <a href="/training/accessibility-inclusion/why"
+                    class="govuk-button govuk-button--grey govuk-!-margin-right-2"
+                    role="button">Previous</a>
+                <a href="/training/accessibility-inclusion/ethical"
+                    class="govuk-button" role="button">Next</a>
+            </p>
 
         </div>
-        <div class="govuk-grid-column-one-third">
-
-        </div>
+        <div class="govuk-grid-column-one-third"></div>
     </div>
 </div>
-
-
 
 {% endblock %}
