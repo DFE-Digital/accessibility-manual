@@ -5,107 +5,119 @@
 <!DOCTYPE html>
 <html lang="en" class="govuk-template ">
 
-<head>
-  <meta charset="utf-8">
-  <title>
-    {%- if seoPageName %}{{seoPageName}} {% elseif pageName %}{{pageName}}{%endif%} - {{serviceName}}</title>
-  <meta name="description"
+  <head>
+    <meta charset="utf-8">
+    <title>
+      {%- if seoPageName %}{{seoPageName}}
+      {% elseif pageName %}{{pageName}}{%endif%} - {{serviceName}}</title>
+      <meta name="description"
     content="{% if seoPageDescription %}{{seoPageDescription}}{% elseif pageName %}{{pageDescription}}{%endif%}">
-  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <meta name="theme-color" content="#00294a">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <link rel="shortcut icon" sizes="16x16 32x32 48x48" href="/assets/images/favicon.ico" type="image/x-icon">
-  <link rel="mask-icon" href="/assets/images/govuk-mask-icon.svg" color="#0b0c0c">
-  <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/govuk-apple-touch-icon-180x180.png">
-  <link rel="apple-touch-icon" sizes="167x167" href="/assets/images/govuk-apple-touch-icon-167x167.png">
-  <link rel="apple-touch-icon" sizes="152x152" href="/assets/images/govuk-apple-touch-icon-152x152.png">
-  <link rel="apple-touch-icon" href="/assets/images/govuk-apple-touch-icon.png">
-  <link href="/assets/css/app.min.css" rel="stylesheet">
+      <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+      <meta name="theme-color" content="#00294a">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <link rel="shortcut icon" sizes="16x16 32x32 48x48" href="/assets/images/favicon.ico" type="image/x-icon">
+      <link rel="mask-icon" href="/assets/images/govuk-mask-icon.svg" color="#0b0c0c">
+      <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/govuk-apple-touch-icon-180x180.png">
+      <link rel="apple-touch-icon" sizes="167x167" href="/assets/images/govuk-apple-touch-icon-167x167.png">
+      <link rel="apple-touch-icon" sizes="152x152" href="/assets/images/govuk-apple-touch-icon-152x152.png">
+      <link rel="apple-touch-icon" href="/assets/images/govuk-apple-touch-icon.png">
+      <link href="/assets/css/app.min.css" rel="stylesheet">
 
-  <meta property="og:url" content="https://design-histories.education.gov.uk" />
-  <meta property="og:site_name" content="{{serviceName}}" />
-  <meta property="og:title" content="{{pageName}}" />
-  <meta property="og:description"
+      <meta property="og:url" content="https://design-histories.education.gov.uk" />
+      <meta property="og:site_name" content="{{serviceName}}" />
+      <meta property="og:title" content="{{pageName}}" />
+      <meta property="og:description"
     content="{% if seoPageDescription %}{{seoPageDescription}}{% elseif pageName %}{{pageDescription}}{%endif%}" />
-  <meta property="og:type" content="website" />
-  <meta property="og:locale" content="en_GB" />
-  <meta property="og:image" content='https://design-histories.education.gov.uk/assets/images/og-image.png' />
+      <meta property="og:type" content="website" />
+      <meta property="og:locale" content="en_GB" />
+      <meta property="og:image" content='https://design-histories.education.gov.uk/assets/images/og-image.png' />
 
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:site" content="@dfe_digital">
-  <meta name="twitter:creator" content="@dfe_digital">
-  <meta name="twitter:image:alt" content="{{serviceName}}">
-  <meta name="google-site-verification" content="78BmMoejRsC4auIyTs5JLkClgxvWYGDAYMIikFxTNPA" />
+      <meta name="twitter:card" content="summary_large_image">
+      <meta name="twitter:site" content="@dfe_digital">
+      <meta name="twitter:creator" content="@dfe_digital">
+      <meta name="twitter:image:alt" content="{{serviceName}}">
+      <meta name="google-site-verification" content="78BmMoejRsC4auIyTs5JLkClgxvWYGDAYMIikFxTNPA" />
 
-  <script src="https://kit.fontawesome.com/3015bc434a.js" crossorigin="anonymous"></script>
-  <script type="text/javascript"
+      <script src="https://kit.fontawesome.com/3015bc434a.js" crossorigin="anonymous"></script>
+      <script type="text/javascript"
     src="https://platform-api.sharethis.com/js/sharethis.js#property=65d8577e0ee8ed00191dc980&product=inline-share-buttons&source=platform"
     async="async"></script>
-  {% block head %}{% endblock %}
-</head>
-<script>
-  (function (m, a, z, e) {
-    var s, t;
-    try {
-      t = m.sessionStorage.getItem('maze-us');
-    } catch (err) {}
-  
-    if (!t) {
-      t = new Date().getTime();
-      try {
-        m.sessionStorage.setItem('maze-us', t);
-      } catch (err) {}
-    }
-  
-    s = a.createElement('script');
-    s.src = z + '?apiKey=' + e;
-    s.async = true;
-    a.getElementsByTagName('head')[0].appendChild(s);
-    m.mazeUniversalSnippetApiKey = e;
-  })(window, document, 'https://snippet.maze.co/maze-universal-loader.js', '65dfeffa-8f46-4a3e-a48e-8de66e00be67');
-  </script>
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-Z4G55VN0FB"></script>
+      {% block head %}{% endblock %}
+    </head>
+    <script>
+      (function (m, a, z, e) {
+        var s,
+          t;
+        try {
+          t = m
+            .sessionStorage
+            .getItem('maze-us');
+        } catch (err) {}
 
+        if (!t) {
+          t = new Date().getTime();
+          try {
+            m
+              .sessionStorage
+              .setItem('maze-us', t);
+          } catch (err) {}
+        }
 
-<body class="govuk-template__body ">
-  <script>document.body.className += ' js-enabled' + ('noModule' in HTMLScriptElement.prototype ? ' govuk-frontend-supported' : '');</script>
+        s = a.createElement('script');
+        s.src = z + '?apiKey=' + e;
+        s.async = true;
+        a
+          .getElementsByTagName('head')[0]
+          .appendChild(s);
+        m.mazeUniversalSnippetApiKey = e;
+      })(window, document, 'https://snippet.maze.co/maze-universal-loader.js', '65dfeffa-8f46-4a3e-a48e-8de66e00be67');
+    </script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-J9EGREXSYH"></script>
 
-  {% include 'layouts/_cookiebanner.html'%}
-  <a href="#main-content" class="govuk-skip-link" data-module="govuk-skip-link">Skip to main content</a>
+    <body class="govuk-template__body ">
+      <script>
+        document.body.className += ' js-enabled' + (
+          'noModule' in HTMLScriptElement.prototype
+          ? ' govuk-frontend-supported'
+          : '');
+      </script>
 
-  {% include 'layouts/_topnav.html'%}
-  {% include 'layouts/_services.html'%}
+      {% include 'layouts/_cookiebanner.html'%}
+      <a href="#main-content" class="govuk-skip-link" data-module="govuk-skip-link">Skip to main content</a>
 
-  {% block header %}
+      {% include 'layouts/_topnav.html'%}
+      {% include 'layouts/_services.html'%}
 
-  {% include 'layouts/_header.html'%}
+      {% block header %}
 
-  {% endblock %}
+        {% include 'layouts/_header.html'%}
 
-  {% block hero %}{% endblock %}
+      {% endblock %}
 
-  {% block main %}
+      {% block hero %}{% endblock %}
 
-  <main class="govuk-main-wrapper {{mainClasses}}" id="main-content" role="main">
-    {% block content %}{% endblock %}
-  </main>
+      {% block main %}
 
-  {% endblock %}
+        <main class="govuk-main-wrapper {{mainClasses}}" id="main-content" role="main">
+          {% block content %}{% endblock %}
+        </main>
 
-  {% block footer %}
-  {% include 'layouts/_footer.html'%}
-  {% endblock %}
+      {% endblock %}
 
-  <script src="/assets/js/all.min.js"></script>
-  <script src="/assets/js/cookies.min.js"></script>
-  <script src="/assets/js/feedback.min.js"></script>
-  <script src="/assets/js/dfefrontend.min.js"></script>
-  {% block scripts %}{% endblock %}
-  <script type="module" src="/assets/js/govuk-frontend.min.min.js"></script>
-  <script type="module">
-    import { initAll } from '/assets/js/govuk-frontend.min.min.js'
-    initAll()
-  </script>
-</body>
+      {% block footer %}
+        {% include 'layouts/_footer.html'%}
+      {% endblock %}
 
-</html>
+      <script src="/assets/js/all.min.js"></script>
+      <script src="/assets/js/cookies.min.js"></script>
+      <script src="/assets/js/feedback.min.js"></script>
+      <script src="/assets/js/dfefrontend.min.js"></script>
+      {% block scripts %}{% endblock %}
+      <script type="module" src="/assets/js/govuk-frontend.min.min.js"></script>
+      <script type="module">
+        import {initAll} from '/assets/js/govuk-frontend.min.min.js'
+        initAll()
+      </script>
+    </body>
+
+  </html>
