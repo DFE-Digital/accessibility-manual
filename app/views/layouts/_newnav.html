@@ -223,7 +223,7 @@
                         {{ section.section }}
                         <span class="icon"></span>
                     </button>
-                    <ul id="sub-nav-{{ section.section | slugify }}" class="sub-nav" style="display: none;">
+                    <ul id="sub-nav-{{ section.section | slugify }}" class="sub-nav">
                         {% for sub_section in section['sub-sections'] %}
                             <li>
                                 <a href="{{ sub_section.url }}" class="{% if sub_section.title == pageName %} sub-nav--active {% endif %}">{{ sub_section.title }}</a>

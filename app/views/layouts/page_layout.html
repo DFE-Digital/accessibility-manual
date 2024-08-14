@@ -228,7 +228,7 @@
   }
 
   .sub-nav {
-    display: none;
+    display: block;
     list-style-type: none;
     padding: 0;
     margin-left: 20px;
@@ -257,6 +257,11 @@
     text-decoration: none;
     /* Add any other styles as needed */
   }
+
+.js-enabled .sub-nav {
+  display: none;
+}
+
 
   .hljs-comment,
   .hljs-quote {
@@ -346,39 +351,43 @@
 </style>
 
 <script>
-  document.addEventListener('DOMContentLoaded', function () {
-    const navLinks = document.querySelectorAll('.nav-link-toggle');
-    const currentPageUrl = window.location.pathname; // Get current page path
+ document.addEventListener('DOMContentLoaded', function () {
+  // Add the 'js-enabled' class to the <html> element
+  document.documentElement.classList.add('js-enabled');
 
-    navLinks.forEach(link => {
-      link.addEventListener('click', function (event) {
-        event.preventDefault(); // Prevent the default link behaviour
-        const expanded = this.getAttribute('aria-expanded') === 'true';
-        this.setAttribute('aria-expanded', String(!expanded));
-        const subNavId = this.getAttribute('aria-controls');
-        const subNav = document.getElementById(subNavId);
-        if (subNav) {
-          subNav.style.display = expanded ? 'none' : 'block';
-        }
-      });
+  const navLinks = document.querySelectorAll('.nav-link-toggle');
+  const currentPageUrl = window.location.pathname; // Get current page path
 
-      // Check if the current page URL matches any sub-navigation link
-      const subNavId = link.getAttribute('aria-controls');
+  navLinks.forEach(link => {
+    link.addEventListener('click', function (event) {
+      event.preventDefault(); // Prevent the default link behaviour
+      const expanded = this.getAttribute('aria-expanded') === 'true';
+      this.setAttribute('aria-expanded', String(!expanded));
+      const subNavId = this.getAttribute('aria-controls');
       const subNav = document.getElementById(subNavId);
       if (subNav) {
-        const subNavLinks = subNav.querySelectorAll('a');
-        subNavLinks.forEach(subNavLink => {
-          if (subNavLink.getAttribute('href') === currentPageUrl) {
-            // Mark the link as active
-            subNavLink.classList.add('sub-nav--active');
-            // Expand the parent link and show the sub-navigation
-            link.setAttribute('aria-expanded', 'true');
-            subNav.style.display = 'block';
-          }
-        });
+        subNav.style.display = expanded ? 'none' : 'block';
       }
     });
+
+    // Check if the current page URL matches any sub-navigation link
+    const subNavId = link.getAttribute('aria-controls');
+    const subNav = document.getElementById(subNavId);
+    if (subNav) {
+      const subNavLinks = subNav.querySelectorAll('a');
+      subNavLinks.forEach(subNavLink => {
+        if (subNavLink.getAttribute('href') === currentPageUrl) {
+          // Mark the link as active
+          subNavLink.classList.add('sub-nav--active');
+          // Expand the parent link and show the sub-navigation
+          link.setAttribute('aria-expanded', 'true');
+          subNav.style.display = 'block';
+        }
+      });
+    }
   });
+});
+
 </script>
 
 <body class="govuk-template__body dfe-manuals-page">
