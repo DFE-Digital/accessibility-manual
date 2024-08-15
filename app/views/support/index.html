@@ -10,7 +10,7 @@
 {% set githubIssueID = "55" %}
 {% set need = "This page exists to help people get support and help when they need it." %}
 
-{% set mainClasses = "govuk-!-padding-top-0 " %}
+{% set mainClasses = "govuk-!-padding-top-0 govuk-!-padding-bottom-0 " %}
 
 {% block hero %}
 
@@ -29,128 +29,321 @@
 
 {% block content %}
 
-   <div class="govuk-width-container govuk-!-margin-top-9">
-      <div class="govuk-grid-row">
-         <div class="govuk-grid-column-two-thirds">
+   <style>
 
-            <h2 class="govuk-heading-l">Support for digital delivery and user-centred design</h2>
-            <p>DesignOps can help with questions, advice, and support for:</p>
-            <ul class="govuk-list govuk-list--bullet">
-               <li>
-                  <a href="/audits-statements/accessibility-statements">accessibility statements</a>
-               </li>
-               <li>
-                  <a href="/audits-statements/audits">audits</a>
-               </li>
-               <li>
-                  <a href="/profession-guidance/content-design">content design</a>
-               </li>
-               <li>
-                  <a href="/profession-guidance/interaction-design">design <abbr title="User Interface">UI</abbr>
-                  components and patterns </a>
-               </li>
-               <li>
-                  <a href="/standards">standards compliance or assurance</a>
-               </li>
-               <li>
-                  <a href="/profession-guidance/development">technical guidance with code and development</a>
-               </li>
-            </ul>
+      .dfe-manual-cta {
+         margin-top: 3em;
+         display: flex;
+         justify-content: space-between;
+         align-items: center;
+         background-color: #f3f4f6;
+         padding: 1.5em;
+         border-radius: 5px;
+         border: 1px solid #dcdcdc;
+      }
 
-            <h3 class="govuk-heading-m">Request support from DesignOps</h3>
+      .dfe-manual-cta--title {
+         margin: 0;
+         font-size: 1.25em;
+         font-weight: bold;
+      }
 
-            <p>Complete the online form to <a href="/support/form/support">request support with an accessibility query</a>.</p>
+      .dfe-manual-cta--button a {
+         text-decoration: none;
+         color: #fff;
+         background-color: #003a69;
+         padding: 0.5em 1em;
+         border-radius: 3px;
+         font-size: 1em;
+         border-radius: 3px;
+      }
 
-            <h3 class="govuk-heading-m">Other ways to contact DesignOps</h3>
+      .dfe-manual-cta--button a:hover {
+         background-color: #347ca9;
+      }
 
-            <ul class="govuk-list govuk-list--spaced">
-               <li>Email: <a href="mailto:design.ops@education.gov.uk">design.ops@education.gov.uk</a>
-               </li>
-               <li>DfE Slack: <a href="https://ukgovernmentdfe.slack.com/archives/C0432A8JSV7">#designops</a>
-               </li>
-               <li>UK Government  Slack: <a
-                  href="https://ukgovernmentdigital.slack.com/archives/C04GXQ0320Z">#dfe-designops</a>
-               </li>
-            </ul>
+      .dfe-manual-cta--button a:focus {
+         background-color: #fd0;
+         border: 0;
+         /* Remove border */
+         box-shadow: 0 4px 0 0 #0b0c0c;
+         color: #0b0c0c;
+         /* Focus text colour */
+         outline: 4px solid transparent;
+         outline-offset: 4px;
+         box-shadow: 0 -2px #fd0, 0 4px #0b0c0c;
+      }
 
-            <h2 class="govuk-heading-l govuk-!-margin-top-7">Support with devices, workplace adjustments and assisitive technology</h2>
-            <p>The accessibility team, can help with support and advice on work-related questions, including:</p>
-            <ul class="govuk-list govuk-list--bullet">
-               <li>
-                  <a href="https://educationgovuk.sharepoint.com/sites/lvewp00043/SitePages/Accessibility-Talks.aspx" target="_blank">accessibility
-                  talks and sessions from the Accessibility team in DfE</a>
-               </li>
-               <li>
-                  <a href="https://educationgovuk.sharepoint.com/sites/lvewp00043/SitePages/Assistive-Software.aspx"
-                  target="_blank" rel="noopener noreferrer">assistive software</a>
-               </li>
-               <li>
-                  <a href="https://educationgovuk.sharepoint.com/sites/lvewp00043/SitePages/Creating-Accessible-Documents.aspx"
-                  target="_blank" rel="noopener noreferrer">creating accessible documents and presentations</a>
-               </li>
-               <li>
-                  <a href="https://educationgovuk.sharepoint.com/sites/lvewp00043/SitePages/Usability-Features-in-Office-and-Windows.aspx"
-                  target="_blank" rel="noopener noreferrer">using Microsoft products</a>
-               </li>
-               <li>
-                  <a href="https://educationgovuk.sharepoint.com/sites/lvewp00043/SitePages/Workplace-Adjustments.aspx"
-                  target="_blank" rel="noopener noreferrer">workplace adjustments</a>
-               </li>
-            </ul>
-            <h3 class="govuk-heading-m">Request support from the accessibility team</h3>
+      .dfe-manual-section--inverse {
+         background-color: #f0f4f5;
+      }
 
-            <p>
-               <p>Visit the <a href="https://educationgovuk.sharepoint.com/sites/lvewp00043" target="_blank"
-               rel="noopener noreferrer">digital accessibility hub</a> on the DfE intranet for more information, or email the <a ref="mailto:accessibility.support@education.gov.uk">accessibility team</a>.</p>
+      .dfe-manual-section--inverse .dfe-manual-cta {
+         margin-top: 3em;
+         display: flex;
+         justify-content: space-between;
+         align-items: center;
+         background-color: #ffffff;
+         padding: 1.5em;
+         border-radius: 5px;
+         border: 1px solid #dcdcdc;
+      }
 
+      .dfe-signpost-list {
+         list-style-type: none;
+         padding: 0;
+         margin: 0;
+      }
+
+      .dfe-signpost {
+         margin-bottom: 1em;
+         /* Space between items */
+      }
+
+      .dfe-signpost__link {
+         display: block;
+         text-decoration: none;
+         background-color: #f3f4f6;
+         padding: 1em;
+         border-radius: 5px;
+         border: 1px solid #dcdcdc;
+         transition: background-color 0.3s ease, box-shadow 0.3s ease;
+      }
+      .dfe-manual-section--inverse .dfe-signpost__link {
+         background-color: #ffffff;
+      }
+
+      .dfe-signpost__link:hover {
+         background-color: #e2e4e6;
+         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
+
+      .dfe-signpost__link:focus {
+         background-color: #fd0;
+         border: 0;
+         /* Remove border */
+         box-shadow: 0 4px 0 0 #0b0c0c;
+         color: #0b0c0c;
+         /* Focus text colour */
+         outline: 4px solid transparent;
+         outline-offset: 4px;
+         box-shadow: 0 -2px #fd0, 0 4px #0b0c0c;
+      }
+
+      .dfe-signpost__content {
+         display: flex;
+         justify-content: space-between;
+         align-items: center;
+      }
+
+      .dfe-signpost__title {
+         font-size: 1em;
+         font-weight: bold;
+         margin: 0;
+         color: #0b0c0c;
+      }
+
+      .dfe-signpost__icon {
+         display: flex;
+         align-items: center;
+      }
+
+      .dfe-signpost__icon__svg {
+         fill: #003a69;
+         width: 0.8em;
+         height: auto;
+         transition: fill 0.3s ease;
+      }
+
+      .dfe-signpost__link:hover .dfe-signpost__icon__svg {
+         fill: #347ca9;
+      }
+
+      .dfe-large-cta {
+         margin: 20px 0;
+         background-color: #347ca9;
+         color: white;
+         padding: 80px 20px 20px;
+         position: relative;
+         overflow: hidden;
+         border-radius: 8px;
+      }
+
+      .dfe-large-cta__content {
+         display: flex;
+         justify-content: space-between;
+         align-items: flex-end;
+         height: 100%;
+      }
+
+      .dfe-large-cta__title {
+         font-size: 2em;
+         /* Adjust font size as needed */
+         font-weight: bold;
+         margin: 0;
+         width: 40%;
+      }
+
+      .dfe-large-cta__title--regular {
+         font-weight: normal;
+      }
+
+      .dfe-large-cta__box {
+         background-color: white;
+         padding: 10px 20px;
+         border-radius: 5px;
+         display: flex;
+         align-items: center;
+         justify-content: center;
+      }
+
+      .dfe-large-cta__arrow {
+         width: 15px;
+         height: auto;
+         fill: #347ca9;
+      }
+
+      .dfe-large-cta__content .dfe-large-cta__box {
+         margin-bottom: 0;
+      }
+   </style>
+
+   <section style="background-color:#ffffff;" class="govuk-!-padding-top-5 govuk-!-padding-bottom-8 govuk-!-margin-top-5">
+      <div class="govuk-width-container">
+         <div class="govuk-grid-row">
+            <div class="govuk-grid-column-full">
+               <h2 class="govuk-heading-l">Get help in digital delivery</h2>
             </div>
-            <div class="govuk-grid-column-one-third">
-
-             
-               <aside class="dfe-aside">
-                  <h3 class="govuk-heading-m">Other resources</h3>
-                  <ul class="govuk-list govuk-list--spaced">
-                     <li>
-                        <a href="https://ukgovernmentdfe.slack.com/archives/CADP1R39Q">DfE Slack accessibility channel</a>
-                     </li>
-                     <li>
-                        <a href="https://ukgovernmentdigital.slack.com/messages/accessibility/">UK cross-government Slack accessibility channel</a>
-                     </li>
-                     <li>
-                        <a href="https://www.gov.uk/service-manual/communities/accessibility-community">Cross-government accessibility community</a>
-                     </li>
-                  </ul>
-               </aside>
+            <div class="govuk-grid-column-one-half">
+               <p>DesignOps can help with questions, advice, and support for accessibility questions from digital delivery teams.</p>
+               <p>Before you contact us, make sure you have read the guidance on some of the popular things we get asked about.</p>
             </div>
 
+            <div class="govuk-grid-column-one-half">
+               <ul class="dfe-signpost-list">
+                  <li class="dfe-signpost">
+                     <a class="dfe-signpost__link" href="/audits-statements/audits">
+                        <span class="dfe-signpost__content">
+                           <p class="dfe-signpost__title">Getting an audit</p>
+                           <span aria-hidden="true" class="dfe-signpost__icon">
+                              <svg class="dfe-signpost__icon__svg" viewBox="0 0 16 29">
+                                 <path d="M1.909 28.11a1.575 1.575 0 0 1-1.115-2.691L11.713 14.5.793 3.58a1.575 1.575 0 1 1 2.23-2.228l12.033 12.033a1.575 1.575 0 0 1 0 2.229L3.023 27.647c-.307.308-.71.463-1.114.463z"></path>
+                              </svg>
+                           </span>
+                        </span>
+                     </a>
+                  </li>
+                  <li class="dfe-signpost">
+                     <a class="dfe-signpost__link" href="/audits-statements/accessibility-statements">
+                        <span class="dfe-signpost__content">
+                           <p class="dfe-signpost__title">Using the right accessibility statement</p>
+                           <span aria-hidden="true" class="dfe-signpost__icon">
+                              <svg class="dfe-signpost__icon__svg" viewBox="0 0 16 29">
+                                 <path d="M1.909 28.11a1.575 1.575 0 0 1-1.115-2.691L11.713 14.5.793 3.58a1.575 1.575 0 1 1 2.23-2.228l12.033 12.033a1.575 1.575 0 0 1 0 2.229L3.023 27.647c-.307.308-.71.463-1.114.463z"></path>
+                              </svg>
+                           </span>
+                        </span>
+                     </a>
+                  </li>
+                  <li class="dfe-signpost">
+                     <a class="dfe-signpost__link" href="/standards">
+                        <span class="dfe-signpost__content">
+                           <p class="dfe-signpost__title">Compliance or assurance with standards</p>
+                           <span aria-hidden="true" class="dfe-signpost__icon">
+                              <svg class="dfe-signpost__icon__svg" viewBox="0 0 16 29">
+                                 <path d="M1.909 28.11a1.575 1.575 0 0 1-1.115-2.691L11.713 14.5.793 3.58a1.575 1.575 0 1 1 2.23-2.228l12.033 12.033a1.575 1.575 0 0 1 0 2.229L3.023 27.647c-.307.308-.71.463-1.114.463z"></path>
+                              </svg>
+                           </span>
+                        </span>
+                     </a>
+                  </li>
+                  <li class="dfe-signpost">
+                     <a class="dfe-signpost__link" href="/tools-testing/tools">
+                        <span class="dfe-signpost__content">
+                           <p class="dfe-signpost__title">What testing tools can I use?</p>
+                           <span aria-hidden="true" class="dfe-signpost__icon">
+                              <svg class="dfe-signpost__icon__svg" viewBox="0 0 16 29">
+                                 <path d="M1.909 28.11a1.575 1.575 0 0 1-1.115-2.691L11.713 14.5.793 3.58a1.575 1.575 0 1 1 2.23-2.228l12.033 12.033a1.575 1.575 0 0 1 0 2.229L3.023 27.647c-.307.308-.71.463-1.114.463z"></path>
+                              </svg>
+                           </span>
+                        </span>
+                     </a>
+                  </li>
+               </ul>
+            </div>
+
+            <div class="govuk-grid-column-full">
+               <div class="dfe-manual-cta">
+                  <h3 class="dfe-manual-cta--title">Get in touch with DesignOps if you still need support</h3>
+                  <span class="dfe-manual-cta--button">
+                     <a href="/support/form/support">Contact DesignOps <span class="govuk-visually-hidden">for help and support</span></a>
+                  </span>
+               </div>
+               {# <div class="dfe-manual-cta" style="background: #e6ebf0">
+                  <h3 class="dfe-manual-cta--title">Get in touch with DesignOps if you still need support</h3>
+                  <span class="dfe-manual-cta--button">
+                     <a href="/support/form/support">Contact DesignOps</a>
+                  </span>
+               </div>
+
+               <div class="dfe-manual-cta">
+                  <h3 class="dfe-manual-cta--title">
+                     <a href="/support/form/support">Contact DesignOps</a> if you still need support</h3>
+               </div>
+
+               <div class="dfe-large-cta">
+                  <div class="dfe-large-cta__content">
+                     <h2 class="dfe-large-cta__title">Still need help? <br />
+                        <span class="dfe-large-cta__title--regular">Get in touch with DesignOps</span></h2>
+                     <a href="/support/form/support" class="dfe-large-cta__box">
+                        <svg class="dfe-large-cta__arrow" viewBox="0 0 16 29">
+                           <path d="M1.909 28.11a1.575 1.575 0 0 1-1.115-2.691L11.713 14.5.793 3.58a1.575 1.575 0 1 1 2.23-2.228l12.033 12.033a1.575 1.575 0 0 1 0 2.229L3.023 27.647c-.307.308-.71.463-1.114.463z"></path>
+                        </svg><span class="govuk-visually-hidden">Contact DesignOps for support and help</span>
+                     </a>
+                  </div>
+               </div> #}
+            </div>
          </div>
       </div>
+   </section>
 
-      <style>
-         .dfe-manual-callout {
-            padding: 25px 25px 10px;
-            border-left: 10px solid #005ea5;
-            margin: 40px 0;
-            background-color: #F2F7FA;
-         }
+   <section class="dfe-manual-section--inverse govuk-!-padding-top-9 govuk-!-padding-bottom-8 govuk-!-margin-top-5">
+      <div class="govuk-width-container">
 
-         .dfe-manual-callout--no-border {
-            border-left: none;
-         }
+         <div class="govuk-grid-row">
+            <div class="govuk-grid-column-full">
+               <h2 class="govuk-heading-l">Get help in the workplace</h2>
+            </div>
 
-         .dfe-manual-callout--no-top-margin {
-            margin-top: 0;
-         }
+            <div class="govuk-grid-column-one-half">
+               <p>The DfE Accessibility team, can help with support and advice on work-related accessibility questions, including:</p>
+               <ul class="govuk-list govuk-list--bullet">
+                  <li>Workplace adjustments</li>
+                  <li>Assistive technology</li>
+                  <li>Creating accessible content for a range of channels</li>
+                  <li>Running training sessions with you and your team</li>
+               </ul>
+               <p>The team also run and manage booking for the <a href="https://educationgovuk.sharepoint.com/sites/lvewp00043/SitePages/Experience-Lab.aspx" target="_blank" rel="noopener noreferrer">Experience Lab (opens in new tab)</a> in the Sheffield office.</p>
+            </div>
 
-         .dfe-manual-callout--header {
-            display: flex;
-            align-items: top;
-         }
+            <div class="govuk-grid-column-one-half">
+               <ul class="dfe-signpost-list">
+                  <li class="dfe-signpost">
+                     <a class="dfe-signpost__link" href="https://educationgovuk.sharepoint.com/sites/lvewp00043">
+                        <span class="dfe-signpost__content">
+                           <p class="dfe-signpost__title">Find out more on the DfE Intranet</p>
+                           <span aria-hidden="true" class="dfe-signpost__icon">
+                              <svg class="dfe-signpost__icon__svg" viewBox="0 0 16 29">
+                                 <path d="M1.909 28.11a1.575 1.575 0 0 1-1.115-2.691L11.713 14.5.793 3.58a1.575 1.575 0 1 1 2.23-2.228l12.033 12.033a1.575 1.575 0 0 1 0 2.229L3.023 27.647c-.307.308-.71.463-1.114.463z"></path>
+                              </svg>
+                           </span>
+                        </span>
+                     </a>
+                  </li>
+               </ul>
+            </div>
+         </div>
+      </div>
+   </section>
 
-         .dfe-manual-callout--header img {
-            margin-right: 10px;
-            height: 32px;
-         }
-      </style>
-
-   {% endblock %}
+{% endblock %}
