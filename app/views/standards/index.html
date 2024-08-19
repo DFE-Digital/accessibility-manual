@@ -4,42 +4,12 @@
 {% set pageName = "Standards" %}
 {% set pageDescription = "The accessibility standards that people delivering digital products and websites must meet."%}
 
-{% set mainClasses = "govuk-!-padding-top-0" %}
+{% set mainClasses = "govuk-!-padding-top-0 govuk-!-padding-bottom-0" %}
 
 {% block content %}
 
-   <style>
-      .dfe-manuals-panel-list {
-         list-style: none;
-         padding: 0;
-         margin: 0;
-      }
 
-      .dfe-manuals-panel-list__item {
-         background: #fff;
-         border: 1px solid #C5C7C9;
-         padding: 30px;
-         margin-bottom: 30px;
-         width: 100%;
-         /* Full width */
-         box-sizing: border-box;
-         /* Ensure padding and border are included in the width */
-         border-radius: 4px;
-      }
-
-      /* Optional: add some hover effect */
-      .dfe-manuals-panel-list__item:hover {
-         box-shadow: 0 0 12px rgba(0, 0, 0, 0.3);
-      }
-
-      /* Optional: add some responsive styling */
-      @media (max-width: 768px) {
-         .dfe-manuals-panel-list__item {
-            padding: 15px;
-         }
-      }
-   </style>
-
+<section>
    <div class="dfe-width-container govuk-!-margin-top-9">
       <div class="govuk-grid-row">
          <div class="govuk-grid-column-full">
@@ -91,37 +61,33 @@
          </div>
       </div>
    </div>
+</section>
 
-   <div class="dfe-width-container govuk-!-margin-top-9">
-      <div class="govuk-grid-row">
-         <div class="govuk-grid-column-full">
-            <h2 class="govuk-heading-l">Web Content Accessibility Guidelines (WCAG)</h2>
-            <p>WCAG is a set of guidelines for making web content more accessible to people with disabilities. It is the international standard for web accessibility and is <a href="/knowledge-hub/regulations">enforced in UK Law</a>.</p>
+   <section style="background-color:#f0f4f5;"  class="govuk-!-padding-top-5 govuk-!-padding-bottom-9 govuk-!-margin-top-5">
+      <div class="dfe-width-container ">
+      
 
-            <div class="dfe-grid-container">
-               <div class="dfe-card">
-                      <img src="/assets/images/wcag.png" alt="">
-                  <div class="dfe-card-container">
-                     <h3 class="govuk-heading-m">
-                        <a href="/standards/wcag"
-                        class="govuk-link govuk-link--no-visited-state dfe-card-link--header">Understand WCAG</a>
-                     </h3>
-                     <p>Understand each of the WCAG criteria, how to apply them and common issues.</p>
+         <div class="govuk-grid-row">
+
+            <div class="govuk-grid-column-full govuk-!-margin-top-7 govuk-!-margin-bottom-5">
+               <div class="govuk-grid-row split-panel split-panel--bg-white ">
+                  <div class="govuk-grid-column-one-half text-column">
+                     <h2 class="govuk-heading-l">Laws and regulations</h2>
+                     <p class="govuk-body">Learn about the legal requirements and standards governing accessibility and inclusive design.</p>
+                     <p class="govuk-body">
+                        <a href="/knowledge-hub/regulations">Understand the law</a>
+                     </p>
                   </div>
-               </div>
-               <div class="dfe-card">
-                      <img src="/assets/images/aa.png" alt="">
-                  <div class="dfe-card-container">
-                     <h3 class="govuk-heading-m">
-                        <a href="/knowledge-hub/wcag/conformance"
-                        class="govuk-link govuk-link--no-visited-state dfe-card-link--header">Understand conformance</a>
-                     </h3>
-                     <p>Understand the 3 levels of conformance, A, AA, and AAA and what they mean.</p>
+                  <div class="govuk-grid-column-one-half image-column">
+                     <div class="image-container"
+                     style="background-image: url('/assets/images/people.jpg');"></div>
                   </div>
                </div>
             </div>
+
          </div>
       </div>
-   </div>
+   </section>
+  
 
 {% endblock %}

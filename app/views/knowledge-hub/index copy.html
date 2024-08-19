@@ -1,0 +1,92 @@
+{% extends "layouts/full.html" %}
+
+{% set selectedNav = "Knowledge hub" %}
+{% set pageName = "Knowledge hub" %}
+{% set pageDescription = "Guidance and knowledge to support understanding of accessibility and inclusive design."%}
+
+{% set mainClasses = "govuk-!-padding-top-0" %}
+
+
+
+{% block content %}
+
+
+
+<div class="govuk-width-container govuk-!-margin-top-9">
+   <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+
+
+
+         <h2 class="govuk-heading-l">Laws and regulatory frameworks</h2>
+         <p>Learn about the legal requirements and standards governing accessibility and inclusive design.</p>
+
+         <ul class="govuk-list govuk-list--spaced">
+            <li>
+               <a href="/knowledge-hub/regulations">Overview of accessibility regulations</a>
+            </li>
+
+         </ul>
+
+
+         <h2 class="govuk-heading-l">Accessibility issues</h2>
+         <p>Guidance for common issues, preventing them, and how to manage and prioritise accessibility issues in your product or website.</p>
+
+
+         <ul class="govuk-list govuk-list--spaced">  <li>
+               <a href="/knowledge-hub/common-issues">Common issues</a>
+            </li>
+            <li>
+               <a href="/knowledge-hub/managing-issues">Manage and prioritise issues</a>
+            </li>
+            <li>
+               <a href="/knowledge-hub/managing-issues/disproportionate-burden">Disproportionate burden</a>
+            </li>
+         </ul>
+
+         <h2 class="govuk-heading-l">WCAG (Web Content Accessibility Guidelines)</h2>
+         <ul class="govuk-list govuk-list--spaced">
+            <li>
+               <a href="/knowledge-hub/wcag">Overview of WCAG</a>
+            </li>
+            <li>
+               <a href="/knowledge-hub/wcag/conformance">Conformance</a>
+            </li>
+         </ul>
+
+
+      </div>
+      <div class="govuk-grid-column-one-third">
+         <aside class="dfe-aside">
+
+
+            <h2 class="govuk-heading-m">Additional guidance and resources</h2>
+            <ul class="govuk-list govuk-list--spaced">
+               <li>
+                  <a href="https://accessibility.blog.gov.uk/">GOV.UK accessibility blog</a>
+               </li>
+               <li>
+                  <a href="https://accessibility-manual.dwp.gov.uk/" target="_blank" rel="noopener noreferrer">DWP accessibility manual</a>
+               </li>
+               <li>
+                  <a href="https://design.homeoffice.gov.uk/accessibility" target="_blank" rel="noopener noreferrer">Home Office accessibility guidance</a>
+               </li>
+
+               <li>
+                  <a href="https://service-manual.nhs.uk/accessibility" target="_blank" rel="noopener noreferrer">NHS Digital service manual - accessibility</a>
+               </li>
+
+            </ul>
+         </aside>
+      </div>
+
+
+   </div>
+
+
+</div>
+
+
+
+
+{% endblock %}
