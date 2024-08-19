@@ -132,6 +132,33 @@
             }
         ]
     },
+ {
+        "nav": "Standards",
+        "url": "/standards",
+        "sections": [
+            {
+ 
+                 "section": "WCAG",
+                "sub-sections": [
+                    {
+                        "title": "WCAG Overview",
+                        "url": "/standards/wcag"
+                    }
+                ]
+            },
+             {
+ 
+                 "section": "Code and labels",
+                "sub-sections": [
+                    {
+                        "title": "1.1.1 - Non-text content",
+                        "url": "/standards/wcag/p-1-1-1"
+                    }
+                ]
+            }
+            ]
+ },
+
     {
         "nav": "Tools and testing",
         "url": "/tools-testing",
@@ -202,7 +229,7 @@
                         "url": "/tools-testing/false-positives"
                     }
                 ]
-            }
+            }           
         ]
     }
 ] %}
@@ -217,7 +244,6 @@
         {% set navSections = item.sections %}
     {% endif %}
 {% endfor %}
-
 
 <nav class="navbar" aria-label="Secondary navigation">
     {%- if selectedSection %}
