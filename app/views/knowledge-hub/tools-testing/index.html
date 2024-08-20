@@ -1,7 +1,7 @@
 {% extends "layouts/page_layout.html" %}
 
 {% set selectedNav = "Knowledge hub" %}
-{% set pageName = "Accessibility testing " %}
+{% set pageName = "Overview" %}
 {% set pageDescription = "Guidance for how to use tools to test for, and understand accesisbility issues in a product."%}
 {% set mainClasses = "govuk-!-padding-top-0" %}
 {% set created = "1 August 2024" %}
@@ -28,26 +28,38 @@
 
     <h1 class="govuk-heading-xl  govuk-!-margin-top-5">{{pageName}}</h1>
 
-    <p class="govuk-body">You should build automated and manual tests into each phase of delivery. Every time you add a new component, page or functionality to your product or website you should run accessibility tools to check that no new issues have been introduced.</p>
+    <p class="govuk-body">You should build automated and manual tests into each phase of delivery.</p> 
+    
+     <p class="govuk-body">Every time you add a new component, page or functionality to your product or website you should run accessibility tools to check that new issues have not been introduced. Addressing issues early ensures they are not introduced into live services.</p>
 
-    <p class="govuk-body">Addressing accessibility issues early on ensures that accessibility barriers or issues are not introduced into live services. You will still need to get an <a href="/audits-statements">accessibility audit</a>, as no test can guarantee your service is fully accessible.</p>
+    <p class="govuk-body">You will still need to get an <a href="/audits-statements">accessibility audit</a>, as no test can guarantee your service is fully accessible.</p>
 
     <h2 class="govuk-heading-l">No tool can guarantee a website is accessible</h2>
     <p>Tools cannot be used as a replacement for accessibility audits or manual testing.</p>
-    <div class="govuk-inset-text">Automated testing tols provide around 30 to 40% of coverage and often miss high impact issues. They can also produce <a href="/knowledge-hub/tools-testing/false-positives">false positives</a>.</div>
-    <p class="govuk-body">You should run multiple automated tools, as well as manual checks, to ensure accessibility issues are accurate and to sense check them.</p>
+    <div class="govuk-inset-text">Automated testing tools provide around 30 to 40% of coverage and often miss high impact issues. They can also produce <a href="/knowledge-hub/tools-testing/false-positives">false positives</a>.</div>
+    <p class="govuk-body">You should run multiple automated tools, as well as manual checks, to sense check accessibility issues and to ensure they are accurate.</p>
 
     <h2 class="govuk-heading-l">Finding issues early saves time and money</h2>
-    <p class="govuk-body">By identifying accessibility issues early means that they can be addressed before too much development work has started. It’s estimated that fixing issues in the design phase could be up to 30 times cheaper than fixing them after the product or website development is live.</p>
+    <p class="govuk-body">Identifying accessibility issues early means they can be addressed before too much development work has started.</p>
+    
+    <p class="govuk-body">It's estimated that fixing issues in the design phase could be up to 30 times cheaper than fixing them after the product or website development is live.</p>
 
     <h2 class="govuk-heading-l">Automated tools</h2>
-    <p class="govuk-body">Automated accessibility tools apply a set of checks against individual pages in a service or website. Once installed, the tests are quick and easy to run and can find some accessibility issues by looking at the code of each webpage. Make automated tests part of your build process to check for a range of accessibility issues. Remember that automated tests only check some of what you need to test.</p>
-    <p class="govuk-body">Automated tools work best when used together, so it's recommended that you install and run the <a href="/knowledge-hub/tools-testing/tools/arc">ARC Toolkit</a>, <a href="/knowledge-hub/tools-testing/tools/axe">axe DevTools</a> and <a href="/knowledge-hub/tools-testing/tools/wave">WAVE together</a>.</p>
+    <p class="govuk-body">Automated accessibility tools apply a set of checks against individual pages in a service or website.</p> 
+    
+    <p class="govuk-body">Make automated tests part of your build process to check for a range of accessibility issues. Remember though that automated tests only check some of what you need to test.</p>
+    <p class="govuk-body">Automated tools work best when used collectively, so it's recommended that you install and run the <a href="/knowledge-hub/tools-testing/tools/arc">ARC Toolkit</a>, <a href="/knowledge-hub/tools-testing/tools/axe">axe DevTools</a> and <a href="/knowledge-hub/tools-testing/tools/wave">WAVE</a> together.</p>
+
+    <p class="govuk-body">Once installed, the tests are quick and easy to run and can find some accessibility issues by looking at the code of each webpage.</p>
 
     <h2 class="govuk-heading-l">Manual checks</h2>
-    <p class="govuk-body">Manual checks are checks you can run to get an indication and find common accessibility issues on your website.</p>
+    <p class="govuk-body">You can run manual checks to get an indication of, and find common accessibility issues, on your website or product.</p>
+
+    <p class="govuk-body">Examples include <a href="/knowledge-hub/tools-testing/tools/accessibility-insights">Accessibility Insights</a>, <a href="/knowledge-hub/tools-testing/tools/contrast">Contrast Checker</a> and <a href="/knowledge-hub/tools-testing/tools/headings-map">HeadingsMap</a>.</p>
 
     <h2 class="govuk-heading-l">Bookmarklets</h2>
-    <p class="govuk-body">A <a href="/knowledge-hub/tools-testing/bookmarklets">bookmarklet</a> is a link you add to your favourites that can be used to highlight or identify things on a page that you might want to check.</p>
+    <p class="govuk-body">A <a href="/knowledge-hub/tools-testing/bookmarklets">bookmarklet</a> is a link you add to your favourites. You can use them to highlight or identify things on a page that you might want to check.</p>
+
+    <p class="govuk-body">Examples include <a href="/knowledge-hub/tools-testing/bookmarklets/blur">Blur page</a>, <a href="/knowledge-hub/tools-testing/bookmarklets/lists">Lists</a> and <a href="/knowledge-hub/tools-testing/bookmarklets/text-spacing">Text spacing</a>.</p>
 
 {% endblock %}
