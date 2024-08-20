@@ -1,0 +1,68 @@
+{% extends "layouts/page_layout.html" %}
+
+{% set selectedNav = "Knowledge hub" %}
+{% set pageName = "Contrast Checker" %}
+{% set pageDescription = "Guidance for installing and using contrast checker to test for accessibility issues."%}
+{% set mainClasses = "govuk-!-padding-top-0" %}
+{% set created = "5 August 2024" %}
+{% set reviewed = "5 August 2024" %}
+{% set updated = "5 August 2024" %}
+{% set githubIssueID = "37" %}
+{% set need = "This page exists to help people understand how to use tools to test for, and understand accesisbility issues in a product." %}
+
+{% block content %}
+
+   <div class="govuk-breadcrumbs">
+      <ol class="govuk-breadcrumbs__list">
+         <li class="govuk-breadcrumbs__list-item">
+            <a class="govuk-breadcrumbs__link" href="/">Home</a>
+         </li>
+         <li class="govuk-breadcrumbs__list-item">
+            <a class="govuk-breadcrumbs__link" href="/knowledge-hub">Knowledge hub</a>
+         </li>
+         <li class="govuk-breadcrumbs__list-item">
+            {{pageName}}
+         </li>
+      </ol>
+   </div>
+
+   <h1 class="govuk-heading-xl  govuk-!-margin-top-5">{{pageName}}</h1>
+
+   <h2 class="govuk-heading-l">Installation</h2>
+
+   <p class="govuk-body">{{pageName}} is a website which you can find at <a href="https://webaim.org/resources/contrastchecker/" target="_blank" rel="noopener noreferrer">https://webaim.org/resources/contrastchecker (opens in new tab)</a>.</p>
+
+   <h2 class="govuk-heading-l">How to use {{pageName}}</h2>
+
+   <p>Contrast Checker will measure the contrast ratio of colours on a webpage. It will tell you whether the colour combination passes or fails any of the WCAG minimum criteria. </p>
+   <p>You will need to provide the foreground and background colours for text or graphic objects on the website to get the results.</p>
+
+   <h3 class="govuk-heading-m">How to get colour codes from a webpage</h3>
+
+   <p>There are a number of ways to get the colour codes from a webpage. You can use the browser dev tools to inspect the element and get the colour codes.</p>
+
+   <p>In Edge or Chrome, right click on the element you want to get the colour code for and select 'Inspect' from the context menu. This will open the dev tools panel.</p>
+
+   <p>From the dev tools panel, you can select the 'Styles' tab to see the colour codes for the element, they will probably start with a # symbol and contain 6 alphanumeric characters. For example: <code>#F3F2F1</code>.</p>
+
+   <p>Watch a video on how to get colour codes from a webpage:</p>
+
+   <video controls class="screenshot govuk-!-margin-top-5 govuk-!-margin-bottom-5">
+      <source src="/assets/video/get_color.webm" type="video/webm" >
+        Your browser does not support the video tag.
+    </video>
+   <p>This video does not have audio.</p>
+
+   <h2 class="govuk-heading-l">Results</h2>
+
+   <p>Example of some content to check the contrast ratio.</p>
+
+   <img src="/assets/images/get_help.png" alt="The words 'Get help and support' in black text on a yellow background" class="screenshot govuk-!-margin-top-5 govuk-!-margin-bottom-5">
+
+   <p>When you have the colour codes, you can enter them into the Contrast Checker website to get the results.</p>
+
+   <p>The black text has the code <code>#1D1D1B</code> and the yellow background has the code <code>#F9B401</code>.</p>
+
+   <img src="/assets/images/cr_result.png" alt="Show contrast ration of 9.29:1 of black text on yellow. This passes all the relevant WCAG criteria" class="screenshot govuk-!-margin-top-5 govuk-!-margin-bottom-5">
+
+{% endblock %}

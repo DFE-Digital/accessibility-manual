@@ -1,0 +1,78 @@
+{% extends "layouts/page_layout.html" %}
+
+{% set selectedNav = "Knowledge hub" %}
+{% set pageName = "Target size" %}
+{% set pageDescription = ""%}
+{% set mainClasses = "govuk-!-padding-top-0" %}
+{% set created = "6 August 2024" %}
+{% set reviewed = "6 August 2024" %}
+{% set updated = "6 August 2024" %}
+{% set githubIssueID = "70" %}
+{% set need = "This page exists to help people understand how to use tools to test for, and understand accesisbility issues in a product." %}
+
+{% block content %}
+
+   <div class="govuk-breadcrumbs">
+      <ol class="govuk-breadcrumbs__list">
+         <li class="govuk-breadcrumbs__list-item">
+            <a class="govuk-breadcrumbs__link" href="/">Home</a>
+         </li>
+         <li class="govuk-breadcrumbs__list-item">
+             <a class="govuk-breadcrumbs__link" href="/knowledge-hub">Knowledge hub</a>
+         </li>
+         <li class="govuk-breadcrumbs__list-item">
+            {{pageName}}
+         </li>
+      </ol>
+   </div>
+
+   <h1 class="govuk-heading-xl  govuk-!-margin-top-5">{{pageName}}</h1>
+
+   <div class="govuk-inset-text">
+      <p>Drag the following link to your bookmarks bar to install the bookmarklet.</p>
+      <a href="javascript:(function(){function t(e){const t=e.getBoundingClientRect();return{top:t.top+window.scrollY+t.height/2,left:t.left+window.scrollX+t.width/2}}function e(e){let t=e;while(t){const e=getComputedStyle(t);if('none'===e.display||'hidden'===e.visibility)return!1;t=t.parentElement}return!0}const n='http://www.w3.org/2000/svg',o=[...document.querySelectorAll('a, label, button, input:not([type=hidden]), select, textarea, [tabindex], [role=button], [role=checkbox], [role=link], [role=menuitem], [role=option], [role=radio], [role=switch], [role=tab]')].filter(e),s=[];o.forEach(function(e){if(!e.matches('label')&&e.closest('label'))return;const o=t(e);s.push({element:e,center:o});const r=document.createElementNS(n,'svg');r.style.position='absolute',r.style.top=`${o.top-12}px`,r.style.left=`${o.left-12}px`,r.style.width='24px',r.style.height='24px',r.style.zIndex='9999',r.style.margin='0',r.style.pointerEvents='none',r.setAttribute('aria-hidden','true');const l=document.createElementNS(n,'circle');l.setAttribute('cx','12'),l.setAttribute('cy','12'),l.setAttribute('r','12');const a=document.createElementNS(n,'clipPath');a.setAttribute('id','clip'),a.appendChild(l.cloneNode()),r.appendChild(a),l.setAttribute('clip-path','url(#clip)'),e.getBoundingClientRect().width%3C24||e.getBoundingClientRect().height%3C24?l.setAttribute('fill','rgba(0,%200,%20255,%200.3)'):(l.setAttribute('fill','rgba(0,%20200,%200,%200.3)'),l.setAttribute('stroke','rgba(0,%20200,%200,%200.8)'),l.setAttribute('stroke-width','4')),r.appendChild(l),document.body.appendChild(r)});const%20r=[];s.forEach(function(e,t){s.slice(t+1).forEach(function(n){Math.sqrt(Math.pow(n.center.left-e.center.left,2)+Math.pow(n.center.top-e.center.top,2))%3C24&&(r.push(e.element),r.push(n.element))})});const%20l=[...new%20Set(r)];l.forEach(function(e){e.setAttribute('aria-description','overlap')}),alert(%60There%20are%20${l.length}%20overlapping%20controls.%60)})();">Target size</a>
+   </div>
+
+   <p>Once the bookmarklet is installed, visit a webpage and click the bookmarklet in your bookmark bar.</p>
+
+   <p>When you have run the check, a pop up will appear to tell you how many overlapping controls appear on the screen.</p>
+   <p>A visual 24 by 24 pixel circle will be shown from the centre of the bounding box of the control.</p>
+
+   <dl class="govuk-summary-list">
+      <div class="govuk-summary-list__row govuk-summary-list__row--no-actions">
+         <dt class="govuk-summary-list__key">
+      Blue circle
+    </dt>
+         <dd class="govuk-summary-list__value">
+      Indicates that the control is undersized, you then need to check if the boundary box circles intersect with another control
+    </dd>
+      </div>
+      <div class="govuk-summary-list__row govuk-summary-list__row--no-actions">
+         <dt class="govuk-summary-list__key">
+      Green circle
+    </dt>
+         <dd class="govuk-summary-list__value">
+      Shows controls that are at least 24 by 24 pixels and therefore pass
+    </dd>
+      </div>
+   </dl>
+
+   <h2 class="govuk-heading-l">Example of using the bookmarklet</h2>
+
+   <p>Below is an example of the bookmarklet being used on the Get into Teaching website.</p>
+
+   <h3 class="govuk-heading-m">Before</h3>
+
+   <img src="/assets/images/target-size-before.png" alt="Screenshot of get into teaching service showing a navigation bar with the links, Is teaching right for me? and How to become a teacher" class="screenshot govuk-!-margin-top-5 govuk-!-margin-bottom-5">
+   <p>
+      <a href="/assets/images/target-size-before.png" target="_blank">View larger image in a new tab</a>
+   </p>
+
+   <h3 class="govuk-heading-m">After</h3>
+
+   <img src="/assets/images/target-size-after.png" alt="Screenshot of get into teaching service showing a navigation bar with the links, Is teaching right for me? and How to become a teacher with a green circle on the links." class="screenshot govuk-!-margin-top-5 govuk-!-margin-bottom-5">
+   <p>
+      <a href="/assets/images/target-size-after.png" target="_blank">View larger image in a new tab</a>
+   </p>
+
+{% endblock %}

@@ -1,0 +1,41 @@
+{% extends "layouts/page_layout.html" %}
+
+{% set selectedNav = "Standards" %}
+{% set pageName = "Accessibility issues" %}
+{% set pageDescription = "Standard for the management and prioritisation of accessibility issues in products and services"%}
+{% set mainClasses = "govuk-!-padding-top-0" %}
+{% set created = "16 July 2024" %}
+{% set reviewed = "16 July 2024" %}
+{% set updated = "16 July 2024" %}
+{% set githubIssueID = "" %}
+{% set need = "This page exists to help people understand the DfE standard for managing accessibility issues." %}
+
+{% block content %}
+
+<div class="govuk-breadcrumbs">
+   <ol class="govuk-breadcrumbs__list">
+      <li class="govuk-breadcrumbs__list-item">
+         <a class="govuk-breadcrumbs__link" href="/">Home</a>
+      </li>
+      <li class="govuk-breadcrumbs__list-item">
+         <a class="govuk-breadcrumbs__link" href="/standards">Standards</a>
+      </li>
+      <li class="govuk-breadcrumbs__list-item">
+         {{pageName}}
+      </li>
+   </ol>
+</div>
+
+<h1 class="govuk-heading-xl  govuk-!-margin-top-5">{{pageName}}</h1>
+
+
+<p class="govuk-body">
+  This standard is currently being drafted and is not available online.
+</p>
+
+
+<p class="govuk-body">
+ Contact the <a href="/support">DesignOps</a> team for more information on this standard.
+</p>
+
+{% endblock %}
