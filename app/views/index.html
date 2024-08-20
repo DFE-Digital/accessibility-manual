@@ -7,36 +7,32 @@ the Department for Education."%}
 {% set mainClasses = "govuk-!-padding-bottom-0 govuk-!-padding-top-0" %}
 
 {% block content %}
-
-      <div class="dfe-width-container govuk-!-margin-top-9">
-        <div class="govuk-grid-row">
+   <section class="govuk-!-margin-top-9">
+      <div class="dfe-width-container">
+         <div class="govuk-grid-row">
             <div class="govuk-grid-column-full">
+               <div class="govuk-!-margin-top-3 govuk-!-margin-bottom-5">
+                  <div class="govuk-grid-row split-panel" style="background: #f3f2f1;">
+                     <div class="govuk-grid-column-one-half text-column">
+                        <strong class="govuk-tag govuk-tag--green">Everyone</strong>
+                        <h2 class="govuk-heading-l govuk-!-margin-top-3">Introduction to accessibility and inclusive design</h2>
+                        <p class="govuk-body-l">Training for everyone to understand the basics of accessibility and inclusive design.</p>
 
-                <section>
-                    <div class="govuk-!-margin-top-3 govuk-!-margin-bottom-5">
-                        <div class="govuk-grid-row split-panel" style="background: #f3f2f1;">
-                            <div class="govuk-grid-column-one-half text-column">
-                                <strong class="govuk-tag govuk-tag--green">Everyone</strong>
-                                <h2 class="govuk-heading-l govuk-!-margin-top-3">Introduction to accessibility and inclusive design</h2>
-                                <p class="govuk-body-l">Training for everyone to understand the basics of accessibility and inclusive design.</p>
-
-                                <p class="govuk-body">Learning time: 10 Minutes</p>
-                                <p class="govuk-!-margin-bottom-0">
-                                    <a href="/training/accessibility-inclusion">Start training</a>
-                                </p>
-                            </div>
-                            <div class="govuk-grid-column-one-half image-column">
-                                <div class="image-container"
+                        <p class="govuk-body">Learning time: 10 Minutes</p>
+                        <p class="govuk-!-margin-bottom-0">
+                           <a href="/training/accessibility-inclusion">Start training</a>
+                        </p>
+                     </div>
+                     <div class="govuk-grid-column-one-half image-column">
+                        <div class="image-container"
                      style="background-image: url('/assets/images/brown-sweater.jpg');"></div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-
+                     </div>
+                  </div>
+               </div>
             </div>
-        </div>
-    </div>
-
+         </div>
+      </div>
+   </section>
 
    <section style="background-color:#f0f4f5;" class="govuk-!-padding-top-8 govuk-!-padding-bottom-9 govuk-!-margin-top-9">
       <div class="govuk-width-container">
@@ -103,36 +99,34 @@ the Department for Education."%}
       </div>
    </section>
 
-   <section style="background: #ffffff" class="govuk-!-margin-top-0 govuk-!-padding-top-2 govuk-!-padding-bottom-4">
+   <section style="background: #ffffff" class="govuk-!-margin-top-0 govuk-!-padding-top-2 govuk-!-padding-bottom-0">
       <div class="govuk-width-container">
          <div class="govuk-grid-row">
-            <div class="govuk-grid-column-full how-many-card govuk-!-padding-top-9 govuk-!-padding-bottom-9">
+            <div class="govuk-grid-column-full how-many-card govuk-!-padding-top-9 govuk-!-padding-bottom-0">
                <h2 class="govuk-heading-xl">How many people</h2>
                <div class="govuk-grid-row">
                   <div class="govuk-grid-column-one-half govuk-!-padding-right-9 govuk-!-margin-bottom-9">
                      <p class="govuk-body-l">Find out about the types of disabilties, impairments, and conditions that affect people who
                      might use your service.</p>
-                     <p style="margin-bottom: 0px;" class="govuk-body-l">
-                        <a href="/project/how-many-people">Learn more about this tool</a>
-                     </p>
+                     <p class="govuk-body-l">Also understand the demographic breakdown of the teacher population in England, as well as digital inclusion of the general population.</p>
                   </div>
                   <div class="govuk-grid-column-one-half ">
                      <div class="border govuk-!-padding-7">
-                     <form action="/app/how-many-people" method="post">
-                        <div class="govuk-form-group govuk-!-margin-bottom-0">
-                           <label class="govuk-body-l" for="numberOfUsers">
+                        <form action="/app/how-many-people" method="post">
+                           <div class="govuk-form-group govuk-!-margin-bottom-0">
+                              <label class="govuk-body-l" for="numberOfUsers">
                            Estimated number of people
                         </label>
-                           <div class="inline-elements govuk-!-margin-top-3">
-                              <input class="govuk-input govuk-!-width-two-thirds" id="numberOfUsers" name="numberOfUsers"
+                              <div class="inline-elements govuk-!-margin-top-3">
+                                 <input class="govuk-input govuk-!-width-two-thirds" id="numberOfUsers" name="numberOfUsers"
                               type="text" style="margin-bottom: 4px;">
-                              <button type="submit" class="govuk-button" data-module="govuk-button"
+                                 <button type="submit" class="govuk-button" data-module="govuk-button"
                               style="margin-bottom: 4px;">
                               Get results
                            </button>
+                              </div>
                            </div>
-                        </div>
-                     </form>
+                        </form>
                      </div>
                   </div>
                </div>
@@ -141,8 +135,7 @@ the Department for Education."%}
       </div>
    </section>
 
-
-   <section style="background-color:#f0f4f5;" class="govuk-!-padding-top-8 govuk-!-padding-bottom-9 govuk-!-margin-top-9">
+   <section style="background-color:#f0f4f5;" class="govuk-!-padding-top-8 govuk-!-padding-bottom-9 govuk-!-margin-top-0">
       <div class="govuk-width-container">
 
          <div class="govuk-grid-row">
@@ -171,7 +164,7 @@ the Department for Education."%}
                      </div>
                   </div>
                   <div class="dfe-card">
-                     
+
                      <div class="dfe-card-container">
                         <h3 class="govuk-heading-m">
                            <a href="https://github.com/DFE-Digital/accessibility-manual"
@@ -183,7 +176,7 @@ the Department for Education."%}
                </div>
             </div>
          </div>
-      
+
       </div>
    </section>
 {% endblock %}
