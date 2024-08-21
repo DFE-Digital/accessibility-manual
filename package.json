@@ -2,11 +2,11 @@
   "name": "accessibility-manual",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
     "gulp": "gulp",
-    "watch": "gulp & nodemon index.js",
-    "start": "node index.js",
+    "watch": "gulp & nodemon app.js",
+    "start": "node app.js",
     "dev": "npm run watch"
   },
   "nodemonConfig": {
