@@ -12,32 +12,22 @@
 
 {% block content %}
 
-   <div class="govuk-breadcrumbs">
-      <ol class="govuk-breadcrumbs__list">
-         <li class="govuk-breadcrumbs__list-item">
-            <a class="govuk-breadcrumbs__link" href="/">Home</a>
-         </li>
-         <li class="govuk-breadcrumbs__list-item">
-             <a class="govuk-breadcrumbs__link" href="/knowledge-hub">Knowledge hub</a>
-         </li>
-         <li class="govuk-breadcrumbs__list-item">
-            {{pageName}}
-         </li>
-      </ol>
-   </div>
+  
 
-   <h1 class="govuk-heading-xl  govuk-!-margin-top-5">{{pageName}}</h1>
+   <h1 class="govuk-heading-xl">{{pageName}}</h1>
 
    <h2 class="govuk-heading-l">Installation</h2>
 
-   <p class="govuk-body">{{pageName}} is a browser extension.</p> 
-   
+   <p class="govuk-body">{{pageName}} is a browser extension.</p>
+
    <p class="govuk-body">Use the following links to install {{pageName}} for your browser:</p>
 
    <ul class="govuk-list govuk-list--bullet">
-      <li ><a href="https://chrome.google.com/webstore/detail/accessibility-insights-fo/pbjjkligggfmakdaogkfomddhfmpjeni" target="_blank">{{pageName}} for Chrome</a>
+      <li >
+         <a href="https://chrome.google.com/webstore/detail/accessibility-insights-fo/pbjjkligggfmakdaogkfomddhfmpjeni" target="_blank">{{pageName}} for Chrome</a>
       </li>
-      <li ><a href="https://microsoftedge.microsoft.com/addons/detail/ghbhpcookfemncgoinjblecnilppimih" target="_blank">{{pageName}} for Edge</a>
+      <li >
+         <a href="https://microsoftedge.microsoft.com/addons/detail/ghbhpcookfemncgoinjblecnilppimih" target="_blank">{{pageName}} for Edge</a>
       </li>
    </ul>
 
@@ -103,16 +93,14 @@
       <li>Manual - the tool provides instructions for identifying and evaluating instances</li>
    </ul>
 
-      <p>Using the assessment tool, you can save your audit and retrieve it later on. You can also generate a report showing issues and tests completed.</p>
+   <p>Using the assessment tool, you can save your audit and retrieve it later on. You can also generate a report showing issues and tests completed.</p>
 
-      <p>The example shows the summary of a full assessment and provides information about which checks passed, failed, or are yet to be done.</p>
+   <p>The example shows the summary of a full assessment and provides information about which checks passed, failed, or are yet to be done.</p>
 
    <img src="/assets/images/acc_ins_full.jpeg" alt="The overview of the completed and outstanding tests carried out so far, 4% is completed with 96% remaining." class="screenshot govuk-!-margin-top-5 govuk-!-margin-bottom-5">
    <p>
       <a href="/assets/images/acc_ins_full.jpeg" target="_blank">View larger image in a new tab</a>
    </p>
-
-
 
    <h3 class="govuk-heading-m">Ad-hoc tools</h3>
 
@@ -127,6 +115,6 @@
       <a href="/assets/images/acc_ins_quick.png" target="_blank">View larger image in a new tab</a>
    </p>
 
-{%include 'partials/_tools_next.html'%}
+   {%include 'partials/_tools_next.html'%}
 
 {% endblock %}

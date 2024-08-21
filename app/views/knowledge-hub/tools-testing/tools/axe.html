@@ -12,26 +12,14 @@
 
 {% block content %}
 
-   <div class="govuk-breadcrumbs">
-      <ol class="govuk-breadcrumbs__list">
-         <li class="govuk-breadcrumbs__list-item">
-            <a class="govuk-breadcrumbs__link" href="/">Home</a>
-         </li>
-         <li class="govuk-breadcrumbs__list-item">
-             <a class="govuk-breadcrumbs__link" href="/knowledge-hub">Knowledge hub</a>
-         </li>
-         <li class="govuk-breadcrumbs__list-item">
-            {{pageName}}
-         </li>
-      </ol>
-   </div>
+  
 
-   <h1 class="govuk-heading-xl  govuk-!-margin-top-5">{{pageName}}</h1>
+   <h1 class="govuk-heading-xl">{{pageName}}</h1>
 
    <h2 class="govuk-heading-l">Installation</h2>
 
-   <p class="govuk-body">{{pageName}} is a browser extension.</p> 
-   
+   <p class="govuk-body">{{pageName}} is a browser extension.</p>
+
    <p class="govuk-body">Use the following links to install {{pageName}} for your browser:</p>
 
    <ul class="govuk-list govuk-list--bullet">
@@ -77,6 +65,6 @@
 
    <p>These issues are for you to consider in the context of your own product or website.</p>
 
-{%include 'partials/_tools_next.html'%}
+   {%include 'partials/_tools_next.html'%}
 
 {% endblock %}

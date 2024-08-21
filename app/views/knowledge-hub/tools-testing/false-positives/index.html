@@ -12,94 +12,81 @@
 
 {% block content %}
 
-    <div class="govuk-breadcrumbs">
-        <ol class="govuk-breadcrumbs__list">
-            <li class="govuk-breadcrumbs__list-item">
-                <a class="govuk-breadcrumbs__link" href="/">Home</a>
-            </li>
-            <li class="govuk-breadcrumbs__list-item">
-                <a class="govuk-breadcrumbs__link" href="/knowledge-hub">Knowledge hub</a>
-            </li>
-            <li class="govuk-breadcrumbs__list-item">
-                {{pageName}}
-            </li>
-        </ol>
-    </div>
 
-    <h1 class="govuk-heading-xl  govuk-!-margin-top-5">{{pageName}}</h1>
+   <h1 class="govuk-heading-xl">{{pageName}}</h1>
 
-    <p class="govuk-body">When using <a href="/knowledge-hub/tools-testing">automated tools</a>, it’s important to validate the results to avoid identifying false positives and ensure that no issues have been missed, thereby preventing false assurances.</p>
+   <p class="govuk-body">When using <a href="/knowledge-hub/tools-testing">automated tools</a>, it’s important to validate the results to avoid identifying false positives and ensure that no issues have been missed, thereby preventing false assurances.</p>
 
-    <h2 class="govuk-heading-l">False positives</h2>
+   <h2 class="govuk-heading-l">False positives</h2>
 
-    <p class="govuk-body">False positives are issues that are flagged by automated tools as accessibility issues, but are not actually issues when reviewed manually.</p>
+   <p class="govuk-body">False positives are issues that are flagged by automated tools as accessibility issues, but are not actually issues when reviewed manually.</p>
 
-    <p>Automated tools do not understand context for example:</p>
+   <p>Automated tools do not understand context for example:</p>
 
-    <ul class="govuk-list govuk-list--bullet">
-        <li>they will not understand the content of an image</li>
-        <li>the words in a link being descriptive or generic</li>
-        <li>understanding the content and context of an error message</li>
-    </ul>
+   <ul class="govuk-list govuk-list--bullet">
+      <li>they will not understand the content of an image</li>
+      <li>the words in a link being descriptive or generic</li>
+      <li>understanding the content and context of an error message</li>
+   </ul>
 
-    <div class="govuk-inset-text">
-        <p class="govuk-body">
-            <span class="govuk-!-font-weight-bold">Contrast in images</span><br /><br />automated checks may raise issues related to <a href="https://www.w3.org/WAI/WCAG21/Understanding/contrast-minimum.html" rel="noopener noreferrer" target="_blank">contrast minimum <span class="govuk-visually-hidden">(opens in new tab)</span></a> even for content that is exempt, such as logos and branding.
+   <div class="govuk-inset-text">
+      <p class="govuk-body">
+         <span class="govuk-!-font-weight-bold">Contrast in images</span><br /><br />automated checks may raise issues related to <a href="https://www.w3.org/WAI/WCAG21/Understanding/contrast-minimum.html" rel="noopener noreferrer" target="_blank">contrast minimum <span class="govuk-visually-hidden">(opens in new tab)</span></a> even for content that is exempt, such as logos and branding.
                     </p>
-    </div>
+   </div>
 
-    <p>Logos, which might not always have sufficiently contrasting foreground and background colours are not required to meet these criteria. Therefore, this is considered a false positive.</p>
+   <p>Logos, which might not always have sufficiently contrasting foreground and background colours are not required to meet these criteria. Therefore, this is considered a false positive.</p>
 
-    <h2 class="govuk-heading-l">False assurance</h2>
+   <h2 class="govuk-heading-l">False assurance</h2>
 
-    <p class="govuk-body">Automated tools may also give a false sense of compliance, this is not only because the tools only identify around 30 to 40% of issues, but also because of how the tools scan code to decide if accessibility issues are present.</p>
+   <p class="govuk-body">Automated tools may also give a false sense of compliance, this is not only because the tools only identify around 30 to 40% of issues, but also because of how the tools scan code to decide if accessibility issues are present.</p>
 
-    <div class="govuk-inset-text">
-        <p class="govuk-body">
-            <span class="govuk-!-font-weight-bold">For example</span><br /><br />When scanning images for alt text, the automated tools are looking for a yes, or no answer, does the image have alt text or not.
+   <div class="govuk-inset-text">
+      <p class="govuk-body">
+         <span class="govuk-!-font-weight-bold">For example</span><br /><br />When scanning images for alt text, the automated tools are looking for a yes, or no answer, does the image have alt text or not.
                     </p>
-    </div>
+   </div>
 
-    <p>This can provide false assurance because if an image contains alt text it would pass this test, but the alt text may not be descriptive. </p>
+   <p>This can provide false assurance because if an image contains alt text it would pass this test, but the alt text may not be descriptive. </p>
 
-    <p>There is an exception to when alt text can be omitted, such as when an image is purely decorative and does not add any context to the page.</p>
-    <p>In this case, add an empty alt tag as follows <code>alt=""</code>.</p>
+   <p>There is an exception to when alt text can be omitted, such as when an image is purely decorative and does not add any context to the page.</p>
+   <p>In this case, add an empty alt tag as follows <code>alt=""</code>.</p>
 
-    <div class="dfe-manual-callout">
-        <div class="dfe-manual-callout--header">
-            <img src="/assets/images/new-window.png" alt="" />
-            <h3 class="govuk-heading-m">Follow the alt decision tree</h3>
-        </div>
+   <div class="dfe-manual-callout">
+      <div class="dfe-manual-callout--header">
+         <img src="/assets/images/new-window.png" alt="" />
+         <h3 class="govuk-heading-m">Follow the alt decision tree</h3>
+      </div>
 
-        <div class="dfe-manual-callout--content">
-            <p>Use the alt decision tree if you're unsure whether you need to use alt text. <a
+      <div class="dfe-manual-callout--content">
+         <p>Use the alt decision tree if you're unsure whether you need to use alt text. <a
                     href=" https://www.w3.org/WAI/tutorials/images/decision-tree/"
                     rel="noopener noreferrer" target="_blank">guidance&nbsp;on&nbsp;W3C <span class="govuk-visually-hidden">link opens in a new tab</span></a>.
             </p>
-        </div>
-    </div>
+      </div>
+   </div>
 
-    <p>If an image of a classroom had an alt tag of alt=”car” or alt=”image123”, this would still pass the automated test, whereas it should fail because of the lack of context that this provides to users. </p>
+   <p>If an image of a classroom had an alt tag of alt=”car” or alt=”image123”, this would still pass the automated test, whereas it should fail because of the lack of context that this provides to users. </p>
 
-    <div class="govuk-grid-row dfe-flex">
-        <div class="govuk-grid-column-one-half dfe-flex-item">
-            <div class="dfe-panel-do">
-                <h3 class="govuk-heading-m">Do</h3>
-                <p class="govuk-!-margin-bottom-5">Ensure alt text accruately describes the image.</p>
-                <img src="/assets/images/classroom.jpg" style="width:100%;"
+   <div class="govuk-grid-row dfe-flex">
+      <div class="govuk-grid-column-one-half dfe-flex-item">
+         <div class="dfe-panel-do">
+            <h3 class="govuk-heading-m">Do</h3>
+            <p class="govuk-!-margin-bottom-5">Ensure alt text accruately describes the image.</p>
+            <img src="/assets/images/classroom.jpg" style="width:100%;"
                                     class="govuk-!-margin-bottom-5" alt="A teacher standing in front of a class of children who are sitting at desks.">
-                <code  style="background: #ffffff; padding: 10px;"> alt="A teacher standing in front of a class of children who are sitting at desks."</code>
-            </div>
-        </div>
-        <div class="govuk-grid-column-one-half dfe-flex-item">
-            <div class="dfe-panel-dont">
-                <h3 class="govuk-heading-m">Don't</h3>
-                <p class="govuk-!-margin-bottom-5">Use the filename or misleading descriptions. </p>
-                <img src="/assets/images/classroom.jpg" style="width:100%;"
+            <code  style="background: #ffffff; padding: 10px;"> alt="A teacher standing in front of a class of children who are sitting at desks."</code>
+         </div>
+      </div>
+      <div class="govuk-grid-column-one-half dfe-flex-item">
+         <div class="dfe-panel-dont">
+            <h3 class="govuk-heading-m">Don't</h3>
+            <p class="govuk-!-margin-bottom-5">Use the filename or misleading descriptions. </p>
+            <img src="/assets/images/classroom.jpg" style="width:100%;"
                                     class="govuk-!-margin-bottom-5" alt="">
-                <code style="background: #ffffff; padding: 10px;"> alt="image123"</code>
-            </div>
-        </div>
-    </div>
+            <code style="background: #ffffff; padding: 10px;"> alt="image123"</code>
+         </div>
+      </div>
+   </div>
 
 {% endblock %}

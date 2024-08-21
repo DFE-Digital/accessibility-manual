@@ -12,21 +12,8 @@
 
 {% block content %}
 
-   <div class="govuk-breadcrumbs">
-      <ol class="govuk-breadcrumbs__list">
-         <li class="govuk-breadcrumbs__list-item">
-            <a class="govuk-breadcrumbs__link" href="/">Home</a>
-         </li>
-         <li class="govuk-breadcrumbs__list-item">
-            <a class="govuk-breadcrumbs__link" href="/knowledge-hub">Knowledge hub</a>
-         </li>
-         <li class="govuk-breadcrumbs__list-item">
-            {{pageName}}
-         </li>
-      </ol>
-   </div>
 
-   <h1 class="govuk-heading-xl  govuk-!-margin-top-5">{{pageName}}</h1>
+   <h1 class="govuk-heading-xl">{{pageName}}</h1>
 
    <p>Bookmarklets are added to your browser bookmarks (sometimes called the favourites or bookmark bar). They are small pieces of JavaScript that can be run on a webpage to perform a specific task. </p>
 
@@ -57,26 +44,17 @@
          </tr>
       </thead>
       <tbody class="govuk-table__body">
+       
+
          <tr class="govuk-table__row">
             <th class="govuk-table__cell govuk-table__header">
-               <a href="/knowledge-hub/tools-testing/bookmarklets/target-size">Target size</a>
+               <a href="/tools-testing/bookmarklets/blur">Blur</a>
             </th>
             <td class="govuk-table__cell">
-               <p>Checks that the target size of interactive elements is at least 24px by 24px</p>
+               <p>Simulates blurred vision when interacting with a webpage</p>
             </td>
             <td class="govuk-table__cell">
-               <p>WCAG 2.5.8 Target Size (Minimum) (Level AA)</p>
-            </td>
-         </tr>
-         <tr class="govuk-table__row">
-            <th class="govuk-table__cell govuk-table__header">
-               <a href="/knowledge-hub/tools-testing/bookmarklets/text-spacing">Text spacing</a>
-            </th>
-            <td class="govuk-table__cell">
-               <p>Resizes text to check can be made larger without losing any functionality</p>
-            </td>
-            <td class="govuk-table__cell">
-               <p>WCAG 1.4.4 Resize Text (Level AA)</p>
+               <p>Various relating to contrast minimum, resize text, images of text and text spacing</p>
             </td>
          </tr>
          <tr class="govuk-table__row">
@@ -89,16 +67,25 @@
             <td class="govuk-table__cell">
                <p>WCAG 1.3.1 Info and Relationships (Level A)</p>
             </td>
-         </tr>
-         <tr class="govuk-table__row">
+         </tr>  <tr class="govuk-table__row">
             <th class="govuk-table__cell govuk-table__header">
-               <a href="/knowledge-hub/tools-testing/bookmarklets/blur">Blur</a>
+               <a href="/tools-testing/bookmarklets/target-size">Target size</a>
             </th>
             <td class="govuk-table__cell">
-               <p>Simulates blurred vision when interacting with a webpage</p>
+               <p>Checks that the target size of interactive elements is at least 24px by 24px</p>
             </td>
             <td class="govuk-table__cell">
-               <p>Various relating to contrast minimum, resize text, images of text and text spacing</p>
+               <p>WCAG 2.5.8 Target Size (Minimum) (Level AA)</p>
+            </td>
+         </tr>         <tr class="govuk-table__row">
+            <th class="govuk-table__cell govuk-table__header">
+               <a href="/tools-testing/bookmarklets/text-spacing">Text spacing</a>
+            </th>
+            <td class="govuk-table__cell">
+               <p>Resizes text to check can be made larger without losing any functionality</p>
+            </td>
+            <td class="govuk-table__cell">
+               <p>WCAG 1.4.4 Resize Text (Level AA)</p>
             </td>
          </tr>
       </tbody>

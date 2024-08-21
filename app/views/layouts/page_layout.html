@@ -21,7 +21,6 @@
       {% block head %}{% endblock %}
     </head>
 
-
     <script>
       document.addEventListener('DOMContentLoaded', function () {
         // Add the 'js-enabled' class to the <html> element
@@ -88,18 +87,7 @@
 
       {% block main %}
         <main class="govuk-main-wrapper govuk-!-padding-0" id="main-content" role="main">
-          <div class="govuk-width-container">
-            <div class="govuk-phase-banner">
-              <p class="govuk-phase-banner__content">
-                <strong class="govuk-tag govuk-phase-banner__content__tag">
-      Alpha
-    </strong>
-                <span class="govuk-phase-banner__text">
-      This is a new service. Help us improve it and <a class="govuk-link" href="mailto:design.ops@education.gov.uk">give your feedback by email</a>.
-    </span>
-              </p>
-            </div>
-          </div>
+          {% include 'partials/_phase.html' %}
           <div class="govuk-width-container">
             <div class="govuk-grid-row">
               <div class="govuk-grid-column-one-quarter govuk-!-padding-top-7 sticky">
@@ -143,30 +131,30 @@
                       </dl>
                     </div>
                   </details>
-        
+
+                </div>
               </div>
-            </div>
-          </main>
-        {% endblock %}
+            </main>
+          {% endblock %}
 
-        {% block footer %}
-          {% include 'layouts/_footer.html'%}
-        {% endblock %}
+          {% block footer %}
+            {% include 'layouts/_footer.html'%}
+          {% endblock %}
 
-        <script src="/assets/js/all.min.js"></script>
-        <script src="/assets/js/cookies.min.js"></script>
-        <script src="/assets/js/feedback.min.js"></script>
-        <script src="/assets/js/dfefrontend.min.js"></script>
-        <script>
-          hljs.highlightAll();
-        </script>
-        {% block scripts %}{% endblock %}
-        <script type="module" src="/assets/js/govuk-frontend.min.min.js"></script>
-        <script type="module">
-          import {initAll} from '/assets/js/govuk-frontend.min.min.js';
-          initAll();
-        </script>
+          <script src="/assets/js/all.min.js"></script>
+          <script src="/assets/js/cookies.min.js"></script>
+          <script src="/assets/js/feedback.min.js"></script>
+          <script src="/assets/js/dfefrontend.min.js"></script>
+          <script>
+            hljs.highlightAll();
+          </script>
+          {% block scripts %}{% endblock %}
+          <script type="module" src="/assets/js/govuk-frontend.min.min.js"></script>
+          <script type="module">
+            import {initAll} from '/assets/js/govuk-frontend.min.min.js';
+            initAll();
+          </script>
 
-      </body>
+        </body>
 
-    </html>
+      </html>

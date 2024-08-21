@@ -12,21 +12,9 @@
 
 {% block content %}
 
-   <div class="govuk-breadcrumbs">
-      <ol class="govuk-breadcrumbs__list">
-         <li class="govuk-breadcrumbs__list-item">
-            <a class="govuk-breadcrumbs__link" href="/">Home</a>
-         </li>
-         <li class="govuk-breadcrumbs__list-item">
-             <a class="govuk-breadcrumbs__link" href="/knowledge-hub">Knowledge hub</a>
-         </li>
-         <li class="govuk-breadcrumbs__list-item">
-            {{pageName}}
-         </li>
-      </ol>
-   </div>
 
-   <h1 class="govuk-heading-xl  govuk-!-margin-top-5">{{pageName}}</h1>
+
+   <h1 class="govuk-heading-xl">{{pageName}}</h1>
 
    <div class="govuk-inset-text">
       <p>Drag the following link to your bookmark bar to install the bookmarklet.</p>
@@ -45,8 +33,8 @@
       <li>word spacing to at least 0.16 times the font size</li>
    </ul>
 
-   <p>These settings can make content on the screen much easier to read for some users.</p> 
-   
+   <p>These settings can make content on the screen much easier to read for some users.</p>
+
    <p>Some people with dyslexia and other cognitive disabilities often find it easier to read and understand content that has been given spacing.</p>
 
    <h2 class="govuk-heading-l">Example of using the bookmarklet</h2>
@@ -69,12 +57,12 @@
 
    <h3 class="govuk-heading-m">Fixing text spacing issues</h3>
 
-   <p>Sometimes when text spacing properties are applied to a webpage content can often become lost or functionality can be lost. For example, if placeholder text has been used within a form, this can often become lost or obscured due to the increased text space.</p>  
+   <p>Sometimes when text spacing properties are applied to a webpage content can often become lost or functionality can be lost. For example, if placeholder text has been used within a form, this can often become lost or obscured due to the increased text space.</p>
 
-   <p>To fix this, always use a visible label rather than placeholder text.</p>  
+   <p>To fix this, always use a visible label rather than placeholder text.</p>
 
    <p>Another example is when text spacing is applied and text containers do not expand with the content, which means that text overflows the container.</p>
-   
-   <p>This can be because the height of the div containing the text is set using pixels (px), so it does not expand with the content. Setting div height in relation to font height using 'em,' or not setting div height at all, would prevent the text from overflowing the div.</p> 
+
+   <p>This can be because the height of the div containing the text is set using pixels (px), so it does not expand with the content. Setting div height in relation to font height using 'em,' or not setting div height at all, would prevent the text from overflowing the div.</p>
 
 {% endblock %}

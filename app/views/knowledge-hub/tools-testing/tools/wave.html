@@ -12,26 +12,14 @@
 
 {% block content %}
 
-   <div class="govuk-breadcrumbs">
-      <ol class="govuk-breadcrumbs__list">
-         <li class="govuk-breadcrumbs__list-item">
-            <a class="govuk-breadcrumbs__link" href="/">Home</a>
-         </li>
-         <li class="govuk-breadcrumbs__list-item">
-             <a class="govuk-breadcrumbs__link" href="/knowledge-hub">Knowledge hub</a>
-         </li>
-         <li class="govuk-breadcrumbs__list-item">
-            {{pageName}}
-         </li>
-      </ol>
-   </div>
 
-   <h1 class="govuk-heading-xl  govuk-!-margin-top-5">{{pageName}}</h1>
+
+   <h1 class="govuk-heading-xl">{{pageName}}</h1>
 
    <h2 class="govuk-heading-l">Installation</h2>
 
-   <p class="govuk-body">{{pageName}} is a browser extension.</p> 
-   
+   <p class="govuk-body">{{pageName}} is a browser extension.</p>
+
    <p>Use the following links to install {{pageName}} for your browser:</p>
 
    <ul class="govuk-list govuk-list--bullet">
@@ -50,7 +38,7 @@
    <p>Once installed, WAVE can be launched from your extensions bar. It will appear as a circle with a W in the centre.</p>
 
    <p>When selected, WAVE will open up to the side of your browser window and automatically starts the checks.</p>
-   
+
    <p>You will need to select the details of the checks you want to appear visually on the screen. Within 'view details', select only alerts and errors to be flagged.</p>
 
    <h2 class="govuk-heading-l">What results could look like</h2>
@@ -77,7 +65,7 @@
       </div>
    </div>
 
-{%include 'partials/_tools_next.html'%}
+   {%include 'partials/_tools_next.html'%}
 
    <style>
       img {

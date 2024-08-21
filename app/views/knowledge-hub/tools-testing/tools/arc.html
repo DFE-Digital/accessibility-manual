@@ -12,26 +12,14 @@
 
 {% block content %}
 
-   <div class="govuk-breadcrumbs">
-      <ol class="govuk-breadcrumbs__list">
-         <li class="govuk-breadcrumbs__list-item">
-            <a class="govuk-breadcrumbs__link" href="/">Home</a>
-         </li>
-         <li class="govuk-breadcrumbs__list-item">
-            <a class="govuk-breadcrumbs__link" href="/knowledge-hub">Knowledge hub</a>
-         </li>
-         <li class="govuk-breadcrumbs__list-item">
-            {{pageName}}
-         </li>
-      </ol>
-   </div>
+ 
 
-   <h1 class="govuk-heading-xl  govuk-!-margin-top-5">{{pageName}}</h1>
+   <h1 class="govuk-heading-xl">{{pageName}}</h1>
 
    <h2 class="govuk-heading-l">Installation</h2>
 
-   <p class="govuk-body">ARC Toolkit is a browser extension.</p> 
-   
+   <p class="govuk-body">ARC Toolkit is a browser extension.</p>
+
    <p class="govuk-body">Use the following links to install ARC for your browser:</p>
 
    <ul class="govuk-list govuk-list--bullet">
@@ -75,6 +63,6 @@
    <p>Issues labelled best practice are not necessarily accessibility failures but are things you should investigate. This will improve the general user experience for people with disabilities.</p>
    <img src="/assets/images/arc-results.png" alt="Screenshot showing results of the ARC Toolkit. With a list of issues classified by errors, alerts and best practice." class="screenshot govuk-!-margin-top-5 govuk-!-margin-bottom-5">
 
-{%include 'partials/_tools_next.html'%}
+   {%include 'partials/_tools_next.html'%}
 
 {% endblock %}

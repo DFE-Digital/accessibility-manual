@@ -1,0 +1,38 @@
+{% extends "layouts/page_layout.html" %}
+
+{% set selectedNav = "Audits and statements" %}
+{% set pageName = "After an audit" %}
+{% set pageDescription = "What happens after you've had an accessibility audit."%}
+{% set created = "6 August 2024" %}
+{% set reviewed = "6 August 2024" %}
+{% set updated = "6 August 2024" %}
+{% set githubIssueID = "34" %}
+{% set need = "This page exists to help people understand the need, and how to get an accessibility audit, and what to do with the results." %}
+
+{% block sidenav %}
+    {% include "layouts/_newnav.html" %}
+{% endblock %}
+
+{% block content %}
+
+
+    <h1 class="govuk-heading-xl">{{pageName}}</h1>
+
+
+    <p>You will receive a report which includes accessibility and best practice issues that may affect users with disabilities. Your report will record each issue against the WCAG criteria which it fails against, provide an overview of the issue and how it may affect a user. It will also include a potential way to fix the issue. Some audit providers will prioritise issues for you.</p>
+
+    <h2 class="govuk-heading-l">Actions for the team after the audit</h2>
+    <ol class="govuk-list govuk-list--number govuk-!-padding-left-0">
+        <li>Review the audit as a team.</li>
+        <li>Prioritise any issues.</li>
+        <li>Log issues so you can keep track of them, for example in a spreadsheet.</li>
+        <li>Start to fix issues.</li>
+        <li>Update the log as each issue is fixed.</li>
+        <li>Request a retest for accessibility.</li>
+        <li>Add any unresolved issues to your accessibility statement.</li>
+    </ol>
+
+    <h2 class="govuk-heading-l">Before your service goes live</h2>
+    <p>Most of your accessibility issues should be resolved before users access your service. Any high-impact issues should have been fixed and if any low-impact issues remain, you must provide a timeline in the statement for when they will be resolved.</p>
+
+{% endblock %}
