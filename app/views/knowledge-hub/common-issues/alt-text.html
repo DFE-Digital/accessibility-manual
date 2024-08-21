@@ -12,82 +12,68 @@
 
 {% block content %}
 
-    <div class="govuk-breadcrumbs">
-        <ol class="govuk-breadcrumbs__list">
-            <li class="govuk-breadcrumbs__list-item">
-                <a class="govuk-breadcrumbs__link" href="/">Home</a>
-            </li>
-            <li class="govuk-breadcrumbs__list-item">
-                <a class="govuk-breadcrumbs__link" href="/knowledge-hub">Knowledge hub</a>
-            </li>
-            <li class="govuk-breadcrumbs__list-item">
-                {{pageName}}
-            </li>
-        </ol>
-    </div>
+   <h1 class="govuk-heading-xl">{{pageName}}</h1>
 
-    <h1 class="govuk-heading-xl  govuk-!-margin-top-5">{{pageName}}</h1>
+   <p>People with a sight impairment or are blind rely on good alternative descriptions to understand none-text content.</p>
+   <p>Where images provide information or context to content, they should be given alternative descriptions which describe or provide the same information as a user would receive visually.</p>
 
-    <p>People with a sight impairment or are blind rely on good alternative descriptions to understand none-text content.</p>
-    <p>Where images provide information or context to content, they should be given alternative descriptions which describe or provide the same information as a user would receive visually.</p>
+   <p>Where images are more complex such as graphs, charts or maps, a longer description is required.</p>
+   <p>In these cases, two descriptions should be provided, a short description which explains what the image is, and a longer description which gives more information on the content of the image. </p>
 
-    <p>Where images are more complex such as graphs, charts or maps, a longer description is required.</p>
-    <p>In these cases, two descriptions should be provided, a short description which explains what the image is, and a longer description which gives more information on the content of the image. </p>
+   <p>Not all images need a description. If the image is purely decorative, it does not require alternative text. Ensure you use alt=”” so that screen readers will skip these images.</p>
 
-    <p>Not all images need a description. If the image is purely decorative, it does not require alternative text. Ensure you use alt=”” so that screen readers will skip these images.</p>
+   <h2 class="govuk-heading-l">Examples of the issues we find</h2>
 
-    <h2 class="govuk-heading-l">Examples of the issues we find</h2>
+   <p>Below are some examples of common issues we find concerning images and how to avoid them.</p>
 
-    <p>Below are some examples of common issues we find concerning images and how to avoid them.</p>
+   <h3 class="govuk-heading-m">Wrong alt text</h3>
 
-    <h3 class="govuk-heading-m">Wrong alt text</h3>
-
-    <div class="govuk-grid-row dfe-flex">
-        <div class="govuk-grid-column-one-half dfe-flex-item">
-            <div class="dfe-panel-do">
-                <h3 class="govuk-heading-m">Do</h3>
-                <p class="govuk-!-margin-bottom-5">Ensure alt text accruately describes the image.</p>
-                <img src="/assets/images/classroom.jpg" style="width:100%;"
+   <div class="govuk-grid-row dfe-flex">
+      <div class="govuk-grid-column-one-half dfe-flex-item">
+         <div class="dfe-panel-do">
+            <h3 class="govuk-heading-m">Do</h3>
+            <p class="govuk-!-margin-bottom-5">Ensure alt text accruately describes the image.</p>
+            <img src="/assets/images/classroom.jpg" style="width:100%;"
                                     class="govuk-!-margin-bottom-5" alt="A teacher standing in front of a class of children who are sitting at desks.">
-                <code  style="background: #ffffff; padding: 10px;"> alt="A teacher standing in front of a class of children who are sitting at desks."</code>
-            </div>
-        </div>
-        <div class="govuk-grid-column-one-half dfe-flex-item">
-            <div class="dfe-panel-dont">
-                <h3 class="govuk-heading-m">Don't</h3>
-                <p class="govuk-!-margin-bottom-5">Use the filename or misleading descriptions. </p>
-                <img src="/assets/images/classroom.jpg" style="width:100%;"
+            <code  style="background: #ffffff; padding: 10px;"> alt="A teacher standing in front of a class of children who are sitting at desks."</code>
+         </div>
+      </div>
+      <div class="govuk-grid-column-one-half dfe-flex-item">
+         <div class="dfe-panel-dont">
+            <h3 class="govuk-heading-m">Don't</h3>
+            <p class="govuk-!-margin-bottom-5">Use the filename or misleading descriptions. </p>
+            <img src="/assets/images/classroom.jpg" style="width:100%;"
                                     class="govuk-!-margin-bottom-5" alt="">
-                <code style="background: #ffffff; padding: 10px;"> alt="image123"</code>
-            </div>
-        </div>
-    </div>
+            <code style="background: #ffffff; padding: 10px;"> alt="image123"</code>
+         </div>
+      </div>
+   </div>
 
-    <h3 class="govuk-heading-m">Charts</h3>
+   <h3 class="govuk-heading-m">Charts</h3>
 
-    <p>It’s also important to ensure that colour alone has not been used to provide information or descriptions. For users with colour deficiencies or colour blindness, this content can often not be understood. </p>
-<p>
+   <p>It’s also important to ensure that colour alone has not been used to provide information or descriptions. For users with colour deficiencies or colour blindness, this content can often not be understood. </p>
+   <p>
 Provide an alternative such as pattern difference or multi-shade colours. Or also provide direct labelling within the chart.</p>
 </p>
 
 <div class="govuk-grid-row dfe-flex">
-<div class="govuk-grid-column-one-half dfe-flex-item">
-    <div class="dfe-panel-do">
-        <h3 class="govuk-heading-s">Do</h3>
-        <p class="govuk-!-margin-bottom-5">Label charts with informmation and use a range of colours.</p>
-        <img src="/assets/images/charts-do.png" style="width:100%;" class="govuk-!-margin-bottom-5"
+   <div class="govuk-grid-column-one-half dfe-flex-item">
+      <div class="dfe-panel-do">
+         <h3 class="govuk-heading-s">Do</h3>
+         <p class="govuk-!-margin-bottom-5">Label charts with informmation and use a range of colours.</p>
+         <img src="/assets/images/charts-do.png" style="width:100%;" class="govuk-!-margin-bottom-5"
                 alt="Example of a circle of lines which spin around and code for aria region.">
 
-    </div>
-</div>
-<div class="govuk-grid-column-one-half dfe-flex-item">
-    <div class="dfe-panel-dont">
-        <h3 class="govuk-heading-s">Don't</h3>
-        <p class="govuk-!-margin-bottom-5">Don't use colour alone to represent data or a label for a chart.</p>
-        <img src="/assets/images/charts-dont.png" style="width:100%;" class="govuk-!-margin-bottom-5"
+      </div>
+   </div>
+   <div class="govuk-grid-column-one-half dfe-flex-item">
+      <div class="dfe-panel-dont">
+         <h3 class="govuk-heading-s">Don't</h3>
+         <p class="govuk-!-margin-bottom-5">Don't use colour alone to represent data or a label for a chart.</p>
+         <img src="/assets/images/charts-dont.png" style="width:100%;" class="govuk-!-margin-bottom-5"
                   alt="Example of a circle of lines which spin around and no code to support aria live region.">
-    </div>
-</div>
+      </div>
+   </div>
 </div>
 
 {% endblock %}

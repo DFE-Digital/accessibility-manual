@@ -12,21 +12,9 @@
 
 {% block content %}
 
-   <div class="govuk-breadcrumbs">
-      <ol class="govuk-breadcrumbs__list">
-         <li class="govuk-breadcrumbs__list-item">
-            <a class="govuk-breadcrumbs__link" href="/">Home</a>
-         </li>
-         <li class="govuk-breadcrumbs__list-item">
-             <a class="govuk-breadcrumbs__link" href="/knowledge-hub">Knowledge hub</a>
-         </li>
-         <li class="govuk-breadcrumbs__list-item">
-            {{pageName}}
-         </li>
-      </ol>
-   </div>
+ 
 
-   <h1 class="govuk-heading-xl  govuk-!-margin-top-5">{{pageName}}</h1>
+   <h1 class="govuk-heading-xl">{{pageName}}</h1>
 
    <div class="govuk-inset-text">
       <p>Drag the following link to your bookmark bar to install the bookmarklet.</p>
@@ -75,18 +63,17 @@
       <a href="/assets/images/target-size-after.png" target="_blank">View larger image in a new tab</a>
    </p>
 
+   <h2 class="govuk-heading-l">Fixing target size issues</h2>
 
- <h2 class="govuk-heading-l">Fixing target size issues</h2>
+   <p>When you run the target size tool, you may see that some elements within a product or webpage are undersized, and the blue bounding circle crosses into other elements.</p>
 
- <p>When you run the target size tool, you may see that some elements within a product or webpage are undersized, and the blue bounding circle crosses into other elements.</p> 
- 
- <p>To fix this, you can either increase the pixel size of your element to ensure they meet the 24x24 minimum, or you can provide further spacing between elements to ensure that bounding circles no longer meet. </p>
+   <p>To fix this, you can either increase the pixel size of your element to ensure they meet the 24x24 minimum, or you can provide further spacing between elements to ensure that bounding circles no longer meet. </p>
 
- <h3 class="govuk-heading-m">Example of undersized elements</h3>
+   <h3 class="govuk-heading-m">Example of undersized elements</h3>
 
- <p>8 x 8 pixel elements, undersized and intersecting.</p>
+   <p>8 x 8 pixel elements, undersized and intersecting.</p>
 
- <h3 class="govuk-heading-m">Example of elements with correct sizing</h3>
+   <h3 class="govuk-heading-m">Example of elements with correct sizing</h3>
 
- <p>The same element increased to 24 x 24 pixel elements, this now meets the minimum requirements.</p>
+   <p>The same element increased to 24 x 24 pixel elements, this now meets the minimum requirements.</p>
 {% endblock %}

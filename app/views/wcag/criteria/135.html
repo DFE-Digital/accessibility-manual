@@ -7,76 +7,39 @@ by assistive technologies and browsers."%}
 
 
 
-{% block hero %}
-<section class="dfe-page-header ">
-  <div class="govuk-width-container">
-    <div class="govuk-grid-row">
-      <div class="govuk-grid-column-two-thirds">
-        <div class="govuk-breadcrumbs">
-          <ol class="govuk-breadcrumbs__list">
-            <li class="govuk-breadcrumbs__list-item">
-              <a class="govuk-breadcrumbs__link" href="/">Home</a>
-            </li>
-            <li class="govuk-breadcrumbs__list-item">
-              <a class="govuk-breadcrumbs__link" href="/wcag">WCAG</a>
-            </li>
-            <li class="govuk-breadcrumbs__list-item">
-              <a class="govuk-breadcrumbs__link" href="/wcag/perceivable">Perceivable</a>
-            </li>
-          </ol>
-        </div>
-        <h1 class="govuk-heading-xl govuk-!-margin-top-5">{{pageName}}</h1>
-
-      </div>
-    </div>
-  </div>
-</section>
-{% endblock %}
-
-
-
 {% block content %}
 
-<h2 class="govuk-heading-l">Criteria level</h2>
+   <h2 class="govuk-heading-l">Criteria level</h2>
 
-<p>This is a level AA criteria. You must meet this criteria in the Department for Education.</p>
+   <p>This is a level AA criteria. You must meet this criteria in the Department for Education.</p>
 
-<h2 class="govuk-heading-l">Goal</h2>
-<p>Ensure that the purpose of each input field that collects user information is understandable by assistive
+   <h2 class="govuk-heading-l">Goal</h2>
+   <p>Ensure that the purpose of each input field that collects user information is understandable by assistive
   technologies and browsers through the use of the autocomplete attribute.</p>
 
+   <h2 class="govuk-heading-l">How this benefits users</h2>
 
-<h2 class="govuk-heading-l">How this benefits users</h2>
+   <p>This criteria has several benefits for everyone, specifially:</p>
 
-<p>This criteria has several benefits for everyone, specifially:</p>
-
-<ul class="govuk-list govuk-list--bullet">
-  <li>it helps people complete forms more quickly and accurately</li>
-  <li>it enables people to more easily understand the purpose of each input field</li>
-  <li>it means people with memory problems don't have to struggle to remember certain information</li>
-  <li>icons can be provided by assisitive technology based on the attribute which can help people with motor-skills
+   <ul class="govuk-list govuk-list--bullet">
+      <li>it helps people complete forms more quickly and accurately</li>
+      <li>it enables people to more easily understand the purpose of each input field</li>
+      <li>it means people with memory problems don't have to struggle to remember certain information</li>
+      <li>icons can be provided by assisitive technology based on the attribute which can help people with motor-skills
     dificulties</li>
-</ul>
+   </ul>
 
-<h2 class="govuk-heading-l">How to Implement</h2>
+   <h2 class="govuk-heading-l">How to Implement</h2>
 
-<p>Identify form fields that collect personal information (e.g., name, email, address) that are used in your form.</p>
-<p>Check the <a href="https://www.w3.org/TR/WCAG/#input-purposes">list of values for autocomplete attributes</a> on the
+   <p>Identify form fields that collect personal information (e.g., name, email, address) that are used in your form.</p>
+   <p>Check the <a href="https://www.w3.org/TR/WCAG/#input-purposes">list of values for autocomplete attributes</a> on the
   W3C website.</p>
-<p>Add the <a href="/best-practice/forms/labels-inputs">autocomplete attribute to the input</a> with the appropriate
+   <p>Add the <a href="/best-practice/forms/labels-inputs">autocomplete attribute to the input</a> with the appropriate
   value to provide a hint to the browser about the type of information expected in the field.</p>
 
+   <h2 class="govuk-heading-l">Additional guidance</h2>
 
-
-
-<h2 class="govuk-heading-l">Additional guidance</h2>
-
-<p>Read the <a href="https://www.w3.org/WAI/WCAG22/Understanding/identify-input-purpose.html">guidance on W3C</a> for
+   <p>Read the <a href="https://www.w3.org/WAI/WCAG22/Understanding/identify-input-purpose.html">guidance on W3C</a> for
   this criteria.</p>
-
-
-
-
-
 
 {% endblock %}
