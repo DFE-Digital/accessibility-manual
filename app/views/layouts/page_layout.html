@@ -5,472 +5,168 @@
 <!DOCTYPE html>
 <html lang="en" class="govuk-template ">
 
-<head>
-  <meta charset="utf-8">
-  <title>
-    {%- if seoPageName %}{{seoPageName}} {% elseif pageName %}{{pageName}}{%endif%} - {{serviceName}}</title>
-  <meta name="description"
+  <head>
+    <meta charset="utf-8">
+    <title>
+      {%- if seoPageName %}{{seoPageName}}
+      {% elseif pageName %}{{pageName}}{%endif%} - {{serviceName}}</title>
+      <meta name="description"
     content="{% if seoPageDescription %}{{seoPageDescription}}{% elseif pageName %}{{pageDescription}}{%endif%}">
-  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <meta name="theme-color" content="#00294a">
-  <link href="/assets/css/app.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/default.min.css">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+      <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+      <meta name="theme-color" content="#00294a">
+      <link href="/assets/css/app.min.css" rel="stylesheet">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/default.min.css">
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+
+      {% block head %}{% endblock %}
+    </head>
 
 
-  {% block head %}{% endblock %}
-</head>
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        // Add the 'js-enabled' class to the <html> element
+        document
+          .documentElement
+          .classList
+          .add('js-enabled');
 
-<style>
-  .dfe-manuals-page {
-    background-color: #F2F7FC;
-  }
+        const navLinks = document.querySelectorAll('.nav-link-toggle');
+        const currentPageUrl = window.location.pathname; // Get current page path
 
-  .dfe-manual-page-content {
-    background-color: #fff;
-    border-left: 1px solid #C5C7C9;
-  }
+        navLinks.forEach(link => {
+          link.addEventListener('click', function (event) {
+            event.preventDefault(); // Prevent the default link behaviour
+            const expanded = this.getAttribute('aria-expanded') === 'true';
+            this.setAttribute('aria-expanded', String(!expanded));
+            const subNavId = this.getAttribute('aria-controls');
+            const subNav = document.getElementById(subNavId);
+            if (subNav) {
+              subNav.style.display = expanded
+                ? 'none'
+                : 'block';
+            }
+          });
 
-  .govuk-grid-column-one-fifth {
-    box-sizing: border-box;
-    width: 100%;
-    padding: 0 15px;
-  }
-
-  @media (min-width: 40.0625em) {
-    .govuk-grid-column-one-fifth {
-      width: 20%;
-      float: left;
-    }
-  }
-
-  .govuk-grid-column-two-fifths {
-    box-sizing: border-box;
-    width: 100%;
-    padding: 0 15px;
-  }
-
-  @media (min-width: 40.0625em) {
-    .govuk-grid-column-two-fifths {
-      width: 40%;
-      float: left;
-    }
-  }
-
-  .govuk-grid-column-three-fifths {
-    box-sizing: border-box;
-    width: 100%;
-    padding: 0 15px;
-  }
-
-  @media (min-width: 40.0625em) {
-    .govuk-grid-column-three-fifths {
-      width: 60%;
-      float: left;
-    }
-  }
-
-  .govuk-grid-column-four-fifths {
-    box-sizing: border-box;
-    width: 100%;
-    padding: 0 15px;
-  }
-
-  @media (min-width: 40.0625em) {
-    .govuk-grid-column-four-fifths {
-      width: 80%;
-      float: left;
-    }
-  }
-
-  .govuk-grid-column-one-fifth-from-desktop {
-    box-sizing: border-box;
-    padding: 0 15px;
-  }
-
-  @media (min-width: 48.0625em) {
-    .govuk-grid-column-one-fifth-from-desktop {
-      width: 20%;
-      float: left;
-    }
-  }
-
-  .govuk-grid-column-two-fifths-from-desktop {
-    box-sizing: border-box;
-    padding: 0 15px;
-  }
-
-  @media (min-width: 48.0625em) {
-    .govuk-grid-column-two-fifths-from-desktop {
-      width: 40%;
-      float: left;
-    }
-  }
-
-  .govuk-grid-column-three-fifths-from-desktop {
-    box-sizing: border-box;
-    padding: 0 15px;
-  }
-
-  @media (min-width: 48.0625em) {
-    .govuk-grid-column-three-fifths-from-desktop {
-      width: 60%;
-      float: left;
-    }
-  }
-
-  .govuk-grid-column-four-fifths-from-desktop {
-    box-sizing: border-box;
-    padding: 0 15px;
-  }
-
-  @media (min-width: 48.0625em) {
-    .govuk-grid-column-four-fifths-from-desktop {
-      width: 80%;
-      float: left;
-    }
-  }
-
-
-  @media (min-width: 48.0625em) {
-    .sticky {
-      position: -webkit-sticky;
-      /* Safari */
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-    }
-  }
-
-  .nav-list {
-    list-style-type: none;
-    padding: 0;
-  }
-
-  .nav-link {
-    display: block;
-    padding: 8px;
-    text-decoration: none;
-    font-size: 1.1875rem;
-    color: #1d70b8;
-    /* GOV.UK link color */
-  }
-
-
-
-  .nav-link-toggle {
-    width: 100%;
-    display: inline-flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 10px;
-    text-decoration: none;
-    color: #1d70b8;
-    /* GOV.UK link color */
-    position: relative;
-    background: none;
-    /* Remove default button background */
-    border: none;
-    /* Remove default button border */
-    cursor: pointer;
-    /* Change cursor to pointer */
-    font-size: 1.1875rem;
-    text-align: left;
-  }
-
-  .nav-link-toggle:focus {
-    outline: 3px solid transparent;
-    color: #0b0c0c;
-    background-color: #fd0;
-    box-shadow: 0 -2px #fd0, 0 4px #0b0c0c;
-    text-decoration: none;
-  }
-
-
-
-
-  .nav-link:hover,
-  .nav-link-toggle:hover {
-    text-decoration: underline;
-  }
-
-  .nav-link .icon,
-  .nav-link-toggle .icon {
-    margin-left: 5px;
-    /* Space between text and icon */
-  }
-
-  .nav-link .icon::after,
-  .nav-link-toggle .icon::after {
-    content: '';
-    position: relative;
-    width: 0;
-    height: 0;
-    border: solid black;
-    border-width: 0 3px 3px 0;
-    display: inline-block;
-    padding: 3px;
-    transform: rotate(45deg);
-    /* Arrow pointing right */
-    transition: transform 0.3s ease;
-    /* Smooth transition for icon flip */
-  }
-
-  .nav-link[aria-expanded="true"] .icon::after,
-  .nav-link-toggle[aria-expanded="true"] .icon::after {
-    transform: rotate(225deg);
-    /* Arrow pointing down when expanded */
-  }
-
-  .nav-list--section {
-    border-bottom: 1px solid #C5C7C9;
-    padding: 0 0 10px 0;
-  }
-
-  .sub-nav {
-    display: block;
-    list-style-type: none;
-    padding: 0;
-    margin-left: 20px;
-    margin-top: 4px;
-  }
-
-  .sub-nav li {
-    margin-bottom: 5px;
-  }
-
-  .sub-nav a {
-    display: block;
-    padding: 8px;
-    text-decoration: none;
-    font-size: 1rem;
-    color: #1d70b8;
-    /* GOV.UK link color */
-  }
-
-  .sub-nav a:hover {
-    text-decoration: underline;
-  }
-
-  .sub-nav--active {
-    font-weight: bold;
-    text-decoration: none;
-    /* Add any other styles as needed */
-  }
-
-.js-enabled .sub-nav {
-  display: none;
-}
-
-
-  .hljs-comment,
-  .hljs-quote {
-    color: #545555;
-    font-style: italic
-  }
-
-  .hljs-keyword,
-  .hljs-selector-tag,
-  .hljs-subst {
-    color: #333;
-    font-weight: bold
-  }
-
-  .hljs-number,
-  .hljs-literal,
-  .hljs-variable,
-  .hljs-template-variable,
-  .hljs-tag .hljs-attr {
-    color: #00703c
-  }
-
-  .hljs-string,
-  .hljs-doctag {
-    color: #d13118
-  }
-
-  .hljs-title,
-  .hljs-section,
-  .hljs-selector-id {
-    color: #900;
-    font-weight: bold
-  }
-
-  .hljs-subst {
-    font-weight: normal
-  }
-
-  .hljs-type,
-  .hljs-class .hljs-title {
-    color: #458;
-    font-weight: bold
-  }
-
-  .hljs-tag,
-  .hljs-name,
-  .hljs-attribute {
-    color: #003078;
-    font-weight: normal
-  }
-
-  .hljs-regexp,
-  .hljs-link {
-    color: #008020
-  }
-
-  .hljs-symbol,
-  .hljs-bullet {
-    color: #990073
-  }
-
-  .hljs-builtin,
-  .hljs-builtin-name {
-    color: #017ba5
-  }
-
-  .hljs-meta {
-    color: #545555;
-    font-weight: bold
-  }
-
-  .hljs-deletion {
-    background: #fdd
-  }
-
-  .hljs-addition {
-    background: #dfd
-  }
-
-  .hljs-emphasis {
-    font-style: italic
-  }
-
-  .hljs-strong {
-    font-weight: bold
-  }
-</style>
-
-<script>
- document.addEventListener('DOMContentLoaded', function () {
-  // Add the 'js-enabled' class to the <html> element
-  document.documentElement.classList.add('js-enabled');
-
-  const navLinks = document.querySelectorAll('.nav-link-toggle');
-  const currentPageUrl = window.location.pathname; // Get current page path
-
-  navLinks.forEach(link => {
-    link.addEventListener('click', function (event) {
-      event.preventDefault(); // Prevent the default link behaviour
-      const expanded = this.getAttribute('aria-expanded') === 'true';
-      this.setAttribute('aria-expanded', String(!expanded));
-      const subNavId = this.getAttribute('aria-controls');
-      const subNav = document.getElementById(subNavId);
-      if (subNav) {
-        subNav.style.display = expanded ? 'none' : 'block';
-      }
-    });
-
-    // Check if the current page URL matches any sub-navigation link
-    const subNavId = link.getAttribute('aria-controls');
-    const subNav = document.getElementById(subNavId);
-    if (subNav) {
-      const subNavLinks = subNav.querySelectorAll('a');
-      subNavLinks.forEach(subNavLink => {
-        if (subNavLink.getAttribute('href') === currentPageUrl) {
-          // Mark the link as active
-          subNavLink.classList.add('sub-nav--active');
-          // Expand the parent link and show the sub-navigation
-          link.setAttribute('aria-expanded', 'true');
-          subNav.style.display = 'block';
-        }
+          // Check if the current page URL matches any sub-navigation link
+          const subNavId = link.getAttribute('aria-controls');
+          const subNav = document.getElementById(subNavId);
+          if (subNav) {
+            const subNavLinks = subNav.querySelectorAll('a');
+            subNavLinks.forEach(subNavLink => {
+              if (subNavLink.getAttribute('href') === currentPageUrl) {
+                // Mark the link as active
+                subNavLink
+                  .classList
+                  .add('sub-nav--active');
+                // Expand the parent link and show the sub-navigation
+                link.setAttribute('aria-expanded', 'true');
+                subNav.style.display = 'block';
+              }
+            });
+          }
+        });
       });
-    }
-  });
-});
+    </script>
 
-</script>
+    <body class="govuk-template__body">
+      <script>
+        document.body.className += ' js-enabled' + (
+          'noModule' in HTMLScriptElement.prototype
+          ? ' govuk-frontend-supported'
+          : '');
+      </script>
 
-<body class="govuk-template__body dfe-manuals-page">
-  <script>document.body.className += ' js-enabled' + ('noModule' in HTMLScriptElement.prototype ? ' govuk-frontend-supported' : '');</script>
+      {% include 'layouts/_cookiebanner.html'%}
+      <a href="#main-content" class="govuk-skip-link" data-module="govuk-skip-link">Skip to main content</a>
 
-  {% include 'layouts/_cookiebanner.html'%}
-  <a href="#main-content" class="govuk-skip-link" data-module="govuk-skip-link">Skip to main content</a>
+      {% include 'layouts/_topnav_new.html'%}
+      {% include 'layouts/_services.html'%}
 
-  {% include 'layouts/_topnav_new.html'%}
-  {% include 'layouts/_services.html'%}
+      {% block header %}
+        {% include 'layouts/_header.html'%}
+      {% endblock %}
 
-  {% block header %}
-  {% include 'layouts/_header.html'%}
-  {% endblock %}
-
-  {% block main %}
-  <main class="govuk-main-wrapper govuk-!-padding-0" id="main-content" role="main">
-    <div class="govuk-width-container">
-      <div class="govuk-grid-row">
-        <div class="govuk-grid-column-one-quarter govuk-!-padding-top-7 sticky">
-        {% block newNav%}  {% include "layouts/_newnav.html" %}{% endblock%}
-        </div>
-
-        <div
-          class="govuk-grid-column-three-quarters dfe-manual-page-content  govuk-!-padding-top-4  govuk-!-padding-bottom-9 govuk-!-padding-left-7 govuk-!-padding-right-7 dfe-manuals-p-max-width">
-          {% block content %}{% endblock %}
-          <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible govuk-!-margin-top-9">
-          <details class="govuk-details">
-            <summary class="govuk-details__summary">
-              <span class="govuk-details__summary-text">Information about this page</span>
-            </summary>
-            <div class="govuk-details__text">
-              <dl class="govuk-summary-list">
-                <div class="govuk-summary-list__row">
-                  <dt class="govuk-summary-list__key">Created</dt>
-                  <dd class="govuk-summary-list__value">{{created}}</dd>
-                </div>
-                <div class="govuk-summary-list__row">
-                  <dt class="govuk-summary-list__key">Last reviewed</dt>
-                  <dd class="govuk-summary-list__value">{{reviewed}}</dd>
-                </div>
-                <div class="govuk-summary-list__row">
-                  <dt class="govuk-summary-list__key">Last updated</dt>
-                  <dd class="govuk-summary-list__value">{{updated}}</dd>
-                </div>
-               
-                <div class="govuk-summary-list__row">
-                  <dt class="govuk-summary-list__key">Reason this page exists</dt>
-                  <dd class="govuk-summary-list__value">{{need}}</dd>
-                </div>
-                <div class="govuk-summary-list__row">
-                  <dt class="govuk-summary-list__key">Suggest a change or comment</dt>
-                  <dd class="govuk-summary-list__value">
-                    <a href="https://github.com/DFE-Digital/accessibility-manual/issues/{{githubIssueID}}">Issue
-                      {{githubIssueID}}</a>
-                  </dd>
-                </div>
-              </dl>
+      {% block main %}
+        <main class="govuk-main-wrapper govuk-!-padding-0" id="main-content" role="main">
+          <div class="govuk-width-container">
+            <div class="govuk-phase-banner">
+              <p class="govuk-phase-banner__content">
+                <strong class="govuk-tag govuk-phase-banner__content__tag">
+      Alpha
+    </strong>
+                <span class="govuk-phase-banner__text">
+      This is a new service. Help us improve it and <a class="govuk-link" href="mailto:design.ops@education.gov.uk">give your feedback by email</a>.
+    </span>
+              </p>
             </div>
-          </details>
-        </div>
-      </div>
-    </div>
-  </main>
-  {% endblock %}
+          </div>
+          <div class="govuk-width-container">
+            <div class="govuk-grid-row">
+              <div class="govuk-grid-column-one-quarter govuk-!-padding-top-7 sticky">
+                {% block newNav%}
+                  {% include "layouts/_newnav.html" %}{% endblock%}
+                </div>
 
-  {% block footer %}
-  {% include 'layouts/_footer.html'%}
-  {% endblock %}
+                <div class="govuk-grid-column-three-quarters govuk-!-padding-top-6">
+                  {% block content %}{% endblock %}
+                  <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible govuk-!-margin-top-9">
+                  <details class="govuk-details">
+                    <summary class="govuk-details__summary">
+                      <span class="govuk-details__summary-text">Information about this page</span>
+                    </summary>
+                    <div class="govuk-details__text">
+                      <dl class="govuk-summary-list">
+                        <div class="govuk-summary-list__row">
+                          <dt class="govuk-summary-list__key">Created</dt>
+                          <dd class="govuk-summary-list__value">{{created}}</dd>
+                        </div>
+                        <div class="govuk-summary-list__row">
+                          <dt class="govuk-summary-list__key">Last reviewed</dt>
+                          <dd class="govuk-summary-list__value">{{reviewed}}</dd>
+                        </div>
+                        <div class="govuk-summary-list__row">
+                          <dt class="govuk-summary-list__key">Last updated</dt>
+                          <dd class="govuk-summary-list__value">{{updated}}</dd>
+                        </div>
 
-  <script src="/assets/js/all.min.js"></script>
-  <script src="/assets/js/cookies.min.js"></script>
-  <script src="/assets/js/feedback.min.js"></script>
-  <script src="/assets/js/dfefrontend.min.js"></script>
-  <script>hljs.highlightAll();</script>
-  {% block scripts %}{% endblock %}
-  <script type="module" src="/assets/js/govuk-frontend.min.min.js"></script>
-  <script type="module">
-    import { initAll } from '/assets/js/govuk-frontend.min.min.js';
-    initAll();
-  </script>
+                        <div class="govuk-summary-list__row">
+                          <dt class="govuk-summary-list__key">Reason this page exists</dt>
+                          <dd class="govuk-summary-list__value">{{need}}</dd>
+                        </div>
+                        <div class="govuk-summary-list__row">
+                          <dt class="govuk-summary-list__key">Suggest a change or comment</dt>
+                          <dd class="govuk-summary-list__value">
+                            <a href="https://github.com/DFE-Digital/accessibility-manual/issues/{{githubIssueID}}">Issue
+                      {{githubIssueID}}</a>
+                          </dd>
+                        </div>
+                      </dl>
+                    </div>
+                  </details>
+        
+              </div>
+            </div>
+          </main>
+        {% endblock %}
 
+        {% block footer %}
+          {% include 'layouts/_footer.html'%}
+        {% endblock %}
 
-</body>
+        <script src="/assets/js/all.min.js"></script>
+        <script src="/assets/js/cookies.min.js"></script>
+        <script src="/assets/js/feedback.min.js"></script>
+        <script src="/assets/js/dfefrontend.min.js"></script>
+        <script>
+          hljs.highlightAll();
+        </script>
+        {% block scripts %}{% endblock %}
+        <script type="module" src="/assets/js/govuk-frontend.min.min.js"></script>
+        <script type="module">
+          import {initAll} from '/assets/js/govuk-frontend.min.min.js';
+          initAll();
+        </script>
 
-</html>
+      </body>
+
+    </html>
