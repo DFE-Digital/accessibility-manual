@@ -1,0 +1,47 @@
+{% extends "layouts/page_layout.html" %}
+
+{% set selectedNav = "Audits and statements" %}
+{% set pageName = "Prepare for an audit" %}
+{% set pageDescription = "How to prepare for an accessibility audit"%}
+{% set created = "6 August 2024" %}
+{% set reviewed = "6 August 2024" %}
+{% set updated = "6 August 2024" %}
+{% set githubIssueID = "34" %}
+{% set need = "This page exists to help people understand the need, and how to get an accessibility audit, and what to do with the results." %}
+
+{% block sidenav %}
+    {% include "layouts/_newnav.html" %}
+{% endblock %}
+
+{% block content %}
+    <div class="govuk-breadcrumbs">
+        <ol class="govuk-breadcrumbs__list">
+            <li class="govuk-breadcrumbs__list-item">
+                <a class="govuk-breadcrumbs__link" href="/">Home</a>
+            </li>
+            <li class="govuk-breadcrumbs__list-item">
+                <a class="govuk-breadcrumbs__link" href="/audits-statements">Audits and statements</a>
+            </li>
+            <li class="govuk-breadcrumbs__list-item">
+                {{pageName}}
+            </li>
+        </ol>
+    </div>
+
+    <h1 class="govuk-heading-xl">{{pageName}}</h1>
+
+    <p>You must provide the accessibility auditors with essential information to:</p>
+    <ul class="govuk-list govuk-list--bullet">
+        <li>access the service</li>
+        <li>understand the scope of the test</li>
+        <li>have all the relevant data to complete the user journeys</li>
+    </ul>
+    <p>You’ll need to provide this information before the audit so that the auditors have what they need to start. This will help to avoid delays in testing.</p>
+
+    <h2 class="govuk-heading-l">How to understand the scope of your audit</h2>
+    <p>Before you request an audit, you need to work out what exactly needs to be audited. Documenting audit requirements and reporting should be done in line with Website Accessibility Conformance Evaluation Methodology (WCAG-EM).</p>
+    <p>An accessibility statement is a legal document. The contents are informed by the findings of an accessibility audit, so it’s important that audit requirements are in line with <a class="govuk-link" href="https://www.w3.org/WAI/test-evaluate/conformance/wcag-em/">Website Accessibility Conformance Evaluation Methodology (WCAG-EM)</a>.</p>
+   
+
+   
+{% endblock %}
