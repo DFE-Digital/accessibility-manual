@@ -8,7 +8,7 @@
 {% set reviewed = "6 August 2024" %}
 {% set updated = "6 August 2024" %}
 {% set githubIssueID = "70" %}
-{% set need = "This page exists to help people understand how to use tools to test for, and understand accesisbility issues in a product." %}
+{% set need = "This page exists to help people understand how to use tools to test for, and understand accessibility issues in a product." %}
 
 {% block content %}
 
@@ -29,7 +29,7 @@
    <h1 class="govuk-heading-xl  govuk-!-margin-top-5">{{pageName}}</h1>
 
    <div class="govuk-inset-text">
-      <p>Drag the following link to your bookmarks bar to install the bookmarklet.</p>
+      <p>Drag the following link to your bookmark bar to install the bookmarklet.</p>
       <a href="javascript:(function()%7B%0A%09document.querySelectorAll('*').forEach(function%20(el)%20%7B%0A%09%09if%20(el.nodeName.toLowerCase()%20%3D%3D%3D%20'p')%20%7B%0A%09%09%09el.style.setProperty('margin-bottom'%2C%20'2em'%2C%20'important')%3B%0A%09%09%7D%0A%09%09el.style.setProperty('line-height'%2C%20'1.5'%2C%20'important')%3B%0A%09%09el.style.setProperty('letter-spacing'%2C%20'0.12em'%2C%20'important')%3B%0A%09%09el.style.setProperty('word-spacing'%2C%20'0.16em'%2C%20'important')%3B%0A%09%7D)%0A%7D)()%3B">Text spacing</a>
    </div>
 
@@ -45,7 +45,13 @@
       <li>word spacing to at least 0.16 times the font size</li>
    </ul>
 
-   <p>These settings can make content on the screen much easier to read for some users. Some people with dyslexia and other cognitive disabilities often find it easier to read and understand content that has been given spacing.</p>
+   <p>These settings can make content on the screen much easier to read for some users.</p> 
+   
+   <p>Some people with dyslexia and other cognitive disabilities often find it easier to read and understand content that has been given spacing.</p>
+
+   <h2 class="govuk-heading-l">Example of using the bookmarklet</h2>
+
+   <p>Below is an example of the bookmarklet being used on <a href="https://getintoteaching.education.gov.uk/">Get into Teaching</a>.</p>
 
    <h3 class="govuk-heading-m">Before</h3>
 
@@ -60,5 +66,15 @@
    <p>
       <a href="/assets/images/text-spacing-after.png" target="_blank">View larger image in a new tab</a>
    </p>
+
+   <h3 class="govuk-heading-m">Fixing text spacing issues</h3>
+
+   <p>Sometimes when text spacing properties are applied to a webpage content can often become lost or functionality can be lost. For example, if placeholder text has been used within a form, this can often become lost or obscured due to the increased text space.</p>  
+
+   <p>To fix this, always use a visible label rather than placeholder text.</p>  
+
+   <p>Another example is when text spacing is applied and text containers do not expand with the content, which means that text overflows the container.</p>
+   
+   <p>This can be because the height of the div containing the text is set using pixels (px), so it does not expand with the content. Setting div height in relation to font height using 'em,' or not setting div height at all, would prevent the text from overflowing the div.</p> 
 
 {% endblock %}
