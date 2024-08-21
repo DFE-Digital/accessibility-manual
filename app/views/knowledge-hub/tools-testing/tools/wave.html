@@ -8,7 +8,7 @@
 {% set reviewed = "1 August 2024" %}
 {% set updated = "1 August 2024" %}
 {% set githubIssueID = "36" %}
-{% set need = "This page exists to help people understand how to use tools to test for, and understand accesisbility issues in a product." %}
+{% set need = "This page exists to help people understand how to use tools to test for, and understand accessibility issues in a product." %}
 
 {% block content %}
 
@@ -30,9 +30,11 @@
 
    <h2 class="govuk-heading-l">Installation</h2>
 
-   <p class="govuk-body">{{pageName}} is a browser extension. Use the following links to install {{pageName}} for your browser.</p>
+   <p class="govuk-body">{{pageName}} is a browser extension.</p> 
+   
+   <p>Use the following links to install {{pageName}} for your browser:</p>
 
-   <ul class="govuk-list govuk-list--spaced">
+   <ul class="govuk-list govuk-list--bullet">
       <li class="govuk-list__item">
          <a href="https://chromewebstore.google.com/detail/wave-evaluation-tool/jbbplnpkjmmeebjpijfedlgcdilocofh" target="_blank">{{pageName}} for Chrome and Edge</a>
       </li>
@@ -43,13 +45,15 @@
 
    <p>{{pageName}} is not available for Safari.</p>
 
-   <h2 class="govuk-heading-l">How to use {{pageName}}</h2>
+   <h2 class="govuk-heading-l">How to use</h2>
 
    <p>Once installed, WAVE can be launched from your extensions bar. It will appear as a circle with a W in the centre.</p>
 
-   <p>When selected, WAVE will open up to the side of your browser window and automatically starts the checks. You will need to select the details of the checks you want to appear visually on the screen. Within ‘view details’, select only alerts and errors to be flagged.</p>
+   <p>When selected, WAVE will open up to the side of your browser window and automatically starts the checks.</p>
+   
+   <p>You will need to select the details of the checks you want to appear visually on the screen. Within 'view details', select only alerts and errors to be flagged.</p>
 
-   <h2 class="govuk-heading-l">Results</h2>
+   <h2 class="govuk-heading-l">What results could look like</h2>
 
    <div class="govuk-grid-row">
       <div class="govuk-grid-column-one-half">
@@ -61,25 +65,19 @@
 
       </div>
       <div class="govuk-grid-column-one-half">
-         <p>Example of the error summary view in WAVE showing the range of checks.</p>
-         <p>You only need to focus on the ‘errors’ and ‘alerts’.</p>
+         <p>Example of the summary tab in WAVE showing the range of checks.</p>
+         <p>You only need to focus on the 'errors' and 'alerts'.</p>
       </div>
       <div class="govuk-grid-column-one-half">
 
-         <p>Example of the details tab on WAVE, showing ‘errors’.</p>
+         <p>Example of the details tab in WAVE, showing 'errors'.</p>
          <p>These are for you to prioritise and consider in the context of your own product or service.
 </p>
 
       </div>
    </div>
 
-   <h2 class="govuk-heading-l">What to do next</h2>
-
-   <p>You need to check or verify that the accessibility issues the tool finds are issues, rather than <a href="/knowledge-hub/tools-testing/false-positives">false positives or false assurances</a>.</p>
-
-   <p>If an issue is genuine, speak to your developer or design team to consider, then implement, a fix.</p>
-
-   <p>You can read guidance for how to <a href="/knowledge-hub/managing-issues">manage and prioritise issues</a> in the knowledge hub.</p>
+{%include 'partials/_tools_next.html'%}
 
    <style>
       img {

@@ -2,13 +2,13 @@
 
 {% set selectedNav = "Knowledge hub" %}
 {% set pageName = "Overview" %}
-{% set pageDescription = "Guidance for how to use tools to test for, and understand accesisbility issues in a product."%}
+{% set pageDescription = "Guidance for how to use tools to test for, and understand accessibility issues in a product."%}
 {% set mainClasses = "govuk-!-padding-top-0" %}
 {% set created = "1 August 2024" %}
 {% set reviewed = "1 August 2024" %}
 {% set updated = "1 August 2024" %}
 {% set githubIssueID = "36" %}
-{% set need = "This page exists to help people understand how to use tools to test for, and understand accesisbility issues in a product." %}
+{% set need = "This page exists to help people understand how to use tools to test for, and understand accessibility issues in a product." %}
 
 {% block content %}
 
@@ -36,8 +36,10 @@
 
     <h2 class="govuk-heading-l">No tool can guarantee a website is accessible</h2>
     <p>Tools cannot be used as a replacement for accessibility audits or manual testing.</p>
-    <div class="govuk-inset-text">Automated testing tools provide around 30 to 40% of coverage and often miss high impact issues. They can also produce <a href="/knowledge-hub/tools-testing/false-positives">false positives</a>.</div>
+    <p class="govuk-body">Automated testing tools provide around 30 to 40% of coverage and often miss high impact issues. They can also produce <a href="/knowledge-hub/tools-testing/false-positives">false positives</a>.</p>
     <p class="govuk-body">You should run multiple automated tools, as well as manual checks, to sense check accessibility issues and to ensure they are accurate.</p>
+
+    <div class="govuk-inset-text">You'll need to be able to use a keyboard and visually identify interactive elements when carrying out accessibility tests.</div>
 
     <h2 class="govuk-heading-l">Finding issues early saves time and money</h2>
     <p class="govuk-body">Identifying accessibility issues early means they can be addressed before too much development work has started.</p>

@@ -8,7 +8,7 @@
 {% set reviewed = "1 August 2024" %}
 {% set updated = "1 August 2024" %}
 {% set githubIssueID = "36" %}
-{% set need = "This page exists to help people understand how to use tools to test for, and understand accesisbility issues in a product." %}
+{% set need = "This page exists to help people understand how to use tools to test for, and understand accessibility issues in a product." %}
 
 {% block content %}
 
@@ -61,11 +61,6 @@
       <a href="/assets/images/headings-map.png" target="_blank">View larger image in a new tab</a>
    </p>
 
-   <h2 class="govuk-heading-l">What to do next</h2>
-
-   <p>The team should review the heading structure to make sure it is correct.</p>
-   <p>It's best practice to only have one heading level 1 (H1), which should be unique, and be contained in the <code>title</code> for the browser.</p>
-   
-   <p>The structure should then follow a hierarchical structure.</p>
+{%include 'partials/_tools_next.html'%}
 
 {% endblock %}

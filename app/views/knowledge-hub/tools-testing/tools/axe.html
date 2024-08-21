@@ -8,7 +8,7 @@
 {% set reviewed = "1 August 2024" %}
 {% set updated = "1 August 2024" %}
 {% set githubIssueID = "36" %}
-{% set need = "This page exists to help people understand how to use tools to test for, and understand accesisbility issues in a product." %}
+{% set need = "This page exists to help people understand how to use tools to test for, and understand accessibility issues in a product." %}
 
 {% block content %}
 
@@ -77,12 +77,6 @@
 
    <p>These issues are for you to consider in the context of your own product or website.</p>
 
-   <h2 class="govuk-heading-l">What to do next</h2>
-
-   <p>You need to check or verify that the accessibility issues the tool finds are issues, rather than <a href="/knowledge-hub/tools-testing/false-positives">false positives or false assurances</a>.</p>
-
-   <p>If an issue is genuine, speak to your developer or design team to consider, then implement, a fix.</p>
-
-   <p>You can read guidance for how to <a href="/knowledge-hub/managing-issues">manage and prioritise issues</a> in the knowledge hub.</p>
+{%include 'partials/_tools_next.html'%}
 
 {% endblock %}
