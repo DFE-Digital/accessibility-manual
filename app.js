@@ -92,16 +92,18 @@ app.use((req, res, next) => {
 
 app.use('/', routes)
 
+
+app.get('/robots.txt', function (req, res) {
+  res.type('text/plain');
+  res.send("User-agent: *\nDisallow: /");
+});
+
 // Render sitemap.xml in XML format
 app.get('/sitemap.xml', (_, res) => {
   res.set({ 'Content-Type': 'application/xml' });
   res.render('sitemap.xml')
 })
 
-app.get('/robots.txt', (_, res) => {
-  res.set({ 'Content-Type': 'text/plain' });
-  res.render('robots.txt');
-})
 
 app.get('/downloads/:filename', (req, res) => {
   const filename = req.params.filename
