@@ -1,5 +1,5 @@
 /* eslint-disable class-methods-use-this */
-require('dotenv').config(); 
+require('dotenv').config();
 const axios = require('axios');
 const cheerio = require('cheerio');
 const lunr = require('lunr');
@@ -14,7 +14,7 @@ class PageIndex {
 
   async init() {
 
-  
+
     const startTime = new Date().getTime();
     const baseUrl = process.env.baseURL;
 
@@ -23,12 +23,12 @@ class PageIndex {
 
     try {
       // Make request to get sitemap
-  
 
 
-  const { data } = await axios.get(`${baseUrl}/site-map`);
 
-  
+      const { data } = await axios.get(`${baseUrl}/site-map`);
+
+
 
       // Assign jQuery style DOM of page to $
       let $ = cheerio.load(data);
@@ -59,13 +59,13 @@ class PageIndex {
         $ = cheerio.load(response.data);
         const url = response.request.path;
         const description = this.parseDescription($);
-        
-     
 
-          this.indexPageNormal($, url, description);
+
+
+        this.indexPageNormal($, url, description);
       });
 
-    
+
 
       // Setup for lunr indexing
       this.index = lunr((builder) => {
@@ -75,11 +75,10 @@ class PageIndex {
         builder.field('h2');
         builder.field('h3');
         builder.field('extra');
+        builder.field('aka');
         // Add each indexed page from above to lunr
         this.docs.forEach((doc) => builder.add(doc)); // eslint-disable-line arrow-parens
       });
-
-
 
       // Time to index logging
       const endTime = new Date().getTime();
@@ -89,7 +88,7 @@ class PageIndex {
     } catch (err) {
       const reason = err.response ? `${err.message} URL: ${err.response.config.url}` : err.message;
       // eslint-disable-next-line no-console
-     console.log('Error: ' + err)
+      console.log('Error: ' + err)
     }
   }
 
@@ -117,26 +116,27 @@ class PageIndex {
 
   // Return indexed pages for passed query
   searchIndex(query) {
-   console.log('searchIndex:' + query)
+
 
     var ind = this.index.query((q) => {
 
-        console.log('thisindex: '+ this.index[0])
-        
+      console.log('thisindex: ' + this.index[0])
+
       lunr.tokenizer(query).forEach((token) => {
         const tokenString = token.toString();
         console.log('tokenString:' + tokenString)
         q.term(tokenString, { boost: 100, fields: ['title'] });
         q.term(tokenString, { boost: 80, fields: ['h2'] });
         q.term(tokenString, { boost: 60, fields: ['h3'] });
+        q.term(tokenString, { boost: 90, fields: ['aka'] });
 
         q.term(`${tokenString}*`, { boost: 90, fields: ['title'] });
         q.term(`${tokenString}*`, { boost: 70, fields: ['h2'] });
         q.term(`${tokenString}*`, { boost: 50, fields: ['h3'] });
+        q.term(`${tokenString}*`, { boost: 80, fields: ['aka'] });
       });
     });
 
-    console.log('INDEX:' + ind)
 
     return ind;
   }
@@ -148,6 +148,9 @@ class PageIndex {
     const h2 = this.getIndex($, 'h2');
     const h3 = this.getIndex($, 'h3');
     const extra = this.getAdditionalIndices(url).join(' ');
+    const aka = this.parseMeta($, 'aka');
+
+
 
     // Add page data to docs array
     this.docs = [
@@ -155,12 +158,14 @@ class PageIndex {
       {
         description,
         extra,
+        aka,
         h2,
         h3,
         title,
         url,
       },
     ];
+
   }
 
 
@@ -174,10 +179,10 @@ class PageIndex {
   parsePageHeadings($, type) {
     let headings = [];
     $('#main-content').find(type).each((_, el) => {
-    
-      
-        headings = [...headings, ...[$(el).text().trim()]];
-      
+
+
+      headings = [...headings, ...[$(el).text().trim()]];
+
     });
     return headings;
   }
@@ -205,7 +210,7 @@ class PageIndex {
   parseTitle($) {
     return $('title').text().trim();
   }
-  
+
   // Return page meta description
   parseDescription($) {
     return this.parseMeta($, 'description');
