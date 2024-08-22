@@ -10,7 +10,7 @@
 {% set updated = "18 July 2024" %}
 {% set githubIssueID = "" %}
 {% set need = "This page exists to help people understand each of the WCAG Criteria" %}
-
+{% set aka = "wcag,wgac,wacg,w3c,criteria,criterion" %}
 {% block content %}
 
    <h1 class="govuk-heading-xl">{{pageName}}</h1>
@@ -23,27 +23,20 @@
          <tr class="govuk-table__row">
             <th scope="col" class="govuk-table__header">Success Criteria</th>
             <th scope="col" class="govuk-table__header">Level</th>
+            <th scope="col" class="govuk-table__header">Principle</th>
          </tr>
       </thead>
       <tbody class="govuk-table__body">
+         {% for criteria in wcag %}
          <tr class="govuk-table__row">
             <th scope="row" class="govuk-table__header">
-               <a href="/wcag/1-1-1">1.1.1 Non-text Content</a>
+               <a href="/wcag/{{criteria.reference}}">{{criteria.criteria}}</a>
             </th>
-            <td class="govuk-table__cell">A</td>
+            <td class="govuk-table__cell">{{criteria.level}}</td>
+                      <td class="govuk-table__cell">{{criteria.principle}}</td>
          </tr>
-            <tr class="govuk-table__row">
-            <th scope="row" class="govuk-table__header">
-               <a href="/wcag/1-1-1">1.1.1 Non-text Content</a>
-            </th>
-            <td class="govuk-table__cell">A</td>
-         </tr>
-         <tr class="govuk-table__row">
-            <th scope="row" class="govuk-table__header">
-               <a href="/wcag/1-4-4">1.4.4 Resize text</a>
-            </th>
-            <td class="govuk-table__cell">AA</td>
-         </tr>
+         {% endfor %}
+          
       </tbody>
    </table>
 
