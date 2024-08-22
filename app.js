@@ -45,7 +45,7 @@ async function trackSearchTerm(searchTerm) {
 
   try {
     const response = await axios.post(`https://www.google-analytics.com/mp/collect?measurement_id=${measurementId}&api_secret=${apiSecret}`, payload);
-    console.log('Event tracked successfully:', response);
+    console.log('Event tracked successfully:');
   } catch (error) {
     console.error('Error tracking event:', error);
   }
