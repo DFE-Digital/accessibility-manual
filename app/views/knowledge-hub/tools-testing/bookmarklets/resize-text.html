@@ -1,0 +1,66 @@
+{% extends "layouts/page_layout.html" %}
+
+{% set selectedNav = "Knowledge hub" %}
+{% set pageName = "Resize text" %}
+{% set pageDescription = ""%}
+{% set mainClasses = "govuk-!-padding-top-0" %}
+{% set created = "6 August 2024" %}
+{% set reviewed = "6 August 2024" %}
+{% set updated = "6 August 2024" %}
+{% set githubIssueID = "70" %}
+{% set need = "This page exists to help people understand how to use tools to test for, and understand accessibility issues in a product." %}
+
+{% block content %}
+
+
+
+   <h1 class="govuk-heading-xl">{{pageName}}</h1>
+
+   <div class="govuk-inset-text">
+      <p>Drag the following link to your bookmark bar to install the bookmarklet.</p>
+      <a href="javascript: (function () {
+  const htmlElement = document.querySelector('html');
+  const currentFontSize = htmlElement.style.getPropertyValue('font-size');
+  const isZoomed = currentFontSize === '200%';
+  const newFontSize = isZoomed ? null : '200%';
+  htmlElement.style.setProperty('font-size', newFontSize);
+})();
+">Resize text</a>
+   </div>
+
+   <p>Once the bookmarklet is installed, visit a webpage and click the bookmarklet in your bookmark bar.</p>
+
+<p>WCAG criterion 1.4.4 relates to resizing the text on screen, this is different to zooming in on the screen.</p>
+<p>Not all user agents have the capability to zoom, therefore it’s important that users can use other methods to increase text size. To meet this standard it is good practice to use rem units for the CSS font-size property rather than percentages or pixels, and no units for the line-height property.</p>
+ 
+<p>Being able to resize the text on the page can benefit users with low vision and other sight related disabilities to ensure that they can still perceive the content on screen.</p>
+
+<h2 class="govuk-heading-l">Example of using the bookmarklet</h2>
+
+<p>This code will force the browser to render the text size of the service at 200%, WCAG stipulates that users should be able to change the size of the text by at least this percentage in order to meet AA standards. The only exceptions for this criterion are captions and images of text.</p>
+ 
+<p>When using the tool you should be able to see visually that the font size on the page has increased. If the font size does not change, you need to ensure that the font size of the service has not been locked to a specific size.</p>
+
+
+   <p>Below is an example of the bookmarklet being used on a page in the <a href="https://getintoteaching.education.gov.uk/help-and-support">Get into teaching</a> website.</p>
+
+<h3 class="govuk-heading-m">Before</h3>
+   <img src="/assets/images/gitbefore.png" alt="" class="screenshot govuk-!-margin-top-5 govuk-!-margin-bottom-5">
+      <p>
+      <a href="/assets/images/gitbefore.png" target="_blank">View larger image in a new tab</a>
+   </p>
+
+<h3 class="govuk-heading-m">After</h3>
+   <img src="/assets/images/gitafter.png" alt="" class="screenshot govuk-!-margin-top-5 govuk-!-margin-bottom-5">
+   <p>
+      <a href="/assets/images/gitafter.png" target="_blank">View larger image in a new tab</a>
+   </p>
+
+<h3 class="govuk-heading-m">Fixing text resizing issues</h3>
+
+<p>If when you run the resize text tool, the text size does not increase, this may be because of the method used to specify the text size within your CSS. This is often because pixel (px) units have been used. </p>
+
+<p>Pixels are an absolute unit, so when you set the font size to 24 pixels, it's going to be 24 pixels and is not responsive. It’s therefore better to use a relative unit such as REM units, this will allow the text size to respond to any increases by users.</p>
+
+
+{% endblock %}
