@@ -1,4 +1,5 @@
 /* eslint-disable class-methods-use-this */
+require('dotenv').config(); 
 const axios = require('axios');
 const cheerio = require('cheerio');
 const lunr = require('lunr');
@@ -12,21 +13,22 @@ class PageIndex {
   }
 
   async init() {
+
+  
     const startTime = new Date().getTime();
     const baseUrl = process.env.baseURL;
-    const config = this.getConnectionConfig();
 
     // Set Lunr to only split searches on spaces rather than spaces and hyphens
     lunr.tokenizer.separator = /\s+/;
 
     try {
       // Make request to get sitemap
+  
 
 
-  const { data } = await axios.get(`${baseUrl}/site-map`, config);
+  const { data } = await axios.get(`${baseUrl}/site-map`);
 
-
-
+  
 
       // Assign jQuery style DOM of page to $
       let $ = cheerio.load(data);
@@ -44,7 +46,7 @@ class PageIndex {
           // Handle absolute vs relative links
           const url = href.toLowerCase().includes('http') ? href : `${baseUrl}${href}`;
           // Add axios request to array
-          urls = [...urls, axios.get(url, config)];
+          urls = [...urls, axios.get(url)];
         }
       });
 
@@ -58,7 +60,7 @@ class PageIndex {
         const url = response.request.path;
         const description = this.parseDescription($);
         
-      
+     
 
           this.indexPageNormal($, url, description);
       });
@@ -87,7 +89,7 @@ class PageIndex {
     } catch (err) {
       const reason = err.response ? `${err.message} URL: ${err.response.config.url}` : err.message;
       // eslint-disable-next-line no-console
-      console.log(`Unable to index pages. Reason: ${reason}`);
+     console.log('Error: ' + err)
     }
   }
 
@@ -219,19 +221,7 @@ class PageIndex {
     return $(`meta[name='${name}']`).attr('content');
   }
 
-  // Some magic to handle basic auth
-  getConnectionConfig() {
-    const { MANUAL_USERNAME, MANUAL_PASSWORD } = process.env;
-    if (MANUAL_USERNAME || MANUAL_PASSWORD) {
-      return {
-        auth: {
-          password: MANUAL_PASSWORD,
-          username: MANUAL_USERNAME,
-        },
-      };
-    }
-    return {};
-  }
+
 }
 
 module.exports = PageIndex;
