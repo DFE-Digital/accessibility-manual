@@ -1,0 +1,65 @@
+{% extends "layouts/page_layout.html" %}
+
+{% set selectedNav = "WCAG criteria" %}
+{% set pageName = "1.4.4 Resize text" %}
+{% set pageDescription = "Guidance for understanding WCAG 1.4.4 Resize text (Level AA)"%}
+{% set mainClasses = "govuk-!-padding-top-0" %}
+{% set created = "22 August 2024" %}
+{% set reviewed = "22 August 2024" %}
+{% set updated = "22 August 2024" %}
+{% set githubIssueID = "71" %}
+{% set need = "This page exists to help people understand a specific WCAG criteria" %}
+{% set aka = "1-4-4 zoom" %}
+{% block content %}
+
+    <h1 class="govuk-heading-xl">{{pageName}}</h1>
+
+    <table class="govuk-table">
+        <thead class="govuk-table__head">
+            <tr class="govuk-table__row">
+                <th scope="col" class="govuk-table__header govuk-!-width-one-quarter">Level</th>
+                <th scope="col" class="govuk-table__header govuk-!-width-one-quarter">Category</th>
+                <th scope="col" class="govuk-table__header govuk-!-width-one-quarter">Understanding</th>
+            </tr>
+        </thead>
+        <tbody class="govuk-table__body">
+            <tr class="govuk-table__row">
+                <td class="govuk-table__cell">AA</td>
+                <td class="govuk-table__cell">Zoom and legibility</td>
+               
+
+                    <td class="govuk-table__cell">
+                        <a href="https://www.w3.org/WAI/WCAG22/Understanding/resize-text.html"
+        target="_blank" rel="noopener noreferrer">Guidance  <span class="govuk-visually-hidden">for understanding the {{pageName}} criteria on WCAG (opens in a new tab)</a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="dfe-manual-callout">
+                <div class="dfe-manual-callout--header">
+                    <img src="/assets/images/exclamation-mark.png" alt="" />
+                    <h3 class="govuk-heading-m">You must meet this criteria</h3>
+                </div>
+
+                <div class="dfe-manual-callout--content">
+                    <p>Any content provided through a browser, must meet this criteria.</p>
+                </div>
+            </div>
+
+            <h2 class="govuk-heading-l">What this means</h2>
+
+        
+            <h2 class="govuk-heading-l">Exceptions</h2>
+           
+           
+            <h2 class="govuk-heading-l">How to implement</h2>
+          
+
+            <h2 class="govuk-heading-l">How to test</h2>
+           
+           
+            <h2 class="govuk-heading-l">Helpful links</h2>
+           
+
+        {% endblock %}

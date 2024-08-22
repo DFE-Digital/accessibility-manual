@@ -3,7 +3,7 @@
 {% set selectedNav = "Knowledge hub" %}
 {% set pageName = "Knowledge hub" %}
 {% set pageDescription = "Guidance and knowledge to support understanding of accessibility and inclusive design."%}
-
+{% set aka = "" %}
 {% set mainClasses = "govuk-!-padding-top-0 govuk-!-padding-bottom-0" %}
 
 {% block content %}
@@ -112,7 +112,7 @@
       </div>
    </div>
 
-      <section style="background: #f0f4f5" class="govuk-!-margin-top-9 govuk-!-padding-top-5 govuk-!-padding-bottom-0">
+   <section style="background: #f0f4f5" class="govuk-!-margin-top-9 govuk-!-padding-top-5 govuk-!-padding-bottom-0">
       <div class="govuk-width-container">
          <div class="govuk-grid-row">
             <div class="govuk-grid-column-full how-many-card govuk-!-padding-top-9 govuk-!-padding-bottom-9">
@@ -121,25 +121,25 @@
                   <div class="govuk-grid-column-one-half govuk-!-padding-right-9 govuk-!-margin-bottom-9">
                      <p class="govuk-body-l">Find out about the types of disabilties, impairments, and conditions that affect people who
                      might use your service.</p>
-                         <p class="govuk-body-l">Also understand the demographic breakdown of the teacher population in England, as well as digital inclusion of the general population.</p>
+                     <p class="govuk-body-l">Also understand the demographic breakdown of the teacher population in England, as well as digital inclusion of the general population.</p>
                   </div>
                   <div class="govuk-grid-column-one-half ">
                      <div class="border govuk-!-padding-7" style="background: #ffffff">
-                     <form action="/app/how-many-people" method="post">
-                        <div class="govuk-form-group govuk-!-margin-bottom-0">
-                           <label class="govuk-body-l" for="numberOfUsers">
+                        <form action="/app/how-many-people" method="post">
+                           <div class="govuk-form-group govuk-!-margin-bottom-0">
+                              <label class="govuk-body-l" for="numberOfUsers">
                            Estimated number of people
                         </label>
-                           <div class="inline-elements govuk-!-margin-top-3">
-                              <input class="govuk-input govuk-!-width-two-thirds" id="numberOfUsers" name="numberOfUsers"
+                              <div class="inline-elements govuk-!-margin-top-3">
+                                 <input class="govuk-input govuk-!-width-two-thirds" id="numberOfUsers" name="numberOfUsers"
                               type="text" style="margin-bottom: 4px;">
-                              <button type="submit" class="govuk-button" data-module="govuk-button"
+                                 <button type="submit" class="govuk-button" data-module="govuk-button"
                               style="margin-bottom: 4px;">
                               Get results
                            </button>
+                              </div>
                            </div>
-                        </div>
-                     </form>
+                        </form>
                      </div>
                   </div>
                </div>
@@ -147,6 +147,5 @@
          </div>
       </div>
    </section>
-
 
 {% endblock %}

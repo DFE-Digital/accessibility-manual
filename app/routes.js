@@ -11,6 +11,7 @@ const trainingController = require('./controllers/trainingController.js');
 router.get("/", homeController.g_home);
 
 router.get("/wcag", wcagController.g_wcag);
+router.get("/knowledge-hub/wcag/criteria", wcagController.g_wcagCriteria);
 
 router.post("/app/check-page", appsController.p_checkpage);
 router.post("/app/check-statement", appsController.p_checkstatement);

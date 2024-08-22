@@ -9,9 +9,8 @@
 {% set updated = "6 August 2024" %}
 {% set githubIssueID = "70" %}
 {% set need = "This page exists to help people understand how to use tools to test for, and understand accessibility issues in a product." %}
-
+{% set aka = "" %}
 {% block content %}
-
 
    <h1 class="govuk-heading-xl">{{pageName}}</h1>
 
@@ -44,7 +43,6 @@
          </tr>
       </thead>
       <tbody class="govuk-table__body">
-       
 
          <tr class="govuk-table__row">
             <th class="govuk-table__cell govuk-table__header">
@@ -67,7 +65,19 @@
             <td class="govuk-table__cell">
                <p>WCAG 1.3.1 Info and Relationships (Level A)</p>
             </td>
-         </tr>  <tr class="govuk-table__row">
+         </tr>
+          <tr class="govuk-table__row">
+            <th class="govuk-table__cell govuk-table__header">
+               <a href="/tools-testing/bookmarklets/resize-text">Resize text</a>
+            </th>
+            <td class="govuk-table__cell">
+               <p>Resize text on a page to 200%</p>
+            </td>
+            <td class="govuk-table__cell">
+               <p>WCAG 1.4.4 Resize text (Level AA)</p>
+            </td>
+         </tr>
+         <tr class="govuk-table__row">
             <th class="govuk-table__cell govuk-table__header">
                <a href="/tools-testing/bookmarklets/target-size">Target size</a>
             </th>
@@ -77,7 +87,8 @@
             <td class="govuk-table__cell">
                <p>WCAG 2.5.8 Target Size (Minimum) (Level AA)</p>
             </td>
-         </tr>         <tr class="govuk-table__row">
+         </tr>
+         <tr class="govuk-table__row">
             <th class="govuk-table__cell govuk-table__header">
                <a href="/tools-testing/bookmarklets/text-spacing">Text spacing</a>
             </th>

@@ -22,10 +22,34 @@ const NotifyClient = require('notifications-node-client').NotifyClient;
 const airtable = require('airtable');
 const base = new airtable({ apiKey: process.env.airtableFeedbackKey }).base(process.env.airtableFeedbackBase);
 const app = express();
+const axios = require('axios');
 
 app.use(compression());
 
 const notify = new NotifyClient(process.env.notifyKey);
+
+async function trackSearchTerm(searchTerm) {
+  const measurementId = process.env.GAProperty;
+  const apiSecret = process.env.GASecret;
+  const clientId = '123456.7890123456'
+
+  const payload = {
+    client_id: clientId, 
+    events: [{
+      name: 'search', 
+      params: {
+        search_term: searchTerm 
+      }
+    }]
+  };
+
+  try {
+    const response = await axios.post(`https://www.google-analytics.com/mp/collect?measurement_id=${measurementId}&api_secret=${apiSecret}`, payload);
+    console.log('Event tracked successfully:');
+  } catch (error) {
+    console.error('Error tracking event:', error);
+  }
+}
 
 app.use(
   session({
@@ -79,6 +103,9 @@ nunjuckEnv.addFilter('slugify', function (str) {
 
 app.use(forceHttps);
 
+console.log('Start page indexing')
+
+
 // Set up static file serving for the app's assets
 app.use('/assets', express.static('public/assets'))
 
@@ -92,16 +119,20 @@ app.use((req, res, next) => {
 
 app.use('/', routes)
 
+
+
+
+app.get('/robots.txt', function (req, res) {
+  res.type('text/plain');
+  res.send("User-agent: *\nDisallow: /");
+});
+
 // Render sitemap.xml in XML format
 app.get('/sitemap.xml', (_, res) => {
   res.set({ 'Content-Type': 'application/xml' });
   res.render('sitemap.xml')
 })
 
-app.get('/robots.txt', (_, res) => {
-  res.set({ 'Content-Type': 'text/plain' });
-  res.render('robots.txt');
-})
 
 app.get('/downloads/:filename', (req, res) => {
   const filename = req.params.filename
@@ -135,6 +166,8 @@ app.get('/search', (req, res) => {
   console.log('Results: ' + results);
   console.log('Query: ' + query);
 
+  trackSearchTerm(query);
+
   const maxPage = Math.ceil(results.length / resultsPerPage);
   if (!Number.isInteger(currentPage)) {
     currentPage = 1;
@@ -156,9 +189,11 @@ app.get('/search', (req, res) => {
 
 if (config.env !== 'development') {
   setTimeout(() => {
-    pageIndex.init();
-  }, 2000);
+    pageIndex.init()
+  }, 2000)
 }
+
+
 // Route for handling Yes/No feedback submissions
 app.post('/form-response/helpful', (req, res) => {
   const { response } = req.body;

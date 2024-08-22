@@ -1,0 +1,119 @@
+{% extends "layouts/page_layout.html" %}
+
+{% set selectedNav = "WCAG criteria" %}
+{% set pageName = "1.1.1 - Non-text content" %}
+{% set pageDescription = "Guidance for understanding WCAG 1.1.1 - Non-text content (Level A)"%}
+{% set mainClasses = "govuk-!-padding-top-0" %}
+{% set created = "22 August 2024" %}
+{% set reviewed = "22 August 2024" %}
+{% set updated = "22 August 2024" %}
+{% set githubIssueID = "71" %}
+{% set need = "This page exists to help people understand a specific WCAG criteria" %}
+{% set aka = "1-1-1 images alt text" %}
+{% block content %}
+
+    <h1 class="govuk-heading-xl">{{pageName}}</h1>
+
+    <table class="govuk-table">
+        <thead class="govuk-table__head">
+            <tr class="govuk-table__row">
+                <th scope="col" class="govuk-table__header govuk-!-width-one-quarter">Level</th>
+                <th scope="col" class="govuk-table__header govuk-!-width-one-quarter">Category</th>
+                <th scope="col" class="govuk-table__header govuk-!-width-one-quarter">Understanding</th>
+            </tr>
+        </thead>
+        <tbody class="govuk-table__body">
+            <tr class="govuk-table__row">
+                <td class="govuk-table__cell">A</td>
+                <td class="govuk-table__cell">Sensory</td>
+               
+
+                    <td class="govuk-table__cell">
+                        <a href="https://www.w3.org/WAI/WCAG22/Understanding/non-text-content.html"
+        target="_blank" rel="noopener noreferrer">Guidance  <span class="govuk-visually-hidden">for understanding the {{pageName}} criteria on WCAG (opens in a new tab)</a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="dfe-manual-callout">
+                <div class="dfe-manual-callout--header">
+                    <img src="/assets/images/exclamation-mark.png" alt="" />
+                    <h3 class="govuk-heading-m">You must meet this criteria</h3>
+                </div>
+
+                <div class="dfe-manual-callout--content">
+                    <p>Any content provided through a browser, must meet this criteria.</p>
+                </div>
+            </div>
+
+            <h2 class="govuk-heading-l">What this means</h2>
+
+            <p>Images, charts, and other non-text content must have a text alternative that describes the information or function.</p>
+            <p>People who cannot see images rely on text alternatives to understand the content. Without a text alternative, they may not be able to access or understand what is being presented on the page.</p>
+            <p>Screen readers read out the text alternative for images. If there is no text alternative, the screen reader will skip the image and the user will not know what the image is.</p>
+            <h3 class="govuk-heading-m">Why it matters</h3>
+            <p>Text alternatives are important for people who:</p>
+            <ul class="govuk-list govuk-list--bullet">
+                <li>have low vision</li>
+                <li>use screen readers</li>
+                <li>have turned off images in their browser</li>
+                <li>might have poor internet connection and images fail to load</li>
+            </ul>
+            <h2 class="govuk-heading-l">Exceptions</h2>
+            <p>Images that do not convey information do not need a text alternative. This includes images that are
+    purely for decoration, like background patterns or spacer images.</p>
+            <h2 class="govuk-heading-l">How to implement</h2>
+            <p>All images must have an alternative text description that describes its meaning, not what the image is:</p>
+            <ul class="govuk-list govuk-list--bullet">
+                <li>images that communicate information (for example icons and logos) have short text descriptions</li>
+                <li>editoral images that support the text around them have short descriptions</li>
+                <li>images that communicate complex information (for example infographics and diagrams) have longer text
+        descriptions within the same page</li>
+                <li>charts or graphs contain the same data in a corresponding table</li>
+                <li>decorative images have the null (or empty) alternative description alt="" (no space between the quotations)</li>
+            </ul>
+
+            <p>You can use the <a href="https://www.w3.org/WAI/tutorials/images/decision-tree/" target="_blank">W3C alt decision
+        tree</a> to help you with determining whether to use alt text or not on images.</p>
+
+            <p>Example: The image is editorial </p>
+            <pre><code>&lt;img src='/path-to-image/filename.png' alt='A child in a classroom sitting at a desk listening to a teacher talk' /&gt;</code></pre>
+            <p>Example: The image is purely decorative, like a background pattern or non-functional icon</p>
+            <pre><code>&lt;img src='/path-to-image/background-pattern.png' alt='' /&gt;</code></pre>
+
+            <h2 class="govuk-heading-l">How to test</h2>
+            <ul class="govuk-list govuk-list--bullet">
+                <li>identify images on the page, right click on them and select ‘Inspect’</li>
+                <li>check the image tag to see if the alt attribute exists</li>
+                <li>for decorative images, the alt attribute should be alt="" or just alt</li>
+                <li>for editoral images and images which communicate information check that the descriptions are appropriate</li>
+                <li>for images of complex information, check that the description refers to the availabiltiy of a longer description
+        and that this is present on the page</li>
+            </ul>
+            <h3 class="govuk-heading-m">How to test with JAWS</h3>
+            <p>Use the <strong class="govuk-tag govuk-tag--grey">G</strong> key to navigate to the images on the page and check that
+    a meaningful textual description is read out for informative images, and that decorative images are not announced.
+</p>
+            <h3 class="govuk-heading-m">How to test with VoiceOver</h3>
+            <p>With VoiceOver (VO) turned on, use the command <strong class="govuk-tag govuk-tag--grey">VO</strong> + <strong
+        class="govuk-tag govuk-tag--grey">command</strong> + <strong class="govuk-tag govuk-tag--grey">G</strong> to
+    navigate through images on the page and check that a meaningful textual description is read out for informative
+    images, and that decorative images are not announced.</p>
+            <p>
+                <a href="https://support.apple.com/en-gb/guide/voiceover/mchlp2740/mac" target="_blank"
+        rel="noopener noreferrer">Guidance for using VoiceOver on Mac and iPhone</a> to navigate pages and content
+</p>
+            <h2 class="govuk-heading-l">Helpful links</h2>
+            <ul class="govuk-list govuk-list--spaced">
+                <li>
+                    <a target="_blank" rel="noopener noreferrer" href="https://www.w3.org/WAI/tutorials/images/">Web Accessibility
+            Tutorials - Images Concepts</a>
+                </li>
+                <li>
+                    <a target="_blank" rel="noopener noreferrer" href="https://design-system.service.gov.uk/styles/images/">GOV.UK
+            Design System - Images</a>
+                </li>
+            </ul>
+
+        {% endblock %}

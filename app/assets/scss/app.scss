@@ -1989,13 +1989,9 @@ code {
 }
 
 
-
-
 .dfe-header {
   border-bottom: none;
 }
-
-
 
 
 .dfe-header__search *,
@@ -3355,4 +3351,9 @@ ol {
   .grid-5-container {
     grid-template-columns: 1fr;
   }
+}
+
+.dfe-inset-text--orange{
+  border-left-color: #1d70b8;
+  background-color: #e8f1f8;
 }

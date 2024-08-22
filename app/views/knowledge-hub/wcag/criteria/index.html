@@ -1,0 +1,43 @@
+{% extends "layouts/page_layout.html" %}
+
+{% set selectedNav = "Knowledge hub" %}
+{% set selectedSubNav = "WCAG" %}
+{% set pageName = "WCAG criteria" %}
+{% set pageDescription = "Understanding each of the Web Content Accessibility Guidelines (WCAG) criteria."%}
+{% set mainClasses = "govuk-!-padding-top-0" %}
+{% set created = "18 July 2024" %}
+{% set reviewed = "18 July 2024" %}
+{% set updated = "18 July 2024" %}
+{% set githubIssueID = "" %}
+{% set need = "This page exists to help people understand each of the WCAG Criteria" %}
+{% set aka = "wcag,wgac,wacg,w3c,criteria,criterion" %}
+{% block content %}
+
+   <h1 class="govuk-heading-xl">{{pageName}}</h1>
+
+   <p>Guidance for understanding each of the Web Content Accessibility Guidelines (WCAG) criteria.</p>
+
+   <table class="govuk-table">
+      <caption class="govuk-table__caption">All criteria</caption>
+      <thead class="govuk-table__head">
+         <tr class="govuk-table__row">
+            <th scope="col" class="govuk-table__header">Success Criteria</th>
+            <th scope="col" class="govuk-table__header">Level</th>
+            <th scope="col" class="govuk-table__header">Principle</th>
+         </tr>
+      </thead>
+      <tbody class="govuk-table__body">
+         {% for criteria in wcag %}
+         <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">
+               <a href="/wcag/{{criteria.reference}}">{{criteria.criteria}}</a>
+            </th>
+            <td class="govuk-table__cell">{{criteria.level}}</td>
+                      <td class="govuk-table__cell">{{criteria.principle}}</td>
+         </tr>
+         {% endfor %}
+          
+      </tbody>
+   </table>
+
+{% endblock %}

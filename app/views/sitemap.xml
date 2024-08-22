@@ -1,12 +1,249 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+<url>
+  <loc>https://accessibility-manual-7ceaefc568e2.herokuapp.com/</loc>
+  <lastmod>2024-08-21T18:19:56+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://accessibility-manual-7ceaefc568e2.herokuapp.com/cookie-policy</loc>
+  <lastmod>2024-08-21T18:19:56+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://accessibility-manual-7ceaefc568e2.herokuapp.com/standards</loc>
+  <lastmod>2024-08-21T18:19:56+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://accessibility-manual-7ceaefc568e2.herokuapp.com/audits-statements</loc>
+  <lastmod>2024-08-21T18:19:56+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://accessibility-manual-7ceaefc568e2.herokuapp.com/knowledge-hub</loc>
+  <lastmod>2024-08-21T18:19:56+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://accessibility-manual-7ceaefc568e2.herokuapp.com/training</loc>
+  <lastmod>2024-08-21T18:19:56+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://accessibility-manual-7ceaefc568e2.herokuapp.com/support</loc>
+  <lastmod>2024-08-21T18:19:56+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://accessibility-manual-7ceaefc568e2.herokuapp.com/training/accessibility-inclusion</loc>
+  <lastmod>2024-08-21T18:19:56+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://accessibility-manual-7ceaefc568e2.herokuapp.com/audits-statements/audits</loc>
+  <lastmod>2024-08-21T18:19:56+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://accessibility-manual-7ceaefc568e2.herokuapp.com/audits-statements/accessibility-statements</loc>
+  <lastmod>2024-08-21T18:19:56+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://accessibility-manual-7ceaefc568e2.herokuapp.com/project</loc>
+  <lastmod>2024-08-21T18:19:56+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://accessibility-manual-7ceaefc568e2.herokuapp.com/accessibility-statement</loc>
+  <lastmod>2024-08-21T18:19:56+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://accessibility-manual-7ceaefc568e2.herokuapp.com/standards/accessibility-statements</loc>
+  <lastmod>2024-08-21T18:19:56+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://accessibility-manual-7ceaefc568e2.herokuapp.com/standards/accessibility-issues</loc>
+  <lastmod>2024-08-21T18:19:56+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://accessibility-manual-7ceaefc568e2.herokuapp.com/standards/accessibility-audits</loc>
+  <lastmod>2024-08-21T18:19:56+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://accessibility-manual-7ceaefc568e2.herokuapp.com/standards/regulations</loc>
+  <lastmod>2024-08-21T18:19:56+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://accessibility-manual-7ceaefc568e2.herokuapp.com/standards/accessibility-statements/how-to-meet</loc>
+  <lastmod>2024-08-21T18:19:56+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://accessibility-manual-7ceaefc568e2.herokuapp.com/knowledge-hub/tools-testing</loc>
+  <lastmod>2024-08-21T18:19:56+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://accessibility-manual-7ceaefc568e2.herokuapp.com/knowledge-hub/common-issues</loc>
+  <lastmod>2024-08-21T18:19:56+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://accessibility-manual-7ceaefc568e2.herokuapp.com/knowledge-hub/managing-issues</loc>
+  <lastmod>2024-08-21T18:19:56+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://accessibility-manual-7ceaefc568e2.herokuapp.com/knowledge-hub/managing-issues/disproportionate-burden</loc>
+  <lastmod>2024-08-21T18:19:56+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://accessibility-manual-7ceaefc568e2.herokuapp.com/knowledge-hub/wcag</loc>
+  <lastmod>2024-08-21T18:19:56+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://accessibility-manual-7ceaefc568e2.herokuapp.com/knowledge-hub/wcag/conformance</loc>
+  <lastmod>2024-08-21T18:19:56+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://accessibility-manual-7ceaefc568e2.herokuapp.com/audits-statements/audits/prepare</loc>
+  <lastmod>2024-08-21T18:19:56+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://accessibility-manual-7ceaefc568e2.herokuapp.com/audits-statements/audits/after-audit</loc>
+  <lastmod>2024-08-21T18:19:56+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://accessibility-manual-7ceaefc568e2.herokuapp.com/audits-statements/accessibility-statements/fully-compliant</loc>
+  <lastmod>2024-08-21T18:19:56+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://accessibility-manual-7ceaefc568e2.herokuapp.com/audits-statements/accessibility-statements/partially-compliant</loc>
+  <lastmod>2024-08-21T18:19:56+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://accessibility-manual-7ceaefc568e2.herokuapp.com/audits-statements/accessibility-statements/non-compliant</loc>
+  <lastmod>2024-08-21T18:19:56+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://accessibility-manual-7ceaefc568e2.herokuapp.com/standards/accessibility-statements/compliance</loc>
+  <lastmod>2024-08-21T18:19:56+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://accessibility-manual-7ceaefc568e2.herokuapp.com/standards/report-manage-issues</loc>
+  <lastmod>2024-08-21T18:19:56+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://accessibility-manual-7ceaefc568e2.herokuapp.com/knowledge-hub/common-issues/error-messages</loc>
+  <lastmod>2024-08-21T18:19:56+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://accessibility-manual-7ceaefc568e2.herokuapp.com/knowledge-hub/common-issues/alt-text</loc>
+  <lastmod>2024-08-21T18:19:56+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://accessibility-manual-7ceaefc568e2.herokuapp.com/knowledge-hub/common-issues/links</loc>
+  <lastmod>2024-08-21T18:19:56+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://accessibility-manual-7ceaefc568e2.herokuapp.com/knowledge-hub/common-issues/contrast</loc>
+  <lastmod>2024-08-21T18:19:56+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://accessibility-manual-7ceaefc568e2.herokuapp.com/knowledge-hub/common-issues/headings</loc>
+  <lastmod>2024-08-21T18:19:56+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://accessibility-manual-7ceaefc568e2.herokuapp.com/knowledge-hub/common-issues/status-changes</loc>
+  <lastmod>2024-08-21T18:19:56+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://accessibility-manual-7ceaefc568e2.herokuapp.com/knowledge-hub/tools-testing/tools/accessibility-insights</loc>
+  <lastmod>2024-08-21T18:19:56+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://accessibility-manual-7ceaefc568e2.herokuapp.com/knowledge-hub/tools-testing/tools/arc</loc>
+  <lastmod>2024-08-21T18:19:56+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://accessibility-manual-7ceaefc568e2.herokuapp.com/knowledge-hub/tools-testing/tools/axe</loc>
+  <lastmod>2024-08-21T18:19:56+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://accessibility-manual-7ceaefc568e2.herokuapp.com/knowledge-hub/tools-testing/tools/contrast</loc>
+  <lastmod>2024-08-21T18:19:56+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://accessibility-manual-7ceaefc568e2.herokuapp.com/knowledge-hub/tools-testing/tools/headings-map</loc>
+  <lastmod>2024-08-21T18:19:56+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://accessibility-manual-7ceaefc568e2.herokuapp.com/knowledge-hub/tools-testing/tools/wave</loc>
+  <lastmod>2024-08-21T18:19:56+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://accessibility-manual-7ceaefc568e2.herokuapp.com/knowledge-hub/tools-testing/bookmarklets</loc>
+  <lastmod>2024-08-21T18:19:56+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://accessibility-manual-7ceaefc568e2.herokuapp.com/knowledge-hub/tools-testing/bookmarklets/blur</loc>
+  <lastmod>2024-08-21T18:19:56+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://accessibility-manual-7ceaefc568e2.herokuapp.com/knowledge-hub/tools-testing/bookmarklets/lists</loc>
+  <lastmod>2024-08-21T18:19:56+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://accessibility-manual-7ceaefc568e2.herokuapp.com/knowledge-hub/tools-testing/bookmarklets/target-size</loc>
+  <lastmod>2024-08-21T18:19:56+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://accessibility-manual-7ceaefc568e2.herokuapp.com/knowledge-hub/tools-testing/bookmarklets/text-spacing</loc>
+  <lastmod>2024-08-21T18:19:56+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://accessibility-manual-7ceaefc568e2.herokuapp.com/knowledge-hub/tools-testing/false-positives</loc>
+  <lastmod>2024-08-21T18:19:56+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
 
-  <url>
-       <loc>http://accessibility.education.gov.uk/</loc>
-       <lastmod>2024-04-01T10:00:00+00:00</lastmod>
-       <changefreq>daily</changefreq>
-       <priority>1.0000</priority>
-  </url>
- 
 </urlset>
