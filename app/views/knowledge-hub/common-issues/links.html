@@ -1,7 +1,7 @@
 {% extends "layouts/page_layout.html" %}
 
 {% set selectedNav = "Knowledge hub" %}
-{% set pageName = "Links" %}
+{% set pageName = "Non-descriptive links" %}
 {% set pageDescription = "How to ensure links are accessible and understandable."%}
 {% set mainClasses = "govuk-!-padding-top-0" %}
 {% set created = "13 August 2024" %}
@@ -16,24 +16,27 @@
 
     <h1 class="govuk-heading-xl">{{pageName}}</h1>
 
-    <p>Some users, especially those using a screen reader may navigate your content by looking for links or viewing links in a list to try to find specific content.</p>
-    <p>If links are not unique or descriptive this can be frustrating, for example if there is a long list of ‘more info’ links, users would not know what this information relates to.</p>
-    <p>By making links descriptive users will know what to expect when they select the link.</p>
-    <p>You should also ensure users know if external links open in a new tab or window.</p>
+    <p>Some users, especially those using a screen reader, may navigate content by looking for links or viewing links in a list to try to find specific content.</p>
+    <p>If links are not unique or descriptive this can be frustrating. For example if there is a long list of ‘more info’ links, users would not know what this information relates to.</p>
 
     <h2 class="govuk-heading-l">How to prevent issues</h2>
 
-    <p>Using the following approaches will help you write links that work for all users.</p>
+    <p>Make links descriptive so that users will know what to expect when they select the link.</p>
+
+    <p>Ensure users know if external links open in a new tab or window. For example, <a href="#" class="govuk-link" rel="noreferrer noopener" target="_blank">link text (opens in new tab)</a>.</p>
+   
+
+    <p>Use the following approaches to write links that work for all users:</p>
 
     <ul class="govuk-list govuk-list--bullet">
-        <li>write in clear, plain language</li>
-        <li>don't use terms like "click here"</li>
+        <li>use clear, plain language</li>
         <li>use unique and descriptive link text</li>
+        <li>don't use terms like 'click here'</li>
     </ul>
 
-    <h2 class="govuk-heading-l">Examples of the issues we find</h2>
+    <h2 class="govuk-heading-l">Examples of issues in DfE</h2>
 
-    <p>Below are some examples of common issues we find with links and how to avoid them.</p>
+    <p>Below are some examples of common issues with links and how to avoid them.</p>
 
     <h3 class="govuk-heading-m">Repetitive links</h3>
 
@@ -61,11 +64,13 @@
         </div>
     </div>
 
-     <h3 class="govuk-heading-m">Descriptive links</h3>
+     <h3 class="govuk-heading-m">Non-descriptive links</h3>
 
-    <p>In some cases, repetitive links are necessary, for example, in a table where actions may be required.</p>
+    <p>If links are not unique or descriptive users will not know what to expect.</p>
 
-    <p>You can make links more useful by including visually-hidden text for each link, which supports screen reader users to understand the context of the link.</p>
+    <p>
+
+    <p></p>
 
     <div class="govuk-grid-row dfe-flex">
         <div class="govuk-grid-column-one-half dfe-flex-item">
@@ -87,4 +92,20 @@
         </div>
     </div>
 
+    <div class="dfe-manual-callout">
+        <div class="dfe-manual-callout--header">
+            <img src="/assets/images/new-window.png" alt="" />
+            <h3 class="govuk-heading-m">Follow GOV.UK Design System guidance</h3>
+        </div>
+
+        <div class="dfe-manual-callout--content">
+            <p>The GOV.UK Design System provides guidance on the following components and patterns:</p>
+
+            <ul class="govuk-list govuk-list--bullet">
+                <li>
+                    <a href="https://design-system.service.gov.uk/styles/links/" rel="noopener noreferrer" target="_blank">links <span class="govuk-visually-hidden">(link opens in a new tab)</span></a>
+                </li>
+
+            </div>
+        </div>
 {% endblock %}

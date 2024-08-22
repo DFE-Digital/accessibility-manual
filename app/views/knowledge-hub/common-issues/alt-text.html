@@ -14,17 +14,19 @@
 
    <h1 class="govuk-heading-xl">{{pageName}}</h1>
 
-   <p>People with a sight impairment or are blind rely on good alternative descriptions to understand none-text content.</p>
+   <p>People with a sight impairment or are blind rely on good alternative descriptions to understand non-text content.</p>
    <p>Where images provide information or context to content, they should be given alternative descriptions which describe or provide the same information as a user would receive visually.</p>
 
-   <p>Where images are more complex such as graphs, charts or maps, a longer description is required.</p>
-   <p>In these cases, two descriptions should be provided, a short description which explains what the image is, and a longer description which gives more information on the content of the image. </p>
+      <h2 class="govuk-heading-l">How to prevent issues</h2>
+
+   <p>Where images are more complex, such as graphs, charts or maps, a longer description is required.</p>
+   <p>In these cases, 2 descriptions should be provided. A short description which explains what the image is, and a longer description which gives more information on the content of the image. </p>
 
    <p>Not all images need a description. If the image is purely decorative, it does not require alternative text. Ensure you use alt=”” so that screen readers will skip these images.</p>
 
-   <h2 class="govuk-heading-l">Examples of the issues we find</h2>
+   <h2 class="govuk-heading-l">Examples of issues in DfE</h2>
 
-   <p>Below are some examples of common issues we find concerning images and how to avoid them.</p>
+   <p>Below are some examples of common issues with images and how to avoid them.</p>
 
    <h3 class="govuk-heading-m">Wrong alt text</h3>
 
@@ -51,16 +53,16 @@
 
    <h3 class="govuk-heading-m">Charts</h3>
 
-   <p>It’s also important to ensure that colour alone has not been used to provide information or descriptions. For users with colour deficiencies or colour blindness, this content can often not be understood. </p>
+   <p>It's also important to ensure that colour alone has not been used to provide information or descriptions. For users with colour deficiencies or colour blindness, this content can often not be understood. </p>
    <p>
-Provide an alternative such as pattern difference or multi-shade colours. Or also provide direct labelling within the chart.</p>
+Provide an alternative such as pattern difference or multi-shade colours. Or you could also provide direct labelling within the chart.</p>
 </p>
 
 <div class="govuk-grid-row dfe-flex">
    <div class="govuk-grid-column-one-half dfe-flex-item">
       <div class="dfe-panel-do">
          <h3 class="govuk-heading-s">Do</h3>
-         <p class="govuk-!-margin-bottom-5">Label charts with informmation and use a range of colours.</p>
+         <p class="govuk-!-margin-bottom-5">Label charts with information and use a range of colours.</p>
          <img src="/assets/images/charts-do.png" style="width:100%;" class="govuk-!-margin-bottom-5"
                 alt="Example of a circle of lines which spin around and code for aria region.">
 
@@ -76,4 +78,26 @@ Provide an alternative such as pattern difference or multi-shade colours. Or als
    </div>
 </div>
 
+    <div class="dfe-manual-callout">
+        <div class="dfe-manual-callout--header">
+            <img src="/assets/images/new-window.png" alt="" />
+            <h3 class="govuk-heading-m">Follow GOV.UK Design System guidance</h3>
+        </div>
+
+        <div class="dfe-manual-callout--content">
+            <p>The GOV.UK Design System provides guidance on the following components and patterns:</p>
+
+            <ul class="govuk-list govuk-list--bullet">
+                <li>
+                    <a href="https://design-system.service.gov.uk/styles/images/" rel="noopener noreferrer" target="_blank">images <span class="govuk-visually-hidden">(link opens in a new tab)</span></a>
+                </li>
+                <li>
+                    <a href="https://design-system.service.gov.uk/styles/images/#text-in-charts-diagrams-and-complex-images" rel="noopener noreferrer" target="_blank">text in charts <span class="govuk-visually-hidden">(link opens in a new tab)</span></a>
+                </li>
+                <li>
+                    <a href="https://design-system.service.gov.uk/styles/images/#alt-text" rel="noopener noreferrer" target="_blank">alt text <span class="govuk-visually-hidden">(link opens in a new tab)</span></a>
+                </li>
+
+            </div>
+        </div>
 {% endblock %}

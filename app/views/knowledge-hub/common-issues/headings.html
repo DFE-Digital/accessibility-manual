@@ -16,21 +16,21 @@
 
     <h1 class="govuk-heading-xl">{{pageName}}</h1>
 
-    <p>Headings should be used to create a logical structure for your content. This helps users to understand the content and navigate it more easily. They are an important way for screen reader users to navigate content.</p>
+    <p>Headings should be used to create a logical structure for content. This helps users to understand the content and navigate it more easily.</p>
+    
+    <p>The H1 of a page should describe to users what they can expect the main theme of the following content to be.</p>
 
-    <p>The H1 of the page should describe to users what they can expect the main theme of the following content to be.</p>
+    <p>Users often skip through headings in a list to find the content they're looking for. Unique, descriptive headings make for a good user experience for screen-reader users.</p>
 
-    <p>Users often skip through headings in a list to find the content they are looking for, unique, descriptive headings make for a good user experience for screen reader users.</p>
+    <h2 class="govuk-heading-l">Examples of issues in DfE</h2>
 
-    <h2 class="govuk-heading-l">Examples of the issues we find</h2>
-
-    <p>Below are some examples of common issues we find where headings are an issue and how to avoid them.</p>
+    <p>Below are some examples of common issues with headings and how to avoid them.</p>
 
     <h3 class="govuk-heading-m">Skipped heading levels</h3>
 
     <p>Skipped heading levels can cause confusion for users, and from a semantic code perspective, is incorrect.</p>
 
-    <p>Ensure headings are used in a logical order, for example, H1 followed by H2, H3, H4 etc.</p>
+    <p>Ensure headings are used in a logical order, for example, H1 followed by H2, and H3.</p>
 
     <p>You can use a tool such as <a href="/knowledge-hub/tools-testing/tools/headings-map">Headings Map</a> to check the heading structure of your page.</p>
 
@@ -56,11 +56,13 @@
 
     <h3 class="govuk-heading-m">Use semantic heading structure</h3>
 
-    <p>Using the correct code to create headings is important for screen reader users. Screen readers use the code to navigate the page and understand the structure of the content.</p>
+    <p>Using the correct code to create headings is important for screen-reader users. Screen readers use the code to navigate the page and understand the structure of the content.</p>
 
     <p>Semantic HTML includes the use of H1 to H6 tags to create a logical structure for your content.</p>
-
+    
     <p>This is instead of styling text to look like a heading, which can be confusing for screen reader users.</p>
+
+    <p>The <a ref="https://design-system.service.gov.uk/styles/headings/">GOV.UK Design System</a> encourages the use of H1 to H3. If content appears to have a need to go beyond an H3 level, you could look to restructure or redesign it.</p>
 
     <p>You can use a tool such as <a href="/knowledge-hub/tools-testing/tools/headings-map">Headings Map</a> to check the heading structure of your page.</p>
 
@@ -68,7 +70,7 @@
         <div class="govuk-grid-column-one-half dfe-flex-item">
             <div class="dfe-panel-do">
                 <h3 class="govuk-heading-s">Do</h3>
-                <p class="govuk-!-margin-bottom-5">Use correct HTML markup (H1, H2 etc) for headings.</p>
+                <p class="govuk-!-margin-bottom-5">Use correct HTML markup (H1, H2, H3) for headings.</p>
                 <img src="/assets/images/headings-semantic-do.png" style="width:100%;" class="govuk-!-margin-bottom-5"
                 alt="Content shown with logical heading structure of H1 followed by H2 then H3.">
 
@@ -83,5 +85,22 @@
             </div>
         </div>
     </div>
+    <div class="dfe-manual-callout">
+        <div class="dfe-manual-callout--header">
+            <img src="/assets/images/new-window.png" alt="" />
+            <h3 class="govuk-heading-m">Follow GOV.UK Design System guidance</h3>
+        </div>
 
+        <div class="dfe-manual-callout--content">
+            <p>The GOV.UK Design System provides guidance on the following style and structure:</p>
+
+            <ul class="govuk-list govuk-list--bullet">
+                <li>
+                    <a href="https://design-system.service.gov.uk/styles/headings/" rel="noopener noreferrer" target="_blank">headings <span class="govuk-visually-hidden">(link opens in a new tab)</span></a>
+                </li>
+                <li>
+                    <a href="https://www.gov.uk/guidance/content-design/writing-for-gov-uk" rel="noopener noreferrer" target="_blank">writing for GOV.UK <span class="govuk-visually-hidden">(link opens in a new tab)</span></a>
+                </li>
+            </div>
+        </div>
 {% endblock %}
