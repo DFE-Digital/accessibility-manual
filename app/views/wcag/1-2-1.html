@@ -1,0 +1,105 @@
+{% extends "layouts/page_layout.html" %}
+
+{% set selectedNav = "WCAG criteria" %}
+{% set pageName = "1.2.1 Audio-only and Video-only (Prerecorded)" %}
+{% set pageDescription = "Guidance for understanding WCAG 1.2.1 Audio-only and Video-only (Prerecorded) (Level A)"%}
+{% set mainClasses = "govuk-!-padding-top-0" %}
+{% set created = "22 August 2024" %}
+{% set reviewed = "22 August 2024" %}
+{% set updated = "22 August 2024" %}
+{% set githubIssueID = "71" %}
+{% set need = "This page exists to help people understand a specific WCAG criteria" %}
+
+{% block content %}
+
+    <h1 class="govuk-heading-xl">{{pageName}}</h1>
+
+    <table class="govuk-table">
+        <thead class="govuk-table__head">
+            <tr class="govuk-table__row">
+                <th scope="col" class="govuk-table__header govuk-!-width-one-quarter">Level</th>
+                <th scope="col" class="govuk-table__header govuk-!-width-one-quarter">Understanding</th>
+            </tr>
+        </thead>
+        <tbody class="govuk-table__body">
+            <tr class="govuk-table__row">
+                <td class="govuk-table__cell">
+                    <strong class="govuk-tag govuk-tag--blue">A</strong>
+                </td>
+
+                <td class="govuk-table__cell">
+                    <a href="https://www.w3.org/WAI/WCAG22/Understanding/audio-only-and-video-only-prerecorded"
+        target="_blank" rel="noopener noreferrer">Guidance  <span class="govuk-visually-hidden">for understanding the {{pageName}} criteria on WCAG (opens in a new tab)</a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="dfe-manual-callout">
+            <div class="dfe-manual-callout--header">
+                <img src="/assets/images/exclamation-mark.png" alt="" />
+                <h3 class="govuk-heading-m">You must meet this criteria</h3>
+            </div>
+
+            <div class="dfe-manual-callout--content">
+                <p>Any content provided through a browser, must meet this criteria.</p>
+            </div>
+        </div>
+
+        <h2 class="govuk-heading-l">What this means</h2>
+
+        <p>Audio and video content has appropriate alternatives to ensure that everyone has a comparable experience when
+    interacting with this content. This may include transcripts, captions and audio description depending on the type of
+    audio or video content.</p>
+
+    <ul class="govuk-list govuk-list--spaced">
+    <li>
+        <a target="_blank" rel="noopener noreferrer"
+            href="https://www.w3.org/WAI/WCAG21/Understanding/audio-only-and-video-only-prerecorded">Understanding
+            Success Criterion 1.2.1: Audio-only and Video-only (Prerecorded)</a>
+    </li>
+    <li>
+        <a target="_blank" rel="noopener noreferrer"
+            href="https://www.w3.org/WAI/WCAG21/Understanding/captions-prerecorded">Understanding Success Criterion
+            1.2.2: Captions (Prerecorded)</a>
+    </li>
+    <li>
+        <a target="_blank" rel="noopener noreferrer"
+            href="https://www.w3.org/WAI/WCAG21/Understanding/audio-description-or-media-alternative-prerecorded">Understanding
+            Success Criterion 1.2.3: Audio Description or Media Alternative (Prerecorded)</a>
+    </li>
+    <li>
+        <a target="_blank" rel="noopener noreferrer"
+            href="https://www.w3.org/WAI/WCAG21/Understanding/captions-live">Understanding Success Criterion 1.2.4:
+            Captions (Live)</a>
+    </li>
+    <li>
+        <a target="_blank" rel="noopener noreferrer"
+            href="https://www.w3.org/WAI/WCAG21/Understanding/audio-description-prerecorded">Understanding Success
+            Criterion 1.2.5: Audio Description (Prerecorded)</a>
+    </li>
+</ul>
+
+        <h2 class="govuk-heading-l">How to implement</h2>
+
+        <p>The alternative required depends on the context of the audio or video, but broadly:</p>
+        <ul class="govuk-list govuk-list--bullet">
+            <li>always provide a transcript</li>
+            <li>always provide captions for videos </li>
+            <li>if the narration of a video does not include all the detail required, then provide audio description</li>
+        </ul>
+        <p>Provide accessible transcripts and alternative versions of content next to the original multimedia content.</p>
+        <p>Closed Captions (where the captions are separate from the video content) should be used where the video player
+    supports this. Captions should be checked for accuracy, especially where auto generated.</p>
+        <p>For live video content like livestreams of events, captions should be provided which are synchronised with the audio.
+</p>
+
+        <h2 class="govuk-heading-l">How to test</h2>
+
+        <h4 class="govuk-heading-s">How to test with a visual check</h4>
+        <p>If the page contains multimedia content, check that the required alternative is available.</p>
+        <p>The transcipt should be available near to the multimedia content but can be a link to another page.</p>
+        <p>If a second version of the content is available with audio description then this must be easily accessible from the
+    non-audio described version.</p>
+
+    {% endblock %}

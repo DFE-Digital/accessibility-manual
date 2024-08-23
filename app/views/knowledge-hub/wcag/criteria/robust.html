@@ -1,0 +1,86 @@
+{% extends "layouts/page_layout.html" %}
+
+{% set selectedNav = "Knowledge hub" %}
+{% set selectedSubNav = "WCAG" %}
+{% set pageName = "Robust" %}
+{% set pageDescription = "Understanding each of the Web Content Accessibility Guidelines (WCAG) criteria." %}
+{% set mainClasses = "govuk-!-padding-top-0" %}
+{% set created = "18 July 2024" %}
+{% set reviewed = "18 July 2024" %}
+{% set updated = "18 July 2024" %}
+{% set githubIssueID = "" %}
+{% set need = "This page exists to help people understand each of the WCAG Criteria" %}
+{% set aka = "wcag,wgac,wacg,w3c,criteria,criterion" %}
+
+
+
+{% block content %}
+
+<h1 class="govuk-heading-xl">{{ pageName }}</h1>
+
+   <p>Content must be robust and compatible with current and future tools, browsers and technologies.</p>
+  <h2 class="govuk-heading-l">Criteria</h2>
+        <h3 class="govuk-heading-m">Compatible</h3>
+        <ul class="govuk-list govuk-list--spaced">
+            <li>
+                <a href="#4-1-1">4.1.1 - Parsing</a> <strong class="govuk-tag govuk-!-margin-bottom-3 govuk-tag--red">Obsolete in version 2.2</strong>
+            </li>
+            <li>
+                <a href="#4-1-2">4.1.2 - Name, Role, Value</a>
+            </li>
+            <li>
+                <a href="#4-1-3">4.1.3 - Status messages</a>
+            </li>
+        </ul>
+        <h2  class="govuk-heading-l">Compatible</h2>
+        <h3 id="4-1-1">4.1.1 - Parsing</h3> 
+    <strong class="govuk-tag govuk-!-margin-bottom-3 govuk-tag--red">Level A</strong>  <strong class="govuk-tag govuk-!-margin-bottom-3 govuk-tag--red">Obsolete in version 2.2</strong>
+        <p>The code of the page must not cause browser or assistive technology conflicts. This ensures that content and functionality is presented in a way that works reliably across all supported browsers and assistive technologies.</p>
+        <p>
+            <a href="https://www.w3.org/WAI/WCAG21/Understanding/parsing"  target="_blank" rel="noopener noreferrer">Understanding Success Criterion 4.1.1: Parsing</a>
+        </p>
+        <h4 class="govuk-heading-s">Implementation guidance</h4>
+        <p>HTML code must conform to the standard identified in the doctype statement.</p>
+        <p>ARIA code must conform to the rules for use with the host language (HTML).</p>
+        <p>Not all errors and warnings raised by an HTML validator have an impact on accessibility. We recommend using the bookmarklets in the <a href="/accessibility/assurance">testing and assurance</a> page rather than starting with an HTML validator.</p>
+        <h4 class="govuk-heading-s">How to test with a manual check</h4>
+        <p>Use the two bookmarklets outlined in the article at <a href="https://www.tpgi.com/wcag-2-0-parsing-error-bookmarklet/"  target="_blank" rel="noopener noreferrer">https://www.tpgi.com/wcag-2-0-parsing-error-bookmarklet</a>
+        </p>
+        <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+        <h3 id="4-1-2">4.1.2 Name, Role, Value</h3>
+    <strong class="govuk-tag govuk-!-margin-bottom-3 govuk-tag--red">Level A</strong> 
+        <p>All interactive components must have an accessible name and role, and the state of the component must be communicated to assistive technologies.</p>
+        <p>
+            <a href="https://www.w3.org/WAI/WCAG21/Understanding/name-role-value"  target="_blank" rel="noopener noreferrer">Understanding Success Criterion 4.1.2: Name, Role, Value</a>
+        </p>
+        <h4 class="govuk-heading-s">Implementation guidance</h4>
+        <p>All interactive elements and components must:</p>
+        <ul>
+            <li>have an accessible name and;</li>
+            <li>an implicit or explicit role and;</li>
+            <li>communicate information about their state</li>
+        </ul>
+        <p>See guidance for complex components/widget at <a href="https://w3c.github.io/aria-practices/"  target="_blank" rel="noopener noreferrer">https://w3c.github.io/aria-practices</a>
+        </p>
+        <h4 class="govuk-heading-s">How to test</h4>
+        <p>The guidance at <a href="https://w3c.github.io/aria-practices/"  target="_blank" rel="noopener noreferrer">https://w3c.github.io/aria-practices</a> includes testing practices for complex components.</p>
+        <h4 class="govuk-heading-s">How to test with JAWS/NVDA</h4>
+        <p>Use the arrow keys, Enter key and Spacebar to reach and interact with all the user interface components on the page and check that the screen readers announce all the information necessary to understand the role and current status of the components and how to operate them.</p>
+        <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+        <h3 id="4-1-3">4.1.3 Status messages</h3>
+    <strong class="govuk-tag govuk-!-margin-bottom-3 govuk-tag--red">Level A</strong> 
+        <p>There are different situations where a page needs to dynamically display a status message. These messages need to be conveyed to assistive technology users, even when they don’t receive focus. Where possible, you should avoid disturbing the user’s place in a page.</p>
+        <p>
+            <a href="https://www.w3.org/WAI/WCAG21/Understanding/status-messages"  target="_blank" rel="noopener noreferrer">Understanding Success Criterion 4.1.3: Status Messages</a>
+        </p>
+        <h4 class="govuk-heading-s">Implementation guidance</h4>
+        <p>Status messages or updates which occur visually should be communicated to screen reader users.</p>
+        <p>These messages should be non-intrustive and only used when there is a benefit to the user, for instance informing them how many search results have been returned, that errors have occured in their submission or that a form has been successfully submitted.</p>
+        <p>Generally, a notification/status message should be implemented using an ARIA live region (see <a href="https://www.w3.org/TR/wai-aria/#aria-live"  target="_blank" rel="noopener noreferrer">https://www.w3.org/TR/wai-aria/#aria-live</a> and <a href="https://developer.mozilla.org/en-US/docs/Web/accessibility/aRIA/aRIA_Live_Regions"  target="_blank" rel="noopener noreferrer">https://developer.mozilla.org/en-US/docs/Web/accessibility/aRIA/aRIA_Live_Regions</a>).</p>
+        <p>Avoid using the assertive setting for aria-live regions. The polite setting is sufficent in most use cases.</p>
+        <h4 class="govuk-heading-s">Testing with JAWS/NVDA</h4>
+        <p>When completing actions that involve a visual status message or information that a user needs to be made aware of, check that the message is announced to screereader users in a timely manner.</p>
+        <p>Note - these messages should not interupt the screenreaders current activity but should relay the information at a suitable break in the screenreader audio.</p>
+
+        <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+{% endblock %}
