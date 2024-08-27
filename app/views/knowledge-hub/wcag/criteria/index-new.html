@@ -25,19 +25,41 @@
 
 {% if principle == 'Perceivable' %}
       <p>Information and user interface components must be presentable to users in ways they can perceive.</p>
-      <p><a href="/knowledge-hub/wcag/criteria/perceivable">Read the criteria for perceivable</a></p>
    {% elif principle == 'Operable' %}
       <p>User interface components and navigation must be operable.</p>
-      <p><a href="/knowledge-hub/wcag/criteria/operable">Read the criteria for operable</a></p>
    {% elif principle == 'Understandable' %}
       <p>Information and the operation of user interface must be understandable.</p>
-      <p><a href="/knowledge-hub/wcag/criteria/understandable">Read the criteria for understandable</a></p>
    {% elif principle == 'Robust' %}
       <p>Content must be robust enough that it can be interpreted reliably by a wide variety of user agents, including assistive technologies.</p>
-      <p><a href="/knowledge-hub/wcag/criteria/robust">Read the criteria for robust</a></p>
 {% endif %}
 
-   
+    <table class="govuk-table">
+        <thead class="govuk-table__head">
+            <tr class="govuk-table__row">
+                <th scope="col" class="govuk-table__header govuk-!-width-three-quarters">Success Criteria</th>
+                <th scope="col" class="govuk-table__header govuk-!-width-one-quarter">Level</th>
+            </tr>
+        </thead>
+        <tbody class="govuk-table__body">
+            {% for criteria in criteria_list %}
+                <tr class="govuk-table__row">
+                    <th scope="row" class="govuk-table__header">
+                        <a href="/wcag/{{ criteria.reference }}">{{ criteria.criteria }}</a>
+                    </th>
+                    <td class="govuk-table__cell">
+                        {% if criteria.level == 'A' %}
+                            <strong class="govuk-tag govuk-tag--blue">{{ criteria.level }}</strong>
+                        {% elif criteria.level == 'AA' %}
+                            <strong class="govuk-tag govuk-tag--light-blue">{{ criteria.level }}</strong>
+                        {% elif criteria.level == 'AAA' %}
+                            <strong class="govuk-tag govuk-tag--yellow">{{ criteria.level }}</strong>
+                        {% endif %}
+                    </td>
+                   
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
 {% endfor %}
 
 {% endblock %}

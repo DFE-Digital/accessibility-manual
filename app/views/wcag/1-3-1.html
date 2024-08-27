@@ -1,0 +1,99 @@
+{% extends "layouts/page_layout.html" %}
+
+{% set selectedNav = "WCAG criteria" %}
+{% set pageName = "1.3.1 - Info and relationships" %}
+{% set pageDescription = "Guidance for understanding WCAG 1.3.1 - Info and relationships (Level A)"%}
+{% set mainClasses = "govuk-!-padding-top-0" %}
+{% set created = "22 August 2024" %}
+{% set reviewed = "22 August 2024" %}
+{% set updated = "22 August 2024" %}
+{% set githubIssueID = "71" %}
+{% set need = "This page exists to help people understand a specific WCAG criteria" %}
+
+{% block content %}
+
+    <h1 class="govuk-heading-xl">{{pageName}}</h1>
+
+    <table class="govuk-table">
+        <thead class="govuk-table__head">
+            <tr class="govuk-table__row">
+                <th scope="col" class="govuk-table__header govuk-!-width-one-quarter">Level</th>
+                <th scope="col" class="govuk-table__header govuk-!-width-one-quarter">Understanding</th>
+            </tr>
+        </thead>
+        <tbody class="govuk-table__body">
+            <tr class="govuk-table__row">
+                <td class="govuk-table__cell">
+                    <strong class="govuk-tag govuk-tag--blue">A</strong>
+                </td>
+               
+                <td class="govuk-table__cell">
+                    <a href="https://www.w3.org/WAI/WCAG21/Understanding/info-and-relationships"
+        target="_blank" rel="noopener noreferrer">Guidance  <span class="govuk-visually-hidden">for understanding the {{pageName}} criteria on WCAG (opens in a new tab)</a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="dfe-manual-callout">
+            <div class="dfe-manual-callout--header">
+                <img src="/assets/images/exclamation-mark.png" alt="" />
+                <h3 class="govuk-heading-m">You must meet this criteria</h3>
+            </div>
+
+            <div class="dfe-manual-callout--content">
+                <p>Any content provided through a browser, must meet this criteria.</p>
+            </div>
+        </div>
+
+        <h2 class="govuk-heading-l">What this means</h2>
+
+        <p>When information is visually presented as a table, this structure must be conveyed appropriately to assistive
+    technologies. This ensure that tables are available to screen reader, screen magnification and speech recognition
+    tool users.</p>
+<p>Where possible, you should use semantic HTML to implement content structures.</p>
+
+
+
+        <h2 class="govuk-heading-l">How to implement</h2>
+
+        <p>Tabular data is presented using proper HTML markup (&lt;table&gt;, &lt;tr&gt;, &lt;th&gt;, and &lt;td&gt; elements).
+</p>
+<p>Tables include a &lt;caption&gt; element which summarises the overall purpose of the table.</p>
+<p>Avoid creating complex tables (with multiple rows or columns of headings).</p>
+<p>If semantic tables are not possible, as a last resort, use ARIA roles to replicate the structure of a table. This is
+    highly complex and involves a lot of additional coding, so avoid it if you can. See <a target="_blank"
+        rel="noopener noreferrer"
+        href="https://developer.mozilla.org/en-US/docs/Web/accessibility/aRIA/Roles/Table_Role">https://developer.mozilla.org/en-US/docs/Web/accessibility/aRIA/Roles/Table_Role</a>
+    for implementation advice.</p>
+
+        <h2 class="govuk-heading-l">How to test</h2>
+
+        <ul class="govuk-list govuk-list--bullet">
+    <li>right click on any tables and select the ‘Inspect’ option</li>
+    <li>manually review the table structure to identify the presence of the correct mark up</li>
+    <li>note - &lt;thead&gt; and &lt;tbody&gt; are not semantic HTML and are used for formatting purposes. The only
+        valid semantic tags are shown</li>
+    <li>if there are no semantic tags, check for ARIA roles related to tables. All appropriate roles, descriptions and
+        indexes need to be available to pass this requirement</li>
+</ul>
+
+<h3 class="govuk-heading-m">How to test with JAWS/NVDA</h3>
+<p>Use the <strong class="govuk-tag govuk-tag--grey">t</strong> key to reach the tables on the page, use <strong
+        class="govuk-tag govuk-tag--grey">ctrl</strong>+<strong class="govuk-tag govuk-tag--grey">alt</strong>+<strong
+        class="govuk-tag govuk-tag--grey">arrow keys</strong> to navigate the tables and check that the correct row or
+    column headers are announced by the screen readers for each data cell.</p>
+
+        <h2 class="govuk-heading-l">Helpful links</h2>
+
+<ul class="govuk-list govuk-list--spaced">
+    <li>
+        <a target="_blank" href="https://design-system.service.gov.uk/components/table/">GOV.UK Design System -
+            Tables</a>
+    </li>
+    <li>
+        <a target="_blank" rel="noopener noreferrer" href="https://www.w3.org/WAI/tutorials/tables/">Web Accessibility
+            Tutorials - Tables Concepts</a>
+    </li>
+</ul>
+    {% endblock %}
