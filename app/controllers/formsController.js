@@ -23,7 +23,7 @@ exports.p_support = async function (req, res) {
     // validate email is an email
     if (email) {
         if (!validateEmail(email)) {
-            errors.push({ msg: 'Enter a valid email', field: 'email' });
+            errors.push({ msg: 'Enter an email address in the correct format, like name@example.com', field: 'email' });
         }
     }
 
