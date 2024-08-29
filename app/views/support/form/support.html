@@ -71,8 +71,6 @@
             {% endif %}
 
             <h2 class="govuk-heading-l govuk-!-margin-top-5">Your request</h2>
-            <p>Give us as much information as possible to help us understand your question, and what, if any, steps you've already taken or considered.</p>
-            <p>We aim to respond to queries within 1 working day, between Monday and Friday.</p>
 
             <form method="post" action="/support/form/support">
                <div class="govuk-form-group {% if nameError %}govuk-form-group--error{% endif %}">
@@ -93,7 +91,7 @@
 
                <div class="govuk-form-group {% if contactError %}govuk-form-group--error{% endif %}">
                   <fieldset class="govuk-fieldset">
-                     <legend class="govuk-fieldset__legend">What is the best way to respond to you?</legend>
+                     <legend class="govuk-fieldset__legend">What's the best way to respond to you?</legend>
                      {% if contactError %}
                         <span class="govuk-error-message">{{ contactError }}</span>
                      {% endif %}
@@ -123,7 +121,7 @@
 
                <div class="govuk-form-group {% if queryError %}govuk-form-group--error{% endif %}">
                   <label class="govuk-label" for="query">Your question</label>
-                  <div id="query-hint" class="govuk-hint">Please provide as much detail as possible to help us understand your query</div>
+                  <div id="query-hint" class="govuk-hint">Provide as much information as possible to help us understand your query</div>
                   {% if queryError %}
                      <span class="govuk-error-message">{{ queryError }}</span>
                   {% endif %}
@@ -137,6 +135,8 @@
                </div>
 
                <p>Your details will only be used to deal with this request.</p>
+
+               <p>We aim to respond to queries within 1 working day, between Monday and Friday.</p>
                <button type="submit" class="govuk-button">Submit request</button>
             </form>
          </div>
