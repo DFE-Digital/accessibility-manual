@@ -13,6 +13,14 @@ exports.handleAnswer = (req, res) => {
     const answer = req.body.answer;
     const currentQuestion = req.session.currentQuestion;
 
+    if (!answer) {
+        return res.render('training/basic/question', {
+            question: questions[currentQuestion],
+            questionIndex: currentQuestion,
+            error: "Please select an answer before proceeding."
+        });
+    }
+
     if (!req.session.answers) {
         req.session.answers = [];
     }
@@ -20,11 +28,15 @@ exports.handleAnswer = (req, res) => {
 
     if (currentQuestion < questions.length - 1) {
         req.session.currentQuestion += 1;
-        res.render('training/basic/question', { question: questions[req.session.currentQuestion], questionIndex: req.session.currentQuestion });
+        res.render('training/basic/question', {
+            question: questions[req.session.currentQuestion],
+            questionIndex: req.session.currentQuestion
+        });
     } else {
         res.redirect('/training/basic/results');
     }
 };
+
 
 
 
