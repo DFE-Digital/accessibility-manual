@@ -99,8 +99,8 @@
           <div class="govuk-width-container">
             <div class="govuk-grid-row">
               <div class="govuk-grid-column-two-thirds">
-                <h1 class="govuk-heading-xl">{{pageName}}</h1>
-                <p class="govuk-body-l">{{pageDescription}}</p>
+                <h1 class="govuk-heading-xl">{% if seoPageName %}{{seoPageName}}{% else %}{{pageName}}{%endif%}</h1>
+                <p class="govuk-body-l">{% if seoPageDescription %}{{seoPageDescription}}{% else %}{{pageDescription}}{%endif%}</p>
               </div>
             </div>
           </div>
