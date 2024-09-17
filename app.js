@@ -122,11 +122,9 @@ app.use((req, res, next) => {
 app.use('/', routes)
 
 
-
-
 app.get('/robots.txt', function (req, res) {
   res.type('text/plain');
-  res.send("User-agent: *\nDisallow: /");
+  res.send("User-agent: *\nAllow: /");
 });
 
 // Render sitemap.xml in XML format
