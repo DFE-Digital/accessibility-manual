@@ -66,7 +66,9 @@ app.use(favicon(path.join(__dirname, 'public/assets/images', 'favicon.ico')));
 
 app.set('view engine', 'html');
 
-app.locals.serviceName = process.env.serviceName || 'Accessibility manual';
+const service = "Accessibility manual"; 
+
+app.locals.serviceName = process.env.serviceName || service;
 
 // Set up Nunjucks as the template engine
 var nunjuckEnv = nunjucks.configure(
@@ -197,7 +199,6 @@ if (config.env !== 'development') {
 // Route for handling Yes/No feedback submissions
 app.post('/form-response/helpful', (req, res) => {
   const { response } = req.body;
-  const service = "Design manual";
   const pageURL = req.headers.referer || 'Unknown';
   const date = new Date().toISOString();
 
@@ -222,7 +223,7 @@ app.post('/form-response/helpful', (req, res) => {
 app.post('/form-response/feedback', (req, res) => {
   const { response } = req.body;
 
-  const service = "Design manual"; // Example service name
+ // Example service name
   const pageURL = req.headers.referer || 'Unknown'; // Attempt to capture the referrer URL
   const date = new Date().toISOString();
 
@@ -279,7 +280,7 @@ app.post('/submit-feedback', (req, res) => {
       personalisation: {
         feedback: feedback,
         page: fullUrl,
-        service: 'Design Manual',
+        service: 'Accessibility Manual',
       },
     })
     .then((response) => { })
