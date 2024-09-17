@@ -1,7 +1,7 @@
 <title>
     {%- if seoPageName %}{{seoPageName}}
     {% elseif pageName %}{{pageName}}{%endif%} - {{serviceName}}</title>
-    <meta name="description" content="{% if seoPageDescription %}{{seoPageDescription}}{% elseif pageName %}{{pageDescription}}{%endif%}">
+    <meta name="description" content="{% if seoPageDescription %}{{seoPageDescription}}{% else %}{{pageDescription}}{%endif%}">
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
     <meta name="theme-color" content="#00294a">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -21,7 +21,8 @@
     <meta property="og:type" content="website" />
     <meta property="og:locale" content="en_GB" />
     <meta property="og:image" content='https://accessibility.education.gov.uk/assets/images/og-image.png' />
-
+    <meta property="og:image:alt" content="Department for Education, Accessibility and inclusive design manual on a pink background." />
+    
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:site" content="@dfe_digital">
     <meta name="twitter:creator" content="@dfe_digital">
