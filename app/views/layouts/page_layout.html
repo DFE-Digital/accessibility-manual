@@ -5,21 +5,13 @@
 <!DOCTYPE html>
 <html lang="en" class="govuk-template ">
 
-  <head>
+    <head>
     <meta charset="utf-8">
-    <title>
-      {%- if seoPageName %}{{seoPageName}}
-      {% elseif pageName %}{{pageName}}{%endif%} - {{serviceName}}</title>
-      <meta name="description"
-    content="{% if seoPageDescription %}{{seoPageDescription}}{% elseif pageName %}{{pageDescription}}{%endif%}">
-      <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-      <meta name="theme-color" content="#00294a">
-      <link href="/assets/css/app.min.css" rel="stylesheet">
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/default.min.css">
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
-       <meta name="aka" content="{{aka}}">
-      {% block head %}{% endblock %}
-    </head>
+
+    {% include 'layouts/_head.html' %}
+
+    {% block head %}{% endblock %}
+  </head>
 
     <script>
       document.addEventListener('DOMContentLoaded', function () {
