@@ -1,0 +1,31 @@
+{% extends "layouts/full-nohero.html" %}
+
+{% set selectedNav = "Training" %}
+{% set pageName = "WCAG 2.2 and GDS monitoring" %}
+{% set pageDescription = "Video discussing the latest additions within the 2.2 update of the web content accessibility guidelines. We give some practical examples of passes and failures and discuss how GDS are incorporating the updates into their monitoring process." %}
+{% set mainClasses = "govuk-!-padding-bottom-9" %}
+
+{% block hero %}
+
+    <div class="govuk-width-container">
+        <a href="/training" class="govuk-back-link">Back to training</a>
+    </div>
+{% endblock %}
+
+{% block content %}
+    <div class="govuk-width-container">
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-two-thirds">
+
+                <h1 class="govuk-heading-xl">{{ pageName }}</h1>
+
+                <p>Jake, DfE's senior accessibility specialist, discusses the latest additions within the 2.2 update of the web content accessibility guidelines.</p>
+                <p>In this video, Jake also gives some practical examples of passes and failures and discuss how GDS are incorporating the updates into their monitoring process.</p>
+               
+               <iframe width="800" height="450" style="margin-bottom: 15px;" src="https://www.youtube.com/embed/j2GJ0JCoqU8?si=Ylm6V8elwAA6hT64" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+              
+              <p>You can also <a href="https://www.youtube.com/watch?v=j2GJ0JCoqU8">watch the video on YouTube</a>.</p>
+            </div>
+        </div>
+    </div>
+{% endblock %}
