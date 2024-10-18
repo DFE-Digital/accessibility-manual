@@ -1,0 +1,53 @@
+{% extends "layouts/page_layout.html" %}
+
+{% set selectedNav = "Knowledge hub" %}
+{% set pageName = "Screen readers" %}
+{% set pageDescription = "Guidance for the types of screen reader tools, how they work and how to use them effectively."%}
+{% set mainClasses = "govuk-!-padding-top-0" %}
+{% set created = "18 October 2024" %}
+{% set reviewed = "18 October 2024" %}
+{% set updated = "18 October 2024" %}
+{% set githubIssueID = "77" %}
+{% set need = "This page exists to help people understand how to use tools to test for, and understand accessibility issues in a product." %}
+{% set aka = "" %}
+{% set pagePath = "/knowledge-hub/screen-readers" %}
+{% block content %}
+
+    <h1 class="govuk-heading-xl">{{pageName}}</h1>
+
+    <p>A screen reader is an assistive technology tool. It can help users to read content or navigate a service if they are unable to, or struggle to, see a screen.</p>
+    <p>They are mostly used by people with low vision, who are blind and are unable to navigate with a mouse. They are also sometimes used by people with cognitive disabilities or who are neurodiverse. </p>
+    <p>Screen readers provide all the information that a user would get visually, just in a different way.  Rather than receive information from a computer visually, it can receive it audibly or by brail display. </p>
+
+    <h2 class="govuk-heading-l">Types of screen readers </h2>
+    <p>There are 3 main types of screen readers. Paid ones, such as JAWS (Job Access With Speech). Free versions, such as NVDA (NonVisual Desktop Access), and ones built into the operating system of a device, such as VoiceOver on Apple devices and Narrator on Windows devices.</p>
+
+    <h2 class="govuk-heading-l">How to test with a screen reader</h2>
+    <p>Most screen readers are used in the same way, but they all have their own keyboard shortcuts and commands. The easier way to start testing with one is to switch the screen reader on and use the tab key to navigate your way through your service. This will give you a basic idea of how a screen reader works and the type of information that is relayed audibly to a user. </p>
+    <p>However, this will only give you information on interactive components, such as links and buttons in your service. There are many other types of web content that should be tested to ensure your website is accessible.</p>
+
+    <h2 class="govuk-heading-l">Who should test with a screen reader</h2>
+    <p>Everyone can carry out these tests on a service. It's useful to understand how people who use a screen reader might navigate a service you are creating, content you are writing, or a document you are creating. </p>
+    <p>Interaction designers and developers especially, should know the basics of a screen reader and be able to carry out checks on a service they are designing or developing.</p>
+
+    <h2 class="govuk-heading-l">Screen reader tools and how to use them</h2>
+
+    <p>Guidance and videos for specific tools:</p>
+
+    <h3 class="govuk-heading-m">Voiceover</h3>
+
+    <p>Voiceover is available on Apple devices. It is a built-in screen reader that can be used on iPhones, iPads and Macs. </p>
+
+    <p>We have created <a href="/knowledge-hub/screen-readers/voiceover" class="govuk-link">guidance for using Voiceover</a> and a <a href="/knowledge-hub/screen-readers/voiceover#video" class="govuk-link">tutorial video</a> for features and testing for common issues.</p>
+
+    <h3 class="govuk-heading-m">NVDA</h3>
+    <p>NVDA (NonVisual Desktop Access) is a free screen reader for Microsoft Windows. </p>
+
+    <p>We are working on guidance and a tutorial video for this tool.</p>
+
+    <h3 class="govuk-heading-m">Jaws</h3>
+
+    <p>JAWS (Job Access With Speech) is a paid version of a screen reader. </p>
+    <p>We are working on guidance and a tutorial video for this tool.</p>
+
+{% endblock %}

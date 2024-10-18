@@ -1,0 +1,58 @@
+{% extends "layouts/page_layout.html" %}
+
+{% set selectedNav = "Knowledge hub" %}
+{% set pageName = "Voiceover" %}
+{% set pageDescription = "Guidance and tutorial video for using Voiceover on mac and ios devices."%}
+{% set mainClasses = "govuk-!-padding-top-0" %}
+{% set created = "18 October 2024" %}
+{% set reviewed = "18 October 2024" %}
+{% set updated = "18 October 2024" %}
+{% set githubIssueID = "77" %}
+{% set need = "This page exists to help people understand how to use tools to test for, and understand accessibility issues in a product using Voiceover." %}
+{% set aka = "" %}
+{% set pagePath = "/knowledge-hub/screen-readers/voiceover" %}
+{% block content %}
+
+    <h1 class="govuk-heading-xl">{{pageName}}</h1>
+
+    <p>Open VoiceOver using the Command + F5 keys on an Apple device. You can also start it by triple tapping the touch ID button (top row, far right on keyboard) and selecting it from the list of accessibility shortcuts. </p>
+
+    <h2 class="govuk-heading-l">Run a test with a screen reader</h2>
+
+    <p>The quickest way to start testing with VoiceOver is to tab through your content using the Tab key on your keyboard (shift + tab to move backwards) and listen to the information that VoiceOver is providing. </p>
+    <p>It might take some time to get used to the way that a screen reader provides information to users. </p>
+    <p>By listening to this and understanding the information that a screen reader user would receive can help you to understand how accessible your service is. A user should always be provided with the type of control that is in focus, for example a link and also the name of that link which should provide enough context to understand where that link will take them.</p>
+    <p>To activate the commands, use Control and Option before each command. This combination of keys is often referred to as VO. </p>
+    <p>There are many shortcuts you can try, as listed in this <a href="https://dequeuniversity.com/screenreaders/voiceover-keyboard-shortcuts" class="govuk-link">VoiceOver guidance by Deque</a>. </p>
+    <p>To get started though, it’s worth using, and remembering, the most common ones, such as ‘read next item’ (VO + Right arrow), ‘next heading’ (VO + Command + H) and read next link (VO + Command + L).</p>
+
+
+        <div class="dfe-manual-callout" id="video">
+        <div class="dfe-manual-callout--header">
+            <img src="/assets/images/video.png" alt="" />
+            <h3 class="govuk-heading-m">Watch a video</h3>
+        </div>
+    
+        <div class="dfe-manual-callout--content">
+            <p>DesignOps have created a <a href="https://www.youtube.com/watch?v=9LmJacSH_90" target="_blank" rel="noopener noreferrer">video on using VoiceOver<span class="govuk-visually-hidden"> (opens in a new tab)</span></a> and how you can use some of the most common keyboard shortcuts to test your services. 
+            </p>
+            <p class="govuk-body-s">YouTube video. 8 minutes 44 seconds</p>
+        </div>
+    </div>
+
+
+    <h2 class="govuk-heading-l">VoiceOver for iOS </h2>
+
+    <p>Mobile screen readers work differently to screen readers on desktop devices. Using screen readers on mobile relies on swipe and tap gestures. The feedback that users receive works in the same way as desktop readers, just the navigation differs. </p>
+    <p>There are a few ways to start VoiceOver on an iOS device. You can:</p>
+
+    <ol class="govuk-list govuk-list--number">
+        <li>go to Settings – Accessibility – VoiceOver and toggle VoiceOver to on</li>
+        <li>ask Siri to “turn on VoiceOver”</li>
+        <li>select accessibility from your control centre, choose the accessibility button and select VoiceOver from the list</li>
+    </ol>
+
+    <p>To start testing, swipe left to move forwards through content, swipe left to move backwards, and double tap when you hear the item you want to select. You should be given details on each interactable element. When navigating to an element, you should be told the name of the element such as “start” and then the type of element in focus such as “button”. </p>
+    <p>Apple provide a full list of VoiceOver commands that you should learn and use when testing your service. DesignOps are also creating a video on how to test with VoiceOver on iOS. This will be shared on this page.</p>
+
+{% endblock %}
