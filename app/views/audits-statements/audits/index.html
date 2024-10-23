@@ -1,11 +1,11 @@
 {% extends "layouts/page_layout.html" %}
 
 {% set selectedNav = "Audits and statements" %}
-{% set pageName = "Why you need an audit" %}
+{% set pageName = "Accessibility audits" %}
 {% set pageDescription = "What an accessibility audit is, why you need one and the outcome for your team."%}
 {% set created = "6 August 2024" %}
-{% set reviewed = "6 August 2024" %}
-{% set updated = "6 August 2024" %}
+{% set reviewed = "23 October 2024" %}
+{% set updated = "23 October 2024" %}
 {% set githubIssueID = "34" %}
 {% set need = "This page exists to help people understand the need, and how to get an accessibility audit, and what to do with the results." %}
 {% set aka = "" %}
@@ -19,30 +19,44 @@
 
     <h1 class="govuk-heading-xl">{{pageName}}</h1>
 
-    <p>An accessibility audit is a comprehensive set of tests run by an independent team of accessibility specialists. They could be external auditors or within DfE.</p>
-    <p>The audit will check to make sure your service or website meets the WCAG 2.2 Level AA accessibility standard and how well it performs with <a href="https://www.gov.uk/service-manual/technology/testing-with-assistive-technologies" rel="noreferrer noopener">assistive technologies</a>.</p>
+    <p>An accessibility audit is a comprehensive set of tests run by an independent team of specialists. Depending on the size and complexity of your product or website you can have an internal or external audit.</p>
+    <p>An audit will check to make sure your product or website meets the WCAG 2.2 Level AA accessibility guidelines and how well it performs with <a href="https://www.gov.uk/service-manual/technology/testing-with-assistive-technologies" rel="noreferrer noopener">assistive technologies</a>.</p>
 
+    <p>During an audit, accessibility specialists will test:</p>
+    <ul class="govuk-list govuk-list--bullet">
+        <li>with <a href="https://accessibility.education.gov.uk/knowledge-hub/tools-testing" rel="noreferrer noopener">automated tools</a></li>
+        <li>against <a href="https://accessibility.education.gov.uk/knowledge-hub/wcag" rel="noreferrer noopener">WCAG criteria</a> using manual checks</li>
+        <li>using assistive technology, including <a href="https://accessibility.education.gov.uk/knowledge-hub/screen-readers" rel="noreferrer noopener">screen readers</a>, voice recognition and magnification tools </li>
+    </ul>
+    <p>After an audit you will receive a report which details accessibility issues in your product or&nbsp;website.</p>
 
-    <div class="govuk-inset-text">
+    <h2 class="govuk-heading-l">Why you need an audit</h2>
+
+    <p>An accessibility audit will give you an understanding of the types of barriers users may face when using your product or website. It will also provide remediation techniques to help resolve any issues.</p>
+    
+    <p>It will check whether your product or website meets WCAG 2.2 Level AA and the <a href="https://www.legislation.gov.uk/uksi/2018/852/contents" rel="noreferrer noopener">public sector bodies accessibility regulations</a>. You can read more about some of the <a href="https://accessibility.education.gov.uk/knowledge-hub/common-issues" rel="noreferrer noopener">most&nbsp;common&nbsp;issues&nbsp;found&nbsp;in&nbsp;DfE&nbsp;audits</a>.</p>
+
+    <p>Before going into public beta, your product or website must work with a combination of <a href="https://www.gov.uk/service-manual/technology/testing-with-assistive-technologies" rel="noreferrer noopener">assistive technologies</a> and browsers. An audit will ensure this and will help you to meet <a href="https://apply-the-service-standard.education.gov.uk/service-standard/5-make-sure-everyone-can-use-the-service" rel="noreferrer noopener">Service Standard point 5</a>.</p>
+
+    <p>You can use the report to help to create your accessibility statement.</p>
+
+    <h3 class="govuk-heading-s">What's included in the audit report</h3>
+    <p>The report will tell you:</p>
+    <ul class="govuk-list govuk-list--bullet">
+        <li>where your product or website is failing to provide a good user experience, especially for people with disabilities</li>
+        <li>which guidelines you are failing to meet</li>
+        <li>why you have not met the criteria and how to resolve issues</li>
+    </ul>
+    <p>It will provide users with an understanding of where they could face accessibility barriers. They can then make a choice to use your product or website or think about workarounds.</p>
+
+ <h2 class="govuk-heading-l">Get an audit</h2>
+
+ <p>You should start planning for your audit at alpha phase, and ensure that sufficient time, resource and cost have been planned into your delivery. This will allow you to have had an audit, updated your accessibility statement and resolved any issues before users start to use your product or website. </p>
+
+      <div class="govuk-inset-text">
     <h3 class="govuk-heading-s">Get help to understand what audit you need</h3>
      <p>Complete the <a class="govuk-link" href="https://forms.office.com/e/P4bedSKaGU" target="_blank">audit requirements form (MS Form, internal only)</a> and DesignOps will contact you to discuss your audit needs. They can also help to ensure you have all the information you need to give to an auditor to complete an accessibility audit. </p>
      
      </div>
-
-    <h2 class="govuk-heading-l">How an audit helps</h2>
-
-    <p>An audit helps identify accessibility issues across your service.</p>
-    
-    <p>It will give you an understanding of the types of barriers users may face, and will provide remediation techniques to help you resolve any issues.</p>
-    <p>You can also use the outputs of the audit to help to create your accessibility statement.</p>
-    <p>The audit report will detail:</p>
-    <ul class="govuk-list govuk-list--bullet">
-        <li>where your service is failing to provide a good user experience, especially for those with disabilities</li>
-        <li>why you've not met the criteria and how to resolve issues</li>
-    </ul>
-    <p>Use the information from the report in your accessibility statement.</p>
-    <p>It will provide users with an understanding of where they could face accessibility barriers. They can then make a choice to use your service or think about workarounds.</p>
-
-  
     
 {% endblock %}
