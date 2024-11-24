@@ -1,0 +1,451 @@
+
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+
+<url>
+  <loc>https://accessibility.education.gov.uk/</loc>
+  <lastmod>2024-11-24T20:06:05+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://accessibility.education.gov.uk/cookie-policy</loc>
+  <lastmod>2024-11-24T20:06:05+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://accessibility.education.gov.uk/support</loc>
+  <lastmod>2024-11-24T20:06:05+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://accessibility.education.gov.uk/standards</loc>
+  <lastmod>2024-11-24T20:06:05+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://accessibility.education.gov.uk/audits-statements</loc>
+  <lastmod>2024-11-24T20:06:05+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://accessibility.education.gov.uk/profession-guidance</loc>
+  <lastmod>2024-11-24T20:06:05+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://accessibility.education.gov.uk/knowledge-hub</loc>
+  <lastmod>2024-11-24T20:06:05+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://accessibility.education.gov.uk/training</loc>
+  <lastmod>2024-11-24T20:06:05+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://accessibility.education.gov.uk/app/how-many-people</loc>
+  <lastmod>2024-11-24T20:06:05+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://accessibility.education.gov.uk/training/accessibility-inclusion</loc>
+  <lastmod>2024-11-24T20:06:05+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://accessibility.education.gov.uk/audits-statements/audits</loc>
+  <lastmod>2024-11-24T20:06:05+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://accessibility.education.gov.uk/audits-statements/accessibility-statements</loc>
+  <lastmod>2024-11-24T20:06:05+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://accessibility.education.gov.uk/project</loc>
+  <lastmod>2024-11-24T20:06:05+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://accessibility.education.gov.uk/accessibility-statement</loc>
+  <lastmod>2024-11-24T20:06:05+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://accessibility.education.gov.uk/knowledge-hub/tools-testing</loc>
+  <lastmod>2024-11-24T20:06:05+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://accessibility.education.gov.uk/standards/accessibility-statements</loc>
+  <lastmod>2024-11-24T20:06:05+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://accessibility.education.gov.uk/standards/accessibility-issues</loc>
+  <lastmod>2024-11-24T20:06:05+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://accessibility.education.gov.uk/standards/accessibility-audits</loc>
+  <lastmod>2024-11-24T20:06:05+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://accessibility.education.gov.uk/standards/regulations</loc>
+  <lastmod>2024-11-24T20:06:05+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://accessibility.education.gov.uk/standards/accessibility-statements/how-to-meet</loc>
+  <lastmod>2024-11-24T20:06:05+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://accessibility.education.gov.uk/profession-guidance/interaction-design</loc>
+  <lastmod>2024-11-24T20:06:05+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://accessibility.education.gov.uk/knowledge-hub/screen-readers</loc>
+  <lastmod>2024-11-24T20:06:05+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://accessibility.education.gov.uk/knowledge-hub/common-issues</loc>
+  <lastmod>2024-11-24T20:06:05+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://accessibility.education.gov.uk/knowledge-hub/manage-issues</loc>
+  <lastmod>2024-11-24T20:06:05+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://accessibility.education.gov.uk/knowledge-hub/manage-issues/disproportionate-burden</loc>
+  <lastmod>2024-11-24T20:06:05+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://accessibility.education.gov.uk/knowledge-hub/wcag</loc>
+  <lastmod>2024-11-24T20:06:05+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://accessibility.education.gov.uk/knowledge-hub/wcag/conformance</loc>
+  <lastmod>2024-11-24T20:06:05+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://accessibility.education.gov.uk/training/wcag</loc>
+  <lastmod>2024-11-24T20:06:05+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://accessibility.education.gov.uk/training/accessibility-inclusion/page-1</loc>
+  <lastmod>2024-11-24T20:06:05+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://accessibility.education.gov.uk/audits-statements/audits/prepare</loc>
+  <lastmod>2024-11-24T20:06:05+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://accessibility.education.gov.uk/audits-statements/audits/after-audit</loc>
+  <lastmod>2024-11-24T20:06:05+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://accessibility.education.gov.uk/audits-statements/accessibility-statements/fully-compliant</loc>
+  <lastmod>2024-11-24T20:06:05+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://accessibility.education.gov.uk/audits-statements/accessibility-statements/partially-compliant</loc>
+  <lastmod>2024-11-24T20:06:05+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://accessibility.education.gov.uk/audits-statements/accessibility-statements/non-compliant</loc>
+  <lastmod>2024-11-24T20:06:05+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://accessibility.education.gov.uk/knowledge-hub/common-issues/error-messages</loc>
+  <lastmod>2024-11-24T20:06:05+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://accessibility.education.gov.uk/knowledge-hub/common-issues/alt-text</loc>
+  <lastmod>2024-11-24T20:06:05+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://accessibility.education.gov.uk/knowledge-hub/common-issues/links</loc>
+  <lastmod>2024-11-24T20:06:05+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://accessibility.education.gov.uk/knowledge-hub/common-issues/contrast</loc>
+  <lastmod>2024-11-24T20:06:05+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://accessibility.education.gov.uk/knowledge-hub/common-issues/headings</loc>
+  <lastmod>2024-11-24T20:06:05+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://accessibility.education.gov.uk/knowledge-hub/common-issues/status-changes</loc>
+  <lastmod>2024-11-24T20:06:05+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://accessibility.education.gov.uk/knowledge-hub/tools-testing/tools/accessibility-insights</loc>
+  <lastmod>2024-11-24T20:06:05+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://accessibility.education.gov.uk/knowledge-hub/tools-testing/tools/arc</loc>
+  <lastmod>2024-11-24T20:06:05+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://accessibility.education.gov.uk/knowledge-hub/tools-testing/tools/axe</loc>
+  <lastmod>2024-11-24T20:06:05+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://accessibility.education.gov.uk/knowledge-hub/tools-testing/tools/contrast</loc>
+  <lastmod>2024-11-24T20:06:05+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://accessibility.education.gov.uk/knowledge-hub/tools-testing/tools/headings-map</loc>
+  <lastmod>2024-11-24T20:06:05+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://accessibility.education.gov.uk/knowledge-hub/tools-testing/tools/wave</loc>
+  <lastmod>2024-11-24T20:06:05+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://accessibility.education.gov.uk/knowledge-hub/screen-readers/voiceover</loc>
+  <lastmod>2024-11-24T20:06:05+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://accessibility.education.gov.uk/knowledge-hub/tools-testing/bookmarklets</loc>
+  <lastmod>2024-11-24T20:06:05+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://accessibility.education.gov.uk/knowledge-hub/tools-testing/bookmarklets/blur</loc>
+  <lastmod>2024-11-24T20:06:05+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://accessibility.education.gov.uk/knowledge-hub/tools-testing/bookmarklets/lists</loc>
+  <lastmod>2024-11-24T20:06:05+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://accessibility.education.gov.uk/knowledge-hub/tools-testing/bookmarklets/resize-text</loc>
+  <lastmod>2024-11-24T20:06:05+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://accessibility.education.gov.uk/knowledge-hub/tools-testing/bookmarklets/target-size</loc>
+  <lastmod>2024-11-24T20:06:05+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://accessibility.education.gov.uk/knowledge-hub/tools-testing/bookmarklets/text-spacing</loc>
+  <lastmod>2024-11-24T20:06:05+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://accessibility.education.gov.uk/knowledge-hub/tools-testing/false-positives</loc>
+  <lastmod>2024-11-24T20:06:05+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://accessibility.education.gov.uk/knowledge-hub/wcag/criteria</loc>
+  <lastmod>2024-11-24T20:06:05+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://accessibility.education.gov.uk/knowledge-hub/wcag/criteria/perceivable</loc>
+  <lastmod>2024-11-24T20:06:05+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://accessibility.education.gov.uk/knowledge-hub/wcag/criteria/operable</loc>
+  <lastmod>2024-11-24T20:06:05+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://accessibility.education.gov.uk/knowledge-hub/wcag/criteria/understandable</loc>
+  <lastmod>2024-11-24T20:06:05+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://accessibility.education.gov.uk/knowledge-hub/wcag/criteria/robust</loc>
+  <lastmod>2024-11-24T20:06:05+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://accessibility.education.gov.uk/standards/accessibility-statements/compliance</loc>
+  <lastmod>2024-11-24T20:06:05+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://accessibility.education.gov.uk/standards/report-manage-issues</loc>
+  <lastmod>2024-11-24T20:06:05+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://accessibility.education.gov.uk/profession-guidance/interaction-design/laws-of-ux</loc>
+  <lastmod>2024-11-24T20:06:05+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://accessibility.education.gov.uk/profession-guidance/interaction-design/design-system-considerations</loc>
+  <lastmod>2024-11-24T20:06:05+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://accessibility.education.gov.uk/profession-guidance/interaction-design/figma-prototype-kit</loc>
+  <lastmod>2024-11-24T20:06:05+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://accessibility.education.gov.uk/profession-guidance/interaction-design/basic-tests</loc>
+  <lastmod>2024-11-24T20:06:05+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://accessibility.education.gov.uk/training/accessibility-inclusion/page-2</loc>
+  <lastmod>2024-11-24T20:06:05+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://accessibility.education.gov.uk/knowledge-hub//tools-testing/bookmarklets/blur</loc>
+  <lastmod>2024-11-24T20:06:05+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://accessibility.education.gov.uk/knowledge-hub//tools-testing/bookmarklets/resize-text</loc>
+  <lastmod>2024-11-24T20:06:05+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://accessibility.education.gov.uk/knowledge-hub//tools-testing/bookmarklets/target-size</loc>
+  <lastmod>2024-11-24T20:06:05+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://accessibility.education.gov.uk/knowledge-hub//tools-testing/bookmarklets/text-spacing</loc>
+  <lastmod>2024-11-24T20:06:05+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://accessibility.education.gov.uk/training/accessibility-inclusion/page-3</loc>
+  <lastmod>2024-11-24T20:06:05+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://accessibility.education.gov.uk/training/accessibility-inclusion/page-4</loc>
+  <lastmod>2024-11-24T20:06:05+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://accessibility.education.gov.uk/training/accessibility-inclusion/page-5</loc>
+  <lastmod>2024-11-24T20:06:05+00:00</lastmod>
+  <priority>0.26</priority>
+</url>
+<url>
+  <loc>https://accessibility.education.gov.uk/training/accessibility-inclusion/page-6</loc>
+  <lastmod>2024-11-24T20:06:05+00:00</lastmod>
+  <priority>0.21</priority>
+</url>
+<url>
+  <loc>https://accessibility.education.gov.uk/training/accessibility-inclusion/page-7</loc>
+  <lastmod>2024-11-24T20:06:05+00:00</lastmod>
+  <priority>0.17</priority>
+</url>
+<url>
+  <loc>https://accessibility.education.gov.uk/training/accessibility-inclusion/page-8</loc>
+  <lastmod>2024-11-24T20:06:05+00:00</lastmod>
+  <priority>0.13</priority>
+</url>
+<url>
+  <loc>https://accessibility.education.gov.uk/training/accessibility-inclusion/page-9</loc>
+  <lastmod>2024-11-24T20:06:05+00:00</lastmod>
+  <priority>0.11</priority>
+</url>
+<url>
+  <loc>https://accessibility.education.gov.uk/training/accessibility-inclusion/page-10</loc>
+  <lastmod>2024-11-24T20:06:05+00:00</lastmod>
+  <priority>0.09</priority>
+</url>
+<url>
+  <loc>https://accessibility.education.gov.uk/training/accessibility-inclusion/page-11</loc>
+  <lastmod>2024-11-24T20:06:05+00:00</lastmod>
+  <priority>0.07</priority>
+</url>
+<url>
+  <loc>https://accessibility.education.gov.uk/training/accessibility-inclusion/page-12</loc>
+  <lastmod>2024-11-24T20:06:05+00:00</lastmod>
+  <priority>0.05</priority>
+</url>
+<url>
+  <loc>https://accessibility.education.gov.uk/training/accessibility-inclusion/page-13</loc>
+  <lastmod>2024-11-24T20:06:05+00:00</lastmod>
+  <priority>0.04</priority>
+</url>
+<url>
+  <loc>https://accessibility.education.gov.uk/training/accessibility-inclusion/page-14</loc>
+  <lastmod>2024-11-24T20:06:05+00:00</lastmod>
+  <priority>0.04</priority>
+</url>
+<url>
+  <loc>https://accessibility.education.gov.uk/training/accessibility-inclusion/page-15</loc>
+  <lastmod>2024-11-24T20:06:05+00:00</lastmod>
+  <priority>0.03</priority>
+</url>
+<url>
+  <loc>https://accessibility.education.gov.uk/training/accessibility-inclusion/page-16</loc>
+  <lastmod>2024-11-24T20:06:05+00:00</lastmod>
+  <priority>0.02</priority>
+</url>
+<url>
+  <loc>https://accessibility.education.gov.uk/training/accessibility-inclusion/page-17</loc>
+  <lastmod>2024-11-24T20:06:05+00:00</lastmod>
+  <priority>0.02</priority>
+</url>
+<url>
+  <loc>https://accessibility.education.gov.uk/training/accessibility-inclusion/page-18</loc>
+  <lastmod>2024-11-24T20:06:05+00:00</lastmod>
+  <priority>0.01</priority>
+</url>
+<url>
+  <loc>https://accessibility.education.gov.uk/training/accessibility-inclusion/page-19</loc>
+  <lastmod>2024-11-24T20:06:05+00:00</lastmod>
+  <priority>0.01</priority>
+</url>
+<url>
+  <loc>https://accessibility.education.gov.uk/training/accessibility-inclusion/page-20</loc>
+  <lastmod>2024-11-24T20:06:05+00:00</lastmod>
+  <priority>0.01</priority>
+</url>
+
+
+</urlset>
