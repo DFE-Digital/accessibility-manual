@@ -1,88 +1,38 @@
 {% extends "layouts/page_layout.html" %}
-
 {% set selectedNav = "Profession guidance" %}
 {% set pageName = "Interaction design" %}
 {% set pageDescription = "Guidance for interaction designers. "%}
-{% set sideNav = "relevant" %}
-
-
-{% block sidenav %}
-
-<nav class="navbar">
-
-    <nav aria-label="Main Navigation">
-        <ul class="nav-list">
-            <li>
-                <a href="/professions" class="nav-link">
-                    Profession guidance
-                </a>
-            </li>
-            <li>
-                <a href="#" aria-expanded="false" aria-controls="sub-nav-1" class="nav-link-toggle">
-                    Business analysis <span class="icon"></span>
-                </a>
-                <ul id="sub-nav-1" class="sub-nav">
-                    <li><a href="#">Requirements</a></li>
-                </ul>
-            </li>
-            <li>
-                <a href="#" aria-expanded="false" aria-controls="sub-nav-2" class="nav-link-toggle">
-                    Interaction design <span class="icon"></span>
-                </a>
-                <ul id="sub-nav-2" class="sub-nav">
-                    <li><a href="/professions/interaction-design"
-                            class="{% if sideNav == 'relevant' %} sub-nav--active {% endif %}">Relevant guidance</a>
-                    </li>
-                    <li><a href="/professions/interaction-design/concepts"
-                            class="{% if sideNav == 'concepts' %} sub-nav--active {% endif %}">Concepts of web
-                            accessibility</a></li>
-                    <li><a href="#">Best practice</a></li>
-                </ul>
-            </li>
-
-        </ul>
-    </nav>
-
-
-</nav>
-
-
-{% endblock %}
-
-
+{% set sideNav = "index" %}
+{% set githubIssueID = "45" %}
 
 {% block content %}
 
-
-<span class="govuk-caption-l  govuk-!-margin-top-5">Profession guidance</span>
-<h1 class="govuk-heading-xl">{{pageName}}</h1>
-
-
-<div class="govuk-inset-text">
-    <p>Designers often perform a mix of design, research, and testing activities. Even if you're
-        mainly an interaction designer, make sure you review the guidance for other roles that relevant to your work.
-    </p>
-</div>
-
-<h2 class="govuk-heading-l">What interaction designers do</h2>
-
-<p class="govuk-body">Interaction designers focus on creating engaging interfaces with well thought out behaviours. They
-    consider the user's journey through the service, and make sure the interface is easy to use.</p>
-<p>The core skills of interaction designers, require them to understand:</p>
-
-<ul class="govuk-list govuk-list--bullet">
-    <li>animation</li>
-    <li>colour theory</li>
-    <li>graphic design elements</li>
-    <li>HTML and CSS</li>
-    <li>navigation techniques and practices</li>
-    <li>prototyping, wireframing, and mockups</li>
-    <li>typography</li>
-    <li>user research and testing</li>
-    <li>web analytics</li>
-</ul>
-
-<p>In addition to the above skills, interaction designers also benefit from an understanding of the <a
-        href="https://lawsofux.com/">laws of UX</a>.</p>
-
+<h1 class="govuk-heading-l">{{pageName}}</h1>
+    <p class="govuk-body">
+   Interaction designers play a crucial role in ensuring that digital products and websites are accessible, inclusive, and easy to use. They focus on how people interact with digital interfaces, ensuring that designs work for everyone, including users with diverse needs.
+</p>
+    <p class="govuk-body">
+        <a class="govuk-link" href="https://ddat-capability-framework.service.gov.uk/role/interaction-designer">
+   Find out more about the role of interaction designers
+   </a>.
+</p>
+    <h2 class="govuk-heading-m">Main concepts</h2>
+    <p class="govuk-body">
+   The following concepts are important for interaction designers to be aware of.
+</p>
+    <h3 class="govuk-heading-s">Accessibility</h3>
+    <p class="govuk-body">
+   Accessibility means ensuring digital products and services can be used by people with a wide range of needs, including those with visual, hearing, cognitive, or physical impairments.
+</p>
+    <h3 class="govuk-heading-s">Inclusive design</h3>
+    <p class="govuk-body">
+   Inclusive design involves creating products and services that work well for as many people as possible, considering different abilities, ages, and backgrounds.
+</p>
+    <p class="govuk-body">
+   It goes beyond accessibility by addressing a broader range of user needs.
+</p>
+    <h3 class="govuk-heading-s">Usability</h3>
+    <p class="govuk-body">
+   Usability measures how clear, simple, and efficient a product or service is to use. It complements accessibility by ensuring everyone has a positive experience, regardless of their abilities or circumstances.
+</p>
 {% endblock %}

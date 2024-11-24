@@ -2,283 +2,44 @@
 
 {% set selectedNav = "Profession guidance" %}
 {% set pageName = "Profession guidance" %}
-{% set pageDescription = "Guidance for professions to deliver accessible and inclusive services consistently."%}
-{% set pagePath = "/profession-guidance" %}
+{% set pageDescription = "Guidance and knowledge specifically aimed at DDaT professions."%}
+{% set aka = "" %}
 {% set mainClasses = "govuk-!-padding-top-0" %}
-
-
+{% set pagePath = "/profession-guidance" %}
 {% block content %}
 
-<style>
-   .dfe-manuals-panel-list {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-   }
-
-   .dfe-manuals-panel-list__item {
-      background: #fff;
-      box-shadow: 0 1rem 3rem rgba(0, 0, 0, .2) !important;
-      padding: 30px;
-      margin-bottom: 30px;
-      width: 100%;
-      /* Full width */
-      box-sizing: border-box;
-      /* Ensure padding and border are included in the width */
-      border-radius: 4px;
-   }
-
-   /* Optional: add some hover effect */
-   .dfe-manuals-panel-list__item:hover {
-      box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
-   }
-
-   /* Optional: add some responsive styling */
-   @media (max-width: 768px) {
-      .dfe-manuals-panel-list__item {
-         padding: 15px;
-      }
-   }
-</style>
-
-
-
-<section class="govuk-!-margin-top-9  govuk-!-padding-bottom-9">
-   <div class="dfe-width-container">
+   <div class="dfe-width-container govuk-!-margin-top-9">
       <div class="govuk-grid-row">
-
          <div class="govuk-grid-column-full">
-            <h2 class="govuk-heading-l">Professions</h2>
-            <p>Understand what accessibility and inclusive design means by profession.</p>
-
-            <h3 class="govuk-heading-m">Product and delivery</h3>
-            <div class="dfe-grid-container">
-               <div class="dfe-card">
-                  <div class="dfe-card-container">
-                     <h3 class="govuk-heading-m">
-                        <a href="#" class="govuk-link govuk-link--no-visited-state dfe-card-link--header">Business
-                           analysis</a>
-                     </h3>
-                     <p>TK</p>
+            <section>
+               <div class="govuk-!-margin-top-3 govuk-!-margin-bottom-5">
+                  <div class="govuk-grid-row split-panel" style="background: #f3f2f1;">
+                     <div class="govuk-grid-column-one-half text-column">
+                        <strong class="govuk-tag govuk-tag--green govuk-!-margin-bottom-3">New</strong>
+                        <h2 class="govuk-heading-l">Interaction design</h2>
+                        <p class="govuk-body">Guidance for interaction designers around accessibility and inclusive design principles in their role.</p>
+                        <p class="govuk-body">
+                           <a href="/profession-guidance/interaction-design">Read the guidance</a>
+                        </p>
+                     </div>
+                     <div class="govuk-grid-column-one-half image-column">
+                        <div class="image-container"
+                     style="background-image: url('/assets/images/ixd.jpg');"></div>
+                     </div>
                   </div>
                </div>
-               <div class="dfe-card">
-                  <div class="dfe-card-container">
-                     <h3 class="govuk-heading-m">
-                        <a href="#/installation"
-                           class="govuk-link govuk-link--no-visited-state dfe-card-link--header">Delivery managers</a>
-                     </h3>
-                     <p>TK</p>
-                  </div>
-               </div>
-               <div class="dfe-card">
-                  <div class="dfe-card-container">
-                     <h3 class="govuk-heading-m">
-                        <a href="#" class="govuk-link govuk-link--no-visited-state dfe-card-link--header">Product
-                           managers</a>
-                     </h3>
-                     <p>TK</p>
-                  </div>
-               </div>
-               <div class="dfe-card">
-                  <div class="dfe-card-container">
-                     <h3 class="govuk-heading-m">
-                        <a href="#" class="govuk-link govuk-link--no-visited-state dfe-card-link--header">Programme
-                           delivery
-                           managers</a>
-                     </h3>
-                     <p>TK</p>
-                  </div>
-               </div>
-               <div class="dfe-card">
-                  <div class="dfe-card-container">
-                     <h3 class="govuk-heading-m">
-                        <a href="#" class="govuk-link govuk-link--no-visited-state dfe-card-link--header">Service
-                           owners</a>
-                     </h3>
-                     <p>TK</p>
-                  </div>
-               </div>
-            </div>
-
-            <h3 class="govuk-heading-m">User-centered design</h3>
-            <div class="dfe-grid-container">
-
-               <div class="dfe-card">
-                  <div class="dfe-card-container">
-                     <h3 class="govuk-heading-m">
-                        <a href="#" class="govuk-link govuk-link--no-visited-state dfe-card-link--header">Accessibility
-                           specialist</a>
-                     </h3>
-                     <p>TK</p>
-                  </div>
-               </div>
-               <div class="dfe-card">
-                  <div class="dfe-card-container">
-                     <h3 class="govuk-heading-m">
-                        <a href="#" class="govuk-link govuk-link--no-visited-state dfe-card-link--header">Content
-                           designers</a>
-                     </h3>
-                     <p>TK</p>
-                  </div>
-               </div>
-               <div class="dfe-card">
-                  <div class="dfe-card-container">
-                     <h3 class="govuk-heading-m">
-                        <a href="/professions/interaction-design"
-                           class="govuk-link govuk-link--no-visited-state dfe-card-link--header">Interaction
-                           designers</a>
-                     </h3>
-                     <p>TK</p>
-                  </div>
-               </div>
-               <div class="dfe-card">
-                  <div class="dfe-card-container">
-                     <h3 class="govuk-heading-m">
-                        <a href="#" class="govuk-link govuk-link--no-visited-state dfe-card-link--header">Service
-                           designers</a>
-                     </h3>
-                     <p>TK</p>
-                  </div>
-               </div>
-               <div class="dfe-card">
-                  <div class="dfe-card-container">
-                     <h3 class="govuk-heading-m">
-                        <a href="#" class="govuk-link govuk-link--no-visited-state dfe-card-link--header">User
-                           researchers</a>
-                     </h3>
-                     <p>TK</p>
-                  </div>
-               </div>
-            </div>
-
-            <h3 class="govuk-heading-m">Data and technology</h3>
-            <div class="dfe-grid-container">
-
-               <div class="dfe-card">
-                  <div class="dfe-card-container">
-                     <h3 class="govuk-heading-m">
-                        <a href="#" class="govuk-link govuk-link--no-visited-state dfe-card-link--header">Architects</a>
-                     </h3>
-                     <p>TK</p>
-                  </div>
-               </div>
-               <div class="dfe-card">
-                  <div class="dfe-card-container">
-                     <h3 class="govuk-heading-m">
-                        <a href="#" class="govuk-link govuk-link--no-visited-state dfe-card-link--header">Data
-                           analysts</a>
-                     </h3>
-                     <p>TK</p>
-                  </div>
-               </div>
-               <div class="dfe-card">
-                  <div class="dfe-card-container">
-                     <h3 class="govuk-heading-m">
-                        <a href="#" class="govuk-link govuk-link--no-visited-state dfe-card-link--header">Frontend and
-                           software
-                           developers</a>
-                     </h3>
-                     <p>TK</p>
-                  </div>
-               </div>
-               <div class="dfe-card">
-                  <div class="dfe-card-container">
-                     <h3 class="govuk-heading-m">
-                        <a href="#/installation"
-                           class="govuk-link govuk-link--no-visited-state dfe-card-link--header">Performance
-                           analysts</a>
-                     </h3>
-                     <p>TK</p>
-                  </div>
-               </div>
-               <div class="dfe-card">
-                  <div class="dfe-card-container">
-                     <h3 class="govuk-heading-m">
-                        <a href="#" class="govuk-link govuk-link--no-visited-state dfe-card-link--header">Quality
-                           assurance and
-                           test engineers</a>
-                     </h3>
-                     <p>TK</p>
-                  </div>
-               </div>
-            </div>
+            </section>
          </div>
       </div>
    </div>
-</section>
 
-
-<div class="govuk-width-container govuk-!-margin-top-9">
+   <div class="dfe-width-container govuk-!-margin-top-9">
    <div class="govuk-grid-row">
-
-
       <div class="govuk-grid-column-full">
+         <h2 class="govuk-heading-l">More guidance coming soon</h2>
 
-         <h2 class="govuk-heading-l">Accessibility by phase of delivery</h2>
-
-         <div class="dfe-grid-container">
-
-            <div class="dfe-card">
-               <div class="dfe-card-container">
-                  <h3 class="govuk-heading-m">
-                     <a href="#" class="govuk-link govuk-link--no-visited-state dfe-card-link--header">Planning and
-                        explore</a>
-                  </h3>
-                  <p>TK</p>
-               </div>
-            </div>
-            <div class="dfe-card">
-               <div class="dfe-card-container">
-                  <h3 class="govuk-heading-m">
-                     <a href="#" class="govuk-link govuk-link--no-visited-state dfe-card-link--header">Discovery</a>
-                  </h3>
-                  <p>TK</p>
-               </div>
-            </div>
-            <div class="dfe-card">
-               <div class="dfe-card-container">
-                  <h3 class="govuk-heading-m">
-                     <a href="#" class="govuk-link govuk-link--no-visited-state dfe-card-link--header">Alpha</a>
-                  </h3>
-                  <p>TK</p>
-               </div>
-            </div>
-            <div class="dfe-card">
-               <div class="dfe-card-container">
-                  <h3 class="govuk-heading-m">
-                     <a href="#" class="govuk-link govuk-link--no-visited-state dfe-card-link--header">Beta</a>
-                  </h3>
-                  <p>TK</p>
-               </div>
-            </div>
-            <div class="dfe-card">
-               <div class="dfe-card-container">
-                  <h3 class="govuk-heading-m">
-                     <a href="#" class="govuk-link govuk-link--no-visited-state dfe-card-link--header">Live</a>
-                  </h3>
-                  <p>TK</p>
-               </div>
-            </div>
-
-            <div class="dfe-card">
-               <div class="dfe-card-container">
-                  <h3 class="govuk-heading-m">
-                     <a href="#"
-                        class="govuk-link govuk-link--no-visited-state dfe-card-link--header">Decommissioning</a>
-                  </h3>
-                  <p>TK</p>
-               </div>
-            </div>
-         </div>
-
+         <p>We're working on creating guidance for more professions. You can <a href="/support">contact us</a> if you want to work with us on developing guidance.</p>
       </div>
-
    </div>
-
-
-
-
-</div>
-
+   </div>
 {% endblock %}

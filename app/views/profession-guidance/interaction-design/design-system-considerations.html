@@ -1,0 +1,84 @@
+{% extends "layouts/page_layout.html" %}
+
+{% set selectedNav = "Profession guidance" %}
+{% set pageName = "Design system considerations" %}
+{% set pageDescription = "Guidance for interaction designers to consider accessibility when using the GOV.UK Design system. "%}
+{% set sideNav = "relevant" %}
+{% set githubIssueID = "45" %}
+
+
+
+
+{% block content %}
+
+<h1 class="govuk-heading-l">{{pageName}}</h1>
+
+
+<p class="govuk-body">
+    When using the <a class="govuk-link" href="https://design-system.service.gov.uk/">GOV.UK Design System</a>, consider the following to ensure accessibility and inclusivity.
+</p>
+
+<h2 class="govuk-heading-m">Forms</h2>
+
+<p class="govuk-body">Things you should consider:</p>
+<ul class="govuk-list govuk-list--bullet">
+    <li>
+        <strong>Labelling:</strong> Ensure all form fields have clear, descriptive labels associated with their corresponding input elements. Use the <code>&lt;label&gt;</code> element and the <code>for</code> attribute to explicitly link labels with form fields.
+    </li>
+    <li>
+        <strong>Error messages:</strong> Provide clear, concise, and specific error messages that appear both in an error summary and directly before the form input causing the error.
+    </li>
+    <li>
+        <strong>Fieldsets and legends:</strong> Group related fields using <code>&lt;fieldset&gt;</code> and <code>&lt;legend&gt;</code> elements to improve structure and provide context for users with screen readers.
+    </li>
+</ul>
+
+<h2 class="govuk-heading-m">Buttons</h2>
+
+<p class="govuk-body">Things you should consider:</p>
+<ul class="govuk-list govuk-list--bullet">
+    <li>
+        <strong>Size:</strong> Ensure buttons are large enough to be easily clicked or tapped.
+    </li>
+    <li>
+        <strong>Contrast:</strong> Ensure there is sufficient contrast between button text and background, meeting the minimum contrast ratio of 4.5:1. This ensures the button text is readable for users with visual disabilities.
+    </li>
+    <li>
+        <strong>State indication:</strong> Clearly indicate different button states (default, hover, active, disabled) using both visual (colour, borders) and non-visual (ARIA attributes) indicators.
+    </li>
+</ul>
+
+<h2 class="govuk-heading-m">Navigation</h2>
+
+<p class="govuk-body">Things you should consider:</p>
+<ul class="govuk-list govuk-list--bullet">
+    <li>
+        <strong>Consistency:</strong> Use consistent navigation patterns across the site to help users predict where to find information and how to navigate. This will ensure you meet <a class="govuk-link" href="https://www.w3.org/WAI/WCAG21/Understanding/consistent-navigation.html">WCAG 2.2 3.2.3 Consistent Navigation (Level AA)</a>.
+    </li>
+    <li>
+        <strong>Descriptive links:</strong> Use clear, descriptive link text that explains what the link does or where it goes, avoiding vague terms like ‘click here’ or ‘read more’. However, in some interfaces single words like ‘view’ may be appropriate. In this case, use <a class="govuk-link" href="https://design-system.service.gov.uk/styles/layout/#hide-elements-and-keep-them-accessible-to-screen-readers">visually hidden text</a> to provide extra information to screen reader users.
+    </li>
+    <li>
+        <strong>Keyboard accessibility:</strong> Ensure all navigation elements are accessible via keyboard. Provide a visible focus indicator to help users navigate through links and buttons. You can test this by tabbing through a page and ensuring all navigation elements are accessed.
+    </li>
+</ul>
+
+<h2 class="govuk-heading-m">Colour contrast</h2>
+
+<p class="govuk-body">
+    Ensure that text and background combinations meet the required contrast ratios for accessibility. Use the <a class="govuk-link" href="https://webaim.org/resources/contrastchecker/">WebAIM Colour Contrast Checker</a> to validate compliance with standards and adjust colours as needed.
+</p>
+
+<p class="govuk-body">Things you should consider:</p>
+<ul class="govuk-list govuk-list--bullet">
+    <li>
+        <strong>Text and background:</strong> Ensure text and background colour combinations meet the minimum contrast ratio of 4.5:1.
+    </li>
+    <li>
+        <strong>Non-text elements:</strong> Apply sufficient contrast to non-text elements like icons, borders, and charts to ensure they are distinguishable for users with visual disabilities.
+    </li>
+</ul>
+
+
+
+{% endblock %}

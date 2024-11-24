@@ -1,0 +1,67 @@
+{% extends "layouts/page_layout.html" %}
+{% set selectedNav = "Profession guidance" %}
+{% set pageName = "Figma and prototype kit" %}
+{% set pageDescription = "Guidance for interaction designers when using Figma and the prototype kit. "%}
+{% set sideNav = "index" %}
+{% set githubIssueID = "45" %}
+
+{% block content %}
+
+<h1 class="govuk-heading-l">{{pageName}}</h1>
+
+<h2 class="govuk-heading-m">
+    Figma
+</h2>
+
+<p class="govuk-body">
+    The handover process between designers and developers can often mean that context or understanding is missed with certain designs.
+</p>
+<p class="govuk-body">
+    It can be useful for designers to annotate their designs. This ensures that essential accessibility context or semantics can be provided.
+</p>
+<p class="govuk-body">
+    There are annotation kits like <a class="govuk-link" href="https://www.figma.com/community/file/1022394680250523675/intopias-accessibility-annotation-kit">Intopia's accessibility annotation kit</a> for Figma, which can be used to document essential accessibility information, such as:
+</p>
+<ul class="govuk-list govuk-list--bullet">
+    <li>Hidden text for screen readers</li>
+    <li>Heading levels</li>
+    <li>Page regions and ARIA roles</li>
+</ul>
+<p class="govuk-body">
+    These annotations ensure that developers understand and implement accessibility features correctly.
+</p>
+
+
+
+
+
+<h2 class="govuk-heading-m">
+    Prototype kit
+</h2>
+
+<p class="govuk-body">
+    Designing and creating prototypes is one of the primary roles as an interaction designer.
+</p>
+<p class="govuk-body">
+    Prototypes should be throwaway ideas which are designed to test ideas, concepts or solutions to a problem or need. A prototype is not production-quality code and should not be treated as such.
+</p>
+<p class="govuk-body">
+    Many DfE products and websites will use the <a class="govuk-link" href="https://design-system.service.gov.uk/">GOV.UK Frontend and Design System</a> for styles, components, and patterns. These have been built to be as accessible as possible, however, some do still have accessibility issues, for example:
+</p>
+
+<h3 class="govuk-heading-s">Details Component Compatibility</h3>
+<p class="govuk-body">
+    The <code>&lt;details&gt;</code> HTML element, used in the details component, may not function optimally with certain assistive technologies like Dragon and VoiceOver. This is a known issue with these technologies rather than the component itself.
+</p>
+
+<h3 class="govuk-heading-s">File Upload Interaction with Dragon</h3>
+<p class="govuk-body">
+    Users of Dragon NaturallySpeaking may encounter difficulties when attempting to activate the file upload component using the command ‘click choose file’. This issue stems from a bug within Dragon and is not due to the GOV.UK Frontend.
+</p>
+
+<p class="govuk-body">
+    It's important to note that while the GOV.UK Frontend addresses many accessibility concerns, the overall accessibility of a service also depends on its specific implementation. Therefore, conducting thorough accessibility testing tailored to your service is essential to ensure compliance with accessibility standards.
+</p>
+
+
+{% endblock %}
