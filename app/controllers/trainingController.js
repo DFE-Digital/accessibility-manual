@@ -155,20 +155,20 @@ exports.getResults = (req, res) => {
     const isCorrectString = results.map(result => result.isCorrect).join(',');
     const csvData = `${questionNumbers}\n${userAnswersString}\n${isCorrectString}`;
 
-    // notify.sendEmail(
-    //     process.env.email_basic_results,
-    //     process.env.designopsemail,
-    //     {
-    //         personalisation: {
-    //             csvData: csvData,
-    //             score: score,
-    //         }
-    //     }
-    // ).then(response => {
-    //     console.log('Email sent successfully');
-    // }).catch(error => {
-    //     console.error('Error sending email:', error);
-    // });
+    notify.sendEmail(
+        process.env.email_basic_results,
+        process.env.designopsemail,
+        {
+            personalisation: {
+                csvData: csvData,
+                score: score,
+            }
+        }
+    ).then(response => {
+        console.log('Email sent successfully');
+    }).catch(error => {
+        console.error('Error sending email:', error);
+    });
 
     res.render('training/basic/results', { results, score });
 };
