@@ -25,6 +25,8 @@ router.post("/app/how-many-people", appsController.p_howmanypeople);
 
 // Training question handlers
 
+router.get('/training/accessibility-inclusion', trainingController.startPage);
+
 router.get('/training/basic/question', trainingController.startTraining);
 router.post('/training/basic/question', trainingController.handleAnswer);
 router.get('/training/basic/results', trainingController.getResults);
