@@ -118,7 +118,7 @@ exports.getResults = (req, res) => {
                 if (counter < results.length) {
                     const result = results[counter];
                     const request = new Request(
-                        `INSERT INTO trainingResults (SessionID, StartDateTime, CompletedDateTime, QuestionNumber, QuestionAnswer) VALUES (@SessionID, @StartDateTime, @CompletedDateTime, @QuestionNumber, @QuestionAnswer)`,
+                        `INSERT INTO BasicTrainingResults (SessionID, StartDateTime, CompletedDateTime, QuestionNumber, QuestionAnswer, QuestionCorrect, UniqueSession) VALUES (@SessionID, @StartDateTime, @CompletedDateTime, @QuestionNumber, @QuestionAnswer, @QuestionCorrect, @UniqueSession);`,
                         err => {
                             if (err) {
                                 console.error(err.message);
@@ -134,7 +134,8 @@ exports.getResults = (req, res) => {
                     request.addParameter('StartDateTime', TYPES.DateTime, trainingLog.trainingStartTime);
                     request.addParameter('CompletedDateTime', TYPES.DateTime, trainingEnd);
                     request.addParameter('QuestionNumber', TYPES.Int, counter + 1);
-                    request.addParameter('QuestionAnswer', TYPES.Bit, result.isCorrect ? 1 : 0);
+                    request.addParameter('QuestionAnswer', TYPES.Int, result.userAnswer);
+                    request.addParameter('QuestionCorrect', TYPES.Bit, result.isCorrect ? 1 : 0);
                     request.addParameter('UniqueSession', TYPES.VarChar, trainingLog.uniqueSession);
 
                     connection.execSql(request);
