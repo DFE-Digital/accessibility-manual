@@ -5,19 +5,27 @@
 {% set pageDescription = "Basic tests interaction designers can do to check for common accessibility issues. "%}
 {% set sideNav = "relevant" %}
 {% set githubIssueID = "45" %}
+{% set created = "25 November 2024" %}
+{% set reviewed = "25 November 2024" %}
+{% set updated = "25 November 2024" %}
+{% set need = "To help users understand what tests they can run to check the accessibility of designs for products and websites." %}
 
 
 
 
 {% block content %}
 
-<h1 class="govuk-heading-l">{{pageName}}</h1>
+<h1 class="govuk-heading-xl">{{pageName}}</h1>
+
+<p class="govuk-body">
+    Checks you can do to help to ensure your product or website works for everyone. 
+</p>
 
 <h2 class="govuk-heading-m">
    Contrast ratios
 </h2>
 <p class="govuk-body">
-    Ensure that text and background combinations meet the required contrast ratios for accessibility. Use the contrast checker tool to validate compliance with standards and adjust colours as needed.
+    Ensure that text and background combinations meet the required contrast ratios for accessibility. Use the <a class="govuk-link" href="https://accessibility.education.gov.uk/knowledge-hub/tools-testing/tools/contrast">contrast checker tool</a> to validate compliance with standards and adjust colours as needed.
 </p>
 
 <h2 class="govuk-heading-m">Keyboard testing</h2>
@@ -26,12 +34,10 @@
 </p>
 <p class="govuk-body">To do this:</p>
 <ul class="govuk-list govuk-list--bullet">
-    <li>Tab through your service. Use the Tab key to navigate forward through all interactive elements (for example, links, buttons, and form fields) and Shift + Tab to navigate backward.</li>
-    <li>Ensure logical focus order. Check that the focus moves through elements in a logical sequence and that the visible focus indicator is always clear and easy to identify.</li>
-    <li>Check for keyboard traps. Users should not be placed in a keyboard trap where they cannot navigate away from a component or section of a webpage:
-        <ul class="govuk-list govuk-list--bullet">
-            <li>Use standard keyboard keys (Tab, Shift + Tab, arrow keys, and Esc) to navigate through your service.</li>
-            <li>Ensure that users do not get trapped within any functionality.</li>
+    <li>tab through your service. Use the Tab key to navigate forward through all interactive elements (for example, links, buttons, and form fields) and Shift + Tab to navigate backward</li>
+    <li>ensure logical focus order. Check that the focus moves through elements in a logical sequence and that the visible focus indicator is always clear and easy to identify</li>
+    <li>check for keyboard traps. Users should not be placed in a keyboard trap where they cannot navigate away from a component or section of a webpage
+    <li>Use standard keyboard keys (Tab, Shift + Tab, arrow keys, and Esc) to navigate through your service. Ensure that users do not get trapped within any functionality</li>
         </ul>
     </li>
 </ul>
@@ -39,13 +45,13 @@
     Sometimes, it may be necessary to intentionally trap a user (for example, within a modal window). In these cases, you should provide a clear exit strategy for the user, such as:
 </p>
 <ul class="govuk-list govuk-list--bullet">
-    <li>A close button in the modal.</li>
-    <li>The ability to press Esc to exit.</li>
+    <li>a close button in the modal</li>
+    <li>the ability to press Esc to exit</li>
 </ul>
 
 <h2 class="govuk-heading-m">Screen reader testing</h2>
 <p class="govuk-body">
-    Conducting screen reader testing ensures that users who rely on assistive technologies can interact effectively with your service.
+    Conducting screen reader testing ensures that users who rely on assistive technologies can interact effectively with your product or website.
 </p>
 <p class="govuk-body">Use screen readers such as:</p>
 <ul class="govuk-list govuk-list--bullet">
@@ -53,11 +59,11 @@
     <li>JAWS (Windows)</li>
     <li>VoiceOver (Mac and iOS)</li>
 </ul>
-<p class="govuk-body">Test the following:</p>
+<p class="govuk-body">To test the following:</p>
 <ul class="govuk-list govuk-list--bullet">
-    <li>Ensure all interactive elements (for example, buttons, links, and form fields) are announced correctly.</li>
-    <li>Confirm that headings are announced in a logical structure.</li>
-    <li>Check that descriptive labels or instructions are provided where needed.</li>
+    <li>ensure all interactive elements (for example, buttons, links, and form fields) are announced correctly</li>
+    <li>confirm that headings are announced in a logical structure</li>
+    <li>check that descriptive labels or instructions are provided where needed</li>
 </ul>
 
 <h2 class="govuk-heading-m">Resize text</h2>
@@ -66,19 +72,19 @@
 </p>
 <p class="govuk-body">Then check that:</p>
 <ul class="govuk-list govuk-list--bullet">
-    <li>Text is still fully readable.</li>
-    <li>No elements overlap, cut off, or disappear.</li>
-    <li>All interactive components remain usable.</li>
+    <li>text is still fully readable</li>
+    <li>no elements overlap, cut off, or disappear</li>
+    <li>all interactive components remain usable</li>
 </ul>
 
 <h2 class="govuk-heading-m">Target size</h2>
 <p class="govuk-body">
-    Interactive elements should be large enough to be easily tapped or clicked. To check these elements, use the <a class="govuk-link" href="/≈knowledge-hub/tools-testing/bookmarklets/target-size">target size bookmarklet</a>.
+    Interactive elements should be large enough to be easily tapped or clicked. To check these elements, use the <a class="govuk-link" href="https://accessibility.education.gov.uk/knowledge-hub/tools-testing/bookmarklets/target-size">target size bookmarklet</a>.
 </p>
 <p class="govuk-body">To test:</p>
 <ul class="govuk-list govuk-list--bullet">
-    <li>Verify that all buttons, links, and interactive components meet a minimum target size of 44px by 44px.</li>
-    <li>Check that there is sufficient spacing between touch targets to prevent accidental clicks.</li>
+    <li>verify that all buttons, links, and interactive components meet a minimum target size of 44px by 44px</li>
+    <li>check that there is sufficient spacing between touch targets to prevent accidental clicks</li>
 </ul>
 
 <h2 class="govuk-heading-m">More resources</h2>

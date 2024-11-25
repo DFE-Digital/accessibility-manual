@@ -5,38 +5,40 @@
 {% set pageDescription = "Applying some of the laws of UX to interaction design from the aspect of accessibility and inclusive design. "%}
 {% set sideNav = "ux" %}
 {% set githubIssueID = "45" %}
+{% set created = "25 November 2024" %}
+{% set reviewed = "25 November 2024" %}
+{% set updated = "25 November 2024" %}
+{% set need = "This page exists to explain what the laws of ux are and tips to apply them to make products and websites work for everyone." %}
 
 
 {% block content %}
 
-<h1 class="govuk-heading-l">{{pageName}}</h1>
+<h1 class="govuk-heading-xl">{{pageName}}</h1>
 
 <p class="govuk-body">
-    Several UX laws impact accessibility and should be considered during the design process.
+    Several UX (user experience) laws impact accessibility and should be considered during the design process.
 </p>
 
 <h2 class="govuk-heading-m">Hick's Law</h2>
 
 <p class="govuk-body">
-    Hick’s Law explains that people take longer to make decisions when faced with more or complex choices. Simplifying options helps people who may process information differently or more slowly.
+    Hick's Law explains that people take longer to make decisions when faced with more or complex choices. Simplifying options helps people who may process information differently or more slowly.
 </p>
 
 <p class="govuk-body">How you can consider simplifying choices:</p>
 <ul class="govuk-list govuk-list--bullet">
-    <li>Limit form choices and options by only asking for necessary information. Use the <a class="govuk-link" href="https://design-system.service.gov.uk/patterns/question-pages/">one thing per page approach</a>.</li>
-    <li>Use <a class="govuk-link" href="https://design-system.service.gov.uk/styles/page-templates/">progressive enhancement</a> to only show users what they need to complete a task. Reveal more information as they progress.</li>
-    <li>Use <a class="govuk-link" href="https://www.gov.uk/guidance/content-design/writing-for-gov-uk#plain-english">plain English</a> and plain language by avoiding jargon and complex terms, so that people with English as an additional language can understand your service.</li>
-    <li>Design consistently by using familiar patterns and placement of components and features that are in line with other products. This reduces the need to learn something new.</li>
-</ul>
+    <li>limit form choices and options by only asking for necessary information. Use the <a class="govuk-link" href="https://design-system.service.gov.uk/patterns/question-pages/#start-by-asking-one-question-per-page">one thing per page approach</a></li>
+    <li>use <a class="govuk-link" href="https://design-system.service.gov.uk/styles/page-templates/">progressive enhancement</a> to only show users what they need to complete a task. Reveal more information as they progress</li>
+    <li>use <a class="govuk-link" href="https://www.gov.uk/guidance/content-design/writing-for-gov-uk#plain-english">plain English</a> and plain language by avoiding jargon and complex terms, so that people with English as an additional language can understand your service</li>
+    <li>design consistently by using familiar patterns and placement of components and features that are in line with other products. This reduces the need to learn something new</li>
+</ul><br>
 
-<p class="govuk-body">Example of applying Hick’s Law:</p>
+<p class="govuk-body">Example of applying Hick's Law, when designing a form to collect personal details:</p>
 <ul class="govuk-list govuk-list--bullet">
-    <li>When designing a form to collect personal details:
-        <ul class="govuk-list govuk-list--bullet">
-            <li>Split the process into smaller sections like ‘Personal details’, ‘Contact information’, and ‘Address’.</li>
-            <li>Show one section at a time.</li>
-            <li>Use <a class="govuk-link" href="https://design-system.service.gov.uk/patterns/question-pages/">one question per page</a>, and provide clear, consistent navigation buttons, such as ‘Next’ and ‘Back’.</li>
-            <li>Consider using a <a class="govuk-link" href="https://design-system.service.gov.uk/components/task-list/">task list</a> to show progress and check your answers to prevent errors and allow users to change information easily.</li>
+    <li>split the process into smaller sections like 'Personal details', 'Contact information', and 'Address'</li>
+    <li>show one section at a time</li>
+    <li>use <a class="govuk-link" href="https://design-system.service.gov.uk/patterns/question-pages/#start-by-asking-one-question-per-page">one question per page</a>, and provide clear, consistent navigation buttons, such as 'Next' and 'Back'</li>
+    <li>consider using a <a class="govuk-link" href="https://design-system.service.gov.uk/components/task-list/">task list</a> to show progress and check your answers to prevent errors and allow users to change information easily</li>
         </ul>
     </li>
 </ul>
@@ -44,16 +46,16 @@
 <h2 class="govuk-heading-m">Fitts's Law</h2>
 
 <p class="govuk-body">
-    Fitts’s Law states that larger and closer interactive elements are quicker and easier to use. This principle is especially helpful for people with motor impairments.
+    Fitts's Law states that larger and closer interactive elements are quicker and easier to use. This principle is especially helpful for people with motor impairments.
 </p>
 
 <p class="govuk-body">How to make interactions easier:</p>
 <ul class="govuk-list govuk-list--bullet">
-    <li>Ensure interactive elements are large enough for everyone to use comfortably either with a keyboard, mouse, touch, or other pointing device.</li>
-    <li>Place buttons and links near where users are likely to need them.</li>
-    <li>Make touch targets at least 24x24 pixels, following <a class="govuk-link" href="https://www.w3.org/WAI/WCAG22/">WCAG 2.2 guidance</a>.</li>
-    <li>Place common actions in predictable locations.</li>
-    <li>Use whitespace to separate elements to prevent accidental selection.</li>
+    <li>ensure interactive elements are large enough for everyone to use comfortably either with a keyboard, mouse, touch, or other pointing device</li>
+    <li>place buttons and links near where users are likely to need them</li>
+    <li>make touch targets at least 24x24 pixels, following <a class="govuk-link" href="https://www.w3.org/WAI/WCAG22/Understanding/target-size-minimum">WCAG 2.2 target size guidance</a></li>
+    <li>place common actions in predictable locations</li>
+    <li>use whitespace to separate elements to prevent accidental selection</li>
 </ul>
 
 <h2 class="govuk-heading-m">Miller's Law</h2>
@@ -64,11 +66,11 @@
 
 <p class="govuk-body">Some of the ways you can do this are:</p>
 <ul class="govuk-list govuk-list--bullet">
-    <li>Break content into smaller chunks using bullet points, headings, and subheadings to organise information.</li>
-    <li>Keep menu options and choices small and simple to make decision-making easier.</li>
-    <li>Show only essential information first, using <a class="govuk-link" href="https://design-system.service.gov.uk/styles/page-templates/">progressive disclosure</a> as needed.</li>
-    <li>Group related items together to improve recall and recognition.</li>
-    <li>Avoid making users remember information or copy information from one place to another. This is a requirement under <a class="govuk-link" href="https://www.w3.org/WAI/WCAG21/Understanding/redundant-entry.html">WCAG 3.3.7 – Redundant entry</a>.</li>
+    <li>break content into smaller chunks using bullet points, headings, and subheadings to organise information</li>
+    <li>keep menu options and choices small and simple to make decision-making easier</li>
+    <li>show only essential information first, using <a class="govuk-link" href="https://design-system.service.gov.uk/styles/page-template">progressive disclosure</a> as needed</li>
+    <li>group related items together to improve recall and recognition</li>
+    <li>avoid making users remember information or copy information from one place to another. This is a requirement under <a class="govuk-link" href="https://www.w3.org/WAI/WCAG22/Understanding/redundant-entry.html">WCAG 3.3.7 Redundant entry</a></li>
 </ul>
 
 
