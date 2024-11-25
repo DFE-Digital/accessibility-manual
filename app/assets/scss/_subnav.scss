@@ -176,3 +176,39 @@
 .app-sub-navigation ul>li {
   margin-bottom: 0;
 }
+
+.nav-link-toggle[aria-expanded="true"] {
+  border-left: 4px solid $color_dfe-blue;
+  /* Add your desired border colour and width */
+  padding-left: 6px;
+  /* Adjust padding to account for border */
+  font-weight: 700;
+}
+
+.sub-nav {
+  display: none;
+  list-style-type: none;
+  padding: 0;
+  margin-left: 20px;
+  margin-top: 0px;
+  border-left: 4px solid transparent;
+  /* Default transparent border */
+}
+
+.nav-link-toggle[aria-expanded="true"]+.sub-nav {
+  display: block;
+  border-left: 4px solid #b1b4b6;
+  /* Match the border colour of the button */
+  margin-left: 0px;
+  /* Adjust margin to align with border */
+}
+
+.sub-nav--active {
+  border-left: 4px solid $color_dfe-blue;
+  /* Replace with the actual blue colour variable or hex code */
+  /* Adjust padding for alignment */
+  font-weight: 700;
+  /* Optional: make it bold for emphasis */
+  margin-left: -4px;
+  background: #f3f2f1;
+}

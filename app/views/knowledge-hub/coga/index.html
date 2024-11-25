@@ -1,0 +1,141 @@
+{% extends "layouts/page_layout.html" %}
+
+{% set selectedNav = "Knowledge hub" %}
+{% set pageName = "Cognitive accessibility guidelines (COGA)" %}
+{% set pageDescription = "Understanding and applying cognitive accessibility guidelines to ensure content is more accessible."%}
+{% set mainClasses = "govuk-!-padding-top-0" %}
+{% set created = "25 November 2024" %}
+{% set reviewed = "25 November 2024" %}
+{% set updated = "25 November 2024" %}
+{% set githubIssueID = "76" %}
+{% set aka = "COGA, Neurodiversity" %}
+{% set need = "This page exists to help people understand Cognitive accessibility guidelines (COGA)" %}
+{% set pagePath = "/knowledge-hub/coga" %}
+{% block content %}
+
+   <h1 class="govuk-heading-xl">{{pageName}}</h1>
+
+   <p class="govuk-body">
+    <a href="https://www.w3.org/TR/coga-usable/" class="govuk-link">COGA</a> is a set of 8 guidelines for inclusive design. By applying them to the products and websites we build, content will be more accessible
+</p>
+
+   <h2 class="govuk-heading-l">Who created COGA</h2>
+   <p class="govuk-body">
+    The guidelines have been drafted by the <a href="https://www.w3.org/" class="govuk-link">World Wide Web Consortium (W3C)</a> and invited experts. W3C also created <a class="govuk-link" href="https://www.w3.org/WAI/standards-guidelines/wcag/">WCAG (Web Content Accessibility Guidelines)</a>
+   </p>
+   <p class="govuk-body">
+    WCAG is a set of guidelines that help teams to test and audit products and websites to see how accessible they are. COGA is a set of guidelines for designers to consider when creating products and websites
+</p>
+
+   <h2 class="govuk-heading-l">The guidelines</h2>
+   <p class="govuk-body">
+    At their core, the 8 guidelines are just good design. They have huge benefits for people with cognitive impairments
+</p>
+   <p class="govuk-body">
+    Cognitive accessibility can often be overlooked, as it is not addressed as significantly as other disabilities within WCAG. Cognitive disabilities do not always have clear solutions like other disabilities. For example, low vision users can use magnification tools or screen readers, whereas finding a universal approach for cognitive disabilities is more complex
+</p>
+   <p class="govuk-body">
+    The guidelines provide advice on how to make content usable for people with cognitive and learning disabilities. By following them, we can ensure that our products and websites meet the needs of people who face challenges with thinking, learning, remembering, and problem-solving
+</p>
+
+   <h2 class="govuk-heading-l">Help users understand what things are and how to use them</h2>
+   <p class="govuk-body">
+    When creating content and components, it should always be clear to users what the purpose of an item is and how to use it. Consistent, identifiable content and visuals reduce cognitive load and make interaction easier
+</p>
+   <ul class="govuk-list govuk-list--bullet">
+      <li>style buttons and links consistently</li>
+      <li>ensure users are aware of what will happen when interacting</li>
+      <li>use commonly recognized icons, such as a phone icon instead of a headset, to support people with English as an additional language</li>
+      <li>provide clear and helpful hint text for inputs</li>
+      <li>place commonly used components in consistent locations and order</li>
+   </ul>
+
+   <h2 class="govuk-heading-l">Help users find what they need</h2>
+   <p class="govuk-body">
+    Navigation should be easy and intuitive. Users should quickly identify important information, find features, and access content with minimal effort
+</p>
+   <ul class="govuk-list govuk-list--bullet">
+      <li>provide a clear layout with defined sections</li>
+      <li>use a clear heading structure</li>
+      <li>make the most important information easy to find</li>
+      <li>include a sitemap</li>
+      <li>use good information architecture and navigation</li>
+      <li>make help and search features easy to recognize</li>
+      <li>ensure content is searchable</li>
+   </ul>
+
+   <h2 class="govuk-heading-l">Use clear and understandable content</h2>
+   <p class="govuk-body">
+    Content should always be clear, understandable, and easy to follow. Use plain language and layouts that prevent users from feeling overwhelmed
+</p>
+   <ul class="govuk-list govuk-list--bullet">
+      <li>write in plain language, using short sentences, and avoid jargon</li>
+      <li>include images that support the content</li>
+      <li>ensure videos are easy to follow and include captions and a transcript</li>
+      <li>avoid large pages of written content</li>
+      <li>use a consistent, easy-to-read font</li>
+      <li>make choices clear</li>
+      <li>format content as users expect to see it (for example, date of birth)</li>
+      <li>use colour to enhance readability and urgency</li>
+   </ul>
+
+   <h2 class="govuk-heading-l">Help users avoid mistakes and know how to correct them</h2>
+   <p class="govuk-body">
+    Ask users only for the information you need. If an error occurs, explain what went wrong and how to resolve it
+</p>
+   <ul class="govuk-list govuk-list--bullet">
+      <li>help users avoid mistakes by using patterns like “check your answers”</li>
+      <li>show examples of potential failures or errors</li>
+      <li>be flexible in data validation, for example, allow spaces in inputs</li>
+      <li>provide a back link</li>
+      <li>use clear error messages that include the problem, cause, and recommendation</li>
+      <li>provide a summary of errors</li>
+      <li>offer alternative methods for resolving issues, like a phone number or helpdesk link</li>
+   </ul>
+
+   <h2 class="govuk-heading-l">Help users focus</h2>
+   <p class="govuk-body">
+    Users do not want to be distracted. Avoid cluttered layouts, looping animations, or auto-playing content that can break concentration
+</p>
+   <ul class="govuk-list govuk-list--bullet">
+      <li>use visual hierarchy to emphasize important content</li>
+      <li>provide one thing per page</li>
+      <li>don’t distract users mid-task, for example, with ads or signups</li>
+      <li>provide clear navigation aids to help users reorient themselves</li>
+   </ul>
+
+   <h2 class="govuk-heading-l">Ensure processes do not rely on memory</h2>
+   <p class="govuk-body">
+    Users should not have to rely on memory to recall important information or complete tasks
+</p>
+   <ul class="govuk-list govuk-list--bullet">
+      <li>re-provide information when required for a task</li>
+      <li>make important information visible, not hidden in tooltips</li>
+      <li>provide hint text</li>
+      <li>allow copy and paste for inputs</li>
+   </ul>
+
+   <h2 class="govuk-heading-l">Provide help and support</h2>
+   <p class="govuk-body">
+    Users want accessible, consistently available support. Provide multiple mechanisms for support to accommodate different needs
+</p>
+   <ul class="govuk-list govuk-list--bullet">
+      <li>link support at the source</li>
+      <li>provide help within error messages</li>
+      <li>link to documentation</li>
+      <li>help users self-serve where possible</li>
+      <li>provide multiple support channels</li>
+   </ul>
+
+   <h2 class="govuk-heading-l">Support adaptation and personalization</h2>
+   <p class="govuk-body">
+    Users want to use their own settings and preferences while interacting with your product or website
+</p>
+   <ul class="govuk-list govuk-list--bullet">
+      <li>support dark mode and high contrast mode</li>
+      <li>support font settings like text and line spacing</li>
+      <li>use responsive units (rem, em) and avoid px</li>
+      <li>support reduced motion</li>
+   </ul>
+
+{% endblock %}
