@@ -118,7 +118,7 @@ exports.getResults = (req, res) => {
                     if (counter < results.length) {
                         const result = results[counter];
                         const request = new Request(
-                            `INSERT INTO BasicTrainingResults (SessionID, StartDateTime, CompletedDateTime, QuestionNumber, QuestionAnswer, QuestionCorrect, UniqueSession) VALUES (@SessionID, @StartDateTime, @CompletedDateTime, @QuestionNumber, @QuestionAnswer, @QuestionCorrect, @UniqueSession);`,
+                            `INSERT INTO BasicTrainingData (SessionID, StartDateTime, CompletedDateTime, QuestionNumber, QuestionAnswer, QuestionCorrect, UniqueSession) VALUES (@SessionID, @StartDateTime, @CompletedDateTime, @QuestionNumber, @QuestionAnswer, @QuestionCorrect, @UniqueSession);`,
                             err => {
                                 if (err) {
                                     console.error(err.message);
