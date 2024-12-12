@@ -1,0 +1,49 @@
+{% extends "layouts/page_layout.html" %}
+
+{% set selectedNav = "Standards" %}
+{% set pageName = "Accessibility specialist assessor role" %}
+{% set pageDescription = "The role of the accessibility specialist is to ensure that products and websites are usable for everyone.  "%}
+{% set created = "12 December 2024" %}
+{% set reviewed = "12 December 2024" %}
+{% set updated = "12 December 2024" %}
+{% set githubIssueID = "80" %}
+{% set need = "This page exists to help people understand the role of an accessibility specialist in service assessments in DfE." %}
+{% set aka = "" %}
+{% set pagePath = "/standards/accessibility-assessor" %}
+
+{% block content %}
+
+    <h1 class="govuk-heading-xl">{{pageName}}</h1>
+
+    <p class="govuk-body">{{pageDescription}}</p>
+
+    <h2 class="govuk-heading-l">Why the role exists</h2>
+
+    <p class="govuk-body">As a government department, we need to make sure that our products and websites are accessible. We also need to make sure that our products and websites are compliant with accessibility regulations.</p>
+
+    <p class="govuk-body">Although user research and design assessors can review how accessible a product or website is, it’s not their main professional area of expertise. This is why we’ve introduced the role of the accessibility specialist to the assessment panel.</p>
+
+    <h2 class="govuk-heading-l">What the role does</h2>
+
+    <p class="govuk-body">The accessibility specialist works alongside the rest of the assessor panel with a specific focus on accessibility and inclusive design at alpha, beta and live phases.</p>
+
+    <p class="govuk-body">Due to the low number of accessibility specialists, there will not always be an assessor on every panel.</p>
+    <p class="govuk-body">Accessibility specialists will assess large or complex products or websites.</p>
+
+    <h2 class="govuk-heading-l">What the accessibility specialist considers at assessment</h2>
+
+    <p class="govuk-body">The accessibility specialist will take an in-depth look at all aspects of accessibility and inclusive design.</p>
+
+    <p class="govuk-body">The accessibility specialist will:</p>
+
+    <ul class="govuk-list govuk-list--bullet">
+        <li>check research includes users with disabilities and access needs</li>
+        <li>ensure there is awareness of accessibility within all professions </li>
+        <li>look for evidence of an accessibility audit plan, including details of budget, time and resource  </li>
+        <li>review accessibility statements (in draft or live), including a plan for when to iterate, and who will be responsible for this </li>
+        <li>review planning or managing accessibility issues and prioritisation  </li>
+    </ul>
+
+    <p class="govuk-body">Check <a href="https://apply-the-service-standard.education.gov.uk/service-standard/5-make-sure-everyone-can-use-the-service" class="govuk-link">Service Standard 5</a> for detailed guidance for what the accessibility specialist will look for by phase.</p>
+
+{% endblock %}
