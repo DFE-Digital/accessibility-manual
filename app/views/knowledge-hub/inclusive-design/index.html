@@ -2,13 +2,14 @@
 
 {% set selectedNav = "Knowledge hub" %}
 {% set pageName = "Inclusive design" %}
-{% set pageDescription = "TK"%}
+{% set pageDescription = "Understanding and applying inclusive design principles to ensure content is more accessible."%}
 {% set mainClasses = "govuk-!-padding-top-0" %}
 {% set created = "7 January 2025" %}
 {% set reviewed = "7 January 2025" %}
 {% set updated= "7 January 2025" %}
-{% set githubIssueID = "TK" %}
-{% set need = "" %}
+{% set githubIssueID = "72" %}
+{% set aka = "inclusive design, neurodiversity" %}
+{% set need = "This page exists to help people understand inclusive design principles" %}
 {% set pagePath = "/knowledge-hub/inclusive-design" %}
 
 
@@ -16,7 +17,219 @@
 {% block content %}
 
    <h1 class="govuk-heading-xl">{{pageName}}</h1>
+ <p class="govuk-body">
+A common fact is that 1 in 5 people have a permanent disability. This doesn't include people who may have temporary or short-term disabilities, like an injury, or situational disabilities, like holding a baby.
+</p>
 
+ <p class="govuk-body">
+Disabilities can be grouped into different types, and a person might experience more than one. Good accessibility helps everyone, not just those with disabilities.
+</p>
+
+   <h2 class="govuk-heading-l">Permanent disabilities</h2>
+   <p class="govuk-body">
+    A person who has one arm, is deaf, or is blind would be considered to have a permanent disability.  
+</p>
+   <p class="govuk-body">
+    Permanent disabilities are the ones most people think of when it comes to inclusive design and accessibility.  
+</p>
+   <p class="govuk-body">
+    Designing for those with permanent disabilities can create products and websites that work for everyone, including those with temporary or situational disabilities.   
+</p>
    
+   <h2 class="govuk-heading-l">Temporary disabilities</h2>
+   <p class="govuk-body">
+    A temporary disability is a short-term condition, like a broken bone, recovering from laser eye surgery, or a concussion.  
+</p>
+   <p class="govuk-body">
+    People with temporary disabilities can benefit from the same inclusive design principles that help those with permanent disabilities.  
+</p>
+   <p class="govuk-body">
+    For example, designing for keyboard accessibility will help someone with a broken arm navigate a service.  
+</p>
+   <p class="govuk-body">
+   Providing functionality that's responsive to zoom, works with magnification, and uses good contrast ratios, can help someone recovering from laser eye surgery. Avoiding content that causes motion sickness or dizziness can help someone with concussion. 
+</p>
+
+   <h2 class="govuk-heading-l">Situational disabilities</h2>
+   <p class="govuk-body">
+    A situational disability is something that almost everyone has experienced.</p>
+    
+   <p class="govuk-body">For example, watching a video in a busy setting, such as a nursery or school, using a website while holding a baby, or trying to open a door with your hands full. Good design can solve these problems. 
+</p>
+   <p class="govuk-body">
+    Captions and transcripts allow people to understand the content of a video in a noisy environment. Websites designed for full keyboard navigation let parents or caregivers use them with one hand, without needing a mouse. An automatic door means that people can still pass through when carrying something. 
+</p>
+
+   <h2 class="govuk-heading-l">Universal design principles</h2>
+   <p class="govuk-body">
+    The 7 design principles are guidelines for designing spaces and products that everyone can use. They were first created for architecture and product design but can also apply to digital services. 
+</p>
+   <p class="govuk-body">
+   When designing DfE products and websites, we should use these principles to ensure they are accessible and easy for everyone.</p> 
+   
+</p>
+
+   <p class="govuk-body">
+  The 7 principles:
+</p>
+   <ul class="govuk-list govuk-!-margin-bottom-9">
+      <li>
+         <a href="#principle-1" class="govuk-link govuk-link--no-visited-state">Principle 1: equitable use</a>
+      </li>
+      <li>
+         <a href="#principle-2" class="govuk-link govuk-link--no-visited-state">Principle 2: flexibility in use</a>
+      </li>
+      <li>
+       <a href="#principle-3" class="govuk-link govuk-link--no-visited-state">Principle 3: simple and intuitive use</a>
+      </li>
+      <li>
+         <a href="#principle-4" class="govuk-link govuk-link--no-visited-state">Principle 4: perceptible information</a>
+      </li>
+      <li>
+         <a href="#principle-5" class="govuk-link govuk-link--no-visited-state">Principle 5: tolerance for error</a>
+      </li>
+      <li>
+         <a href="#principle-6" class="govuk-link govuk-link--no-visited-state">Principle 6: low physical effort</a>
+      </li>
+      <li>
+         <a href="#principle-7" class="govuk-link govuk-link--no-visited-state">Principle 7: size and space for approach and use</a>
+      </li>
+   </ul>
+
+   <span class="govuk-caption-m govuk-!-margin-top-7" id="principle-1">Principle 1</span>
+   <h3 class="govuk-heading-m">Equitable use</h3>
+   <p class="govuk-body">
+Provide equal access to DfE products and websites to everyone who wants to use a service.   
+</p>
+   <p class="govuk-body">
+   You should:
+</p>
+   <ul class="govuk-list govuk-list--bullet">
+      <li>avoid cluttered layouts</li>
+      <li>use the <a href="https://design.homeoffice.gov.uk/accessibility/inclusive-language#disability" class="govuk-link">correct language for people with disabilities</a></li>
+      <li>not exclude anyone</li>
+      <li>not disadvantage or stigmatise anyone</li>
+      <li>make the design appealing to all users</li>
+      <li>ensure users can access with assistive technology</li>
+   </ul>
+
+      <span class="govuk-caption-m govuk-!-margin-top-7" id="principle-2">Principle 2</span>
+   <h3 class="govuk-heading-m">Flexibility in use</h3>
+   <p class="govuk-body">
+Not all users will use your service in the same way. People need different settings, preferences, and adaptive ways of working. We should ensure that they are not forced to work in a certain way.   
+</p>
+   <p class="govuk-body">
+   You should:
+</p>
+   <ul class="govuk-list govuk-list--bullet">
+      <li>allow users to change settings to suit their needs</li>
+      <li>ensure pages can reflow</li>
+      <li>allow for high contrast</li>
+      <li>use responsive units for text</li>
+      <li>allow users to work at their own pace</li>
+      <li>avoid timeouts or allow users to extend</li>
+   </ul>
+
+      <span class="govuk-caption-m govuk-!-margin-top-7" id="principle-3">Principle 3</span>
+   <h3 class="govuk-heading-m">Simple and intuitive use</h3>
+   <p class="govuk-body">
+Users want to be able to navigate products and websites with ease. When content is hard to understand, it makes it harder for users to move through a service.</p>
+
+<p class="govuk-body">People with English as an additional language, are new users, have learning disabilities, low literacy, and memory issues could all have issues with products and websites which are not simple and intuitive.     
+</p>
+   <p class="govuk-body">
+A person's background, language, or experience should not make it harder for them to understand how to use DfE products and websites.     
+</p>
+   <p class="govuk-body">
+   You should:
+</p>
+   <ul class="govuk-list govuk-list--bullet">
+      <li>write in <a href="https://www.gov.uk/guidance/content-design/writing-for-gov-uk" class="govuk-link">plain language</a></li>
+      <li>provide descriptions for acronyms</li>
+      <li>avoid jargon</li>
+      <li>be consistent in positioning components</li>
+      <li>avoid unnecessary complexity</li>
+      <li>provide effective prompting and feedback on task completion</li>
+      <li>accommodate a wide range of literacy and language skills</li>
+   </ul>
+      <span class="govuk-caption-m govuk-!-margin-top-7" id="principle-4">Principle 4</span>
+   <h3 class="govuk-heading-m">Perceptible information</h3>
+   <p class="govuk-body">
+Users perceive content in different ways. Not everyone reads blocks of content visually, or watches videos. This could be because they are blind and cannot view the video but can read the transcript with a <a href="https://accessibility.education.gov.uk/knowledge-hub/screen-readers" class="govuk-link">screen reader</a>.</p>
+
+<p class="govuk-body"> 
+People who are deaf cannot hear the audio in a meeting, but can follow the conversation by using the captions.</p>
+
+<p class="govuk-body">When designing DfE products and websites, we should think about the different ways in which users may perceive content.     
+</p>
+   <p class="govuk-body">
+   You should:
+</p>
+   <ul class="govuk-list govuk-list--bullet">
+      <li>provide captions and transcripts for meetings and videos</li>
+      <li>provide <a href="https://design-system.service.gov.uk/styles/images/#alt-text" class="govuk-link">alt text</a> for all images</li>
+      <li>not use <a href="https://design-system.service.gov.uk/styles/colour/" class="govuk-link">colour</a> alone to provide information</li>
+      <li>use colours that contrast sufficiently</li>
+   </ul>
+         <span class="govuk-caption-m govuk-!-margin-top-7" id="principle-5">Principle 5</span>
+   <h3 class="govuk-heading-m">Tolerance for error</h3>
+   <p class="govuk-body">
+Provide a way for users to avoid errors, or if they do make them, provide clear information and a way to fix them. Clear content, which gives information on how to do a task, and hint text in a form, can minimise the chance of an error occurring. This avoids frustration and repetition which can be difficult for many people with disabilities.</p>
+
+<p class="govuk-body"> 
+People who are deaf cannot hear the audio in a meeting, but can follow the conversation by using the captions.</p>
+
+<p class="govuk-body">When designing DfE services, we should think about where users are most likely to cause an error to occur. We should ensure that things are in place to avoid or rectify these errors.    
+</p>
+   <p class="govuk-body">
+   You should:
+</p>
+   <ul class="govuk-list govuk-list--bullet">
+      <li>allow copy and paste</li>
+      <li>allow password managers</li>
+      <li>provide a forgot password functionality</li>
+      <li>use the <a href="https://design-system.service.gov.uk/patterns/check-answers/" class="govuk-link">check your answers</a> </li>
+      <li>provide an <a href="https://design-system.service.gov.uk/components/error-summary/" class="govuk-link">error summary</a> for every error</li>
+      <li>provide <a href="https://design-system.service.gov.uk/components/error-message/" class="govuk-link">specific error information</a></li>
+      <li>provide help</li>
+   </ul>
+            <span class="govuk-caption-m govuk-!-margin-top-7" id="principle-6">Principle 6</span>
+   <h3 class="govuk-heading-m">Low physical effort</h3>
+   <p class="govuk-body">
+DfE products and websites should be easy to use, intuitive, and allow users to navigate and interact without fatigue.</p> 
+
+<p class="govuk-body">Clear, simple, easy-to-read content ensures users do not suffer cognitive load. Creating robust products means that people can use our websites with ease on their preferred input device. </p>
+
+<p class="govuk-body"> 
+When websites are not fully accessible, some users will try to use alternative methods. For example, some people with RSI (repetitive strain injury) who use Dragon, will stop using speech recognition and reach for a mouse to navigate. This can cause further pain and discomfort.     
+</p>
+   <p class="govuk-body">
+   You should:
+</p>
+   <ul class="govuk-list govuk-list--bullet">
+      <li>make mobile components reachable</li>
+      <li>make services speech recognition accessible</li>
+      <li>provide full keyboard accessibility</li>
+      <li>cognitive load</li>
+      <li>minimise repetitive actions</li>
+   </ul>
+            <span class="govuk-caption-m govuk-!-margin-top-7" id="principle-7">Principle 7</span>
+   <h3 class="govuk-heading-m">Size and space for approach and use</h3>
+   <p class="govuk-body">
+Make sure users have the tools they need to use a product or website, and those tools are easy to find and access. Buttons and other elements should be big enough and spaced out so that people with limited mobility can use them easily.</p>
+
+<p class="govuk-body"> 
+Design elements and components should be simple to reach, click, or select, no matter what device or input method someone is using. </p>  
+</p>
+   <p class="govuk-body">
+   You should:
+</p>
+   <ul class="govuk-list govuk-list--bullet">
+      <li>provide enough spacing between elements</li>
+      <li>provide sufficient  <a href="https://accessibility.education.gov.uk/knowledge-hub/tools-testing/bookmarklets/target-size) for clickable or tappable components" class="govuk-link">target size</a> for clickable or tappable components</li>
+      <li>use full width buttons on mobile where possible </li>
+      <li>ensure all elements are speech recognition accessible</li>
+      <li>provide responsive viewports that adapt to users preferences</li>
+   </ul>
 
 {% endblock %}
