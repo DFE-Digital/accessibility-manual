@@ -1,7 +1,7 @@
 {% extends "layouts/page_layout.html" %}
 
 {% set selectedNav = "Knowledge hub" %}
-{% set pageName = "Content with insufficient contrast" %}
+{% set pageName = "Use of colour" %}
 {% set pageDescription = ""%}
 {% set mainClasses = "govuk-!-padding-top-0" %}
 {% set created = "13 August 2024" %}
@@ -10,29 +10,32 @@
 {% set githubIssueID = "43" %}
 {% set need = "This page exists to help people understand how to prevent introducing common accessibility issues in products and services." %}
 {% set aka = "" %}
-{% set pagePath = "/knowledge-hub/common-issues/contrast" %}
+{% set pagePath = "/knowledge-hub/common-issues/colour" %}
 {% block content %}
 
   
 
     <h1 class="govuk-heading-xl">{{pageName}}</h1>
 
-    <p>Low contrast for text, focus, and images makes content difficult to percieve and understand for many users.</p>
-    <p>Providing content which contrast sufficiently can help with focus, and reduce eye strain. It's also crucial for users with sight impairments or colour deficiencies to read content.</p>
+    <p>When used correctly, colour can be an effective way to get information across to users.</p>
+
+     <p>When implemented incorrectly, there are multiple ways that use of colour can cause issues for users.</p>
+     
+     <p>For example, within a chart, if you have provided a key which states, blue represents primary school-aged children, some users will not be able to perceive the colour and therefore link it to the information within the chart.</p>
 
     <h2 class="govuk-heading-l">Examples of issues in DfE</h2>
 
     <p>We find a lot of issues relating to colour within services that use campaign sites, charts and graphs, and services that are not using the design system.</p>
 
-    <p>Below are some examples of common issues with contrast and how to avoid them.</p>
+    <p>Below are examples of common issues with contrast and how to avoid them.</p>
 
-    <h3 class="govuk-heading-m">Low contrast</h3>
+    <h3 class="govuk-heading-m">Text contrast</h3>
 
-    <p>Low contrast can make content difficult to read, especially for people with sight impairments or colour deficiencies.</p>
+    <p>Low text contrast can make content difficult to read, especially for people with sight impairments or colour deficiencies.</p>
 
     <p>Ensure text and background colours have a contrast ratio of at least 4.5:1 for normal text and 3:1 for large text.</p>
 
-    <p>You can use a tool such as <a href="/knowledge-hub/tools-testing/tools/contrast">Contrast Checker</a> to check the contrast ratio of your text and background colours. As long as you are aware of your text size, you won't need to remember the minimum requirements, as the contrast checker can do this for you.</p>
+    <p>You can use a tool such as <a href="/knowledge-hub/tools-testing/tools/contrast">Contrast Checker</a> to check the contrast ratio of your text and background colours.</p>
 
     <div class="govuk-grid-row dfe-flex">
         <div class="govuk-grid-column-one-half dfe-flex-item">
@@ -47,16 +50,24 @@
         <div class="govuk-grid-column-one-half dfe-flex-item">
             <div class="dfe-panel-dont">
                 <h3 class="govuk-heading-s">Don't</h3>
-                <p class="govuk-!-margin-bottom-5">Don't use light text on pale backgrounds that makes content difficult to read.</p>
+                <p class="govuk-!-margin-bottom-5">Do not use light text on pale backgrounds that makes content difficult to read.</p>
                 <img src="/assets/images/contrast-dont.png" style="width:100%;" class="govuk-!-margin-bottom-5"
                   alt="The words, 'There is a problem', and the message, 'Information is missing' in red text">
             </div>
         </div>
     </div>
 
+    <h3 class="govuk-heading-m">None-text contrast</h3>
+
+    <p>Checking the none-text contrast ratio on each page of your product or website ensures that users with low vision or a colour deficiency can perceive parts of the screen that may not be text but are still  important for accessing and understanding content.</p>
+
+    <p>None-text contrast has a minimum requirement of a 3:1 contrast ratio. You can use the <a href="/knowledge-hub/tools-testing/tools/contrast">Contrast Checker</a> to check this.</p>
+
     <h3 class="govuk-heading-m">Focus state</h3>
 
-    <p>Focus states are used to show people they are on an interactive element, this could be a link or form input. They are especially important for people who navigate using a keyboard.</p>
+    <p>Focus states help users know they're on an interactive element, like a link or a form input. Focus states are important for people who use a keyboard to navigate, and for people with low vision or a colour deficiency.</p>
+
+    <p>If the foreground and background colours do not have enough contrast, users with low vision or a colour deficiency may not see the name of the link. </p>
 
     <p>Changing the style of the focus state when designing services using the <a href="https://design-system.service.gov.uk/"> GOV.UK Design System</a> and <a href="https://frontend.design-system.service.gov.uk/">GOV.UK Frontend</a> can confuse people.</p>
 
@@ -73,7 +84,7 @@
         <div class="govuk-grid-column-one-half dfe-flex-item">
             <div class="dfe-panel-dont">
                 <h3 class="govuk-heading-s">Don't</h3>
-                <p class="govuk-!-margin-bottom-5">Don't change the colour or style of focus states.</p>
+                <p class="govuk-!-margin-bottom-5">Do not change the colour or style of focus states.</p>
                 <img src="/assets/images/focus-dont.png" style="width:100%;" class="govuk-!-margin-bottom-5"
                   alt="The words, Follow the content style guide when writing for the web, with the words 'content style guide' written in red and underlined.">
             </div>

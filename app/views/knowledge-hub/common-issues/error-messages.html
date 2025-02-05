@@ -1,7 +1,7 @@
 {% extends "layouts/page_layout.html" %}
 
 {% set selectedNav = "Knowledge hub" %}
-{% set pageName = "Form error messages" %}
+{% set pageName = "Error messages" %}
 {% set pageDescription = "How to ensure people can understand and resolve errors when using a service."%}
 {% set mainClasses = "govuk-!-padding-top-0" %}
 {% set created = "12 August 2024" %}
@@ -15,23 +15,23 @@
 
     <h1 class="govuk-heading-xl">{{pageName}}</h1>
 
-    <p>Error messages are essential for users to understand where they've made a mistake, what the mistake or mistakes are, and how to correct them.</p>
-    <p>If users are just told they have made a mistake, this is not helpful. Content should be provided to tell a user the exact part of a form that has been filled out incorrectly. For example, if characters have been used that are not accepted within that field. </p>
+    <p>Error messages should help users understand what went wrong, where the problem is, and how to fix it.</p>
+
+    <p class="govuk-body">This is especially important for people with disabilities. Clear and helpful error messages are particularly useful for people with cognitive disabilities and those who are neurodivergent.</p>
 
     <h2 class="govuk-heading-l">How to prevent issues</h2>
 
-    <p>Before writing error messages, ensure your forms are easy to understand. This will help avoid errors in the first place, for example:</p>
-
+    <p>Make your forms easy to understand. This will help avoid errors in the first place.</p>
+    <p class="govuk-body">For example:</p>
     <ul class="govuk-list govuk-list--bullet">
         <li>write in clear, plain language</li>
         <li>use hint text where information is required in a specific format</li>
         <li>avoid jargon</li>
     </ul>
 
-    <p>You can also read guidance from the NHS Digital team for <a href="https://digital.nhs.uk/blog/transformation-blog/2019/how-to-write-good-questions" rel="noopener noreferrer" target="_blank">writing good questions <span class="govuk-visually-hidden">(link opens in a new tab)</span></a>.</p>
-
-    <p>When you have written your forms, check the error messages to ensure they are clear and easy to understand. An error message needs to:</p>
-
+    <p>When you have written your forms, check the error messages to ensure they're clear and easy to understand.</>
+    
+    <p class="govuk-body">An error message needs to:</p>
     <ul class="govuk-list govuk-list--bullet">
         <li>help the user understand the problem</li>
         <li>tell the user what to do to resolve the problem</li>
@@ -39,11 +39,11 @@
         <li>link directly from the summary to the input field with the problem</li>
     </ul>
 
-    <p>Clear forms and error messages reduces the chance of poor data getting into DfE systems and services. They help users to complete tasks more effectively and without frustration.</p>
+    <p>Clear forms and error messages help users to complete tasks more effectively and without frustration. They also help reduce the chance of poor data getting into DfE systems and services.</p>
 
     <h2 class="govuk-heading-l">Examples of issues in DfE</h2>
 
-    <p>Below are some examples of common issues with error messages and how to avoid them.</p>
+    <p>Below are examples of common issues with error messages and how to avoid them.</p>
 
     <h3 class="govuk-heading-m">Non-descriptive error messages</h3>
 
@@ -63,7 +63,7 @@
         <div class="govuk-grid-column-one-half dfe-flex-item">
             <div class="dfe-panel-dont">
                 <h3 class="govuk-heading-s">Don't</h3>
-                <p class="govuk-!-margin-bottom-5">Don't use generic error messages that are ambiguous or don't explain the problem.</p>
+                <p class="govuk-!-margin-bottom-5">Do not use generic error messages that are ambiguous or don't explain the problem.</p>
                 <img src="/assets/images/error-description-dont.png" style="width:100%;" class="govuk-!-margin-bottom-5"
                   alt="The words, 'There is a problem', and the message, 'Information is missing' in red text">
             </div>
@@ -88,7 +88,7 @@
         <div class="govuk-grid-column-one-half dfe-flex-item">
             <div class="dfe-panel-dont">
                 <h3 class="govuk-heading-s">Don't</h3>
-                <p class="govuk-!-margin-bottom-5">Don't show database generated errors. They can expose information to hackers.</p>
+                <p class="govuk-!-margin-bottom-5">Do not show database generated errors. They can expose information to hackers.</p>
                 <img src="/assets/images/error-db-dont.png" style="width:100%;" class="govuk-!-margin-bottom-5"
                   alt="The words, 'There is a problem', and the message, 'Information is missing' in red text">
             </div>
@@ -112,7 +112,7 @@
         <div class="govuk-grid-column-one-half dfe-flex-item">
             <div class="dfe-panel-dont">
                 <h3 class="govuk-heading-s">Don't</h3>
-                <p class="govuk-!-margin-bottom-5">Don't use plain text in error messages. It makes it harder to navigate the form.</p>
+                <p class="govuk-!-margin-bottom-5">Do not use plain text in error messages. It makes it harder to navigate the form.</p>
                 <img src="/assets/images/error-link-dont.png" style="width:100%;" class="govuk-!-margin-bottom-5"
                   alt="The words, 'There is a problem', and the message, 'Information is missing' in red text">
             </div>
@@ -121,7 +121,7 @@
 
     <h3 class="govuk-heading-m">Mismatched error messages</h3>
 
-    <p>Error summaries are a list of all the errors on a page. They are usually placed at the top of the page and help users quickly identify and correct any errors they have made.</p>
+    <p>Error summaries are a list of all the errors on a page. They're usually placed at the top of the page and help users quickly identify and correct any errors they have made.</p>
     <p>Error summaries are particularly useful for users who are using screen readers, as they provide a clear and concise list of all the errors on a page.</p>
 
     <div class="govuk-grid-row dfe-flex">
@@ -137,7 +137,7 @@
         <div class="govuk-grid-column-one-half dfe-flex-item">
             <div class="dfe-panel-dont">
                 <h3 class="govuk-heading-s">Don't</h3>
-                <p class="govuk-!-margin-bottom-5">Don't have different error messages in the summary and against the input.</p>
+                <p class="govuk-!-margin-bottom-5">Do not have different error messages in the summary and against the input.</p>
                 <img src="/assets/images/error-label-dont.png" style="width:100%;" class="govuk-!-margin-bottom-5"
                   alt="The words, 'There is a problem', and the message, 'Information is missing' in red text">
             </div>
@@ -149,15 +149,16 @@
     <p>Find more information on forms and error messages using the following resources:</p>
 
     <ul class="govuk-list govuk-list--spaced">
+       <li><a href="https://digital.nhs.uk/blog/transformation-blog/2019/how-to-write-good-questions" rel="noopener noreferrer" target="_blank">How to write good questions, NHS Digital<span class="govuk-visually-hidden">(link opens in a new tab)</span></a>.
+       </li>
         <li>
-            <a href="https://www.nngroup.com/articles/web-form-design/" rel="noopener noreferrer" target="_blank">Web form design from NN Group<span class="govuk-visually-hidden">(link opens in a new tab)</span></a>
+            <a href="https://www.nngroup.com/articles/web-form-design/" rel="noopener noreferrer" target="_blank">Web form design, Nielsen Norman Group<span class="govuk-visually-hidden">(link opens in a new tab)</span></a>.
         </li>
         <li>
-            <a href="https://www.w3.org/WAI/WCAG22/Understanding/error-prevention-all.html" rel="noopener noreferrer" target="_blank">WCAG 3.3.6 - Error prevention - Help users prevent errors <span class="govuk-visually-hidden">(link opens in a new tab)</span></a>
+            <a href="https://www.w3.org/WAI/WCAG22/Understanding/error-prevention-all.html" rel="noopener noreferrer" target="_blank">Understand error prevention, WCAG 3.3.6<span class="govuk-visually-hidden">(link opens in a new tab)</span></a>.
         </li>
-
         <li>
-            <a href="https://design.homeoffice.gov.uk/accessibility/forms" rel="noopener noreferrer" target="_blank">Forms guidance from the Home Office <span class="govuk-visually-hidden">(link opens in a new tab)</span></a>
+            <a href="https://design.homeoffice.gov.uk/accessibility/forms" rel="noopener noreferrer" target="_blank">Forms guidance, Home Office<span class="govuk-visually-hidden">(link opens in a new tab)</span></a>.
         </li>
     </ul>
 
@@ -168,7 +169,7 @@
         </div>
 
         <div class="dfe-manual-callout--content">
-            <p>The GOV.UK Design System provides guidance on the following components and patterns:</p>
+            <p>Use the GOV.UK Design System for the following components and patterns:</p>
 
             <ul class="govuk-list govuk-list--bullet">
                 <li>
