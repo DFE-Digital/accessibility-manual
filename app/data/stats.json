@@ -77,14 +77,14 @@
         "measure": "Colour vision deficiency (Men)",
         "percent": 8,
         "source": "https://www.colourblindawareness.org/colour-blindness/",
-        "summary": "Colour-blindness is more prevalant in men and affects around 1 in 10 men compared to 1 in 100 women",
+        "summary": "Colour-blindness is more prevalent in men and affects around 1 in 10 men compared to 1 in 100 women",
         "type": "a"
     },
     {
         "measure": "Colour vision deficiency (Women)",
         "percent": 0.8,
         "source": "https://www.colourblindawareness.org/colour-blindness/",
-        "summary": "Colour-blindnes affects around 1 in 100 women and is less prevalant than in men.",
+        "summary": "Colour-blindnes affects around 1 in 100 women and is less prevalent than in men.",
         "type": "a"
     },
     {
