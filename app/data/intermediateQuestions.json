@@ -1,0 +1,472 @@
+[
+    {
+        "id": 1,
+        "summary": "Checking sufficient contrast",
+        "question": "Which tool is best to help you check that there is sufficient contrast of foreground and background colours?",
+        "type": "multipleChoice",
+        "options": [
+            "Contrast Checker",
+            "Target size bookmarklets",
+            "JAWS",
+            "AXE Devtools"
+        ],
+        "correctAnswers": [
+            0
+        ],
+        "explanation": "Contrast Checker allows you to enter your foreground and background colours for your content and will give you a pass or fail for each type of content.",
+        "relatedLinks": [
+            {
+                "text": "Contrast Checker",
+                "url": "https://accessibility.education.gov.uk/knowledge-hub/tools-testing/tools/contrast"
+            },
+            {
+                "text": "Bookmarklets",
+                "url": "https://accessibility.education.gov.uk/knowledge-hub/tools-testing/bookmarklets"
+            },
+            {
+                "text": "Screen readers",
+                "url": "https://accessibility.education.gov.uk/knowledge-hub/screen-readers"
+            },
+            {
+                "text": "axeDevTools",
+                "url": "https://accessibility.education.gov.uk/knowledge-hub/tools-testing/tools/axe"
+            }
+        ]
+    },
+    {
+        "id": 2,
+        "summary": "Accurate colour values",
+        "question": "The most accurate way to find the values for foreground and background colours is to use the pipette tool within the Contrast Checker?",
+        "type": "trueFalse",
+        "options": [
+            "True",
+            "False"
+        ],
+        "correctAnswers": [
+            1
+        ],
+        "explanation": "False: the best way is to find the exact RGB or Hex code for your colours (e.g. from the stylesheet or HTML), which is more accurate than sampling with a pipette.",
+        "relatedLinks": [
+            {
+                "text": "Contrast Checker",
+                "url": "https://accessibility.education.gov.uk/knowledge-hub/tools-testing/tools/contrast"
+            }
+        ]
+    },
+    {
+        "id": 3,
+        "summary": "Minimum colour contrast",
+        "question": "The minimum colour contrast ratio is always 3:1.",
+        "type": "trueFalse",
+        "options": [
+            "True",
+            "False"
+        ],
+        "correctAnswers": [
+            1
+        ],
+        "explanation": "False: large text and non-text contrast can have a ratio of 3:1, but normal text contrast must be 4.5:1.",
+        "relatedLinks": [
+            {
+                "text": "Use of colour",
+                "url": "https://accessibility.education.gov.uk/knowledge-hub/common-issues/colour"
+            }
+        ]
+    },
+    {
+        "id": 4,
+        "summary": "Who uses screen readers?",
+        "question": "Who could be navigating your service using a screen reader?",
+        "type": "multipleChoice",
+        "options": [
+            "A person with low vision",
+            "A person with dyslexia",
+            "A person who is blind",
+            "All of the above"
+        ],
+        "correctAnswers": [
+            3
+        ],
+        "explanation": "Screen readers are used by a wide variety of users, including people who are blind, have low vision, or have dyslexia.",
+        "relatedLinks": [
+            {
+                "text": "Screen readers",
+                "url": "https://accessibility.education.gov.uk/knowledge-hub/screen-readers"
+            }
+        ]
+    },
+    {
+        "id": 5,
+        "summary": "Screen readers on MacOS",
+        "question": "What is the name of the screen reader built into MacOS?",
+        "type": "multipleChoice",
+        "options": [
+            "JAWS",
+            "Narrator",
+            "VoiceOver",
+            "NVDA"
+        ],
+        "correctAnswers": [
+            2
+        ],
+        "explanation": "VoiceOver is the screen reader built into MacOS.",
+        "relatedLinks": [
+            {
+                "text": "Screen readers",
+                "url": "https://accessibility.education.gov.uk/knowledge-hub/screen-readers"
+            }
+        ]
+    },
+    {
+        "id": 6,
+        "summary": "Descriptive links matter",
+        "question": "Writing links that aren't descriptive may impact the following people.",
+        "type": "multipleChoice",
+        "options": [
+            "People navigating using a screen reader",
+            "People using speech recognition",
+            "People with cognitive disabilities",
+            "All of the above"
+        ],
+        "correctAnswers": [
+            3
+        ],
+        "explanation": "All of the above: a descriptive link helps screen readers, speech recognition users, and those with cognitive disabilities understand link purpose.",
+        "relatedLinks": [
+            {
+                "text": "Screen readers",
+                "url": "https://accessibility.education.gov.uk/knowledge-hub/screen-readers"
+            }
+        ]
+    },
+    {
+        "id": 7,
+        "summary": "Colour perception in charts",
+        "question": "Which of the following are ways to ensure colour is not the only way of perceiving information within a chart or graph? (Select all that apply)",
+        "type": "multipleSelect",
+        "options": [
+            "Providing hidden screen reader text",
+            "Apply a pattern to bars within a chart and provide a key",
+            "Ask users to install a filter to help them perceive colours more easily",
+            "Provide direct labelling within the chart"
+        ],
+        "correctAnswers": [
+            1,
+            3
+        ],
+        "explanation": "Using colour alone is insufficient. Patterns and direct labelling ensure users can interpret charts without relying solely on colour.",
+        "relatedLinks": [
+            {
+                "text": "Charts and graphs",
+                "url": "[content to be added to Design manual – action in GitHub]"
+            }
+        ]
+    },
+    {
+        "id": 8,
+        "summary": "Effective error messages",
+        "question": "What should error messages do? (Select all that apply)",
+        "type": "multipleSelect",
+        "options": [
+            "Be summarised to include all errors within the form",
+            "Include technical jargon such as ‘404 error’",
+            "Provide a descriptive message on how to resolve the error",
+            "Clear any previously entered data that caused the error",
+            "Blame the user for causing the error"
+        ],
+        "correctAnswers": [
+            0,
+            2
+        ],
+        "explanation": "Error messages should be summarised so all errors are known, and should guide users on how to fix them without using jargon or blaming them.",
+        "relatedLinks": [
+            {
+                "text": "Error messages",
+                "url": "https://accessibility.education.gov.uk/knowledge-hub/common-issues/error-messages"
+            }
+        ]
+    },
+    {
+        "id": 9,
+        "summary": "DfE accessibility standards",
+        "question": "DfE has accessibility standards to help ensure accessibility compliance for our services.",
+        "type": "trueFalse",
+        "options": [
+            "True",
+            "False"
+        ],
+        "correctAnswers": [
+            0
+        ],
+        "explanation": "True: DfE requires accessibility statements and has internal standards that help teams maintain compliance.",
+        "relatedLinks": [
+            {
+                "text": "Accessibility statements standard",
+                "url": "https://standards.education.gov.uk/standard/accessibility-statements"
+            }
+        ]
+    },
+    {
+        "id": 10,
+        "summary": "Cognitive accessibility guidelines",
+        "question": "The cognitive accessibility guidelines (COGA) were created to...? (Select all that apply)",
+        "type": "multipleSelect",
+        "options": [
+            "Add new criterion to the WCAG guidelines",
+            "Provide designers with design principles to help design for people with cognitive impairments",
+            "Help delivery teams to design for people with motor skills"
+        ],
+        "correctAnswers": [
+            1
+        ],
+        "explanation": "COGA supplements WCAG with guidance on designing for people with cognitive impairments. It does not add new WCAG criteria nor address motor skills.",
+        "relatedLinks": [
+            {
+                "text": "WCAG overview",
+                "url": "https://accessibility.education.gov.uk/knowledge-hub/wcag"
+            },
+            {
+                "text": "Cognitive accessibility guidelines (COGA)",
+                "url": "https://accessibility.education.gov.uk/knowledge-hub/coga"
+            }
+        ]
+    },
+    {
+        "id": 11,
+        "summary": "Who can use automated tools?",
+        "question": "Automated testing tools, accessibility bookmarklets, and accessibility browser extensions can be used by:",
+        "type": "multipleChoice",
+        "options": [
+            "Only accessibility experts",
+            "Only developers",
+            "Only interaction designers",
+            "Anyone"
+        ],
+        "correctAnswers": [
+            3
+        ],
+        "explanation": "Anyone can use these tools. However, interpreting results may require deeper accessibility knowledge.",
+        "relatedLinks": [
+            {
+                "text": "Testing tools",
+                "url": "https://accessibility.education.gov.uk/knowledge-hub/tools-testing"
+            }
+        ]
+    },
+    {
+        "id": 12,
+        "summary": "Limits of automated testing",
+        "question": "Automated testing will find 100% of accessibility issues and removes the need for manual testing.",
+        "type": "trueFalse",
+        "options": [
+            "True",
+            "False"
+        ],
+        "correctAnswers": [
+            1
+        ],
+        "explanation": "False: automated tests typically find only around 40% of accessibility issues. Manual testing, assistive technology testing, and user research are always needed.",
+        "relatedLinks": [
+            {
+                "text": "Accessibility tool audit",
+                "url": "https://alphagov.github.io/accessibility-tool-audit/"
+            }
+        ]
+    },
+    {
+        "id": 13,
+        "summary": "Updating accessibility statements",
+        "question": "The accessibility statement for a service should be updated when?",
+        "type": "multipleChoice",
+        "options": [
+            "Every 12 months",
+            "If the team are notified of an issue from feedback",
+            "When an audit has been carried out",
+            "If the team find an issue from internal testing",
+            "All of the above"
+        ],
+        "correctAnswers": [
+            4
+        ],
+        "explanation": "All of the above: the statement should be updated at least every 12 months or whenever new issues are discovered or reported.",
+        "relatedLinks": [
+            {
+                "text": "Accessibility statements standard",
+                "url": "https://standards.education.gov.uk/standard/accessibility-statements"
+            }
+        ]
+    },
+    {
+        "id": 14,
+        "summary": "Legal wording in statements",
+        "question": "There are no exact requirements for wording within accessibility statements. Wording which explains you had tested your service is sufficient.",
+        "type": "trueFalse",
+        "options": [
+            "True",
+            "False"
+        ],
+        "correctAnswers": [
+            1
+        ],
+        "explanation": "False: there is exact legal wording required for an accessibility statement. The department provides templates for each level of compliance.",
+        "relatedLinks": [
+            {
+                "text": "Accessibility statements",
+                "url": "https://accessibility.education.gov.uk/audits-statements/accessibility-statements"
+            }
+        ]
+    },
+    {
+        "id": 15,
+        "summary": "WCAG 2.2 updates",
+        "question": "Which of the following was not added in the 2.2 update to the Web Content Accessibility Guidelines (WCAG)?",
+        "type": "multipleChoice",
+        "options": [
+            "2.5.7 – Dragging Movements",
+            "4.1.2 – Name, role, value",
+            "2.5.8 – Target Size (Minimum)",
+            "3.3.8 – Accessible Authentication (Minimum)"
+        ],
+        "correctAnswers": [
+            1
+        ],
+        "explanation": "4.1.2 (Name, role, value) was already part of WCAG before 2.2.",
+        "relatedLinks": [
+            {
+                "text": "Watch WCAG 2.2 video",
+                "url": "https://accessibility.education.gov.uk/training/wcag"
+            }
+        ]
+    },
+    {
+        "id": 16,
+        "summary": "Zooming to 400%",
+        "question": "Which WCAG criterion ensures that all content is available when users zoom to 400%?",
+        "type": "multipleChoice",
+        "options": [
+            "Reflow",
+            "Info and Relationships",
+            "Target Size",
+            "Non-text Contrast"
+        ],
+        "correctAnswers": [
+            0
+        ],
+        "explanation": "Reflow ensures content can adapt to different viewports so users needn't scroll horizontally at 400% zoom.",
+        "relatedLinks": [
+            {
+                "text": "WCAG 1.4.10 - Reflow",
+                "url": "https://accessibility.education.gov.uk/knowledge-hub/wcag/criteria/perceivable#1-4-10"
+            }
+        ]
+    },
+    {
+        "id": 17,
+        "summary": "Captions for live content",
+        "question": "Captions are only required for pre-recorded media and are not expected for live content.",
+        "type": "trueFalse",
+        "options": [
+            "True",
+            "False"
+        ],
+        "correctAnswers": [
+            1
+        ],
+        "explanation": "False: captions are required for both live and pre-recorded media. WCAG 1.2.4 covers live captions.",
+        "relatedLinks": [
+            {
+                "text": "WCAG 1.2.4 - Captions (Live)",
+                "url": "https://accessibility.education.gov.uk/knowledge-hub/wcag/criteria/perceivable#1-2-x"
+            }
+        ]
+    },
+    {
+        "id": 18,
+        "summary": "Inclusive design principle 3",
+        "question": "Which of the following can help you apply inclusive design principle 3? (Select all that apply)",
+        "type": "multipleSelect",
+        "options": [
+            "Write in plain language",
+            "Provide descriptions for acronyms",
+            "Avoid jargon",
+            "Design innovative user interfaces"
+        ],
+        "correctAnswers": [
+            0,
+            1,
+            2
+        ],
+        "explanation": "Plain language, acronym descriptions, and avoiding jargon all support inclusive design principle 3 (making services simple and intuitive).",
+        "relatedLinks": [
+            {
+                "text": "Inclusive design principle 3: simple and intuitive use",
+                "url": "https://accessibility.education.gov.uk/knowledge-hub/inclusive-design#principle-3"
+            },
+            {
+                "text": "Planning, writing and managing content",
+                "url": "https://www.gov.uk/guidance/content-design/writing-for-gov-uk"
+            }
+        ]
+    },
+    {
+        "id": 19,
+        "summary": "Techniques for accessible pages",
+        "question": "Which of these is a technique for creating accessible web pages?",
+        "type": "multipleChoice",
+        "options": [
+            "One thing per page",
+            "Use accordions",
+            "Progressive enhancements",
+            "Write in plain language",
+            "All of the above"
+        ],
+        "correctAnswers": [
+            4
+        ],
+        "explanation": "All are valid techniques if done correctly, though accordions must be carefully implemented to avoid confusion.",
+        "relatedLinks": [
+            {
+                "text": "Structuring forms",
+                "url": "https://www.gov.uk/service-manual/design/form-structure#start-with-one-thing-per-page"
+            },
+            {
+                "text": "Accordions",
+                "url": "https://design-system.service.gov.uk/components/accordion/"
+            },
+            {
+                "text": "Building a robust front end",
+                "url": "https://www.gov.uk/service-manual/technology/using-progressive-enhancement"
+            },
+            {
+                "text": "Plain language standard",
+                "url": "[add when published]"
+            }
+        ]
+    },
+    {
+        "id": 20,
+        "summary": "Assessment checks by specialists",
+        "question": "Which of these is not something an accessibility specialist would look for at assessment?",
+        "type": "multipleChoice",
+        "options": [
+            "Evidence of an accessibility audit plan, including budget, time, and resource",
+            "An accessibility statement",
+            "A plan for managing accessibility issues and prioritisation",
+            "No custom component and patterns are used"
+        ],
+        "correctAnswers": [
+            3
+        ],
+        "explanation": "Teams can use custom components or patterns if they follow best practices and feed them back into design systems when appropriate.",
+        "relatedLinks": [
+            {
+                "text": "Overview of accessibility regulations",
+                "url": "https://accessibility.education.gov.uk/standards/regulations"
+            },
+            {
+                "text": "Understanding accessibility requirements for public sector bodies",
+                "url": "https://www.gov.uk/guidance/accessibility-requirements-for-public-sector-websites-and-apps"
+            }
+        ]
+    }
+]

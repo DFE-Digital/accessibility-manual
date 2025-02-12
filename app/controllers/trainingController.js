@@ -1,4 +1,6 @@
 const pool = require('../../middleware/pool');
+const fs = require('fs');
+const path = require('path');
 
 const questions = require('../data/questions.json');
 const NotifyClient = require('notifications-node-client').NotifyClient;
@@ -56,6 +58,18 @@ async function createTrainingSessionWithUniqueCode(maxAttempts = 10) {
 }
 
 
+// Helper to load all intermediate questions
+function loadIntermediateQuestions() {
+    const filePath = path.join(__dirname, '../data/intermediateQuestions.json');
+    const rawData = fs.readFileSync(filePath, 'utf-8');
+    return JSON.parse(rawData);
+}
+
+// Helper for multiple-select array comparison
+function arraysEqual(arr1, arr2) {
+    if (arr1.length !== arr2.length) return false;
+    return arr1.every((val, idx) => val === arr2[idx]);
+}
 
 
 exports.startPage = (req, res) => {
@@ -166,25 +180,146 @@ exports.g_intermediateAuth = (req, res) => {
 
 
 
-
-exports.g_questionsList = (req, res) => {
-
-    // If they don't have a session code in memory, redirect to auth
+exports.g_questionsList = async (req, res) => {
     if (!req.session.intermediateDbSessionCode) {
         return res.redirect('/training/intermediate/auth');
     }
 
-    const { intermediateDbSessionCode } = req.session;
+    const code = req.session.intermediateDbSessionCode;
 
-    res.render('training/intermediate/questions-list', { code: intermediateDbSessionCode });
+    try {
+        // 1) Get the session row for this code (intermediate)
+        const sessionResult = await pool.query(`
+      SELECT id
+      FROM accessibility_manual.training_sessions
+      WHERE unique_code = $1
+      LIMIT 1
+    `, [code]);
+
+        if (sessionResult.rowCount === 0) {
+            return res.redirect('/training/intermediate/auth');
+        }
+
+        const sessionId = sessionResult.rows[0].id;
+
+        // 2) Fetch existing answers for this session
+        const answersResult = await pool.query(`
+      SELECT question_number, answer_status
+      FROM accessibility_manual.answers
+      WHERE training_session_id = $1
+      ORDER BY question_number
+    `, [sessionId]);
+
+        // Make a map of { questionNumber: status }
+        const statusMap = {};
+        answersResult.rows.forEach(row => {
+            // "Not answered", "Correct", or "Incorrect"
+            statusMap[row.question_number] = row.answer_status;
+        });
+
+        // 3) Load the JSON file that contains summary and other question data
+        const allQuestions = loadIntermediateQuestions();
+
+        // 4) Build an array of 20 questions, merging in the summary from JSON
+        const questions = [];
+        for (let i = 1; i <= 20; i++) {
+            const status = statusMap[i] || 'Not answered';
+
+            // Find the question info from JSON where id === i
+            const questionData = allQuestions.find(q => q.id === i) || {};
+
+            questions.push({
+                questionNumber: i,
+                status: status,
+                summary: questionData.summary || '' // fallback if missing
+            });
+        }
+
+        // 5) Render the view, passing 'questions' with 'summary'
+        res.render('training/intermediate/questions-list', {
+            code: code,
+            questions: questions
+        });
+
+    } catch (err) {
+        console.error('Error retrieving intermediate question statuses:', err);
+        return res.redirect('/training/intermediate/auth');
+    }
 };
 
 
-exports.g_intermediateQuestion = (req, res) => {
-    const questionNumber = req.params.questionNumber;
+// 2) GET route handler for /training/intermediate/question-:questionNumber
+exports.g_intermediateQuestion = async (req, res) => {
+    // Make sure the user has a session code
+    if (!req.session.intermediateDbSessionCode) {
+        return res.redirect('/training/intermediate/auth');
+    }
 
-    res.render('training/intermediate/question-' + questionNumber);
+    // Parse questionNumber
+    const questionNumber = parseInt(req.params.questionNumber, 10);
+
+    // Load your JSON
+    const allQuestions = loadIntermediateQuestions();
+    // Find the question object by id
+    const question = allQuestions.find(q => q.id === questionNumber);
+    if (!question) {
+        return res.status(404).send(`Question ${questionNumber} not found in JSON`);
+    }
+
+    // Look up trainingSessionId in DB
+    let trainingSessionId;
+    try {
+        const sessionResult = await pool.query(`
+      SELECT id
+      FROM accessibility_manual.training_sessions
+      WHERE unique_code = $1
+      LIMIT 1
+    `, [req.session.intermediateDbSessionCode]);
+
+        if (sessionResult.rowCount === 0) {
+            return res.redirect('/training/intermediate/auth');
+        }
+        trainingSessionId = sessionResult.rows[0].id;
+    } catch (err) {
+        console.error('Error fetching session:', err);
+        return res.status(500).send('Database error finding session.');
+    }
+
+    // Attempt to load any existing answers for this question
+    let selectedAnswers = [];
+    try {
+        const answersResult = await pool.query(`
+      SELECT user_answer
+      FROM accessibility_manual.answers
+      WHERE training_session_id = $1
+        AND question_number = $2
+      LIMIT 1
+    `, [trainingSessionId, questionNumber]);
+
+        if (answersResult.rowCount === 1) {
+            const userAnswerStr = answersResult.rows[0].user_answer || '';
+            if (userAnswerStr.trim() !== '') {
+                // e.g. "0,2" => [0,2]
+                selectedAnswers = userAnswerStr.split(',').map(x => parseInt(x, 10));
+            }
+        }
+    } catch (err) {
+        console.error('Error fetching existing answer:', err);
+        // We'll just keep selectedAnswers as empty if there's a DB error
+    }
+
+    // Finally, render the question page
+    // Provide selectedAnswers so the template can pre-check radio/checkbox inputs
+    res.render('training/intermediate/question', {
+        code: req.session.intermediateDbSessionCode,
+        question,
+        selectedAnswers,
+        // You can also define nextQuestionNumber or prevQuestionNumber here if you like
+        // e.g. nextQuestionNumber: questionNumber + 1,
+        //      prevQuestionNumber: questionNumber - 1
+    });
 };
+
 
 exports.g_intermediateComplete = (req, res) => {
 
@@ -209,7 +344,6 @@ exports.p_intermediateAuth = async (req, res) => {
         SELECT id, unique_code
         FROM accessibility_manual.training_sessions
         WHERE unique_code = $1
-          AND training_type = 'intermediate'
         LIMIT 1
       `, [existingCode]);
 
@@ -230,7 +364,7 @@ exports.p_intermediateAuth = async (req, res) => {
         } catch (err) {
             console.error('Error finding existing code:', err);
             return res.render('training/intermediate/auth', {
-                error: "Sorry, something went wrong looking up your code. Try again?",
+                error: "Sorry, something went wrong looking up your code. Try again.",
                 existingCode: existingCode
             });
         }
@@ -263,17 +397,233 @@ exports.p_intermediateAuth = async (req, res) => {
 
 
 
-exports.p_intermediateQuestion = (req, res) => {
-    const questionNumber = req.params.questionNumber;
-
-    // Next question, unless next question is 21 and instead go to questions-list
-
-    // Next question
-    const nextQuestion = parseInt(questionNumber) + 1;
-
-    if (nextQuestion === 21) {
-        return res.redirect('/training/intermediate/questions-list');
+exports.p_intermediateQuestion = async (req, res) => {
+    // 1) Check for session code
+    if (!req.session.intermediateDbSessionCode) {
+        return res.redirect('/training/intermediate/auth');
     }
 
-    return res.redirect('/training/intermediate/question-' + nextQuestion);
-}
+    // 2) Which question is this?
+    const questionNumber = parseInt(req.params.questionNumber, 10);
+
+    // 3) Load full intermediate questions JSON & find the question object
+    const allQuestions = loadIntermediateQuestions();
+    const question = allQuestions.find(q => q.id === questionNumber);
+    if (!question) {
+        return res.status(404).send('Question not found in JSON');
+    }
+
+    // 4) Find the user's trainingSessionId
+    let trainingSessionId;
+    try {
+        const sessionResult = await pool.query(`
+      SELECT id 
+      FROM accessibility_manual.training_sessions
+      WHERE unique_code = $1
+      LIMIT 1
+    `, [req.session.intermediateDbSessionCode]);
+
+        if (sessionResult.rowCount === 0) {
+            return res.redirect('/training/intermediate/auth');
+        }
+        trainingSessionId = sessionResult.rows[0].id;
+
+    } catch (err) {
+        console.error('Error finding training session:', err);
+        return res.status(500).send('Database error (session lookup).');
+    }
+
+    // 5) Parse the user's submitted answer(s)
+    let userAnswerArray = [];
+    let answerStatus = 'Incorrect';
+    const questionType = question.type;
+
+    if (questionType === 'trueFalse' || questionType === 'multipleChoice') {
+        const singleAnswer = req.body.answer; // e.g. "0"
+        if (!singleAnswer) {
+            // No radio selected → re-render with error
+            return res.render('training/intermediate/question', {
+                question,
+                code: req.session.intermediateDbSessionCode,
+                error: 'Please select an answer',
+                selectedAnswers: [], // no selection
+                prevQuestionNumber: questionNumber - 1,
+                nextQuestionNumber: questionNumber + 1
+            });
+        }
+
+        userAnswerArray = [parseInt(singleAnswer, 10)];
+        if (question.correctAnswers.includes(userAnswerArray[0])) {
+            answerStatus = 'Correct';
+        }
+
+    } else if (questionType === 'multipleSelect') {
+        let answers = req.body.answer; // could be undefined, string, or array
+        if (!answers) {
+            answers = [];
+        } else if (!Array.isArray(answers)) {
+            answers = [answers];
+        }
+        userAnswerArray = answers.map(a => parseInt(a, 10));
+
+        const sortedUser = [...userAnswerArray].sort((a, b) => a - b);
+        const sortedCorrect = [...question.correctAnswers].sort((a, b) => a - b);
+        if (arraysEqual(sortedUser, sortedCorrect)) {
+            answerStatus = 'Correct';
+        }
+    }
+
+    const userAnswerString = userAnswerArray.join(',');
+
+    // 6) Insert/update the answer row
+    try {
+        await pool.query(`
+      INSERT INTO accessibility_manual.answers
+        (training_session_id, question_number, question_type, user_answer, answer_status)
+      VALUES ($1, $2, $3, $4, $5)
+      ON CONFLICT (training_session_id, question_number)
+      DO UPDATE SET
+        question_type = EXCLUDED.question_type,
+        user_answer   = EXCLUDED.user_answer,
+        answer_status = EXCLUDED.answer_status
+    `, [
+            trainingSessionId,
+            questionNumber,
+            questionType,
+            userAnswerString,
+            answerStatus
+        ]);
+    } catch (err) {
+        console.error('Error inserting/updating answer:', err);
+        return res.status(500).send('Database error (insert/update).');
+    }
+
+    // 7) Re-render the same question page showing correct/incorrect message
+    //    Also pass `selectedAnswers` so the page can show which choice was selected
+    if (answerStatus === 'Correct') {
+        return res.render('training/intermediate/question', {
+            question,
+            code: req.session.intermediateDbSessionCode,
+            success: 'Correct!',
+            explanation: question.explanation,
+            selectedAnswers: userAnswerArray, // so the radio/checkbox stays selected
+            prevQuestionNumber: questionNumber - 1,
+            nextQuestionNumber: questionNumber + 1
+        });
+    } else {
+        return res.render('training/intermediate/question', {
+            question,
+            code: req.session.intermediateDbSessionCode,
+            incorrect: true,
+            selectedAnswers: userAnswerArray,
+            prevQuestionNumber: questionNumber - 1,
+            nextQuestionNumber: questionNumber + 1
+        });
+    }
+};
+
+
+exports.p_sendCodeEmail = async (req, res) => {
+    // 1) Grab the user’s email from the form
+    const email = req.body.email;
+
+    // 2) The code can come from either:
+    //    - The session: req.session.intermediateDbSessionCode
+    //    - Or a hidden input in the form: req.body.code
+    // For this example, let's use session:
+    const code = req.session.intermediateDbSessionCode;
+
+    // Basic validation
+    if (!email) {
+        // Re-render the page with an error
+        return res.render('training/intermediate/questions-list', {
+            errorMessage: 'Please enter an email address',
+            code: code,
+            questions: [] // or rebuild the list if you want it to show
+        });
+    }
+    if (!code) {
+        // The user doesn't have a code in session
+        return res.render('training/intermediate/questions-list', {
+            errorMessage: 'No code found in session',
+            code: '',
+            questions: []
+        });
+    }
+
+    // 3) Send the email with GOV.UK Notify
+    try {
+        // Use your environment variable for the template ID
+        // or any other approach. Example:
+        const templateId = process.env.email_intermediate_training;
+
+        // If your template needs personalisation, e.g. "code"
+        await notify.sendEmail(templateId, email, {
+            personalisation: {
+                code: code
+            }
+        });
+
+        console.log(`Email sent with code "${code}" to ${email}`);
+
+        // 4) Rebuild the questions array so your page can show the statuses
+        //    or call your existing function that does the same
+        const sessionResult = await pool.query(`
+      SELECT id
+      FROM accessibility_manual.training_sessions
+      WHERE unique_code = $1
+      LIMIT 1
+    `, [code]);
+
+        if (sessionResult.rowCount === 0) {
+            // If the session doesn't exist, we can just show the success but no list
+            return res.render('training/intermediate/questions-list', {
+                successMessage: 'We have sent you an email with your code.',
+                code: code,
+                questions: []
+            });
+        }
+
+        const sessionId = sessionResult.rows[0].id;
+
+        // Re-fetch statuses from answers
+        const answersResult = await pool.query(`
+      SELECT question_number, answer_status
+      FROM accessibility_manual.answers
+      WHERE training_session_id = $1
+      ORDER BY question_number
+    `, [sessionId]);
+
+        const statusMap = {};
+        answersResult.rows.forEach(row => {
+            statusMap[row.question_number] = row.answer_status;
+        });
+
+        // Rebuild the questions array from your JSON
+        const allQuestions = loadIntermediateQuestions();
+        const questions = [];
+        for (let i = 1; i <= 20; i++) {
+            const qData = allQuestions.find(q => q.id === i) || {};
+            questions.push({
+                questionNumber: i,
+                summary: qData.summary || '',
+                status: statusMap[i] || 'Not answered'
+            });
+        }
+
+        // Render with a success message
+        return res.render('training/intermediate/questions-list', {
+            code: code,
+            questions: questions,
+            successMessage: 'Email sent successfully!'
+        });
+
+    } catch (err) {
+        console.error('Error sending code email via Notify:', err);
+        return res.render('training/intermediate/questions-list', {
+            errorMessage: 'An error occurred while sending your email. Please try again.',
+            code: code,
+            questions: []
+        });
+    }
+};
