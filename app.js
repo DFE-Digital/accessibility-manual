@@ -66,7 +66,7 @@ app.use(
     }),
     secret: process.env.sessionkey,
     resave: false,
-    saveUninitialized: true,
+    saveUninitialized: false,
     cookie: { secure: false }
   })
 );
