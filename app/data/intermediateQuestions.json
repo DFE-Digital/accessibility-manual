@@ -1,14 +1,14 @@
 [
     {
         "id": 1,
-        "summary": "Checking sufficient contrast",
+        "summary": "Check sufficient contrast",
         "question": "Which tool is best to help you check that there is sufficient contrast of foreground and background colours?",
         "type": "multipleChoice",
         "options": [
             "Contrast Checker",
             "Target size bookmarklets",
             "JAWS",
-            "AXE Devtools"
+            "axe Devtools"
         ],
         "correctAnswers": [
             0
@@ -28,7 +28,7 @@
                 "url": "https://accessibility.education.gov.uk/knowledge-hub/screen-readers"
             },
             {
-                "text": "axeDevTools",
+                "text": "axe DevTools",
                 "url": "https://accessibility.education.gov.uk/knowledge-hub/tools-testing/tools/axe"
             }
         ]
@@ -45,7 +45,7 @@
         "correctAnswers": [
             1
         ],
-        "explanation": "False: the best way is to find the exact RGB or Hex code for your colours (e.g. from the stylesheet or HTML), which is more accurate than sampling with a pipette.",
+        "explanation": "False: the best way is to find the exact RGB or Hex code for your colours, for example, from the stylesheet or HTML, which is more accurate than sampling with a pipette.",
         "relatedLinks": [
             {
                 "text": "Contrast Checker",
@@ -87,7 +87,7 @@
         "correctAnswers": [
             3
         ],
-        "explanation": "Screen readers are used by a wide variety of users, including people who are blind, have low vision, or have dyslexia.",
+        "explanation": "Screen readers are used by a wide variety of users, including people with low vision, have dyslexia, or are blind.",
         "relatedLinks": [
             {
                 "text": "Screen readers",
@@ -142,7 +142,7 @@
     {
         "id": 7,
         "summary": "Colour perception in charts",
-        "question": "Which of the following are ways to ensure colour is not the only way of perceiving information within a chart or graph? (Select all that apply)",
+        "question": "Which of the following are ways to ensure colour is not the only way of perceiving information within a chart or graph?",
         "type": "multipleSelect",
         "options": [
             "Providing hidden screen reader text",
@@ -165,11 +165,11 @@
     {
         "id": 8,
         "summary": "Effective error messages",
-        "question": "What should error messages do? (Select all that apply)",
+        "question": "What should error messages do?",
         "type": "multipleSelect",
         "options": [
             "Be summarised to include all errors within the form",
-            "Include technical jargon such as ‘404 error’",
+            "Include technical jargon such as '404 error'",
             "Provide a descriptive message on how to resolve the error",
             "Clear any previously entered data that caused the error",
             "Blame the user for causing the error"
@@ -178,7 +178,7 @@
             0,
             2
         ],
-        "explanation": "Error messages should be summarised so all errors are known, and should guide users on how to fix them without using jargon or blaming them.",
+        "explanation": "Error messages should be summarised so all errors are known, and should guide users on how to fix them, without using jargon or blaming them.",
         "relatedLinks": [
             {
                 "text": "Error messages",
@@ -198,7 +198,7 @@
         "correctAnswers": [
             0
         ],
-        "explanation": "True: DfE requires accessibility statements and has internal standards that help teams maintain compliance.",
+        "explanation": "True: DfE requires accessibility statements for all products and websites and has internal standards that help teams maintain compliance.",
         "relatedLinks": [
             {
                 "text": "Accessibility statements standard",
@@ -209,7 +209,7 @@
     {
         "id": 10,
         "summary": "Cognitive accessibility guidelines",
-        "question": "The cognitive accessibility guidelines (COGA) were created to...? (Select all that apply)",
+        "question": "The cognitive accessibility guidelines (COGA) created to?",
         "type": "multipleSelect",
         "options": [
             "Add new criterion to the WCAG guidelines",
@@ -219,7 +219,7 @@
         "correctAnswers": [
             1
         ],
-        "explanation": "COGA supplements WCAG with guidance on designing for people with cognitive impairments. It does not add new WCAG criteria nor address motor skills.",
+        "explanation": "COGA supplements WCAG with guidance on designing for people with cognitive impairments. It does not add new WCAG criteria nor address motor skills. WCAG is for auditors to help with testing.",
         "relatedLinks": [
             {
                 "text": "WCAG overview",
@@ -234,7 +234,7 @@
     {
         "id": 11,
         "summary": "Who can use automated tools?",
-        "question": "Automated testing tools, accessibility bookmarklets, and accessibility browser extensions can be used by:",
+        "question": "Automated testing tools, accessibility bookmarklets, and accessibility browser extensions can be used by?",
         "type": "multipleChoice",
         "options": [
             "Only accessibility experts",
@@ -265,7 +265,7 @@
         "correctAnswers": [
             1
         ],
-        "explanation": "False: automated tests typically find only around 40% of accessibility issues. Manual testing, assistive technology testing, and user research are always needed.",
+        "explanation": "False: automated tests typically find only around 40% of accessibility issues in a product or website. Manual testing, assistive technology testing, and testing with people with disabilities are needed to ensure all issues are discovered.",
         "relatedLinks": [
             {
                 "text": "Accessibility tool audit",
@@ -288,7 +288,7 @@
         "correctAnswers": [
             4
         ],
-        "explanation": "All of the above: the statement should be updated at least every 12 months or whenever new issues are discovered or reported.",
+        "explanation": "All of the above: the statement should be updated at least every 12 months or whenever new issues are discovered or reported.  If an audit or testing has not been required in the past 12 months, the statement should be updated to state this.",
         "relatedLinks": [
             {
                 "text": "Accessibility statements standard",
@@ -299,7 +299,7 @@
     {
         "id": 14,
         "summary": "Legal wording in statements",
-        "question": "There are no exact requirements for wording within accessibility statements. Wording which explains you had tested your service is sufficient.",
+        "question": "There are no exact requirements for wording within accessibility statements. Wording which explains you tested your service is sufficient.",
         "type": "trueFalse",
         "options": [
             "True",
@@ -330,7 +330,7 @@
         "correctAnswers": [
             1
         ],
-        "explanation": "4.1.2 (Name, role, value) was already part of WCAG before 2.2.",
+        "explanation": "4.1.2 - Name, role, value was already part of WCAG before 2.2.",
         "relatedLinks": [
             {
                 "text": "Watch WCAG 2.2 video",
@@ -341,7 +341,7 @@
     {
         "id": 16,
         "summary": "Zooming to 400%",
-        "question": "Which WCAG criterion ensures that all content is available when users zoom to 400%?",
+        "question": "Which WCAG criterion ensures all content is available when users zoom to 400%?",
         "type": "multipleChoice",
         "options": [
             "Reflow",
@@ -372,7 +372,7 @@
         "correctAnswers": [
             1
         ],
-        "explanation": "False: captions are required for both live and pre-recorded media. WCAG 1.2.4 covers live captions.",
+        "explanation": "False: captions are required for both pre-recorded and live content. WCAG criterion 1.2.4 - Captions (Live) ensures that people who are deaf or hard of hearing, can understand audio in real-time.",
         "relatedLinks": [
             {
                 "text": "WCAG 1.2.4 - Captions (Live)",
@@ -383,7 +383,7 @@
     {
         "id": 18,
         "summary": "Inclusive design principle 3",
-        "question": "Which of the following can help you apply inclusive design principle 3? (Select all that apply)",
+        "question": "Which of the following can help you apply inclusive design principle 3?",
         "type": "multipleSelect",
         "options": [
             "Write in plain language",
@@ -396,7 +396,7 @@
             1,
             2
         ],
-        "explanation": "Plain language, acronym descriptions, and avoiding jargon all support inclusive design principle 3 (making services simple and intuitive).",
+        "explanation": "Plain language, acronym descriptions, and avoiding jargon all support inclusive design principle 3, making services simple and intuitive.",
         "relatedLinks": [
             {
                 "text": "Inclusive design principle 3: simple and intuitive use",
@@ -411,7 +411,7 @@
     {
         "id": 19,
         "summary": "Techniques for accessible pages",
-        "question": "Which of these is a technique for creating accessible web pages?",
+        "question": "Which of these is a technique used to create accessible web pages?",
         "type": "multipleChoice",
         "options": [
             "One thing per page",
@@ -445,23 +445,26 @@
     },
     {
         "id": 20,
-        "summary": "Assessment checks by specialists",
-        "question": "Which of these is not something an accessibility specialist would look for at assessment?",
+        "summary": "Accessibility regulations",
+        "question": "Which of these in not in scope for the Public Sector Bodies (Websites and Mobile Applications) Accessibility Regulations 2018?",
         "type": "multipleChoice",
         "options": [
-            "Evidence of an accessibility audit plan, including budget, time, and resource",
-            "An accessibility statement",
-            "A plan for managing accessibility issues and prioritisation",
-            "No custom component and patterns are used"
+            "DfE staff",
+            "School business professionals",
+            "Printed letters"
         ],
         "correctAnswers": [
             3
         ],
-        "explanation": "Teams can use custom components or patterns if they follow best practices and feed them back into design systems when appropriate.",
+        "explanation": "This specific accessibility legislation does not include offline, printed material. However, this are included in under Service Standard 3: provide a joined-up experience across all channels.",
         "relatedLinks": [
             {
                 "text": "Overview of accessibility regulations",
                 "url": "https://accessibility.education.gov.uk/standards/regulations"
+            },
+            {
+                "text": "Service Standard 3: provide a joined up experience across all channels",
+                "url": "https://apply-the-service-standard.education.gov.uk/service-standard/3-join-up-across-channels"
             },
             {
                 "text": "Understanding accessibility requirements for public sector bodies",

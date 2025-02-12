@@ -615,7 +615,7 @@ exports.p_sendCodeEmail = async (req, res) => {
         return res.render('training/intermediate/questions-list', {
             code: code,
             questions: questions,
-            successMessage: 'Email sent successfully!'
+            successMessage: 'Email sent.'
         });
 
     } catch (err) {
