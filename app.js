@@ -67,7 +67,9 @@ app.use(
     secret: process.env.sessionkey,
     resave: false,
     saveUninitialized: false,
-    cookie: { secure: false }
+    ccookie: {
+      maxAge: 1000 * 60 * 60 * 24 * 365 
+    }
   })
 );
 
