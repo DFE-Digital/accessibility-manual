@@ -38,8 +38,8 @@ async function createTrainingSessionWithUniqueCode(maxAttempts = 10) {
         const code = generateCode();
         const result = await pool.query(
             `
-        INSERT INTO accessibility_manual.training_sessions (start_date, unique_code)
-        VALUES (CURRENT_DATE, $1)
+        INSERT INTO accessibility_manual.training_sessions (unique_code)
+        VALUES ($1)
         ON CONFLICT DO NOTHING
         RETURNING id, unique_code;
       `,
@@ -565,6 +565,11 @@ exports.p_sendCodeEmail = async (req, res) => {
         });
 
         console.log(`Email sent with code "${code}" to ${email}`);
+
+        await pool.query(`
+    INSERT INTO accessibility_manual.sent_codes (email, code)
+    VALUES ($1, $2)
+  `, [email, code]);
 
         // 4) Rebuild the questions array so your page can show the statuses
         //    or call your existing function that does the same
