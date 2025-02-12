@@ -1,6 +1,8 @@
 {% extends "layouts/full.html" %}
 {% set selectedNav = "Training" %}
 
+{% set pageName =  question.question %}
+
 {% block hero %}
     {# If you pass next/prev question numbers, you can handle back link logic #}
     {% set prevQuestionNumber = question.id - 1 %}
