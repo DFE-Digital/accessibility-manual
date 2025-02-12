@@ -23,6 +23,9 @@ const airtable = require('airtable');
 const base = new airtable({ apiKey: process.env.airtableFeedbackKey }).base(process.env.airtableFeedbackBase);
 const app = express();
 const axios = require('axios');
+const PGStore = require('connect-pg-simple')(session);
+
+const pool = require('./middleware/pool');
 
 app.use(compression());
 
@@ -51,13 +54,21 @@ async function trackSearchTerm(searchTerm) {
   }
 }
 
+
+
 app.use(
   session({
+    store: new PGStore({
+      pool: pool,                      
+      schemaName: 'accessibility_manual',
+      tableName: 'sessions',            
+      createTableIfMissing: false
+    }),
     secret: process.env.sessionkey,
     resave: false,
     saveUninitialized: true,
-    cookie: { secure: false }, // Note: `secure: true` in a production environment with HTTPS
-  }),
+    cookie: { secure: false }
+  })
 );
 
 app.use(bodyParser.json());

@@ -30,4 +30,17 @@ router.get('/training/accessibility-inclusion', trainingController.startPage);
 router.get('/training/basic/question', trainingController.startTraining);
 router.post('/training/basic/question', trainingController.handleAnswer);
 router.get('/training/basic/results', trainingController.getResults);
+
+//Intermediate training routes
+
+router.get('/training/intermediate', trainingController.g_intermediateStart);
+router.get('/training/intermediate/auth', trainingController.g_intermediateAuth);  
+router.get('/training/intermediate/questions-list', trainingController.g_questionsList);     
+router.get('/training/intermediate/question-:questionNumber', trainingController.g_intermediateQuestion);
+router.get('/training/intermediate/complete', trainingController.g_intermediateComplete);
+
+router.post('/training/intermediate/auth', trainingController.p_intermediateAuth);
+router.post('/training/intermediate/question-:questionNumber', trainingController.p_intermediateQuestion);
+
+
 module.exports = router

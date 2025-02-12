@@ -1,0 +1,276 @@
+{% extends "layouts/full.html" %}
+
+{% set selectedNav = "Training" %}
+{% set pageName = "Intermediate accessibility and inclusive design training" %}
+{% set pageDescription = ""%}
+
+{% block hero %}
+{% endblock %}
+
+{% block content %}
+    <div class="govuk-width-container">
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-two-thirds">
+                <h1 class="govuk-heading-xl">{{pageName}}</h1>
+            </div>
+            <div class="govuk-grid-column-two-thirds">
+
+
+                <div class="govuk-inset-text">
+                    <h2 class="govuk-heading-m">Training code</h2>
+                    <p>{{code}}</p>
+                    <p>Use this code to continue your training in the future.</p>
+
+                       <details class="govuk-details">
+                        <summary class="govuk-details__summary">
+                            <span class="govuk-details__summary-text">
+      Email this to yourself
+    </span>
+                        </summary>
+                        <div class="govuk-details__text">
+                            <form action="/training/intermediate/questions-list" method="post">
+                                <div class="govuk-form-group">
+                                    <label class="govuk-label" for="email">Your email address</label>
+                                    <input class="govuk-input" id="email" name="email" type="email" required>
+                                </div>
+                                <button type="submit" class="govuk-button">Send</button>
+                            </form>
+                        </div>
+                    </details>
+                    </div>
+
+                     <h2 class="govuk-heading-l">Training progress</h2>
+
+                <ul class="govuk-task-list">
+                    <li class="govuk-task-list__item govuk-task-list__item--with-link">
+                        <div class="govuk-task-list__name-and-hint">
+                            <a class="govuk-link govuk-task-list__link" href="/training/intermediate/question-1" aria-describedby="question-1">Question 1</a>
+                        </div>
+                        <div class="govuk-task-list__status" id="question-1-status">
+                            <strong class="govuk-tag govuk-tag--grey">
+        Not answered
+      </strong>
+                        </div>
+                    </li>
+                    <li class="govuk-task-list__item govuk-task-list__item--with-link">
+                        <div class="govuk-task-list__name-and-hint">
+                            <a class="govuk-link govuk-task-list__link" href="/training/intermediate/question-2" aria-describedby="question-2">Question 2</a>
+                        </div>
+                        <div class="govuk-task-list__status" id="question-2-status">
+                            <strong class="govuk-tag govuk-tag--red">
+        Incorrect
+      </strong>
+                        </div>
+                    </li>
+                    <li class="govuk-task-list__item govuk-task-list__item--with-link">
+                        <div class="govuk-task-list__name-and-hint">
+                            <a class="govuk-link govuk-task-list__link" href="/training/intermediate/question-3" aria-describedby="question-3">Question 3</a>
+                        </div>
+                        <div class="govuk-task-list__status" id="question-3-status">
+                            <strong class="govuk-tag govuk-tag--green">
+        Correct
+      </strong>
+                        </div>
+                    </li>
+                    <li class="govuk-task-list__item govuk-task-list__item--with-link">
+                        <div class="govuk-task-list__name-and-hint">
+                            <a class="govuk-link govuk-task-list__link" href="/training/intermediate/question-4" aria-describedby="question-4">Question 4</a>
+                        </div>
+                        <div class="govuk-task-list__status" id="question-4-status">
+                            <strong class="govuk-tag govuk-tag--green">
+        Correct
+      </strong>
+                        </div>
+                    </li>
+                    <li class="govuk-task-list__item govuk-task-list__item--with-link">
+                        <div class="govuk-task-list__name-and-hint">
+                            <a class="govuk-link govuk-task-list__link" href="/training/intermediate/question-5" aria-describedby="question-5">Question 5</a>
+                        </div>
+                        <div class="govuk-task-list__status" id="question-5-status">
+                            <strong class="govuk-tag govuk-tag--green">
+        Correct
+      </strong>
+                        </div>
+                    </li>
+                    <li class="govuk-task-list__item govuk-task-list__item--with-link">
+                        <div class="govuk-task-list__name-and-hint">
+                            <a class="govuk-link govuk-task-list__link" href="/training/intermediate/question-6" aria-describedby="question-6">Question 6</a>
+                        </div>
+                        <div class="govuk-task-list__status" id="question-6-status">
+                            <strong class="govuk-tag govuk-tag--green">
+        Correct
+      </strong>
+                        </div>
+                    </li>
+                    <li class="govuk-task-list__item govuk-task-list__item--with-link">
+                        <div class="govuk-task-list__name-and-hint">
+                            <a class="govuk-link govuk-task-list__link" href="/training/intermediate/question-7" aria-describedby="question-7">Question 7</a>
+                        </div>
+                        <div class="govuk-task-list__status" id="question-7-status">
+                            <strong class="govuk-tag govuk-tag--green">
+        Correct
+      </strong>
+                        </div>
+                    </li>
+                    <li class="govuk-task-list__item govuk-task-list__item--with-link">
+                        <div class="govuk-task-list__name-and-hint">
+                            <a class="govuk-link govuk-task-list__link" href="/training/intermediate/question-8" aria-describedby="question-8">Question 8</a>
+                        </div>
+                        <div class="govuk-task-list__status" id="question-8-status">
+                            <strong class="govuk-tag govuk-tag--green">
+        Correct
+      </strong>
+                        </div>
+                    </li>
+                    <li class="govuk-task-list__item govuk-task-list__item--with-link">
+                        <div class="govuk-task-list__name-and-hint">
+                            <a class="govuk-link govuk-task-list__link" href="/training/intermediate/question-9" aria-describedby="question-9">Question 9</a>
+                        </div>
+                        <div class="govuk-task-list__status" id="question-9-status">
+                            <strong class="govuk-tag govuk-tag--green">
+        Correct
+      </strong>
+                        </div>
+                    </li>
+                    <li class="govuk-task-list__item govuk-task-list__item--with-link">
+                        <div class="govuk-task-list__name-and-hint">
+                            <a class="govuk-link govuk-task-list__link" href="/training/intermediate/question-10" aria-describedby="question-10">Question 10</a>
+                        </div>
+                        <div class="govuk-task-list__status" id="question-10-status">
+                            <strong class="govuk-tag govuk-tag--green">
+        Correct
+      </strong>
+                        </div>
+                    </li>
+                    <li class="govuk-task-list__item govuk-task-list__item--with-link">
+                        <div class="govuk-task-list__name-and-hint">
+                            <a class="govuk-link govuk-task-list__link" href="/training/intermediate/question-11" aria-describedby="question-11">Question 11</a>
+                        </div>
+                        <div class="govuk-task-list__status" id="question-11-status">
+                            <strong class="govuk-tag govuk-tag--green">
+        Correct
+      </strong>
+                        </div>
+                    </li>
+                    <li class="govuk-task-list__item govuk-task-list__item--with-link">
+                        <div class="govuk-task-list__name-and-hint">
+                            <a class="govuk-link govuk-task-list__link" href="/training/intermediate/question-12" aria-describedby="question-12">Question 12</a>
+                        </div>
+                        <div class="govuk-task-list__status" id="question-12-status">
+                            <strong class="govuk-tag govuk-tag--green">
+        Correct
+      </strong>
+                        </div>
+                    </li>
+                    <li class="govuk-task-list__item govuk-task-list__item--with-link">
+                        <div class="govuk-task-list__name-and-hint">
+                            <a class="govuk-link govuk-task-list__link" href="/training/intermediate/question-13" aria-describedby="question-13">Question 13</a>
+                        </div>
+                        <div class="govuk-task-list__status" id="question-13-status">
+                            <strong class="govuk-tag govuk-tag--green">
+        Correct
+      </strong>
+                        </div>
+                    </li>
+                    <li class="govuk-task-list__item govuk-task-list__item--with-link">
+                        <div class="govuk-task-list__name-and-hint">
+                            <a class="govuk-link govuk-task-list__link" href="/training/intermediate/question-14" aria-describedby="question-14">Question 14</a>
+                        </div>
+                        <div class="govuk-task-list__status" id="question-14-status">
+                            <strong class="govuk-tag govuk-tag--green">
+        Correct
+      </strong>
+                        </div>
+                    </li>
+                    <li class="govuk-task-list__item govuk-task-list__item--with-link">
+                        <div class="govuk-task-list__name-and-hint">
+                            <a class="govuk-link govuk-task-list__link" href="/training/intermediate/question-15" aria-describedby="question-15">Question 15</a>
+                        </div>
+                        <div class="govuk-task-list__status" id="question-15-status">
+                            <strong class="govuk-tag govuk-tag--green">
+        Correct
+      </strong>
+                        </div>
+                    </li>
+                    <li class="govuk-task-list__item govuk-task-list__item--with-link">
+                        <div class="govuk-task-list__name-and-hint">
+                            <a class="govuk-link govuk-task-list__link" href="/training/intermediate/question-16" aria-describedby="question-16">Question 16</a>
+                        </div>
+                        <div class="govuk-task-list__status" id="question-16-status">
+                            <strong class="govuk-tag govuk-tag--green">
+        Correct
+      </strong>
+                        </div>
+                    </li>
+                    <li class="govuk-task-list__item govuk-task-list__item--with-link">
+                        <div class="govuk-task-list__name-and-hint">
+                            <a class="govuk-link govuk-task-list__link" href="/training/intermediate/question-17" aria-describedby="question-17">Question 17</a>
+                        </div>
+                        <div class="govuk-task-list__status" id="question-17-status">
+                            <strong class="govuk-tag govuk-tag--green">
+        Correct
+      </strong>
+                        </div>
+                    </li>
+                    <li class="govuk-task-list__item govuk-task-list__item--with-link">
+                        <div class="govuk-task-list__name-and-hint">
+                            <a class="govuk-link govuk-task-list__link" href="/training/intermediate/question-18" aria-describedby="question-18">Question 18</a>
+                        </div>
+                        <div class="govuk-task-list__status" id="question-18-status">
+                            <strong class="govuk-tag govuk-tag--green">
+        Correct
+      </strong>
+                        </div>
+                    </li>
+                    <li class="govuk-task-list__item govuk-task-list__item--with-link">
+                        <div class="govuk-task-list__name-and-hint">
+                            <a class="govuk-link govuk-task-list__link" href="/training/intermediate/question-19" aria-describedby="question-19">Question 19</a>
+                        </div>
+                        <div class="govuk-task-list__status" id="question-19-status">
+                            <strong class="govuk-tag govuk-tag--green">
+        Correct
+      </strong>
+                        </div>
+                    </li>
+                    <li class="govuk-task-list__item govuk-task-list__item--with-link">
+                        <div class="govuk-task-list__name-and-hint">
+                            <a class="govuk-link govuk-task-list__link" href="/training/intermediate/question-20" aria-describedby="question-20">Question 20</a>
+                        </div>
+                        <div class="govuk-task-list__status" id="question-20-status">
+                            <strong class="govuk-tag govuk-tag--green">
+        Correct
+      </strong>
+                        </div>
+                    </li>
+                </ul>
+
+            </div>
+            <div class="govuk-grid-column-one-third">
+
+              <div class="dfe-aside">
+  <h2 class="govuk-heading-m">Training code</h2>
+                    <p style="padding: 15px; background: #f3f2f1; font-weight: bold;">{{code}}</p>
+                    <p>Use this code to continue your training in the future.</p>
+
+                       <details class="govuk-details">
+                        <summary class="govuk-details__summary">
+                            <span class="govuk-details__summary-text">
+      Email this to yourself
+    </span>
+                        </summary>
+                        <div class="govuk-details__text">
+                            <form action="/training/intermediate/questions-list" method="post">
+                                <div class="govuk-form-group">
+                                    <label class="govuk-label" for="email">Your email address</label>
+                                    <input class="govuk-input" id="email" name="email" type="email" required>
+                                </div>
+                                <button type="submit" class="govuk-button">Send</button>
+                            </form>
+                        </div>
+                    </details>
+                </div>
+
+            </div>
+        </div>
+    </div>
+{% endblock %}

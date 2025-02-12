@@ -23,6 +23,7 @@
     "cheerio": "^1.0.0-rc.12",
     "clipboard": "^2.0.11",
     "compression": "^1.7.4",
+    "connect-pg-simple": "^9.0.1",
     "dfe-frontend": "^2.0.1",
     "dotenv": "^16.0.3",
     "express": "^4.18.2",
@@ -46,6 +47,7 @@
     "nunjucks-date-filter": "^0.1.1",
     "nunjucks-markdown": "^2.0.1",
     "path": "^0.12.7",
+    "pg": "^8.13.2",
     "sass": "^1.69.1",
     "serve-favicon": "^2.5.0",
     "tedious": "^18.6.1"
