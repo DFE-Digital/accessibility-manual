@@ -37,16 +37,17 @@
 
                 {# If all the answer status' are 'Correct' show a message #}
 
-                {% set allCorrect = false %}
+                {% set allCorrect = true %}
                 {% for item in questions %}
+            
                     {% if item.status != 'Correct' %}
                         {% set allCorrect = false %}
                     {% endif %}
-                    {% set allCorrect = true %}
+                  
 
                 {% endfor %}
 
-                {% if allCorrect %}
+                {% if allCorrect === true %}
 
                     <div class="govuk-notification-banner govuk-notification-banner--success" role="alert" aria-labelledby="govuk-notification-banner-title" data-module="govuk-notification-banner">
                         <div class="govuk-notification-banner__header">
