@@ -156,7 +156,11 @@
 
                     <div class="govuk-button-group">
                         <button type="submit" class="govuk-button govuk-!-margin-top-6">Submit</button>
-                        <a href="/training/intermediate/questions-list" class="govuk-link">View list of questions</a>
+                        {% if nextQuestionNumber === 21 %}
+ <a href="/training/intermediate/questions-list" class="govuk-link">View list of questions</a>
+                        {% else %}
+                        <a href="/training/intermediate/question-{{ nextQuestionNumber }}" class="govuk-link">Skip to next question</a>
+                        {% endif %}
                     </div>
                 </form>
 

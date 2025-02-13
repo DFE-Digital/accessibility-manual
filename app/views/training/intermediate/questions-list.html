@@ -3,96 +3,123 @@
 
 {% set pageName = "Intermediate accessibility and inclusive design training" %}
 
-{% block hero %}
-
-{% endblock %}
+{% block hero %}{% endblock %}
 
 {% block content %}
-<div class="govuk-width-container">
-  <div class="govuk-grid-row">
+    <div class="govuk-width-container">
+        <div class="govuk-grid-row">
 
-    <div class="govuk-grid-column-two-thirds">
-          <h1 class="govuk-heading-xl">{{ pageName }}</h1>
-</div>
-</div>
-  <div class="govuk-grid-row">
-    <div class="govuk-grid-column-two-thirds">
-          {% if successMessage %}
-          <div class="govuk-notification-banner govuk-notification-banner--success">
-            <div class="govuk-notification-banner__header">
-              <h2 class="govuk-notification-banner__title">Success</h2>
+            <div class="govuk-grid-column-two-thirds">
+                <h1 class="govuk-heading-xl">{{ pageName }}</h1>
             </div>
-            <div class="govuk-notification-banner__content">
-              <p class="govuk-notification-banner__heading">{{ successMessage }}</p>
-            </div>
-          </div>
-        {% endif %}
+        </div>
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-two-thirds">
+                {% if successMessage %}
+                    <div class="govuk-notification-banner govuk-notification-banner--success">
+                        <div class="govuk-notification-banner__header">
+                            <h2 class="govuk-notification-banner__title">Success</h2>
+                        </div>
+                        <div class="govuk-notification-banner__content">
+                            <p class="govuk-notification-banner__heading">{{ successMessage }}</p>
+                        </div>
+                    </div>
+                {% endif %}
 
-        {% if errorMessage %}
-          <div class="govuk-error-summary" role="alert">
-            <h2 class="govuk-error-summary__title">There is a problem</h2>
-            <div class="govuk-error-summary__body">
-              <p>{{ errorMessage }}</p>
-            </div>
-          </div>
-        {% endif %}
+                {% if errorMessage %}
+                    <div class="govuk-error-summary" role="alert">
+                        <h2 class="govuk-error-summary__title">There is a problem</h2>
+                        <div class="govuk-error-summary__body">
+                            <p>{{ errorMessage }}</p>
+                        </div>
+                    </div>
+                {% endif %}
 
+                {# If all the answer status' are 'Correct' show a message #}
 
-      <h2 class="govuk-heading-l">Training progress</h2>
-      <ul class="govuk-task-list">
-        {% for item in questions %}
-          <li class="govuk-task-list__item govuk-task-list__item--with-link">
-            <div class="govuk-task-list__name-and-hint">
-              <a class="govuk-link govuk-task-list__link"
+                {% set allCorrect = false %}
+                {% for item in questions %}
+                    {% if item.status != 'Correct' %}
+                        {% set allCorrect = false %}
+                    {% endif %}
+                    {% set allCorrect = true %}
+
+                {% endfor %}
+
+                {% if allCorrect %}
+
+                    <div class="govuk-notification-banner govuk-notification-banner--success" role="alert" aria-labelledby="govuk-notification-banner-title" data-module="govuk-notification-banner">
+                        <div class="govuk-notification-banner__header">
+                            <h2 class="govuk-notification-banner__title" id="govuk-notification-banner-title">
+      Success
+    </h2>
+                        </div>
+                        <div class="govuk-notification-banner__content">
+                            <h3 class="govuk-notification-banner__heading">
+      You have completed the intermediate training
+    </h3>
+
+                            <p class="govuk-body"><a href="mailto:design.ops@education.gov.uk?subject=Intermediate training completion sticker&body=Training code: {{code}}" class="govuk-link">Contact DesignOps</a> to request a sticker.</p>
+                            <p class="govuk-body">You may want to consider becoming a DfE <a href="/standards/accessibility-assessor" class="govuk-link">accessibility assessor</a> for service assessments.</p>
+                        </div>
+                    </div>
+
+                {% endif %}
+
+                <h2 class="govuk-heading-l">Training progress</h2>
+                <ul class="govuk-task-list">
+                    {% for item in questions %}
+                        <li class="govuk-task-list__item govuk-task-list__item--with-link">
+                            <div class="govuk-task-list__name-and-hint">
+                                <a class="govuk-link govuk-task-list__link"
                  href="/training/intermediate/question-{{ item.questionNumber }}"
                  aria-describedby="question-{{ item.questionNumber }}-hint">
                 Question {{ item.questionNumber }}
-              </a>
-              <div id="question-{{ item.questionNumber }}-hint" class="govuk-task-list__hint">
-                {{ item.summary }}
-              </div>
+                                </a>
+                                <div id="question-{{ item.questionNumber }}-hint" class="govuk-task-list__hint">
+                                    {{ item.summary }}
+                                </div>
+                            </div>
+                            <div class="govuk-task-list__status" id="question-{{ item.questionNumber }}-status">
+                                {% if item.status == 'Correct' %}
+                                    <strong class="govuk-tag govuk-tag--green">Correct</strong>
+                                {% elif item.status == 'Incorrect' %}
+                                    <strong class="govuk-tag govuk-tag--red">Incorrect</strong>
+                                {% else %}
+                                    <strong class="govuk-tag govuk-tag--grey">Not answered</strong>
+                                {% endif %}
+                            </div>
+                        </li>
+                    {% endfor %}
+                </ul>
             </div>
-            <div class="govuk-task-list__status" id="question-{{ item.questionNumber }}-status">
-              {% if item.status == 'Correct' %}
-                <strong class="govuk-tag govuk-tag--green">Correct</strong>
-              {% elif item.status == 'Incorrect' %}
-                <strong class="govuk-tag govuk-tag--red">Incorrect</strong>
-              {% else %}
-                <strong class="govuk-tag govuk-tag--grey">Not answered</strong>
-              {% endif %}
-            </div>
-          </li>
-        {% endfor %}
-      </ul>
-    </div>
 
-    <div class="govuk-grid-column-one-third">
-      <div class="dfe-aside">
-        <h2 class="govuk-heading-m">Training code</h2>
-        <p style="padding: 15px; background: #f3f2f1; font-weight: bold;">{{ code }}</p>
-        <p>Use this code to continue your training in the future.</p>
+            <div class="govuk-grid-column-one-third">
+                <div class="dfe-aside">
+                    <h2 class="govuk-heading-m">Training code</h2>
+                    <p style="padding: 15px; background: #f3f2f1; font-weight: bold;">{{ code }}</p>
+                    <p>Use this code to continue your training in the future.</p>
 
-        {# The form that sends the code to an email address #}
-        <details class="govuk-details">
-          <summary class="govuk-details__summary">
-            <span class="govuk-details__summary-text">
+                    {# The form that sends the code to an email address #}
+                    <details class="govuk-details">
+                        <summary class="govuk-details__summary">
+                            <span class="govuk-details__summary-text">
               Email this to yourself
             </span>
-          </summary>
-          <div class="govuk-details__text">
-            <form action="/training/intermediate/questions-list" method="post">
-              <div class="govuk-form-group">
-                <label class="govuk-label" for="email">Your email address</label>
-                <input class="govuk-input" id="email" name="email" type="email" required>
-              </div>
-              <button type="submit" class="govuk-button">Send</button>
-            </form>
-          </div>
-        </details>
+                        </summary>
+                        <div class="govuk-details__text">
+                            <form action="/training/intermediate/questions-list" method="post">
+                                <div class="govuk-form-group">
+                                    <label class="govuk-label" for="email">Your email address</label>
+                                    <input class="govuk-input" id="email" name="email" type="email" required>
+                                </div>
+                                <button type="submit" class="govuk-button">Send</button>
+                            </form>
+                        </div>
+                    </details>
 
-      
-      </div>
+                </div>
+            </div>
+        </div>
     </div>
-  </div>
-</div>
 {% endblock %}

@@ -314,9 +314,8 @@ exports.g_intermediateQuestion = async (req, res) => {
         code: req.session.intermediateDbSessionCode,
         question,
         selectedAnswers,
-        // You can also define nextQuestionNumber or prevQuestionNumber here if you like
-        // e.g. nextQuestionNumber: questionNumber + 1,
-        //      prevQuestionNumber: questionNumber - 1
+        nextQuestionNumber: questionNumber + 1,
+        prevQuestionNumber: questionNumber - 1
     });
 };
 
