@@ -332,7 +332,7 @@ exports.p_intermediateAuth = async (req, res) => {
         // Validate user input
         if (!existingCode) {
             return res.render('training/intermediate/auth', {
-                error: "Please enter a code or choose to generate a new one.",
+                error: "Enter a code, or start a new training session.",
                 existingCode: existingCode
             });
         }
@@ -348,7 +348,7 @@ exports.p_intermediateAuth = async (req, res) => {
 
             if (rows.length === 0) {
                 return res.render('training/intermediate/auth', {
-                    error: "That code was not found. Please check it and try again, or generate a new code.",
+                    error: "The code was not found. Please check it and try again, or start a new training session.",
                     existingCode: existingCode
                 });
             }

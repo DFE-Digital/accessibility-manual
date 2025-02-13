@@ -1,12 +1,12 @@
 {% extends "layouts/full.html" %}
 
 {% set selectedNav = "Training" %}
-{% set pageName = "Continue with an existing training code" %}
+{% set pageName = "Before you continue" %}
 {% set pageDescription = ""%}
 
 {% block hero %}
     <div class="govuk-width-container">
-        <a href="/training" class="govuk-back-link">Back</a>
+        <a href="/training/intermediate" class="govuk-back-link">Back</a>
     </div>
 {% endblock %}
 
@@ -26,17 +26,33 @@
 
                 <h1 class="govuk-heading-xl">{{pageName}}</h1>
 
-                <p class="govuk-body">
-    If you've started this training previously, you were provided a code.
-  </p>
+                <p class="govuk-body">You can complete this training in one go, or come back to it later.</p>
+                <p class="govuk-body">If you return to the training on the same device and browser, we'll remember you and your progress and you'll skip this page</p>
+                <p class="govuk-body">We'll give you a code on the next screen so you can continue your training if you use a different browser or device.</p>
 
-                <p>The code is 4 characters, a hyphen, and 4 more characters, for example: <span style="white-space: nowrap;">9J2D-8NM2</span></p>
+                <form method="POST" action="/training/intermediate/auth" novalidate>
 
-                <p>If you don't have one, you can start a new training session and get a new code to use and come back to in future. Something like this. </p>
+                    <div class="govuk-button-group">
+
+                        <button  role="button" draggable="false" class="govuk-button govuk-button--start" data-module="govuk-button"  name="action" value="generateNewCode">
+  Start now
+  <svg class="govuk-button__start-icon" xmlns="http://www.w3.org/2000/svg" width="17.5" height="19" viewBox="0 0 33 40" aria-hidden="true" focusable="false">
+                                <path fill="currentColor" d="M0 0h13l20 20-20 20H0l20-20z" />
+                            </svg>
+                        </button>
+
+                    </div>
+                </form>
+
+                <h2 class="govuk-heading-l">Return to your training</h2>
+
+                <p>If you have a code from a previous session, you can enter it below to continue where you left off.</p>
+
+                <p class="govuk-body">If you don't have the code, you will need to start again.</p>
 
                 <form method="POST" action="/training/intermediate/auth" novalidate>
                     <div class="govuk-form-group">
-                        <label class="govuk-label " for="existingCode">Enter an existing code</label>
+                        <label class="govuk-label " for="existingCode">Enter your code</label>
                         <div id="account-number-hint" class="govuk-hint">
     Example format: 9J2D-8NM2
   </div>
@@ -55,9 +71,6 @@
         Continue with code
       </button>
 
-                        <button class="govuk-button govuk-button--secondary" data-module="govuk-button" name="action" value="generateNewCode">
-        Generate new code
-      </button>
                     </div>
                 </form>
 
