@@ -170,11 +170,13 @@
                         {% else %}
                         <button type="submit" class="govuk-button govuk-!-margin-top-6">Submit</button>
                         {% endif %}
+                           {% if not success %}
                         {% if nextQuestionNumber === 21 %}
                             <a href="/training/intermediate/questions-list" class="govuk-link">View list of questions</a>
                         {% else %}
                             <a href="/training/intermediate/question-{{ nextQuestionNumber }}" class="govuk-link">Skip to next question</a>
                         {% endif %}
+                             {% endif %}
                     </div>
                 </form>
             </div>
