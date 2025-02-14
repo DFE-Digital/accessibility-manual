@@ -3125,11 +3125,7 @@ ol {
   outline: none;
 }
 
-.govuk-button:focus {
-  outline: 3px solid #ffdd00;
-  /* Custom focus outline */
-  outline-offset: 2px;
-}
+
 
 @media (max-width: 768px) {
   .wider-grid {

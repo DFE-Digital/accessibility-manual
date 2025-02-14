@@ -16,7 +16,7 @@
         <div class="govuk-grid-row">
             <div class="govuk-grid-column-two-thirds">
                 {% if successMessage %}
-                    <div class="govuk-notification-banner govuk-notification-banner--success">
+                    <div class="govuk-notification-banner govuk-notification-banner--success" role="alert" aria-labelledby="govuk-notification-banner-title" data-module="govuk-notification-banner">
                         <div class="govuk-notification-banner__header">
                             <h2 class="govuk-notification-banner__title">Success</h2>
                         </div>
@@ -30,7 +30,7 @@
                     <div class="govuk-error-summary" role="alert">
                         <h2 class="govuk-error-summary__title">There is a problem</h2>
                         <div class="govuk-error-summary__body">
-                            <p>{{ errorMessage }}</p>
+                            <p class="govuk-body">{{ errorMessage }}</p>
                         </div>
                     </div>
                 {% endif %}
@@ -98,8 +98,8 @@
             <div class="govuk-grid-column-one-third">
                 <div class="dfe-aside">
                     <h2 class="govuk-heading-m">Training code</h2>
-                    <p style="padding: 15px; background: #f3f2f1; font-weight: bold;">{{ code }}</p>
-                    <p>Use this code to continue your training in the future.</p>
+                    <p  class="govuk-body" style="padding: 15px; background: #f3f2f1; font-weight: bold;">{{ code }}</p>
+                    <p class="govuk-body">Use this code to continue your training in the future.</p>
 
                     {# The form that sends the code to an email address #}
                     <details class="govuk-details">

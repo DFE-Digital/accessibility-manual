@@ -582,7 +582,7 @@ exports.p_sendCodeEmail = async (req, res) => {
         if (sessionResult.rowCount === 0) {
             // If the session doesn't exist, we can just show the success but no list
             return res.render('training/intermediate/questions-list', {
-                successMessage: 'We have sent you an email with your code.',
+                successMessage: 'We have sent an email containing your code.',
                 code: code,
                 questions: []
             });

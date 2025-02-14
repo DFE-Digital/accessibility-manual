@@ -1,34 +1,31 @@
 {% extends "layouts/full.html" %}
 {% set selectedNav = "Training" %}
-
 {% set pageName = question.question %}
-
 {% block hero %}
     {# If you pass next/prev question numbers, you can handle back link logic #}
     {% set prevQuestionNumber = question.id - 1 %}
     <section aria-label="Service information" class="govuk-service-navigation"
-  data-module="govuk-service-navigation">
+   data-module="govuk-service-navigation">
         <div class="govuk-width-container">
             <div class="govuk-service-navigation__container">
                 <span class="govuk-service-navigation__service-name">
-        Training code: {{ code }}
+         Training code: {{ code }}
                 </span>
                 <nav aria-label="Menu" class="govuk-service-navigation__wrapper">
                     <button type="button" class="govuk-service-navigation__toggle govuk-js-service-navigation-toggle" aria-controls="navigation" hidden>
-          Menu
-        </button>
+            Menu
+            </button>
                     <ul class="govuk-service-navigation__list" id="navigation">
                         <li class="govuk-service-navigation__item">
                             <a class="govuk-service-navigation__link" href="/training/intermediate/questions-list">
-              Questions list
-            </a>
+                  Questions list
+                  </a>
                         </li>
                     </ul>
                 </nav>
             </div>
         </div>
     </section>
-
     <div class="govuk-width-container">
         {% if question.id == 1 %}
             <a href="/training/intermediate/questions-list" class="govuk-back-link">Back</a>
@@ -37,64 +34,55 @@
         {% endif %}
     </div>
 {% endblock %}
-
 {% block content %}
     <div class="govuk-width-container">
         <div class="govuk-grid-row">
             <div class="govuk-grid-column-two-thirds">
-
                 {% if error %}
-                  <div class="govuk-error-summary" data-module="govuk-error-summary">
+                    <div class="govuk-error-summary" data-module="govuk-error-summary">
                         <div role="alert">
                             <h2 class="govuk-error-summary__title">
-      There's a problem
-    </h2>
+                  There's a problem
+               </h2>
                             <div class="govuk-error-summary__body">
                                 <ul class="govuk-list govuk-error-summary__list">
                                     <li>
                                         <a href="#option-0">Select an option.</a>
                                     </li>
-
                                 </ul>
                             </div>
                         </div>
                     </div>
                 {% endif %}
-
                 {% if incorrect %}
-
                     <div class="govuk-error-summary" data-module="govuk-error-summary">
                         <div role="alert">
                             <h2 class="govuk-error-summary__title">
-      That's not right
-    </h2>
+                  That's not right
+               </h2>
                             <div class="govuk-error-summary__body">
                                 <ul class="govuk-list govuk-error-summary__list">
                                     <li>
                                         <a href="#option-0">Check your answer, and try again.</a>
                                     </li>
-
                                 </ul>
                             </div>
                         </div>
                     </div>
-
                 {% endif %}
-
                 {% if success %}
                     <div class="govuk-notification-banner govuk-notification-banner--success"
-           role="alert"
-           aria-labelledby="govuk-notification-banner-title"
-           data-module="govuk-notification-banner">
+            role="alert"
+            aria-labelledby="govuk-notification-banner-title"
+            data-module="govuk-notification-banner">
                         <div class="govuk-notification-banner__header">
                             <h2 class="govuk-notification-banner__title" id="govuk-notification-banner-title">
-            That's right
-          </h2>
+                  That's right
+               </h2>
                         </div>
                         <div class="govuk-notification-banner__content">
                             {% if explanation %}
                                 <p class="govuk-body">{{ explanation }}</p>
-
                                 {% if nextQuestionNumber === 21 %}
                                     <p class="govuk-body">This is the last question. You can check all <a href="/training/intermediate/questions-list" class="govuk-link">question answers</a>.</p>
                                 {% else %}
@@ -105,80 +93,83 @@
                         </div>
                     </div>
                 {% endif %}
-
                 <span class="govuk-caption-l">Question {{ question.id }} of 20</span>
-
                 <form method="POST" action="/training/intermediate/question-{{ question.id }}">
-               <div class="govuk-form-group {% if incorrect or error%}govuk-form-group--error{% endif %} "> 
-                    <fieldset class="govuk-fieldset" aria-describedby="question-hint question-error">
-                        <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
-                            <h1 class="govuk-fieldset__heading">
-                                {{ question.question }}
-                            </h1>
-                        </legend>
-
-                        {% if question.type == 'multipleSelect' %}
-                            <div class="govuk-hint" id="question-hint">Select all that apply</div>
-                        {% else %}
-                            <div class="govuk-hint" id="question-hint">Select one answer</div>
-                        {% endif %}
-
-                        {% if incorrect %}
-                               <p id="question-error" class="govuk-error-message">
-      <span class="govuk-visually-hidden">Error:</span> Check your answer, and try again.
-    </p>
-{% endif %}   {% if error %}
-                               <p id="question-error" class="govuk-error-message">
-      <span class="govuk-visually-hidden">Error:</span> Select an option.
-    </p>
-{% endif %}
-
-                        {# Safely default selectedAnswers to an empty array #}
-                        {% set safeSelectedAnswers = selectedAnswers | default([]) %}
-
-                        {% if question.type == 'trueFalse' or question.type == 'multipleChoice' %}
-                            <div class="govuk-radios" data-module="govuk-radios">
-                                {% for option in question.options %}
-                                    {% set optionIndex = loop.index0 %}
-                                    <div class="govuk-radios__item">
-                                        <input class="govuk-radios__input"
-                         id="option-{{ optionIndex }}"
-                         name="answer"
-                         type="radio"
-                         value="{{ optionIndex }}"
-                         {% if optionIndex in safeSelectedAnswers %}checked="checked"{% endif %}
-                  >
-                                        <label class="govuk-label govuk-radios__label" for="option-{{ optionIndex }}">
-                                            {{ option }}
-                                        </label>
-                                    </div>
-                                {% endfor %}
-                            </div>
-
-                        {% elif question.type == 'multipleSelect' %}
-                            <div class="govuk-checkboxes" data-module="govuk-checkboxes">
-                                {% for option in question.options %}
-                                    {% set optionIndex = loop.index0 %}
-                                    <div class="govuk-checkboxes__item">
-                                        <input class="govuk-checkboxes__input"
-                         id="option-{{ optionIndex }}"
-                         name="answer"
-                         type="checkbox"
-                         value="{{ optionIndex }}"
-                         {% if optionIndex in safeSelectedAnswers %}checked="checked"{% endif %}
-                  >
-                                        <label class="govuk-label govuk-checkboxes__label" for="option-{{ optionIndex }}">
-                                            {{ option }}
-                                        </label>
-                                    </div>
-                                {% endfor %}
-                            </div>
-                        {% endif %}
-                    </fieldset>
-                         </div>
-
+                    <div class="govuk-form-group {% if incorrect or error%}govuk-form-group--error{% endif %} ">
+                        <fieldset class="govuk-fieldset" aria-describedby="question-hint question-error">
+                            <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                                <h1 class="govuk-fieldset__heading">
+                                    {{ question.question }}
+                                </h1>
+                            </legend>
+                            {% if question.type == 'multipleSelect' %}
+                                <div class="govuk-hint" id="question-hint">Select all that apply</div>
+                            {% else %}
+                                <div class="govuk-hint" id="question-hint">Select one answer</div>
+                            {% endif %}
+                            {% if incorrect %}
+                                <p id="question-error" class="govuk-error-message">
+                                    <span class="govuk-visually-hidden">Error:</span> Check your answer, and try again.
+                  </p>
+                            {% endif %}
+                            {% if error %}
+                                <p id="question-error" class="govuk-error-message">
+                                    <span class="govuk-visually-hidden">Error:</span> Select an option.
+                  </p>
+                            {% endif %}
+                            {# Safely default selectedAnswers to an empty array #}
+                            {% set safeSelectedAnswers = selectedAnswers | default([]) %}
+                            {% if question.type == 'trueFalse' or question.type == 'multipleChoice' %}
+                                <div class="govuk-radios" data-module="govuk-radios">
+                                    {% for option in question.options %}
+                                        {% set optionIndex = loop.index0 %}
+                                        <div class="govuk-radios__item">
+                                            <input class="govuk-radios__input"
+                        id="option-{{ optionIndex }}"
+                        name="answer"
+                        type="radio"
+                        value="{{ optionIndex }}"
+                        aria-describedby="question-hint" 
+                        {% if optionIndex in safeSelectedAnswers %}checked="checked"{% endif %}>
+                                            <label class="govuk-label govuk-radios__label" for="option-{{ optionIndex }}">
+                                                {{ option }}
+                                            </label>
+                                        </div>
+                                    {% endfor %}
+                                </div>
+                            {% elif question.type == 'multipleSelect' %}
+                                <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+                                    {% for option in question.options %}
+                                        {% set optionIndex = loop.index0 %}
+                                        <div class="govuk-checkboxes__item">
+                                            <input class="govuk-checkboxes__input"
+                        id="option-{{ optionIndex }}"
+                        name="answer"
+                        type="checkbox"
+                        value="{{ optionIndex }}"
+                        aria-describedby="question-hint" 
+                        {% if optionIndex in safeSelectedAnswers %}checked="checked"{% endif %}>
+                                            <label class="govuk-label govuk-checkboxes__label" for="option-{{ optionIndex }}">
+                                                {{ option }}
+                                            </label>
+                                        </div>
+                                    {% endfor %}
+                                </div>
+                            {% endif %}
+                        </fieldset>
+                    </div>
                     <div class="govuk-button-group">
+                        {% if success %}
+                        
+                              {% if nextQuestionNumber === 21 %}
+                            <a href="/training/intermediate/questions-list" class="govuk-button" role="button">Finish</a>
+                        {% else %}
+                            <a href="/training/intermediate/question-{{ nextQuestionNumber }}" class="govuk-button" role="button">Next question</a>
+                        {% endif %}
+
+                        {% else %}
                         <button type="submit" class="govuk-button govuk-!-margin-top-6">Submit</button>
+                        {% endif %}
                         {% if nextQuestionNumber === 21 %}
                             <a href="/training/intermediate/questions-list" class="govuk-link">View list of questions</a>
                         {% else %}
@@ -186,27 +177,20 @@
                         {% endif %}
                     </div>
                 </form>
-
             </div>
             <div class="govuk-grid-column-one-third">
                 <div class="dfe-aside">
-                    <h2 class="govuk-heading-m">Guidance to help you</h2>
-
+                    <h2 class="govuk-heading-m">Guidance to help you <span class="govuk-visually-hidden">(links will open in a new tab, so you don't lose your progress)</span></h2>
                     <p>Links will open in a new tab, so you don't lose your progress.</p>
-
                     <ul class="govuk-list govuk-list--spaced">
                         {% for related in question.relatedLinks %}
-
                             <li>
                                 <a href="{{ related.url }}" class="govuk-link" target="_blank">{{ related.text }}</a>
                             </li>
-
                         {% endfor %}
                     </ul>
-
                 </div>
             </div>
         </div>
     </div>
-
 {% endblock %}
