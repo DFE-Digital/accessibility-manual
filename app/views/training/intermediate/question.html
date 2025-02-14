@@ -1,7 +1,7 @@
 {% extends "layouts/full.html" %}
 {% set selectedNav = "Training" %}
 
-{% set pageName =  question.question %}
+{% set pageName = question.question %}
 
 {% block hero %}
     {# If you pass next/prev question numbers, you can handle back link logic #}
@@ -54,17 +54,19 @@
 
                 {% if incorrect %}
 
-                    <div class="govuk-notification-banner govuk-notification-banner--warning"
-           role="alert"
-           aria-labelledby="govuk-notification-banner-title"
-           data-module="govuk-notification-banner">
-                        <div class="govuk-notification-banner__header">
-                            <h2 class="govuk-notification-banner__title" id="govuk-notification-banner-title">
-            That's not right
-          </h2>
-                        </div>
-                        <div class="govuk-notification-banner__content">
-                            <p class="govuk-!-margin-bottom-0">Check your answer and try again.</p>
+                    <div class="govuk-error-summary" data-module="govuk-error-summary">
+                        <div role="alert">
+                            <h2 class="govuk-error-summary__title">
+      That's not right
+    </h2>
+                            <div class="govuk-error-summary__body">
+                                <ul class="govuk-list govuk-error-summary__list">
+                                    <li>
+                                        <a href="#option-0">Check your answer, and try again.</a>
+                                    </li>
+
+                                </ul>
+                            </div>
                         </div>
                     </div>
 
@@ -98,7 +100,8 @@
                 <span class="govuk-caption-l">Question {{ question.id }} of 20</span>
 
                 <form method="POST" action="/training/intermediate/question-{{ question.id }}">
-                    <fieldset class="govuk-fieldset">
+               <div class="govuk-form-group {% if incorrect %}govuk-form-group--error{% endif %} "> 
+                    <fieldset class="govuk-fieldset" aria-describedby="question-hint question-error">
                         <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
                             <h1 class="govuk-fieldset__heading">
                                 {{ question.question }}
@@ -110,6 +113,12 @@
                         {% else %}
                             <div class="govuk-hint" id="question-hint">Select one answer</div>
                         {% endif %}
+
+                        {% if incorrect %}
+                               <p id="question-error" class="govuk-error-message">
+      <span class="govuk-visually-hidden">Error:</span> Check your answer, and try again.
+    </p>
+{% endif %}
 
                         {# Safely default selectedAnswers to an empty array #}
                         {% set safeSelectedAnswers = selectedAnswers | default([]) %}
@@ -153,13 +162,14 @@
                             </div>
                         {% endif %}
                     </fieldset>
+                         </div>
 
                     <div class="govuk-button-group">
                         <button type="submit" class="govuk-button govuk-!-margin-top-6">Submit</button>
                         {% if nextQuestionNumber === 21 %}
- <a href="/training/intermediate/questions-list" class="govuk-link">View list of questions</a>
+                            <a href="/training/intermediate/questions-list" class="govuk-link">View list of questions</a>
                         {% else %}
-                        <a href="/training/intermediate/question-{{ nextQuestionNumber }}" class="govuk-link">Skip to next question</a>
+                            <a href="/training/intermediate/question-{{ nextQuestionNumber }}" class="govuk-link">Skip to next question</a>
                         {% endif %}
                     </div>
                 </form>
@@ -179,7 +189,7 @@
                             </li>
 
                         {% endfor %}
-                        </ul>
+                    </ul>
 
                 </div>
             </div>
