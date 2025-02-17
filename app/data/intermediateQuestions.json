@@ -446,7 +446,7 @@
     {
         "id": 20,
         "summary": "Accessibility regulations",
-        "question": "Which of these in not in scope for the Public Sector Bodies (Websites and Mobile Applications) Accessibility Regulations 2018?",
+        "question": "Which of these are not in scope for the Public Sector Bodies (Websites and Mobile Applications) Accessibility Regulations 2018?",
         "type": "multipleChoice",
         "options": [
             "Internal products used by DfE staff, for example, HR systems",
