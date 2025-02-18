@@ -209,7 +209,7 @@
     {
         "id": 10,
         "summary": "Cognitive accessibility guidelines",
-        "question": "The cognitive accessibility guidelines (COGA) created to?",
+        "question": "The cognitive accessibility guidelines (COGA) were created to?",
         "type": "multipleSelect",
         "options": [
             "Add new criterion to the WCAG guidelines",
