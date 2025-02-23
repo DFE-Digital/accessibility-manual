@@ -114,6 +114,9 @@ function calculateValues(data, number) {
 }
 
 exports.g_howmanypeople = async function (req, res) {
+
+
+    
     const number = parseInt(req.params.number | 0)
     if (number) {
         fs.readFile('./app/data/stats.json', 'utf8', (err, data) => {
@@ -142,9 +145,12 @@ exports.g_howmanypeople = async function (req, res) {
 
 exports.p_howmanypeople = async function (req, res) {
     const number = req.body.numberOfUsers
-    console.log(number)
-    if (number) {
-        res.redirect('/app/how-many-people/' + number)
+
+    // try and parse the number (it might have commas in)
+    const parsedNumber = parseInt(number.replace(/,/g, ''))
+
+    if (parsedNumber) {
+        res.redirect('/app/how-many-people/' + parsedNumber)
     } else {
         res.redirect('/app/how-many-people')
     }
