@@ -412,7 +412,7 @@
         "id": 19,
         "summary": "Techniques for accessible pages",
         "question": "Which of these is a technique used to create accessible web pages?",
-        "type": "multipleChoice",
+        "type": "multipleSelect",
         "options": [
             "One thing per page",
             "Use accordions",
@@ -421,9 +421,11 @@
             "All of the above"
         ],
         "correctAnswers": [
-            4
+            0,
+            2,
+            3
         ],
-        "explanation": "All are valid techniques if done correctly, though accordions must be carefully implemented to avoid confusion.",
+        "explanation": "Starting with one thing per page reduces cognitive load for users. Progressive enhancement ensures that all users can access content, regardless of their device or browser. Writing in plain language helps users understand content.<br/><br/> Accordions can create accessibility issues as they can often be mistaken for links, but also hide important content from users.",
         "relatedLinks": [
             {
                 "text": "Structuring forms",

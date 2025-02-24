@@ -82,7 +82,7 @@
                         </div>
                         <div class="govuk-notification-banner__content">
                             {% if explanation %}
-                                <p class="govuk-body">{{ explanation }}</p>
+                                <p class="govuk-body">{{ explanation | safe }}</p>
                                 {% if nextQuestionNumber === 21 %}
                                     <p class="govuk-body">This is the last question. You can check all <a href="/training/intermediate/questions-list" class="govuk-link">question answers</a>.</p>
                                 {% else %}
