@@ -42,6 +42,11 @@ gulp.task('copy-assets', function () {
     .pipe(copy('app/assets/images', { prefix: 6 }));
 });
 
+gulp.task('process-video-copy', async function () {
+  return gulp.src('app/assets/video/**/*')
+    .pipe(gulp.dest('public/assets/video'));
+});
+
 
 gulp.task('process-images-copy', async function () {
   return gulp.src('app/assets/images/**/*')
@@ -81,4 +86,4 @@ gulp.task('watch', function () {
 });
 
 // Set up a default task to process assets and start the watch task
-gulp.task('default', gulp.series('process-scss', 'copy-assets', 'process-js', 'process-images-copy', 'process-images', 'watch'));
+gulp.task('default', gulp.series('process-scss', 'copy-assets', 'process-js', 'process-images-copy', 'process-images', 'process-video-copy', 'watch'));
