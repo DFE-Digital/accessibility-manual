@@ -34,7 +34,7 @@ const notify = new NotifyClient(process.env.notifyKey);
 async function trackSearchTerm(searchTerm) {
   const measurementId = process.env.GAProperty;
   const apiSecret = process.env.GASecret;
-  const clientId = '123456.7890123456'
+  const clientId = '999999.999999'; // Optional client ID
 
   const payload = {
     client_id: clientId, 
@@ -54,6 +54,31 @@ async function trackSearchTerm(searchTerm) {
   }
 }
 
+async function trackReferrer(referrerUrl) {
+  const measurementId = process.env.GAProperty;
+  const apiSecret = process.env.GASecret;
+  const clientId = '999999.999999'; // Optional client ID
+
+  const payload = {
+    client_id: clientId,
+    events: [{
+      name: 'referrer_tracking',
+      params: {
+        referrer_url: referrerUrl || 'No referrer' // Ensure a fallback if missing
+      }
+    }]
+  };
+
+  try {
+    const response = await axios.post(
+      `https://www.google-analytics.com/mp/collect?measurement_id=${measurementId}&api_secret=${apiSecret}`,
+      payload
+    );
+    console.log('Referrer URL tracked successfully:', referrerUrl);
+  } catch (error) {
+    console.error('Error tracking referrer URL:', error);
+  }
+}
 
 
 app.use(
@@ -134,7 +159,15 @@ app.use((req, res, next) => {
 
 app.use('/', routes)
 
+app.use(async (req, res, next) => {
+  const referrer = req.get('Referer') || 'No referrer';
 
+  if (referrer !== 'No referrer') {
+    await trackReferrer(referrer); // Send to GA4
+  }
+
+  next();
+});
 
 
 // Render sitemap.xml in XML format
