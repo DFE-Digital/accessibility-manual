@@ -160,14 +160,17 @@ app.use((req, res, next) => {
 app.use('/', routes)
 
 app.use(async (req, res, next) => {
-  const referrer = req.get('Referer') || 'No referrer';
+  const referrer = req.get('Referer') || '';
+  const landingUrl = `${req.protocol}://${req.get('host')}${req.originalUrl}`;
 
-  if (referrer !== 'No referrer') {
-    await trackReferrer(referrer); // Send to GA4
+  // Check if referrer exists and is external (not self-referral)
+  if (referrer && !referrer.includes(req.get('host'))) {
+    await trackReferrer(referrer, landingUrl); // send to GA4 only if external
   }
 
   next();
 });
+
 
 
 // Render sitemap.xml in XML format
