@@ -499,6 +499,15 @@ exports.p_intermediateQuestion = async (req, res) => {
             userAnswerString,
             answerStatus
         ]);
+
+        // Track the answer submission in GA4
+        await trackEvent('intermediate_training_answer', {
+            training_code: req.session.intermediateDbSessionCode,
+            question_number: questionNumber,
+            answer_status: answerStatus,
+            question_type: questionType
+        });
+
     } catch (err) {
         console.error('Error inserting/updating answer:', err);
         return res.status(500).send('Database error (insert/update).');
