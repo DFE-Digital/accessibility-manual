@@ -1,4 +1,3 @@
-
 require('dotenv').config();
 
 const express = require('express');
@@ -24,6 +23,7 @@ const base = new airtable({ apiKey: process.env.airtableFeedbackKey }).base(proc
 const app = express();
 const axios = require('axios');
 const PGStore = require('connect-pg-simple')(session);
+const { trackEvent } = require('./app/utils/analytics');
 
 const pool = require('./middleware/pool');
 
@@ -32,54 +32,12 @@ app.use(compression());
 const notify = new NotifyClient(process.env.notifyKey);
 
 async function trackSearchTerm(searchTerm) {
-  const measurementId = process.env.GAProperty;
-  const apiSecret = process.env.GASecret;
-  const clientId = '999999.999999'; // Optional client ID
-
-  const payload = {
-    client_id: clientId, 
-    events: [{
-      name: 'search', 
-      params: {
-        search_term: searchTerm 
-      }
-    }]
-  };
-
-  try {
-    const response = await axios.post(`https://www.google-analytics.com/mp/collect?measurement_id=${measurementId}&api_secret=${apiSecret}`, payload);
-    console.log('Event tracked successfully:');
-  } catch (error) {
-    console.error('Error tracking event:', error);
-  }
+  await trackEvent('search', { search_term: searchTerm });
 }
 
 async function trackReferrer(referrerUrl) {
-  const measurementId = process.env.GAProperty;
-  const apiSecret = process.env.GASecret;
-  const clientId = '999999.999999'; // Optional client ID
-
-  const payload = {
-    client_id: clientId,
-    events: [{
-      name: 'referrer_tracking',
-      params: {
-        referrer_url: referrerUrl || 'No referrer' // Ensure a fallback if missing
-      }
-    }]
-  };
-
-  try {
-    const response = await axios.post(
-      `https://www.google-analytics.com/mp/collect?measurement_id=${measurementId}&api_secret=${apiSecret}`,
-      payload
-    );
-    console.log('Referrer URL tracked successfully:', referrerUrl);
-  } catch (error) {
-    console.error('Error tracking referrer URL:', error);
-  }
+  await trackEvent('referrer_tracking', { referrer_url: referrerUrl || 'No referrer' });
 }
-
 
 app.use(
   session({

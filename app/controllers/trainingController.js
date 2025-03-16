@@ -1,6 +1,7 @@
 const pool = require('../../middleware/pool');
 const fs = require('fs');
 const path = require('path');
+const { trackEvent } = require('../utils/analytics');
 
 const questions = require('../data/questions.json');
 const NotifyClient = require('notifications-node-client').NotifyClient;
@@ -129,7 +130,6 @@ exports.getResults = (req, res) => {
 
     const score = results.filter(result => result.isCorrect).length;
 
-
     // Send email with CSV data
     const questionNumbers = results.map((result, index) => index + 1).join(',');
     const userAnswersString = results.map(result => result.userAnswer).join(',');
@@ -147,10 +147,17 @@ exports.getResults = (req, res) => {
         }
     ).then(response => {
         console.log('Email sent successfully');
+        // Track the completion in GA4
+        trackEvent('basic_training_completion', {
+            score: score,
+            total_questions: results.length,
+            completion_rate: (score / results.length * 100).toFixed(1)
+        }).catch(error => {
+            console.error('Error tracking basic training completion:', error);
+        });
     }).catch(error => {
         console.error('Error sending email:', error);
     });
-
 
     res.render('training/basic/results', { results, score });
 };
@@ -523,7 +530,7 @@ exports.p_intermediateQuestion = async (req, res) => {
 
 
 exports.p_sendCodeEmail = async (req, res) => {
-    // 1) Grab the user’s email from the form
+    // 1) Grab the user's email from the form
     const email = req.body.email;
 
     // 2) The code can come from either:
