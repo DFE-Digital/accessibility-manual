@@ -106,7 +106,7 @@
 <p>All images must have an alternative text description that describes its meaning, not what the image is:</p>
 <ul class="govuk-list govuk-list--bullet">
     <li>images that communicate information (for example icons and logos) have short text descriptions</li>
-    <li>editoral images that support the text around them have short descriptions</li>
+    <li>editorial images that support the text around them have short descriptions</li>
     <li>images that communicate complex information (for example infographics and diagrams) have longer text
         descriptions within the same page</li>
     <li>charts or graphs contain the same data in a corresponding table</li>
@@ -324,20 +324,20 @@
     to the page. This is a last resort.</p>
 <h4 class="govuk-heading-s">How to test</h4>
 <ul class="govuk-list govuk-list--bullet">
-    <li>right click on any heading and select the ‘Inspect’ option</li>
+    <li>right click on any heading and select the 'Inspect' option</li>
     <li>manually review the correct heading structure has been applied to visual headings</li>
     <li>if no semantic tags exist, check for the presence of ARIA heading role and the aria-level attribute</li>
 </ul>
 <h4 class="govuk-heading-s">How to test with JAWS</h4>
 <p>Use the <strong class="govuk-tag govuk-!-margin-bottom-3 govuk-tag--grey">H</strong> key to reach the headings on the page and check that all
-    text that visually and logically represents a heading is announced as ‘heading’; that the correct level is announced
+    text that visually and logically represents a heading is announced as 'heading'; that the correct level is announced
     for each heading; that text that does not represent a heading is not announced as a heading.</p>
 <p>Use the <strong class="govuk-tag govuk-!-margin-bottom-3 govuk-tag--grey">JAWS Key</strong> + <strong
         class="govuk-tag govuk-tag--grey">F6</strong> to open the Heading List dialog. Review this to check that the
     heading structure matches the visual document outline</p>
 <h4 class="govuk-heading-s">How to test with NVDA</h4>
 <p>Use the <strong class="govuk-tag govuk-!-margin-bottom-3 govuk-tag--grey">H</strong> key to reach the headings on the page and check that all
-    text that visually and logically represents a heading is announced as ‘heading’; that the correct level is announced
+    text that visually and logically represents a heading is announced as 'heading'; that the correct level is announced
     for each heading; that text that does not represent a heading is not announced as a heading.</p>
 <p>Use the <strong class="govuk-tag govuk-!-margin-bottom-3 govuk-tag--grey">NVDA Key</strong> + <strong
         class="govuk-tag govuk-tag--grey">F7</strong> to show the elements list that should show you all the headings
@@ -368,7 +368,7 @@
         Info and Relationships</a>
 </p>
 <h4 class="govuk-heading-s">How to implement</h4>
-<p>If you can, use the &lt;label&gt; tag and ‘for’ attribute to give form field elements visible labels.</p>
+<p>If you can, use the &lt;label&gt; tag and 'for' attribute to give form field elements visible labels.</p>
 <p>Group sets of radio buttons or checkboxes using the &lt;fieldset&gt; tag and have an appropriate &lt;legend&gt; tag
     to label the group.</p>
 <p>If you cannot use &lt;fieldset&gt; and &lt;legend&gt;, use the radiogroup and radio ARIA roles and associated
@@ -376,32 +376,32 @@
     is a last resort.</p>
 <p>Use aria-describedby to reference hint text from the form control if specific format or input requirements need to be
     met by users.</p>
-<p>Ensure information on entry format isn’t given by placeholders alone and that this is available to screen reader
+<p>Ensure information on entry format isn't given by placeholders alone and that this is available to screen reader
     users.</p>
 <p>If you cannot use visible labels, follow the requirements of <a
         href="/accessibility/understanding-wcag/robust#4-1-2">4.1.2 - Name, Role, Value</a>.</p>
 <h4 class="govuk-heading-s">How to test with a quick check</h4>
 <p>The following quick check will show you if this requirement has been implemented. It will not necessarily show you if
-    it’s failed. If this check doesn’t work then complete the other manual code checks.</p>
+    it's failed. If this check doesn't work then complete the other manual code checks.</p>
 <ul class="govuk-list govuk-list--bullet">
-    <li>click on the visible label for the form control you’re testing</li>
+    <li>click on the visible label for the form control you're testing</li>
     <li>if focus moves to the control or activates it then the control and the label are correctly associated</li>
-    <li>if focus doesn’t move or the control is not activated, complete further testing</li>
+    <li>if focus doesn't move or the control is not activated, complete further testing</li>
 </ul>
 <h4 class="govuk-heading-s">How to test form elements with a manual code check</h4>
 <ul class="govuk-list govuk-list--bullet">
-    <li>right click on a form element and select the ‘Inspect’ option</li>
+    <li>right click on a form element and select the 'Inspect' option</li>
     <li>manually review the form element and check that a label has been associated with it</li>
     <li>if there is a visible label start by checking the label. It should be wrapped in a &lt;Label&gt; tag and should
         have a for attribute which references the ID of the form element it labels</li>
-    <li>if there is no visible label or it doesn’t have a for attribute, look for aria-label or aria-labelledby on the
+    <li>if there is no visible label or it doesn't have a for attribute, look for aria-label or aria-labelledby on the
         form element</li>
     <li>check that any additional hint information is linked using aria-describedby</li>
     <li>check that any additional hint information is not only provided using placeholder text</li>
 </ul>
 <h4 class="govuk-heading-s">How to test radio buttons or checkboxes with a manual code check</h4>
 <ul class="govuk-list govuk-list--bullet">
-    <li>right click on a radio button or checkbox group and select the ‘Inspect’ option</li>
+    <li>right click on a radio button or checkbox group and select the 'Inspect' option</li>
     <li>manually review to identify if the group of elements are enclosed within a &lt;fieldset&gt; tag and the
         question/statement is within a &lt;label&gt; tag.</li>
     <li>if this is missing, check for appropriate ARIA alternatives</li>
@@ -441,8 +441,8 @@
 <p>As a minimum, you must include a main landmark (either the HTML 5 &lt;main&gt; or ARIA role="main") on each page.</p>
 <p>Add extra landmarks, for example navigation and footer content, if the page has these areas.</p>
 <p>All the section’s content or functionality must be contained within a landmark.</p>
-<p>Where multiple landmarks of the same type are used e.g. navigation, use aria-label to add a descriptive label to the
-    navigation area e.g. ‘Related Links’ for a secondary navigation area.</p>
+<p>Where multiple landmarks of the same type are used, for example, navigation, use aria-label to add a descriptive label to the
+    navigation area, for example, ‘Related Links’ for a secondary navigation area.</p>
 <h4 class="govuk-heading-s">How to test</h4>
 <ul class="govuk-list govuk-list--bullet">
     <li>right click on the page and select the ‘Inspect’ option</li>
@@ -453,7 +453,7 @@
 </ul>
 <h4 class="govuk-heading-s">Testing with JAWS</h4>
 <p>Use the <strong class="govuk-tag govuk-!-margin-bottom-3 govuk-tag--grey">R</strong> key to get the screen readers to announce all landmarks
-    on the page and check that the right landmark is announced for each page section (e.g. ‘main’ for the main content
+    on the page and check that the right landmark is announced for each page section (for example, ‘main’ for the main content
     area).</p>
 <h4 class="govuk-heading-s">Testing with NVDA</h4>
 <ul class="govuk-list govuk-list--bullet">
@@ -643,7 +643,7 @@
 </ul>
 <h4 class="govuk-heading-s">How to test with manual code check</h4>
 <ul class="govuk-list govuk-list--bullet">
-    <li>use an online contrast checker e.g. <a href="https://webaim.org/resources/contrastchecker" target="_blank"
+    <li>use an online contrast checker, for example, <a href="https://webaim.org/resources/contrastchecker" target="_blank"
             rel="noopener noreferrer">https://webaim.org/resources/contrastchecker</a>
     </li>
     <li>identify the HEX values from the CSS for text and background colours</li>
@@ -733,7 +733,7 @@
 
 <h3 class="govuk-heading-m" id="1-4-11">1.4.11 - Non text contrast</h3>
 <strong class="govuk-tag govuk-!-margin-bottom-3 govuk-tag--yellow">Level AA</strong>
-<p>Interactive controls, keyboard focus, icons and content required for understanding e.g. charts and infographics must
+<p>Interactive controls, keyboard focus, icons and content required for understanding, for example, charts and infographics must
     have enough contrast (at least 3:1) with adjacent colours.</p>
 <p>
     <a target="_blank" rel="noopener noreferrer"
@@ -754,7 +754,7 @@
 </ul>
 <h4 class="govuk-heading-s">How to test</h4>
 <ul class="govuk-list govuk-list--bullet">
-    <li>Use an online contrast checker e.g. <a href="https://webaim.org/resources/contrastchecker" target="_blank"
+    <li>Use an online contrast checker, for example, <a href="https://webaim.org/resources/contrastchecker" target="_blank"
             rel="noopener noreferrer">https://webaim.org/resources/contrastchecker</a>
     </li>
     <li>Identify the HEX values from the CSS for outline styles and states and input these into the colour contrast
