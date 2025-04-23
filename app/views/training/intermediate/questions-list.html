@@ -39,11 +39,10 @@
 
                 {% set allCorrect = true %}
                 {% for item in questions %}
-            
+
                     {% if item.status != 'Correct' %}
                         {% set allCorrect = false %}
                     {% endif %}
-                  
 
                 {% endfor %}
 
@@ -60,8 +59,11 @@
       You have completed the intermediate training
     </h3>
 
-                            <p class="govuk-body">If you're a DfE employee, <a href="mailto:design.ops@education.gov.uk?subject=Intermediate training completion sticker&body=Training code: {{code}}" class="govuk-link">contact DesignOps</a> to request a sticker. We're also designing a digital sticker, it will be available for everyone soon.</p>
+                            <p class="govuk-body">If you're a DfE employee, <a href="mailto:design.ops@education.gov.uk?subject=Intermediate training completion sticker&body=Training code: {{code}}" class="govuk-link">contact DesignOps</a> to request a sticker.</p>
                             <p class="govuk-body">You may want to consider becoming a DfE <a href="/standards/accessibility-assessor" class="govuk-link">accessibility assessor</a> for service assessments.</p>
+                            <h4 class="govuk-heading-s">Digital sticker</h4>
+                            <p class="govuk-body">You can also <a href="/assets/images/intermediate-sticker.png" class="govuk-link" target="_blank">download a digital version of the sticker (Transparent PNG 40kb) <span class="govuk-visually-hidden">(image opens in new tab)</span></a> to use on social media, email signatures and other digital communications.</p>
+                            <p class="govuk-body">We recommend you link to the Accessibility training page –– <span class="govuk-body govuk-!-font-weight-bold">accessibility.education.gov.uk/training</span> from the sticker.</p>
                         </div>
                     </div>
 
