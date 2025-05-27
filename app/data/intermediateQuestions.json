@@ -265,7 +265,8 @@
         "correctAnswers": [
             1
         ],
-        "explanation": "False: automated tests typically find only around 40% of accessibility issues in a product or website. Manual testing, assistive technology testing, and testing with people with disabilities are needed to ensure all issues are discovered.",
+        "explanation": "False: according to the [GDS accessibility tool audit](https://alphagov.github.io/accessibility-tool-audit/) automated tests typically find only around 40% of accessibility issues in a product or website. Manual testing, assistive technology testing, and testing with people with disabilities are needed to ensure all issues are discovered.",
+        
         "relatedLinks": [
             {
                 "text": "Accessibility tool audit",
