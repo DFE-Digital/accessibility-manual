@@ -23,26 +23,7 @@
             <div class="govuk-grid-row">
                 <div class="govuk-grid-column-full">
 
-                    <div class="dfe-hmp-tool govuk-!-margin-bottom-6">
-                        <div class="card-content">
-                            <h2 class="card-title govuk-heading-m">How many people?</h2>
-                            <p class="card-description">Find out how many people have a disability or condition that might impact their ability to use your service.</p>
-                            
-                            <form action="/app/how-many-people" method="post">
-                                <div class="govuk-form-group govuk-!-margin-bottom-2">
-                                    <label class="govuk-label" for="how-many-people-input">
-                                        Enter the number of people who use your service
-                                    </label>
-                                    <div class="calculator-input-wrapper govuk-!-margin-bottom-0">
-                                        <input class="govuk-input govuk-input--width-10" id="how-many-people-input" name="numberOfUsers" type="number" inputmode="numeric" pattern="[0-9]*" placeholder="e.g. 10000" required>
-                                        <button class="govuk-button govuk-!-margin-bottom-0" data-module="govuk-button" type="submit">
-                                            Calculate
-                                        </button>
-                                    </div>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
+                  {% include "layouts/_how-many-people.html" %}
 
 
                     <h2 class="govuk-heading-l">Testing by disability or impairment</h2>

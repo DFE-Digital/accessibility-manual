@@ -234,9 +234,9 @@ app.use((req, res, next) => {
     }
     // Check both original and lowercased path for flexibility
     const target = redirectMap[reqPath] || redirectMap[reqPath.toLowerCase()];
-    console.log('Redirect middleware:', req.path, '| Normalized:', reqPath, '| Target:', target);
+    //console.log('Redirect middleware:', req.path, '| Normalized:', reqPath, '| Target:', target);
     if (target) {
-        console.log(`Redirecting ${req.path} -> ${target}`);
+        //console.log(`Redirecting ${req.path} -> ${target}`);
         return res.redirect(301, target);
     }
     next();
@@ -295,7 +295,7 @@ function matchRoutes(req, res, next) {
     if (path === '') {
         path = 'index';
     }
-    console.log(path);
+    //console.log(path);
     renderPath(path, res, next);
 }
 
@@ -356,11 +356,7 @@ app.get('/robots.txt', function(req, res) {
     res.sendFile(path.join(__dirname, 'app/robots.txt'));
 });
 
-// Test route
-app.get('/api/test', (req, res) => {
-    console.log('Test route hit');
-    res.json({ message: 'Test route working' });
-});
+
 
 // Start the server
 const PORT = process.env.PORT || 3519;

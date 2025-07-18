@@ -1,7 +1,7 @@
 {% extends "layouts/layout.html" %}
 
 {% set serviceNav = "Tools and testing" %}
-{% set path = "" %}
+{% set path = "/app/how-many-people" %}
 {% set title = "How many people?" %}
 {% set description = "Find out how many people have a disability or condition that might impact their ability to use your service." %}
 {% set dateModified = "2025-07-09" %}
@@ -23,27 +23,9 @@
       <div class="govuk-grid-row">
         <div class="govuk-grid-column-full">
 
-<section class="dfe-hmp-tool">
-          <form action="/app/how-many-people" method="post">
-            <div class="govuk-form-group govuk-!-margin-bottom-3">
 
-              <label class="govuk-label" for="numberOfUsers">
-            Enter the number of people who use your service
-        </label>
+                  {% include "layouts/_how-many-people.html" %}
 
-              <input class="govuk-input govuk-!-width-one-third govuk-!-margin-bottom-0" id="numberOfUsers" name="numberOfUsers" type="text"
-            value="{{number}}">
-            </div>
-
-            <div class="govuk-button-group govuk-!-margin-bottom-0">
-              <button class="govuk-button govuk-!-margin-bottom-0" data-module="govuk-button">
-            Calculate
-        </button>
-              <a class="govuk-link" href="/app/how-many-people">Clear results</a>
-            </div>
-
-          </form>
-</section>
           {% if number !== undefined %}
 
             <h2 class="govuk-heading-l govuk-!-margin-top-9">Results for {{number | formatNumber}} people.</h2>
