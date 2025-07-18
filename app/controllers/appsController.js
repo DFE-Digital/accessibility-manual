@@ -54,7 +54,6 @@ exports.p_howmanypeople = async function(req, res) {
     const number = req.body.numberOfUsers;
     const path = req.body.sourcePage || '';
 
-    con;
     // try and parse the number (it might have commas in)
     const parsedNumber = parseInt(number ? number.replace(/,/g, '') : '');
     if (parsedNumber && !isNaN(parsedNumber)) {
