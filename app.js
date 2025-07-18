@@ -12,6 +12,12 @@ const marked = require('marked');
 const govukMarkdown = require('govuk-markdown');
 const session = require('express-session');
 const csrf = require('csurf');
+
+const airtable = require('airtable');
+const base = new airtable({ apiKey: process.env.airtableFeedbackKey }).base(
+    process.env.airtableFeedbackBase
+);
+
 const {
     removeFilter,
     findServiceName,
@@ -226,6 +232,8 @@ const redirectMap = {
     '/knowledge-hub/coga': '/guidelines/coga',
 };
 
+
+
 app.use((req, res, next) => {
     // Normalize path: remove trailing slash (except for root), and lowercase
     let reqPath = req.path;
@@ -241,6 +249,31 @@ app.use((req, res, next) => {
     }
     next();
 });
+
+
+// New route for handling detailed feedback submissions
+app.post('/form-response/feedback', (req, res) => {
+    const { response } = req.body;
+
+    // Example service name
+    const pageURL = req.headers.referer || 'Unknown'; // Attempt to capture the referrer URL
+    const date = new Date().toISOString();
+
+    base('Feedback').create([{
+        "fields": {
+            "Feedback": response,
+            "Service": "Accessibility manual",
+            "URL": pageURL
+        }
+    }], function(err) {
+        if (err) {
+            console.error(err);
+            return res.status(500).send('Error saving to Airtable');
+        }
+        res.json({ success: true, message: 'Feedback submitted successfully' });
+    });
+});
+
 
 // Make request object available to all templates
 app.use((req, res, next) => {
@@ -355,6 +388,7 @@ app.use((err, req, res, next) => {
 app.get('/robots.txt', function(req, res) {
     res.sendFile(path.join(__dirname, 'app/robots.txt'));
 });
+
 
 
 

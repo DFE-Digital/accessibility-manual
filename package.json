@@ -25,6 +25,7 @@
     "description": "",
     "dependencies": {
         "@ministryofjustice/frontend": "^5.1.0",
+        "airtable": "^0.12.2",
         "axios": "^1.10.0",
         "body-parser": "^1.20.3",
         "compression": "^1.8.0",
