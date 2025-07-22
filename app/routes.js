@@ -22,9 +22,7 @@ router.get('/training/intermediate/questions-list',
     trainingController.g_questionsList
 );
 
-router.get('/training/intermediate/question-:questionNumber',
-    trainingController.g_intermediateQuestion
-);
+
 
 router.get('/training/intermediate/complete',
     trainingController.g_intermediateComplete
@@ -34,6 +32,12 @@ router.post('/training/intermediate/auth',
     trainingController.p_intermediateAuth
 );
 
+
+router.get(
+    "/training/intermediate/question-:questionNumber",
+    trainingController.g_intermediateQuestion
+);
+
 router.post('/training/intermediate/question-:questionNumber',
     trainingController.p_intermediateQuestion
 );
@@ -41,5 +45,7 @@ router.post('/training/intermediate/question-:questionNumber',
 router.post('/training/intermediate/questions-list',
     trainingController.p_sendCodeEmail
 );
+
+
 
 module.exports = router;

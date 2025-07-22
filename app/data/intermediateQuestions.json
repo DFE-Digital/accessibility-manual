@@ -15,19 +15,19 @@
         "explanation": "Contrast Checker allows you to enter your foreground and background colours for your content and will give you a pass or fail for each type of content.",
         "relatedLinks": [{
                 "text": "Contrast Checker",
-                "url": "https://accessibility.education.gov.uk/knowledge-hub/tools-testing/tools/contrast"
+                "url": "https://accessibility.education.gov.uk/tools-testing/tools/contrast-checker"
             },
             {
                 "text": "Bookmarklets",
-                "url": "https://accessibility.education.gov.uk/knowledge-hub/tools-testing/bookmarklets"
+                "url": "https://accessibility.education.gov.uk/tools-testing/tools/bookmarklets"
             },
             {
                 "text": "Screen readers",
-                "url": "https://accessibility.education.gov.uk/knowledge-hub/screen-readers"
+                "url": "https://accessibility.education.gov.uk/tools-testing/tools/screen-readers"
             },
             {
                 "text": "axe DevTools",
-                "url": "https://accessibility.education.gov.uk/knowledge-hub/tools-testing/tools/axe"
+                "url": "https://accessibility.education.gov.uk/tools-testing/tools/axe-devtools"
             }
         ]
     },
@@ -46,7 +46,7 @@
         "explanation": "False: the best way is to find the exact RGB or Hex code for your colours, for example, from the stylesheet or HTML, which is more accurate than sampling with a pipette.",
         "relatedLinks": [{
             "text": "Contrast Checker",
-            "url": "https://accessibility.education.gov.uk/knowledge-hub/tools-testing/tools/contrast"
+            "url": "https://accessibility.education.gov.uk/tools-testing/tools/contrast-checker"
         }]
     },
     {
@@ -64,7 +64,7 @@
         "explanation": "False: large text and non-text contrast can have a ratio of 3:1, but normal text contrast must be 4.5:1.",
         "relatedLinks": [{
             "text": "Use of colour",
-            "url": "https://accessibility.education.gov.uk/knowledge-hub/common-issues/colour"
+            "url": "https://accessibility.education.gov.uk/audits-issues-statements/issues/common-issues#using-colour"
         }]
     },
     {
@@ -84,7 +84,7 @@
         "explanation": "Screen readers are used by a wide variety of users, including people with low vision, have dyslexia, or are blind.",
         "relatedLinks": [{
             "text": "Screen readers",
-            "url": "https://accessibility.education.gov.uk/knowledge-hub/screen-readers"
+            "url": "https://accessibility.education.gov.uk/tools-testing/tools/screen-readers"
         }]
     },
     {
@@ -104,7 +104,7 @@
         "explanation": "VoiceOver is the screen reader built into MacOS.",
         "relatedLinks": [{
             "text": "Screen readers",
-            "url": "https://accessibility.education.gov.uk/knowledge-hub/screen-readers"
+            "url": "https://accessibility.education.gov.uk/tools-testing/tools/screen-readers"
         }]
     },
     {
@@ -124,7 +124,7 @@
         "explanation": "All of the above: a descriptive link helps screen readers, speech recognition users, and those with cognitive disabilities understand link purpose.",
         "relatedLinks": [{
             "text": "Screen readers",
-            "url": "https://accessibility.education.gov.uk/knowledge-hub/screen-readers"
+            "url": "https://accessibility.education.gov.uk/tools-testing/tools/screen-readers"
         }]
     },
     {
@@ -145,7 +145,7 @@
         "explanation": "Using colour alone is insufficient. Patterns and direct labelling ensure users can interpret charts without relying solely on colour.",
         "relatedLinks": [{
             "text": "Charts and graphs",
-            "url": "https://accessibility.education.gov.uk/knowledge-hub/common-issues/alt-text"
+            "url": "https://accessibility.education.gov.uk/audits-issues-statements/issues/common-issues#images-charts-and-alt-text"
         }]
     },
     {
@@ -167,7 +167,7 @@
         "explanation": "Error messages should be summarised so all errors are known, and should guide users on how to fix them, without using jargon or blaming them.",
         "relatedLinks": [{
             "text": "Error messages",
-            "url": "https://accessibility.education.gov.uk/knowledge-hub/common-issues/error-messages"
+            "url": "https://accessibility.education.gov.uk/audits-issues-statements/issues/common-issues#error-messages"
         }]
     },
     {
@@ -204,11 +204,11 @@
         "explanation": "COGA supplements WCAG with guidance on designing for people with cognitive impairments. It does not add new WCAG criteria nor address motor skills. WCAG is for auditors to help with testing.",
         "relatedLinks": [{
                 "text": "WCAG overview",
-                "url": "https://accessibility.education.gov.uk/knowledge-hub/wcag"
+                "url": "https://accessibility.education.gov.uk/guidelines/wcag"
             },
             {
                 "text": "Cognitive accessibility guidelines (COGA)",
-                "url": "https://accessibility.education.gov.uk/knowledge-hub/coga"
+                "url": "https://accessibility.education.gov.uk/guidelines/coga"
             }
         ]
     },
@@ -229,7 +229,7 @@
         "explanation": "Anyone can use these tools. However, interpreting results may require deeper accessibility knowledge.",
         "relatedLinks": [{
             "text": "Testing tools",
-            "url": "https://accessibility.education.gov.uk/knowledge-hub/tools-testing"
+            "url": "https://accessibility.education.gov.uk/tools-testing"
         }]
     },
     {
@@ -244,8 +244,7 @@
         "correctAnswers": [
             1
         ],
-        "explanation": "False: according to the [GDS accessibility tool audit](https://alphagov.github.io/accessibility-tool-audit/) automated tests typically find only around 40% of accessibility issues in a product or website. Manual testing, assistive technology testing, and testing with people with disabilities are needed to ensure all issues are discovered.",
-
+        "explanation": "False: according to the GDS accessibility tool audit automated tests typically find only around 40% of accessibility issues in a product or website. Manual testing, assistive technology testing, and testing with people with disabilities are needed to ensure all issues are discovered.",
         "relatedLinks": [{
             "text": "Accessibility tool audit",
             "url": "https://alphagov.github.io/accessibility-tool-audit/"
@@ -287,7 +286,7 @@
         "explanation": "False: there is exact legal wording required for an accessibility statement. The department provides templates for each level of compliance.",
         "relatedLinks": [{
             "text": "Accessibility statements",
-            "url": "https://accessibility.education.gov.uk/audits-statements/accessibility-statements"
+            "url": "https://accessibility.education.gov.uk/audits-issues-statements/accessibility-statements"
         }]
     },
     {
@@ -307,7 +306,7 @@
         "explanation": "4.1.2 - Name, role, value was already part of WCAG before 2.2.",
         "relatedLinks": [{
             "text": "Watch WCAG 2.2 video",
-            "url": "https://accessibility.education.gov.uk/training/wcag"
+            "url": "https://www.youtube.com/playlist?list=PLOJFDWLd3n39nmsITg0H2nPF8Wdyu_v5r"
         }]
     },
     {
@@ -327,7 +326,7 @@
         "explanation": "Reflow ensures content can adapt to different viewports so users needn't scroll horizontally at 400% zoom.",
         "relatedLinks": [{
             "text": "WCAG 1.4.10 - Reflow",
-            "url": "https://accessibility.education.gov.uk/knowledge-hub/wcag/criteria/perceivable#1-4-10"
+            "url": "https://accessibility.education.gov.uk/guidelines/wcag/explorer#1-4-10"
         }]
     },
     {
@@ -345,7 +344,7 @@
         "explanation": "False: captions are required for both pre-recorded and live content. WCAG criterion 1.2.4 - Captions (Live) ensures that people who are deaf or hard of hearing, can understand audio in real-time.",
         "relatedLinks": [{
             "text": "WCAG 1.2.4 - Captions (Live)",
-            "url": "https://accessibility.education.gov.uk/knowledge-hub/wcag/criteria/perceivable#1-2-x"
+            "url": "https://accessibility.education.gov.uk/guidelines/wcag/explorer#1-2-x"
         }]
     },
     {
@@ -367,7 +366,7 @@
         "explanation": "Plain language, acronym descriptions, and avoiding jargon all support inclusive design principle 3, making services simple and intuitive.",
         "relatedLinks": [{
                 "text": "Inclusive design principle 3: simple and intuitive use",
-                "url": "https://accessibility.education.gov.uk/knowledge-hub/inclusive-design#principle-3"
+                "url": "https://accessibility.education.gov.uk/guidelines/universal-design#principle-3"
             },
             {
                 "text": "Planning, writing and managing content",
@@ -428,7 +427,7 @@
         "explanation": "This specific accessibility legislation does not include offline, printed material. However, this are included in under Service Standard 3: provide a joined-up experience across all channels.",
         "relatedLinks": [{
                 "text": "Overview of accessibility regulations",
-                "url": "https://accessibility.education.gov.uk/standards/regulations"
+                "url": "https://accessibility.education.gov.uk/standards/accessibility-regulations"
             },
             {
                 "text": "Service Standard 3: provide a joined up experience across all channels",

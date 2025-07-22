@@ -163,6 +163,7 @@ marked.use(
 
 markdown.register(nunjuckEnv, marked.parse);
 
+
 // Set view engine
 app.set('view engine', 'html');
 app.set('views', [path.join(__dirname, 'app/views')]);
@@ -304,8 +305,10 @@ app.use((req, res, next) => {
     next();
 });
 
+
 // Use application routes (move this up)
 app.use('/', routes);
+
 
 // Clean URLs
 app.get(/\.html?$/i, function(req, res) {
