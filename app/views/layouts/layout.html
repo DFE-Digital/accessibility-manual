@@ -14,6 +14,7 @@
         <link rel="stylesheet" href="/public/css/app.css">
         <link rel="stylesheet" href="/public/css/manual.css">
         <link rel="stylesheet" href="/public/css/moj-filter.css">
+        <link rel="stylesheet" href="/public/css/_header.css">
         <link rel="icon" href="/public/images/favicon.ico" type="image/x-icon">
 
         <meta property="og:title" content="{{title}}">
@@ -157,19 +158,23 @@
         {% include 'layouts/_feedback.html' %}
         {% include 'layouts/_footer.html' %}
 
+ <script src="/public/js/moj-filter.js"></script>
+
+        <script src="/public/js/dfefrontend-2.0.0.min.js"></script>
+        <script src="/public/js/app.js"></script>
+        <script src="/public/js/feedback.js"></script>
+        <script src="/public/js/header.js"></script>
+        <script src="/public/js/cookies.js"></script>
+
+        <script src="/public/js/govuk-frontend.min.js"></script>
+
         <script type="module">
             import {initAll} from '/assets/js/govuk-frontend.min.js';
             initAll();
         </script>
 
           <!-- MOJ Filter component JavaScript -->
-    <script src="/public/js/moj-filter.js"></script>
-
-        <script src="/public/js/dfefrontend-2.0.0.min.js"></script>
-        <script src="/public/js/app.js"></script>
-        <script src="/public/js/feedback.js"></script>
-        <script src="/public/js/cookies.js"></script>
-
+   
         {% block scripts %}{% endblock %}
     </body>
 
